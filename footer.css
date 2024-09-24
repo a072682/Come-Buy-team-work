@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------*/
+*,*::before,*::after{
+    box-sizing: border-box;
+    outline: solid 1px;
+}
+
+body{
+   font-family: "Inter" ,sans-serif;
+   line-height: 1.2;
+}
+.footer img{
+    max-width: 100%;
+    height: auto;
+    /*vertical-align: middle; */
+    padding: 12px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer{
+    background-color: #000;
+    color: #FFFFFF;
+    padding: 100px 312px; 
+}
+
+
+.footer-nav{
+    width:376px;
+    padding: 28px 0;
+    /*vertical-align: middle;*/
+
+}
+
+.footer-list li{
+    color: #FFFFFF;
+    display: inline;
+}
+.footer-list a{
+    display: block;
+}
+
+/*Div區塊*/
+.one{
+    background-color: yellow;
+    width: auto;
+    justify-content:space-between;
+}
+.two{
+    background-color: green;
+    width: auto;
+    padding-bottom: 48px;
+}
+.three{
+    background-color: pink;
+    width: auto;
+}
+.four{
+    background-color: aqua;
+}
+.five{
+    background-color: #c0c0c0;
+    padding-bottom: 48px;
+}
+.six{
+    background-color: #daa520;
+    text-align: center ;
+    padding :48px 286px ; 
+}
+
+.h3{
+    display: inline-block;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 28px 0;
+}
+/*通用unit*/
+.mr-4{
+    margin-right: 16px;
+}
+.mr-5{
+    margin-right: 30px;
+}
+.mr-6{
+    margin-right: 36px; 
+}
+.mr-8{
+    margin-right: 48px;
+}
+.mb-1{
+    margin-bottom: 4px;
+}
+.mb-6{
+    margin-bottom: 24px;
+}
+.mb-8{
+    margin-bottom: 32px;
+}
+.mb-12{
+    margin-bottom: 48px;
+}
+
+.fs-1{
+    font-style: 24px;
+}
+
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    font-display: column;
+}
+
+.social-p{/*社群圖片*/
+  display: inline;
+
+}
+
