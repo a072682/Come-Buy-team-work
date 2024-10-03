@@ -1,0 +1,85 @@
+.main5{
+    outline: none;
+    border: none;
+    background-color:#000000;
+    position: relative;
+}
+.main5-card-box-set{
+    border: 4px solid #8B0018;
+    width: 351px;
+}
+.main5-card-img-box-set{
+    max-width: 343px;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+.main5-card-text-set{
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #F1B1FF, #C10877) 1;
+    background-color: #6E002C;
+    @include media-breakpoint-up(lg){  
+        background-color: #8B0018;
+    }
+}
+
+.main5-card-title-set{
+    h5{
+        color:#fff;
+    }
+    time{
+        color:#FFAAD7;
+    }
+}
+
+.main5-card-con-set{
+    p{
+        color:#fff;
+    }
+}
+
+.swiper-next-R-btn{
+    position: absolute;
+    display: none;
+    top: 40%;
+    right: 0px;
+    @include media-breakpoint-up(sm){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(md){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(lg){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(xxl){  
+        display: block;
+        right: 24px;
+    }
+}
+.swiper-next-L-btn{
+    position: absolute;
+    display: none;
+    top: 40%;
+    left: 0px;
+    @include media-breakpoint-up(sm){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(md){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(lg){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(xxl){  
+        display: block;
+        left: 24px;
+    }
+}

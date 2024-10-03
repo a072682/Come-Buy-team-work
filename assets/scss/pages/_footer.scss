@@ -1,0 +1,66 @@
+.footer-container-box{  /*最外層*/
+    background-color: #000000;
+    border-top: 8px solid ;
+    border-image: linear-gradient(90deg, #F478FF, #F22082) 1;
+    padding-top: 60px;
+    padding-bottom: 64px;
+    @include media-breakpoint-up(xl){  
+        padding-top: 92px;
+        padding-bottom: 100px;
+    }
+}
+.footer-logo{ /*標題logo*/
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 12px;
+    @include media-breakpoint-up(xl){  
+        flex-direction:row;
+        justify-content:start;
+    }
+}
+
+.text{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.card-box{
+    width: auto;
+    @include media-breakpoint-up(xl){  
+        width: 415px;
+    }
+}
+.card-set{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+    @include media-breakpoint-up(xl){  
+        flex-direction:row;
+        justify-content: start;
+        gap:16px
+    }
+}
+.card-text{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    @include media-breakpoint-up(xl){  
+        font-size: 24px;
+    }
+}
+
+
+.footer-text-set{
+    color:#ffffff;
+}
+
+.footer-footer-set{
+    width: 375px;
+    @include media-breakpoint-up(xl){  
+        width: auto;
+    }
+}

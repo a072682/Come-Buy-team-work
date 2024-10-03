@@ -1,4 +1,6 @@
 //字體區
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 //字體區
 //bootstrap5
 @import "../../node_modules/bootstrap/scss/functions";
@@ -54,5 +56,10 @@ $utilities: map-merge(
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
+@import './pages/footer.scss';
 @import './pages/btn.scss';
+@import './pages/nav.scss';
+@import './pages/main1.scss';
+@import './pages/main2.scss';
+@import './pages/main5.scss';
 @import './pages/index.scss';
