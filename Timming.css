@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #3f0303);/* 從黑色(#000000)漸層到酒紅色(#3f0303) */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+	text-align: left;
+}
+
+.info {
+    font-size: 1rem;
+    color: #ff5656; 
+	text-align: left;
+}
+
+.selector {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.selector input[type="period"] {
+    width: 100%; 
+    height: 40px; 
+    padding: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+select, input[type="date"] {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.d-flex{
+	display: flex;
+}
+.mb-9{
+	margin-bottom: 72px;
+}
