@@ -2,11 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 //字體區
+
+//GoogleFonts-icon
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+//GoogleFonts-icon
+
+//swiper輪播插件
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+//swiper輪播插件
+
 //bootstrap5
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
 @import "../../node_modules/bootstrap";
 //bootstrap5
+
+//bootstrap5設定
 //文字的響應式變化
 $utilities: map-merge(
   $utilities,
@@ -50,8 +61,10 @@ $utilities: map-merge(
 );
 @import "bootstrap/scss/utilities/api";
 //斷點
+//bootstrap5設定
 
 @import "./base/base";
+
 @import "./helper/helper";
 
 @import './layout/header.scss';
@@ -59,7 +72,6 @@ $utilities: map-merge(
 @import './pages/footer.scss';
 @import './pages/btn.scss';
 @import './pages/nav.scss';
-@import './pages/main1.scss';
-@import './pages/main2.scss';
-@import './pages/main5.scss';
 @import './pages/index.scss';
+@import './pages/aboutUS.scss';
+@import './pages/qaPage.scss';

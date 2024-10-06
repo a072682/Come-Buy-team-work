@@ -298,6 +298,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
+//更改處
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -306,10 +307,18 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$primary1:#8B0018;
+$primary2: #E22288;
+$primary3: #FFAAD7;
+$nautral-white: #ffffff;
+$nautral-black: #000000;
+$nautral-60: #909090;
+//更改處
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  //更改處
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
@@ -317,7 +326,14 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "primary1":    $primary1,
+  "primary2":    $primary2,
+  "primary3":    $primary3,
+  "nautral-white":    $nautral-white,
+  "nautral-black":    $nautral-black,
+  "nautral-60":       $nautral-60
+  //更改處
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -429,11 +445,14 @@ $spacers: (
   16 : $spacer ,
   20 : $spacer * 1.25,
   24 : $spacer * 1.5,
+  26 : $spacer * 1.625,
   28 : $spacer * 1.75,
   32 : $spacer * 2,
+  36 : $spacer * 2.25,
   40 : $spacer * 2.5,
   42 : $spacer * 2.625,
   48 : $spacer * 3,
+  50 : $spacer * 3.125,
   56 : $spacer * 3.5,
   60 : $spacer * 3.75,
   64 : $spacer * 4,

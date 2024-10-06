@@ -1,0 +1,29 @@
+.abus-main3-bg-set{ //背景為上左和下右各一個貼圖加純色背景 //原 - main4
+    outline: 
+        none;
+    border: 
+        none;
+    background-color: 
+        #000000;
+    background-image: 
+        url(/assets/images/main4-bg-sm-1.png), 
+        url(/assets/images/main4-bg-sm-2.png);
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+    background-position:
+        bottom right,
+        top left;
+    @include media-breakpoint-up(lg){  
+      background-image: 
+        url(/assets/images/main4-bg-1.png), 
+        url(/assets/images/main4-bg-2.png);
+    }
+}
+
+.abus-main3-img-box{
+    max-width: 351px;
+    @include media-breakpoint-up(xxl){  
+        max-width: 329px;
+    }
+}

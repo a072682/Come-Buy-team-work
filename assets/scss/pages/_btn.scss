@@ -108,7 +108,7 @@
 
 /*box*/
 .box{
-    width: 285px;
+    width: 100%;
     font-size: 24px;
     font-weight: 900;
     color: #fff;
@@ -121,10 +121,6 @@
     background: linear-gradient(90deg, #000000, #60003A) bottom left;
     clip-path: polygon(0 0,100% 0,100% 100%,40px 100%,0 calc(100% - 40px));
     background-repeat: no-repeat;
-    /*box-shadow: 0 0 10px #E22288, 0 0 40px #E22288, 0 0 80px #E22288;*/
-    @include media-breakpoint-up(xl){  
-        width: 340px;
-      }
     @include media-breakpoint-up(xxl){  
         width: 405px;
     }
@@ -153,7 +149,7 @@
     clip-path: polygon(0 0,100% 0,100% 100%,20px 100%,0 calc(100% - 20px));
     background-repeat: no-repeat; 
     @include media-breakpoint-up(md){  
-        width: 300px;
+        width: 100%;
       }
 }
 .box-sm:before {
@@ -341,10 +337,9 @@
     line-height: 1.5;
     font-weight: 500;
     color: #ffffff;
-    display: block;
     padding-top:24px ;
     padding-bottom:24px ;
-    padding-right:auto ;
+    padding-right:auto;//75px
     padding-left:auto;
     background-color: transparent;
     border-radius: 5px;

@@ -1,0 +1,17 @@
+.main4{
+    outline: none;
+    border: none;
+    background-color: #000000;
+    background-image: url(/assets/images/main4-bg-sm-1.png), url(/assets/images/main4-bg-sm-2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position:bottom right,top left;
+    @include media-breakpoint-up(lg){  
+      background-image: url(/assets/images/main4-bg-1.png), url(/assets/images/main4-bg-2.png);
+    }
+}
+
+.main4-title-text-set{
+    color:#ffffff;
+    font-weight: 900;
+    line-height: 1.2;
+}
