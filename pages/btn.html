@@ -47,6 +47,56 @@
 
             <hr>
 
+            <button class="qP-main2-box">
+                店到店
+            </button>
+
+            <hr>
+
+            <button class="oEstimate-main2-btn">
+                3D列印
+            </button>
+            <button class="oEstimate-main2-btn">
+                3D列印
+            </button>
+
+            <hr>
+
+            <div class="qP-main3-accordion-btn">
+                <div class="accordion accordion-flush" id="accordionExample"><!--最外層-->
+                    <!--accordionExample為外層獨立id 與內層 data-bs-parent="#accordionExample" 為對應關係-->
+                    <!--accordion-flush為樣式 將外框的邊線給移除-->
+                    <div class="accordion-item"><!--主體1-->
+                        <h2 class="accordion-header" id="headingOne"><!--標題列-->
+                            <button class="accordion-button01" 
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseOne" 
+                                    aria-expanded="true" 
+                                    aria-controls="collapseOne">
+                                        Accordion Item #1
+                                    <!--data-bs-toggle="collapse" 為功能種類 在這邊的功能為收合觸發-->
+                                    <!--data-bs-target="#collapseOne" 定義目標 目標為內層 id="collapseOne" -->
+                            </button>
+                        </h2>
+                        <div  id="collapseOne" 
+                              class="accordion-collapse collapse show"   
+                              aria-labelledby="headingOne" 
+                              data-bs-parent="#accordionExample">
+                              <!--accordion-collapse為收合樣式-->
+                              <!--collapse show為展開樣式-->
+                              <!--id="collapseOne"為內層獨立id且唯一的-->
+                              <!--data-bs-parent="#accordionExample" 與外層 accordionExample 為對應關係-->
+                              <div class="accordion-body-set mx-auto mt-5 p-3">
+                                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
             <button class="carousel-btn-L">
                 <div class="img-box">
                     <img class="img-set" src="../assets/images/Vector 13.png" alt="Vector 13">
@@ -122,6 +172,17 @@
             <div class="select-btn">
                 <button class="select-btn-set">
                     最新消息
+                </button>
+            </div>
+
+            <hr>
+
+            <div class="upLord-fileFormat-sm-box">
+                <button class="upLord-fileFormat-sm-box-set d-flex align-items-center me-4">
+                    <span class="material-symbols-outlined sec-btn1-img-set">
+                        error
+                    </span>
+                    檔案格式說明
                 </button>
             </div>
 

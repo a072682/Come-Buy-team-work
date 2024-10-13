@@ -1,0 +1,117 @@
+.oEstimate-main2-bg-set{ //背景為上左和下右各一個貼圖加背景漸層 //原 - main2
+    width: 100%;
+    height: auto;
+    outline: 
+        none;
+    border: 
+        none;
+    background-image: 
+        url(/assets/images/main2-bg-sm-top.png), 
+        url(/assets/images/main2-bg-sm-bottom.png),
+        linear-gradient(180deg, #000000, #000000);
+    background-repeat: 
+        no-repeat, 
+        no-repeat,
+        no-repeat;
+    background-position:
+        top left,
+        bottom right,
+        center center;
+    background-size: 
+        auto,
+        100% 190px, //完全貼合標籤容器寬度和限制高為190px 會失真
+        cover;
+    @include media-breakpoint-up(lg){  
+        background-image:
+            url(/assets/images/main2-bg-top.png), 
+            url(/assets/images/main2-bg-sm-bottom.png),
+            linear-gradient(180deg, #000000, #4F000E);
+        background-size: 
+            auto,
+            auto,
+            cover;
+    }
+  }
+
+  .oEstimate-main2-swiper{/*最外框作為輪播按鈕的定位*/
+    border:2px solid $primary2;
+    position: relative;
+    outline: none;
+  }
+
+.oEstimate-main2-mySwiper-set{
+    width: 231px;
+    height: auto;
+    @include media-breakpoint-up(xxl){  
+        width: 1056px;
+    }
+}
+.oEstimate-main2-card-box-set{
+    width: 231px;
+    padding: 8px;
+    @include media-breakpoint-up(xl){  
+        width: 336px;
+    }
+}
+.oEstimate-main2-card-img-box-set{
+    max-width: 215px;
+    height: auto;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+.oEstimate-main2-card-text-set{
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #F1B1FF, #C10877) 1;
+    background-color: #6E002C;
+    @include media-breakpoint-up(lg){  
+        background-color: #8B0018;
+    }
+}
+
+
+.swiper-next-R-btn{
+    position: absolute;
+    display: none;
+    top: 40%;
+    right: 0px;
+    @include media-breakpoint-up(sm){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(md){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(lg){  
+        display: block;
+        right: 24px;
+    }
+    @include media-breakpoint-up(xxl){  
+        display: block;
+        right: 24px;
+    }
+}
+.swiper-next-L-btn{
+    position: absolute;
+    display: none;
+    top: 40%;
+    left: 0px;
+    @include media-breakpoint-up(sm){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(md){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(lg){  
+        display: block;
+        left: 24px;
+    }
+    @include media-breakpoint-up(xxl){  
+        display: block;
+        left: 24px;
+    }
+}

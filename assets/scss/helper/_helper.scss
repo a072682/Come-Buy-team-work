@@ -1,3 +1,12 @@
+body{
+    background-color: $nautral-black;
+}
+.lh-12{
+    line-height: 1.2;
+}
+.lh-15{
+    line-height: 1.5;
+}
 .fw-100{
     font-weight: 100;
 }
@@ -26,7 +35,7 @@
     font-weight: 900;
 }
 
-.bg-set1{ //main1-bg
+.bg-set1{ //原-main1-bg
     outline: 
         none;
     border: 

@@ -1,0 +1,49 @@
+.qP-main3:target{
+    padding-top: 60px;
+    margin-top: -60px;
+    @include media-breakpoint-up(lg){       
+        padding-top: 108px;
+        margin-top: -108px;
+    }
+    @include media-breakpoint-up(xl){       
+        padding-top: 80px;
+        margin-top: -80px;
+    } 
+    @include media-breakpoint-up(xxl){       
+        padding-top: 20px;
+        margin-top: -20px;
+    }   
+}
+
+.qP-main3-bg{ //背景為上左和下右各一個貼圖加純色背景 //原 - main4
+    outline: 
+        none;
+    border: 
+        none;
+    background-color: 
+        #000000;
+    background-image: 
+        url(/assets/images/main4-bg-sm-1.png), 
+        url(/assets/images/main4-bg-sm-2.png);
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+    background-position:
+        bottom right,
+        top left;
+    @include media-breakpoint-up(xl){  
+      background-image: 
+        url(/assets/images/main4-bg-1.png), 
+        url(/assets/images/main4-bg-2.png);
+    }
+}
+.content-set{ //給xl尺寸以上用
+    width: calc(100% - 240px);
+}
+
+.accordion-btn-sm-set{
+    line-height: 1.2;   
+}
+.accordion-btn-set{
+    line-height: 1.5;   
+}
