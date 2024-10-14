@@ -42,20 +42,30 @@
 .oEstimate-main2-mySwiper-set{
     width: 231px;
     height: auto;
+    @include media-breakpoint-up(xl){  
+        width: 752px;
+    }
     @include media-breakpoint-up(xxl){  
         width: 1056px;
     }
 }
 .oEstimate-main2-card-box-set{
-    width: 231px;
+    max-width: 231px;
     padding: 8px;
+    background-color:$nautral-black;
     @include media-breakpoint-up(xl){  
-        width: 336px;
+        max-width: 336px;
     }
 }
+
 .oEstimate-main2-card-img-box-set{
     max-width: 215px;
     height: auto;
+    border-bottom:4px solid ;
+    border-image: linear-gradient(90deg, #f1b1ff, #c10877) 1;
+    @include media-breakpoint-up(xl){  
+        max-width: 336px;
+    }
     img{
         max-width: 100%;
         height: auto;

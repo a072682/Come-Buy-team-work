@@ -53,6 +53,7 @@
 }
 
 .mian-btn1-set-sm{
+    width: auto;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-right: 48px;
@@ -61,7 +62,9 @@
     border-radius: 5px;
     border: none;
     font-size: 24px;
-    color:#ffffffb7;
+    line-height: 1.5;
+    font-weight: 900;
+    color:$nautral-white;
     transition: 0.2s;
     @include media-breakpoint-up(lg){  
         padding-top: 24px;
@@ -501,6 +504,7 @@
     margin-right: -1px;
     border:none;
     outline: none;
+    color:$nautral-white;
     clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%); /*calc(100% - 80px)靠上方點 100% 20px 靠下方點*/
 }
 .oEstimate-main2-btn:before {
@@ -516,4 +520,15 @@
 .oEstimate-main2-btn:hover:before,.oEstimate-main2-btn:active:before,.oEstimate-main2-btn:focus:before{
     background-color: $primary2;
 }
+.oEstimate-main2-btn-on{
+    background-color: $primary2;
+}
+.oEstimate-main2-btn-on:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:$primary2;
+    clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%,0 0,2px  2px ,2px calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(10px + 0.83px),calc(100% - 10px - 0.83px) 2px,2px 2px);/*calc(60px + 0.83px)靠下方點 calc(100% - 80px - 0.83px) 靠下方點 由於是繞回來所以會反過來寫*/
+}
 /*qP-main2-box*/
+

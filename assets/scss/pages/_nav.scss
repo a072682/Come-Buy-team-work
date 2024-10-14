@@ -50,7 +50,7 @@
         transition: 0.5s;
     }
 }
-.border-low:hover::after { /*按鈕下方的紅條(點擊狀態)*/
+.border-low:hover::after,.border-low:active:after,.border-low:focus:after { /*按鈕下方的紅條(點擊狀態)*/
         content: "";
         display: none;
         @include media-breakpoint-up(xxl){
@@ -72,10 +72,18 @@
     }
 }
 
-.dropdown-menu01-set{ /*選單設定*/
+.dropdown-menu01-set.dropdown-menu01-set{ /*最新消息選單設定和位置設定*/
     border-radius: 0;
     background-color: #000000;
     border: 5px solid #E22288;
+    left:-85px;
+}
+
+.dropdown-menu02-set.dropdown-menu02-set{ /*新手指南選單設定和位置設定*/
+    border-radius: 0;
+    background-color: #000000;
+    border: 5px solid #E22288;
+    left:-65px;
 }
 
 .dropdown-menu.show{

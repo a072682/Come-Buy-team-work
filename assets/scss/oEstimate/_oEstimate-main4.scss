@@ -1,8 +1,4 @@
-
-
-
-
-.oEstimate-main3-btn01-set{
+.oEstimate-main4-btn01-set{
     border:1px solid $nautral-white;
     border-radius: 5px;
     @include media-breakpoint-up(xl){  
@@ -10,23 +6,14 @@
     }
 }
 
-
-.ousidematerial-item-set{
-    border:2px solid $nautral-white;
-    border-radius: 5px;
-}
-
-.ousidematerial-item-menu-set{
-
-}
-.oEstimate-main3-ousidematerial-box-set{
+.oEstimate-main4-ousidematerial-box-set{
     @include media-breakpoint-up(xl){  
         form{
             label{
                 width: 120px;
             }
             input{
-                width: 644px;
+                width: 452px;
             }
         }
     }
