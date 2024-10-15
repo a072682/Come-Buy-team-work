@@ -1,0 +1,10 @@
+
+.aside-box{
+    top:212px;
+    left:calc(50% - 560px);
+    z-index: 500;
+    @include media-breakpoint-up(xxl){ 
+        top:285px;
+        left:calc(50% - 650px);
+    } 
+}

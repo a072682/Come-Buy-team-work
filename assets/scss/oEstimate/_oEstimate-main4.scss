@@ -1,0 +1,20 @@
+.oEstimate-main4-btn01-set{
+    border:1px solid $nautral-white;
+    border-radius: 5px;
+    @include media-breakpoint-up(xl){  
+        width: 48%;
+    }
+}
+
+.oEstimate-main4-ousidematerial-box-set{
+    @include media-breakpoint-up(xl){  
+        form{
+            label{
+                width: 120px;
+            }
+            input{
+                width: 452px;
+            }
+        }
+    }
+}

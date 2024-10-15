@@ -1,0 +1,7 @@
+.oEstimate-main5-btn01-set{
+    border:1px solid $nautral-white;
+    border-radius: 5px;
+    @include media-breakpoint-up(xl){  
+        width: 48%;
+    }
+}
