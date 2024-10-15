@@ -5,49 +5,229 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/web-layout-training-vite/assets/main-5638090f.js"></script>
-    <link rel="stylesheet" href="/web-layout-training-vite/assets/main-e680dc5f.css">
+    <script type="module" crossorigin src="/web-layout-training-vite/assets/main-37041295.js"></script>
+    <link rel="stylesheet" href="/web-layout-training-vite/assets/main-0a98612c.css">
   </head>
   <body>
+    <nav class="navbar fixed-top nav-bg-set nav-border-set w-100 pt-24 pb-20 px-16 navbar-expand-xxl py-xxl-16"> <!--最外層 pd放這邊 navbar-expand-lg-->
+    <div class="container-fluid px-0 justify-content-xxl-center gap-xxl-32"> <!--中間容器 不動-->
+        <a class="navbar-brand py-0 px-0 mx-0" href="../pages/index.html"> <!--標格 or Logo標誌-->
+            <picture>
+                <source srcset="data:image/png;base64,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 " media="(max-width:992px)">
+                <img src="/web-layout-training-vite/assets/logo-4d84c3b2.png" alt="home-section2-1">
+            </picture>
+        </a>
+
+        <button class="navbar-toggler border-0 py-0 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">  
+            <div class="navbar-menu-img-box">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAwCAYAAAC4wJK5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABJSURBVHgB7dWxEYAwDANAm0my/1IckxgGgBylk/tvVKhSpQgAAP7Kr6KqzidG9DEy83orjtiAEQDMeOwujABgxmN3YQQAAOu5AYfsDxZt394MAAAAAElFTkSuQmCC" alt="Menu.png">
+            </div>  
+        </button><!--漢堡標誌 lg不顯示-->
+
+        <div class="offcanvas offcanvas-end nav-aside-page-set" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"><!--漢堡內部內容-->
+            <div class="offcanvas-header pt-32 px-26 pb-8"><!--漢堡內部內容 標題區 lg不顯示-->
+                <button type="button" class="navbar-close-img-box py-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <div class="navbar-close-img-box">
+                        <img class="navbar-close-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC2SURBVHgB7ZfbCYVADETDreT238SWYilRkSAKBt1NTCJzQPybOSM+kAgAAAAA4D2Y+b8cbT2TER6ZWtHEG5NFoUemVtb4yFDhSV5o5MVFYdcIy6zXi8PkLQTC5UdE0sj3CKWTfyKWVl7QBNPLC4pofnnhYkQNeUEZ4SL/I7BT+hYq/RBz5dcoV/6QPRFLN6JHKM2IEZHwERYCYSMsi0NG8Md+6k2ulkfmncJmWeSRCQAAAABwgxmljWRVfJ4rhgAAAABJRU5ErkJggg==" alt="Close.png">
+                    </div>
+                </button>
+            </div>
+            <div class="offcanvas-body  py-0  align-items-xxl-center gap-xxl-32 px-xxl-0 py-xxl-0"><!--漢堡內部內容 內容區-->
+                <ul class="navbar-nav justify-content-center align-items-xxl-center gap-xxl-32">
+                    <li class="nav-item mb-12 mb-lg-0 ms-xxl-48 mx-auto dropdown pe-auto border-low"> <!--漢堡內部內容 最新消息子項目-->
+                        <button type="button" class="select-btn-set text-center" id="select-btn01-active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            最新消息
+                            <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--最新消息子項目右邊icon-->
+                                arrow_drop_down
+                            </span>
+                        </button>
+                          <ul class="dropdown-menu dropdown-menu01-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--最新消息子項目下拉選項mt-lg-24-->
+                              <li><a class="dropdown-item dropdown-item-set" href="../pages/index.html#index-main5">最新消息</a></li>
+                              <li><a class="dropdown-item dropdown-item-set" href="#">優惠活動</a></li>
+                              <li><a class="dropdown-item dropdown-item-set" href="#">合作廠商</a></li>
+                              <li><a class="dropdown-item dropdown-item-set" href="../pages/aboutUs.html#abus-main4">聯絡我們</a></li>
+                          </ul>
+                    </li>
+                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low dropdown"> <!--漢堡內部內容 線上估價子項目-->
+                        <a class="select-btn-set text-center" id="select-btn02-active" aria-current="page" href="../pages/oEstimate.html">
+                        線上估價
+                        </a>
+                    </li>
+                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 材料選擇子項目-->
+                        <a class="select-btn-set text-center" id="select-btn03-active" aria-current="page" href="#">材料選擇</a>
+                    </li>
+                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low  dropdown"> <!--漢堡內部內容 新手指南QA子項目-->
+                        <a class="select-btn-set text-center" id="select-btn04-active" aria-current="page" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        新手指南QA
+                            <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--新手指南QA子項目右邊icon-->
+                                arrow_drop_down
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--新手指南QA子項目下拉選項-->
+                            <li><a class="dropdown-item dropdown-item-set" href="../pages/qaPage.html#">客製化流程</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="../pages/qaPage.html#qP-main1">設計需求介紹</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="../pages/qaPage.html#qP-main2">運費說明</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="../pages/qaPage.html#qP-main3">常見問題</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-16 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 聯絡我們子項目-->
+                        <a class="select-btn-set text-center" id="select-btn05-active" aria-current="page" href="../pages/aboutUs.html">聯絡我們</a>
+                    </li>
+                </ul>
+                <div class="navbar-log1 d-block"> <!--log-in 未登錄狀態-->
+                    <button type="button" class="navbar-log1-img-box py-0 d-block mx-auto">
+                        <div class="navbar-log1-img-box">
+                            <img class="navbar-log1-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABICAYAAAD1ctupAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZrdUdtAFIWPmPy8+iEJvEVUEKeCmApCB5gKAhWQDiAVYCogqQCngrgDlDcmyQw8J9ibcyOJERqMZeLVrvH5ZjSWZMla36O99+7dBYQQQgghhBBCCCGEEEIIIYQQQjxi1p3be+XcJbfzDedSRATbNODmuJ1ilSmM4GIzxkvn+tW2vXCuh4CsISyjyv52aGOUJMBB9fgayBCQoCJNgP3qcd04IWDP+ciPtDx2wOAqSTKsMnQtZzXXsodAWFysueDzTmSxMgidmmEo2iXPdRAAPv+41pYPEDk0yEHtDW7d7VGQbr0XIRISRID1nGeAGeWmBzFYbl7cEwvMNTGmdXldh5+vGTs6SXE/96+SYuP+d27ZzyQZ3deGQpS0POY9fd5zggiIQiTDYhENflge00hDGmmrPDZReO49tx7ybV6XaKKN7Hf5nK98AYblF5Zy87vjyrMHfPYuIiEakQxLIpJcgH9wfxv5273tKucXRIZcsJNJLlBafvGbvTimjC4qkWycRKOdISB8GY7Yi/YREaEHs7e4zge3GQJCkb4gMqIRiTGnx+ThGypuJwTWk4sBbTRE4e4Yi47YkNjGJBkF27qIIDYFFckytjFwykZ0EScZk4rdX5VMMATBRCrGOZYkpIgcqzFSqCMEIkhMWiaBDBu/hYxTrfekZROoSqgqRKsiFeWf4Bnc/0Ch3s4qMS2aVt3ds7zsk2KJ4Vt92vZUf2sirefzRP2Gl2dWY0N7zPM8y0iP0SKtiFQURw8bXJpZ3exHkmxacdX2cXuKfdFYit2rPs/KQrNusvpim5OTrcQkm0zDjF5k0wt/6O/rhU2fcWxaIbVe6L2Lor12/xU8470n2TQAGrg5GmV4l8HMCDTIZyye0bRKN9vyCTOwuaunLa3J8C5S08Ul7p7C6pqHoqv1BEx/XqPewf+210YS4VWkjXyJVtrw8qmlIeenbNSdtpZiPIdrHbdQc/Qq0mSOP2AxgK5xp37e1h6geVbYmGnuynrGnEvL+r4XznhLHIrKwkMWcwxstnScT3fbzKwJ7dMIN8/j5zv2Wsva0nl+wO5hdjgzjj0UbyLV1w08ZurrMRaNN3fHH97BimCu2qfL8yaSh4UjUfOcrhKe8CLSRiQL79tk4vGl9CISe9EbrB7eZpe9iDRZ8kr3A1kukdbiXbPgDRt3+UoensADHHMMk8Dr54QQQgghhBBCCCGEEEIIIYQQQojm/AX+FpTZtpCUFwAAAABJRU5ErkJggg==" alt="log01.png">
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar-log2 d-none"> <!--log-in 登錄狀態-->
+                    <button type="button" class="navbar-log2-img-box py-0 d-block mx-auto">
+                        <div class="navbar-log2-img-box">
+                            <img class="navbar-log2-img-box" src="/web-layout-training-vite/assets/log02-74c06870.png" alt="log02.png">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="main1 pb-28 pb-xl-0">
+      <div class="main1-bg d-block d-xl-none">
+          <div class="container"><!--外框 要增加y軸pd在這邊加 sm用-->
+              <div class="row">                         <!--外框 不動--> 
+                  <div class="col-12 main1-bg-color pt-48"> <!--外框 控制欄數-->
+                      <div class="main1-content d-flex flex-column justify-content-center align-items-center row-gap-48 pb-20">           <!--內層外框-->
+                          <div class="main1-title mb-8">
+                              <h1 class="fs-32 fw-900 text-center main1-title-text-set">從想像到實物</h1>
+                              <h1 class="fs-32 fw-900 text-center main1-title-text-set">只需Come & Buy</h1>
+                          </div>
+                          <div class="main1-btn">
+                              <button class="mian-btn1-set-sm">開始製作</button>
+                          </div>
+                          <div class="main1-img-box">
+                              <img class="main1-img" src="/web-layout-training-vite/assets/main-frame-sm-de85df4e.png" alt="main-frame-sm">
+                              <img class="main-corner-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAWCAYAAADXYyzPAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAAB3klEQVRIx2P8//8/A73ACakUIwse7bMMDAwMjPSy+JF8Rbscu3gFjE9zi89LZ7EpsEusEWTh9UUWp6nFZ6QzHE241fdhk6OZxehBiwzUH7S/oL7Fav1Mn/9+283LzOWETVrobjXD+3/fqevjizI5gfpcyuuwyZk9mfD2zs/Xwu//faduUD9UqGiTZxOvxCYnc7/xzdM/H0WoHsffVTpOcjKxm6GLhz9f9Hn3t5u8MF9SzeJrsgVJKhzSBWyMLLrock5Ppj7f//2uJC69ZFv8VLFmsjSrcA6OoH379M9HYXz6Sbb4kGQSnymP+m5ORjaMoPV+Ouft8R/3hbEFLUUWX5UtTNDmlJuPTc7gUc+Hiz+fCRBrFtEWv1JqWCTGwh+LNW/eq/n5/u83dlJCjqDFR6RSFIy4VZdzMbJZoMsFPJ//+dC3O7zEBC1JFl+RLYzX4ZRbgLWAetj+7vav10Lk5gicFr9Tbl4vxMwTQK2gJWjxEalUBSNulRVcjGzm6Irdns78d+bHIyZyghavxfcVKhsU2cTqsSmMeL7478ov55mpVa7DLX6n3LJeiJmbZkGLYfFByWRZCx6NbWwMzDroknEvl/7b8uUaVYIW08eqfVhTl9fT2f+2f7vORKvWCQCa1ObxQCNV9wAAAABJRU5ErkJggg==" alt="main-sm-corner">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="main1-bg d-none d-xl-block">
+          <div class="container">        <!--外框 要增加y軸pd在這邊加 lg用-->
+              <div class="row">                         <!--外框 不動--> 
+                  <div class="col-6 "> <!--外框 控制欄數-->
+                      <div class="main1-content-L h-100 d-xl-flex flex-xl-column justify-content-xl-center align-items-xl-start">           <!--內層外框-->
+                          <div class="main1-title mb-56">
+                              <h1 class="fs-64 fw-900 main1-title-text-set mb-20">從想像到實物</h1>
+                              <h1 class="fs-64 fw-900 main1-title-text-set">只需Come & Buy</h1>
+                          </div>
+                          <div class="main1-btn">
+                              <button class="mian-btn1-set-sm">開始製作</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6"> <!--外框 控制欄數-->
+                      <div class="main1-content-R py-124">           <!--內層外框-->
+                          <div class="main1-img-box ms-auto">
+                              <img class="main1-img" src="/web-layout-training-vite/assets/main-frame-sm-de85df4e.png" alt="main-frame-sm">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+
+    <div class="main2 container-out py-64 py-lg-160">
+      <div class="container mb-64 mb-lg-96">
+          <div class="row">
+                  <div class="col-12 mb-64 col-lg-4 mb-lg-0">
+                      <div class="main2-card1 main2-card-set">
+                          <div class="main2-card1-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center align-items-center">
+                            <p class="main2-box-text d-flex justify-content-center align-items-center">設計流程標準化</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mb-64 col-lg-4 mb-lg-0">
+                      <div class="main2-card2 main2-card-set">
+                          <div class="main2-card2-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center">
+                              <p class="main2-box-text d-flex justify-content-center align-items-center">降低前期製造成本</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-lg-4 mb-lg-0">
+                      <div class="main2-card3 main2-card-set">
+                          <div class="main2-card3-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center">
+                              <p class="main2-box-text d-flex justify-content-center align-items-center">細節精準調教</p>
+                          </div>
+                      </div>
+                  </div>
+          
+          </div>
+      </div>
+      <div class="d-flex justify-content-center d-lg-none">
+          <button class="mian-btn1-set-sm text-center">線上估價</button>
+      </div>
+      <div class="d-none d-lg-flex justify-content-lg-center">
+        <button class="mian-btn1-set-sm text-center">開始製作</button>
+      </div>
+    </div>
+
     <div class="main3">
       <div class="container pt-64 pb-100 pt-lg-144 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
         <div class="row">                         <!--外框 不動-->
 
-            <div class="col-12 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-12 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main3-content">           <!--內層外框-->
 
                   <div class="main3-title pb-48">
-                    <h1 class="fs-32 text-center">線上估價</h1>
+                    <h1 class="fs-32 text-center main3-title-text-set">線上估價</h1>
                   </div>
                   <div class="main3-card">
 
                       <div class="main3-card-item1 border-bottom-set mb-64">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main-text-box pb-24">
-                          <p class="fs-24 fw-bold">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
+                          <p class="fs-24 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
                         </div>
                       </div>
 
                       <div class="main3-card-item2 mb-64">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main3-text-box border-bottom-set pb-20 mb-64">
-                          <p class="fs-24 fw-bold">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
+                          <p class="fs-24 fw-bold main3-text-set">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
                         </div>
                         <div class="main3-btn-box">
-                          <button class="fs-24 fw-bolder py-12 px-48 d-block mx-auto">線上估價</button>
+                          <button class="fw-bolder d-block mx-auto mian-btn1-set-sm">線上估價</button>
                         </div>
                       </div>
 
                       <div class="main3-card-item3 border-bottom-set">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main-text-box pb-24">
-                          <p class="fs-24 fw-bold">打樣快速交付,讓你的創意即刻成真。</p>
+                          <p class="fs-24 fw-bold main3-text-set">打樣快速交付,讓你的創意即刻成真。</p>
                         </div>
                       </div>
                   
@@ -55,43 +235,43 @@
               </div>
             </div>
 
-            <div class="col-12 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+            <div class="col-12 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
               <div class="main3-content">           <!--內層外框-->
 
                   <div class="main3-title pb-64">
-                    <h1 class="fs-64 text-center">線上估價</h1>
+                    <h1 class="fs-64 text-center main3-title-text-set">線上估價</h1>
                   </div>
                   <div class="main3-card">
 
                       <div class="main3-card-item1 d-flex justify-content-lg-center align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
-                          <p class="fs-24 fw-bold">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
+                          <p class="fs-32 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
                         </div>
                       </div>
 
                       <div class="main3-card-item2 d-flex flex-row-reverse justify-content-lg-between align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="item2-content">
                           <div class="main-text-box border-bottom-set pt-32 pb-28 mb-48">
-                            <p class="fs-24 fw-bold">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
+                            <p class="fs-32 fw-bold main3-text-set">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
                           </div>
                           <div class="main3-btn-box">
-                            <button class="fs-24 fw-bolder py-24 px-88 d-block">線上估價</button>
+                            <button class="fs-24 fw-bolder py-24 px-88 d-block mian-btn1-set-sm">開始製作</button>
                           </div>
                         </div>
                       </div>
 
-                      <div class="main3-card-item3 d-flex justify-content-lg-center align-items-lg-center gap-148">
+                      <div class="main3-card-item3 d-flex justify-content-lg-between align-items-lg-center gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
-                          <p class="fs-24 fw-bold">打樣快速交付，讓你的創意即刻成真。</p>
+                          <p class="fs-32 fw-bold main3-text-set">打樣快速交付，讓你的創意即刻成真。</p>
                         </div>
                       </div>
                 
@@ -105,82 +285,82 @@
 
     <div class="main4">
       <div class="container  pt-64 pb-100 pt-lg-144 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
-        <div class="row">                                            <!--外框 不動-->
+        <div class="row gx-xxl-48">                                            <!--外框 不動-->
             <div class="main4-title mb-48 d-lg-none">
-              <h1 class="fs-32 text-center">服務項目</h1>
+              <h1 class="fs-32 text-center main4-title-text-set">服務項目</h1>
             </div>
-            <div class="col-6 pe-6 ps-12 mb-48 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-6 pe-6 ps-12 mb-48 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main4-content">                     <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item1 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item1 mb-24 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">FDM技術</p>
                     </div>
-                    <div class="card-item2 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">SLM技術</p>
+                    <div class="card-item2 mb-24 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLM技術</p>
                     </div>
-                    <div class="card-item3 w-100 py-24 border border-dark">
-                      <p class="fs-16 fw-bolder text-center">SLS選擇性雷射燒結</p>
+                    <div class="card-item3 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLS選擇性雷射燒結</p>
                     </div>               
                   </div>
               </div>
             </div>
-            <div class="col-6 ps-6 pe-12 mb-48 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-6 ps-6 pe-12 mb-48 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main4-content">                               <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item4 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">連續碳纖維尼龍</p>
+                    <div class="card-item4 mb-24 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">連續碳纖維尼龍</p>
                     </div>
-                    <div class="card-item4 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">SLA雷射光固化</p>
+                    <div class="card-item4 mb-24 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLA雷射光固化</p>
                     </div>
-                    <div class="card-item4 w-100 py-24 border border-dark">
-                      <p class="fs-16 fw-bolder text-center">層疊製造成型</p>
+                    <div class="card-item4 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">層疊製造成型</p>
                     </div>               
                   </div>
               </div>
             </div>
-            <div class="main3-btn-box d-lg-none">
-              <button class="fs-24 fw-bolder py-12 px-48 d-block mx-auto">了解更多</button>
+            <div class="main4-btn-box d-lg-none">
+              <button class="fw-bolder d-block mx-auto mian-btn1-set-sm">了解更多</button>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
               <div class="main4-content h-100 d-flex flex-column justify-content-lg-center">           <!--內層外框-->
                   <div class="main4-title mb-48">
-                    <h1 class="fs-64">服務項目</h1>
+                    <h1 class="fs-64 main4-title-text-set">服務項目</h1>
                   </div>
                   <div class="main3-btn-box">
-                    <button class="fs-24 fw-bolder py-24 px-88 d-block">了解更多</button>
+                    <button class="fs-24 fw-bolder d-block mian-btn1-set">開始製作</button>
                   </div>
               </div>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
-              <div class="main4-content pe-12">           <!--內層外框-->   
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+              <div class="main4-content">           <!--內層外框-->   
                   <div class="main4-card">
-                    <div class="card-item1 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item1 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">FDM技術</p>
                     </div>
-                    <div class="card-item2 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item2 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">SLM技術</p>
                     </div>
-                    <div class="card-item3 w-100 py-42 border border-dark ">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item3">
+                      <p class="fs-24 fw-bolder text-center box">SLS選擇性雷射燒結</p>
                     </div>
                   </div>
               </div>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
-              <div class="main4-content ps-12">           <!--內層外框-->
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+              <div class="main4-content">           <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item4 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item4 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">連續碳纖維尼龍</p>
                     </div>
-                    <div class="card-item5 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item5 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">SLA雷射光固化</p>
                     </div>
-                    <div class="card-item6 w-100 py-42 border border-dark ">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item6">
+                      <p class="fs-24 fw-bolder text-center box">層疊製造成型</p>
                     </div>
                   </div>
               </div>
@@ -189,10 +369,366 @@
         </div>
       </div>
     </div>
-    
-    <div class="text-center">
-      <a class="fs-64" href="test.html">test</a>
+
+    <div class="main5" id="index-main5">
+      <div class="main5-title-box">
+        <h3 class="main5-title-box-set text-nautral-white text-center fs-32 fw-900 fs-xxl-64 pt-64 pb-48 pt-xxl-144 px-xxl-88 ">最新消息</h3>
+      </div>
+      <div class="container pb-64 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
+          <div class="row justify-content-center gx-0">                                            <!--外框 不動-->
+              <div class="col-8 col-lg-10 col-xl-12"> <!--外框 控制欄數 sm用-->
+                  <div class="main5-content">                     <!--內層外框-->
+
+                    <div class="swiper mySwiper mb-50 mb-xxl-96"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                      <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
+                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                            <div class="main5-content">
+                              <div class="main5-card1-box main5-card-box-set mx-auto">
+                                  <div class="main5-card1-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card1-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card1-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card1-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>  
+                            </div> 
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card2-box main5-card-box-set mx-auto">
+                                  <div class="main5-card2-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card2-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card2-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card2-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card3-box main5-card-box-set mx-auto">
+                                  <div class="main5-card3-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card3-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card3-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card3-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card4-box main5-card-box-set mx-auto">
+                                  <div class="main5-card4-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card4-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card4-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card4-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content ">
+                              <div class="main5-card5-box main5-card-box-set mx-auto">
+                                  <div class="main5-card5-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card5-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card5-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card5-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card6-box main5-card-box-set mx-auto">
+                                  <div class="main5-card6-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card6-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card6-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card6-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main5-btn-box text-center">
+                        <button class="mian-btn1-set-sm">
+                            更多消息
+                        </button>
+                    </div>
+                    <div class="swiper-next-R-btn">
+                      <button class="carousel-btn-R">
+                        <div class="img-box">
+                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 14">
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-next-L-btn">
+                      <button class="carousel-btn-L">
+                        <div class="img-box">
+                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 13">
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
+
+    <div class="footer-container-box">
+    <div class="container">
+            
+        <div class="footer-logo mb-32 mb-xl-48">
+            <div class="img-box">
+                <picture>
+                    <source srcset="https://fakeimg.pl/64x64/" media="(max-width:1200px)">
+                    <img src="https://fakeimg.pl/376x104/" alt="home-section2-1">
+                </picture>
+            </div>
+            <div class="text d-xl-none">Come & Buy</div>
+        </div>
+        
+        <div class="main d-xl-flex justify-content-xl-between mb-xl-48">
+
+            <div class="card-box mb-32 mx-auto mx-xl-0 mb-xl-0  d-xl-flex flex-xl-column justify-content-xl-between">
+                <div class="card01 card-set mb-16">
+                    <div class="card-img-box">
+                        <img src="https://fakeimg.pl/36x36/" alt="">
+                    </div>
+                    <div class="card-text footer-text-set">
+                        地址：台中市大雅區神仙路1號
+                    </div>
+                </div>
+                <div class="card02 card-set mb-16">
+                    <div class="card-img-box">
+                        <img src="https://fakeimg.pl/36x36/" alt="">
+                    </div>
+                    <div class="card-text footer-text-set">
+                        come_and_buy@comebuy.com
+                    </div>
+                </div>
+                <div class="card03 card-set mb-16">
+                    <div class="card-img-box">
+                        <img src="https://fakeimg.pl/36x36/" alt="">
+                    </div>
+                    <div class="card-text footer-text-set">
+                        (04)9408-1688
+                    </div>
+                </div>
+                <div class="card04 card-set ">
+                    <div class="card-img-box">
+                        <img src="https://fakeimg.pl/36x36/" alt="">
+                    </div>
+                    <div class="card-text footer-text-set">
+                        9:00am - 18:00pm
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article">
+                <div class="text-content d-flex gap-32 justify-content-center mb-32 gap-xl-48 mb-xl-48">
+                    <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">線上估價</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">服務項目</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">最新消息</span>
+                    </div>
+                    <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">材料介紹</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">設備介紹</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">專利介紹</span>
+                    </div>
+                    <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">公司介紹</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">售後服務</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">運費說明</span>
+                        <span class="fs-16 fw-medium d-xl-none footer-text-set">聯絡我們</span>
+                    </div>
+                    <div class="text-box d-flex flex-column d-none d-xl-block">
+                        <span class="fs-xl-24 fw-medium footer-text-set">聯絡我們</span>
+                    </div>
+                </div>
+
+                <div class="footer-icon d-flex justify-content-center gap-32 mb-32  justify-content-xl-start mb-xl-0">
+                    <div class="footer-icon-box">
+                        <img src="https://fakeimg.pl/40x40/" alt="">
+                    </div>
+                    <div class="footer-icon-box">
+                        <img src="https://fakeimg.pl/40x40/" alt="">
+                    </div>
+                    <div class="footer-icon-box">
+                        <img src="https://fakeimg.pl/40x40/" alt="">
+                    </div>
+                    <div class="footer-icon-box">
+                        <img src="https://fakeimg.pl/40x40/" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-text-set text-center px-12 fs-16 footer-footer-set mx-auto  fs-xl-24 py-xl-48 ">
+            Come_and_Buy © 2021, In Here. All Rights Reserved.隱私權政策
+        </div>
+
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">/*使用swiper輪播插件需要插入的javascript*/
+    </script>
+    <script>/*swiper輪播插件自定義的參數放置位置*/
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, /*要顯示的輪播片數量*/
+            spaceBetween: 0, /*輪播片與輪播片的間隔設定單位為px*/
+            loop: true, /*循環功能 true為開啟 false為關閉*/
+            navigation: { /*上一張與下一張的按鈕設定*/
+                nextEl: ".swiper-next-R-btn", /*下一張的按鈕設定*/
+                prevEl: ".swiper-button-prev"  /*上一張的按鈕設定*/
+            },
+            pagination: {/*顯示分頁設定*/
+                el: ".swiper-pagination-custom",/*與class:swiper-pagination-custom進行對應*/
+                type: "fraction"/*型態為數字記錄*/
+            },
+            breakpoints: { //RWD斷點設定
+                992: { //如果螢幕大於992px則套用以下程式
+                //slidesPerGroup: 2,/*畫面群組 若是設定2 會將兩個投影片數量當成一個*/
+                slidesPerView: 2,
+                spaceBetween: 0
+                },
+                1200: { //如果螢幕大於1200px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 0
+                },
+                1400: { //如果螢幕大於1400px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 0
+                }
+            }
+        });
+    </script>
     
   </body>
 </html>
