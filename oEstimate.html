@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>oEstimate</title>
-    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-89a6995c.js"></script>
-    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-cd6b99f3.css">
+    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-b031ce1d.js"></script>
+    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-9eca79e0.css">
   </head>
   <body>
     <nav class="navbar fixed-top nav-bg-set nav-border-set w-100 pt-24 pb-20 px-16 navbar-expand-xxl py-xxl-16"> <!--最外層 pd放這邊 navbar-expand-lg-->
@@ -93,505 +93,448 @@
         </div>
     </div>
 </nav>
-    <div class="oEstimate-main1 w-100 oEstimate-main1-bg-set">
-      <div class="container py-48"> <!--sm~xl 標籤內容切換用-->
-        <div class="row">
-            <div class="col-12">
-
-                <div class="oEstimate-main1-title-sm-box mb-24 mb-xl-64">
-                    <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">線上估價</h3>
-                </div>
-
-                <div class="oEstimate-main1-upLord-content-sm-box py-16 py-xl-0 mb-24 mb-xl-64">
-
-                    <div class="upLord-sm-body p-16 d-xl-flex justify-content-xl-between align-items-xl-center py-xl-40 px-xl-56">
-
-                        <div class="upLord-title-text-sm-box">
-                            <div class="upLord-title-sm-box mb-24">
-                                <h5 class="fs-24 fw-700 text-primary1 fs-xl-32 fw-xl-900">圖檔上傳</h5>
-                            </div>
-
-                            <div class="upLord-text-sm-box d-flex flex-column row-gap-8 mb-24 mb-xl-0">
-                                <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">請上傳檔案或將檔案拖曳至此</p>
-                                <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">最多上傳10個檔案</p>
-                                <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">格式：.stl | 大小: &lt; 30MB</p> <!--格式：.stl | 大小： < 30MB-->
-                            </div>
-                        </div>
-
-                        <div class="upLord-btn-sm-box d-none d-xl-block"> <!--xl用按鈕-->
-                            <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center  py-xl-22 px-xl-22">
-                                <div class="upLord-btn-img-sm-set">
-                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAYAAAC4e0AJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAWJAAAFiQBmxXGFAAAABt0RVh0U29mdHdhcmUAQ2Vsc3lzIFN0dWRpbyBUb29swafhfAAAAQtJREFUaEPt2kEKgkAUBuCxTbtu0i5oV7foIHWA6AadoC4R3qELSLRzmZt2UkYzOXuV9+B/mvALs9HH/8ZvYAbBxIGvYndZzTbzRVPsdHk6Ju7gwS1xcd77b2i5Xtd8i+tkkMTJG6CKIikvYjIoorwBqiiS8iImgyLKG6CKIikvYjIoorwBqiiS8iImg6Le5cv0vkaNtq+oeP+dPQKsj9tPXAzravivz6pbcebkh1gdyg+hHnuOXz5u9WWa1VslZnStxCd/1lslqI8LCfyY6v2QQr4BJ4/U1GRRXqOFrKU8UlOTRXmNFrKW8khNTRblNVrIWsojNTVZlNdoIWtHLR9/nIj/GDSNAP50+wFO198pTqPEVQAAAABJRU5ErkJggg==" alt="upLord-btn">
-                                </div>
-                            </button>
-                        </div>
-
-                        <div class="upLord-fileFormat-sm-box mb-24 mb-xl-0">
-                            <button class="upLord-fileFormat-sm-box-set d-flex align-items-center me-4">
-                                <span class="material-symbols-outlined">
-                                    error 
-                                </span>
-                                檔案格式說明
-                            </button>
-                        </div>
-
-                        <div class="upLord-btn-sm-box d-block d-xl-none">
-                            <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center">
-                                <div class="upLord-btn-img-sm-set">
-                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAYAAAC4e0AJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAWJAAAFiQBmxXGFAAAABt0RVh0U29mdHdhcmUAQ2Vsc3lzIFN0dWRpbyBUb29swafhfAAAAQtJREFUaEPt2kEKgkAUBuCxTbtu0i5oV7foIHWA6AadoC4R3qELSLRzmZt2UkYzOXuV9+B/mvALs9HH/8ZvYAbBxIGvYndZzTbzRVPsdHk6Ju7gwS1xcd77b2i5Xtd8i+tkkMTJG6CKIikvYjIoorwBqiiS8iImgyLKG6CKIikvYjIoorwBqiiS8iImg6Le5cv0vkaNtq+oeP+dPQKsj9tPXAzravivz6pbcebkh1gdyg+hHnuOXz5u9WWa1VslZnStxCd/1lslqI8LCfyY6v2QQr4BJ4/U1GRRXqOFrKU8UlOTRXmNFrKW8khNTRblNVrIWsojNTVZlNdoIWtHLR9/nIj/GDSNAP50+wFO198pTqPEVQAAAABJRU5ErkJggg==" alt="upLord-btn">
-                                </div>
-                            </button>
-                        </div>
- 
-                    </div>    
-                </div>
-            </div>
-            <div class="col-12 col-xl-4">
-                <div class="oEstimate-main1-box2 py-16 py-xl-0 mb-24">
-                    <div class="oEstimate-main1-title2-sm-box mb-16 mb-xl-48">
-                        <h3 class="fs-32 fw-900 text-nautral-white">圖檔上傳預覽</h3>
-                    </div>
-
-                    <div class="oEstimate-main1-upLord-img-sm-box">
-                        <div class="oEstimate-main1-upLord-img-sm-box-set py-16 px-12 py-xl-64 px-xl-auto row-gap-16 row-gap-xl-48 d-flex flex-column justify-content-center align-items-center">
-                            <div class="oEstimate-main1-upLord-btn-img-sm-set">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABCCAYAAAAIY7vrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIJSURBVHgB7ZrhTcMwEIVfEf+BCcgGwARkhDIB3YAyQbtBywQVE8AGLhPQDTpCYYLjnKSoKmntJG7ioPdJJ0vRqWk+nR0nF4AQQgghhDRHRFINo7GRuDEajwiN/uhY+sfU9/oGHgISHdboJw+DweDdlXQGNxP0lyefJJ9K2Ohwif5ypdXwdSzhHG7KBMw1nGXWMncas5LjFxqNJZSxUrsfiAitWGdVH8JnTfj3UAIoIYMSQAkZlABKyKAEUEIGJYASMigBlJBBCaCEDEpApBL0BUmrr/Oik1AI+NRxjJaIsRLse8LEjioiRQtEJaFomIx2Di3amBonlaAXMPQta827xd8eR6Lxhq450OJy9vps50pjXeSnFXLLcIqUvFdaxjWaUkeCLeG9i9oU7bxD+UbcpI5z1pZwqukwRV7KW+y8NlIyvyVfB1K4WUjLt85fpGIlyPEOttnLHUk1zJHzxjEdJJ/bLmY7uWupzhiBJdRtw5UK0MF4pNpK+dbRikxQHbt/sG3AJQIRck3YbnJ8mKCegC0LCbg+BJEg+eI2RHskCLh/aCxBBdiL7+JDjlQCPV+EWBNs73+EjrDTwvURhovGEkIuUF3BlyqghAxKQP01we72UsTFDWrCT/jgNx2W6C8rn9unj4QX9Je5T5JTQrEPeEb/mOp/f0VIikdfI/FjNO5BCCGEEELC8AOaz2sdd1J+FAAAAABJRU5ErkJggg==" alt="upLord-btn">
-                            </div>
-                            <div class="oEstimate-main1-upLord-text-box d-flex flex-column justify-content-center align-items-center row-gap-xl-12">
-                                <p class="fs-16 fw-500 lh-15 text-nautral-white d-block d-xl-none">目前無檔案，請上傳圖檔進行估價確認</p>
-                                <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">目前無檔案</p>
-                                <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">請上傳圖檔進行估價確認</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-8">
-                <div class="oEstimate-main1-box3 mb-xl-64">
-                    <div class="oEstimate-main1-title3-sm-box d-none d-xl-block mb-xl-48">
-                        <h3 class="fs-32 fw-900 text-nautral-white">圖檔資料</h3>
-                    </div>
-                    <div class="oEstimate-main1-numTable">
-                        <div class="row1 d-flex align-items-center">
-                            <div class="row1-sm-set-1">檔案</div>
-                            <div class="row1-sm-set-1">數量</div>
-                            <div class="row1-sm-set-2">估價</div>
-                            <div class="row1-sm-set-2">材質</div>
-                            <div class="row1-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-                        <div class="row2 d-flex align-items-center">
-                            <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                <p>monstera_ad</p>
-                                <p>ansonii.stl</p>
-                            </div>
-                            <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
-                                <p>12</p>
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
-                            </div>
-                            <div class="row2-sm-set-3">
-                                $360
-                            </div>
-                            <div class="row2-sm-set-3">
-                                PLA白
-                            </div>
-                            <div class="row2-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-                        <div class="row3 d-flex align-items-center">
-                            <div class="row3-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                <p>monstera_ad</p>
-                                <p>ansonii.stl</p>
-                            </div>
-                            <div class="row3-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
-                                <p>12</p>
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
-                            </div>
-                            <div class="row3-sm-set-3">
-                                $360
-                            </div>
-                            <div class="row3-sm-set-3">
-                                PLA白
-                            </div>
-                            <div class="row3-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-                        <div class="row4 d-flex align-items-center">
-                            <div class="row4-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                <p>monstera_ad</p>
-                                <p>ansonii.stl</p>
-                            </div>
-                            <div class="row4-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
-                                <p>12</p>
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
-                            </div>
-                            <div class="row4-sm-set-3">
-                                $360
-                            </div>
-                            <div class="row4-sm-set-3">
-                                PLA白
-                            </div>
-                            <div class="row4-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-                        <div class="row5 d-flex align-items-center">
-                            <div class="row5-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                <p>monstera_ad</p>
-                                <p>ansonii.stl</p>
-                            </div>
-                            <div class="row5-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
-                                <p>12</p>
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
-                            </div>
-                            <div class="row5-sm-set-3">
-                                $360
-                            </div>
-                            <div class="row5-sm-set-3">
-                                PLA白
-                            </div>
-                            <div class="row5-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-                        <div class="row6 d-flex align-items-center">
-                            <div class="row6-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                <p>monstera_ad</p>
-                                <p>ansonii.stl</p>
-                            </div>
-                            <div class="row6-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
-                                <p>12</p>
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
-                            </div>
-                            <div class="row6-sm-set-3">
-                                $360
-                            </div>
-                            <div class="row6-sm-set-3">
-                                PLA白
-                            </div>
-                            <div class="row6-sm-img-set d-flex justify-content-center align-items-center">
-                                <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="oEstimate-main1-footer-btn d-none d-xl-block d-xl-flex justify-content-xl-center align-items-xl-center">
-                    <button class="pagination-btn01">
-                        <div class="pagination-img-box01">
-                            <img class="pagination-img01-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAkCAYAAADl9UilAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAACaElEQVRYw82YTW7aUBSFvytQ1c7cUeMqA9gBS0h3kK6gsAKMKqLMMKOiEhWzAtoVhB2U7oAdlEEl2k7KIAMigW8HQEKsZ/sBNsFDzM/Hu+ece2RRVU7xki6uV0SHnk4npwAUiFtawAfpcvYdtBIi/Sud+s8JdSOuL0hd0fEajIv1vUkR3h379G7EvQDtgVTWL42iYACE0H7BPPD03yzfsb12lrzyFa1HbpnBNqcn4H/U6bc8oD7Lm8sChYGijuF2ItjKHfC1AO2sxrsW9yDpN63Asjy9LXE7KW+1Bnv4QBFqu56eQdxkDfZgDptoSRB3PmCb8SrL9039O95D3LmCGc1hKe78wbbNoVC2FHc62CfOSgVoCVRPZH+PFlCTTbvoiltlBVh6DhqFCVBt6vQHgGzXnkDKTsi8HsIRl7nMQIM75n1/awWKqY91xC0VkVvQyjHGdm3IxcQ+ltd4FSZK2LjSP8O9+1hH3IzNocEd923f0Fz26mNdOa/A8vaA0xsphUZTf43NK4sBj98dl2MaFJG+CfCLuK3dzCEzJfSb+rufex+zH2/S2N56Aq1c+licORQdg3ibTHp6SueVBcteah9bJb/0BL1M+OezOHMEUnYW3LdAvbSxLXjpAa08kj/WHB1xS3Pmsxi3RcVt1GLIsraJkCcBu4t24syxR402atGY/JbRkFi3U8S9FSH4Ji1K0iMCm2iImsOuRsdr0Qrscbx25iggTlqNVmS4RBvXKTIQ24cqh+7NaK1JjeVdnvYcsDf9aK3JFGyPvRlba3IBSzdHurhzBTObI34/HhUsYo6ftuI+GljW139Gwtjm1v/h4QAAAABJRU5ErkJggg==" alt="Vector 15">
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div> 
-
-    <div class="oEstimate-main2 w-100 oEstimate-main2-bg-set">
-        <div class="container py-100">
+    <div class="all">
+        <div class="oEstimate-main1 w-100 oEstimate-main1-bg-set">
+        <div class="container py-48"> <!--sm~xl 標籤內容切換用-->
             <div class="row">
-                <div class="col-12 ">
-                    <div class="oEstimate-main2-title-sm-box mb-24 mb-xl-64">
-                        <h3 class="fs-32 fw-900 lh-15 text-center text-nautral-white fs-xl-64 text-xl-start">材料選擇</h3>
+                <div class="col-12">
+
+                    <div class="oEstimate-main1-title-sm-box mb-24 mb-xl-64">
+                        <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">線上估價</h3>
                     </div>
-                    <div class="oEstimate-main2-btn-box d-flex">
-                        <button class="oEstimate-main2-btn oEstimate-main2-btn-on">
-                            3D列印
-                        </button>
-                        <button class="oEstimate-main2-btn">
-                            3D列印
-                        </button>
-                    </div>
-                    <div class="oEstimate-main2-swiper w-100 py-20 d-flex justify-content-center align-items-center mb-32 mb-xl-72">
-                        <div class="oEstimate-main2-swiper-box w-100">                     <!--內層外框-->
 
-                            <div class="swiper mySwiper oEstimate-main2-mySwiper-set"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
-                                <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
-                                    <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+                    <div class="oEstimate-main1-upLord-content-sm-box py-16 py-xl-0 mb-24 mb-xl-64">
 
-                                        <div class="oEstimate-main2-card-content-box mx-auto">
-                                            <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
-                                                <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
-                                                    <picture>
-                                                        <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
-                                                        <img src="https://fakeimg.pl/215x144/" alt="215x144">
-                                                    </picture>  
-                                                </div>
-                                                <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-32">
-                                        
-                                                    <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
-                                                        <div class="oEstimate-main2-card1-text">
-                                                            <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
-                                                            <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="secondary-btn1-box d-none d-xl-block">
-                                                        <button class="secondary-btn1-set d-flex align-items-center me-4">
-                                                            選擇我
-                                                        
-                                                            <span class="material-symbols-outlined sec-btn1-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                            
-                                                        </button>
-                                                    </div>
-                                                    <div class="secondary-btn2-box d-block d-xl-none">
-                                                        <button class="secondary-btn2-set d-flex align-items-center me-4">
-                                                            選擇我
-                                        
-                                                            <span class="material-symbols-outlined sec-btn2-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                        </button>
-                                                    </div>
+                        <div class="upLord-sm-body p-16 d-xl-flex justify-content-xl-between align-items-xl-center py-xl-40 px-xl-56">
 
-                                                </div>   
-                                            </div>  
-                                        </div> 
+                            <div class="upLord-title-text-sm-box">
+                                <div class="upLord-title-sm-box mb-24">
+                                    <h5 class="fs-24 fw-700 text-primary1 fs-xl-32 fw-xl-900">圖檔上傳</h5>
+                                </div>
 
-                                    </div>
-                                    <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
-
-                                        <div class="oEstimate-main2-card-content-box mx-auto">
-                                            <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
-                                                <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
-                                                    <picture>
-                                                        <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
-                                                        <img src="https://fakeimg.pl/215x144/" alt="215x144">
-                                                    </picture>  
-                                                </div>
-                                                <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
-                                        
-                                                    <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
-                                                        <div class="oEstimate-main2-card1-text">
-                                                            <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
-                                                            <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="secondary-btn1-box d-none d-xl-block">
-                                                        <button class="secondary-btn1-set d-flex align-items-center me-4">
-                                                            選擇我
-                                                        
-                                                            <span class="material-symbols-outlined sec-btn1-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                            
-                                                        </button>
-                                                    </div>
-                                                    <div class="secondary-btn2-box d-block d-xl-none">
-                                                        <button class="secondary-btn2-set d-flex align-items-center me-4">
-                                                            選擇我
-                                        
-                                                            <span class="material-symbols-outlined sec-btn2-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                        </button>
-                                                    </div>
-
-                                                </div>   
-                                            </div>  
-                                        </div> 
-
-                                    </div>
-                                    <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
-
-                                        <div class="oEstimate-main2-card-content-box mx-auto">
-                                            <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
-                                                <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
-                                                    <picture>
-                                                        <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
-                                                        <img src="https://fakeimg.pl/215x144/" alt="215x144">
-                                                    </picture>  
-                                                </div>
-                                                <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
-                                        
-                                                    <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
-                                                        <div class="oEstimate-main2-card1-text">
-                                                            <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
-                                                            <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="secondary-btn1-box d-none d-xl-block">
-                                                        <button class="secondary-btn1-set d-flex align-items-center me-4">
-                                                            選擇我
-                                                        
-                                                            <span class="material-symbols-outlined sec-btn1-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                            
-                                                        </button>
-                                                    </div>
-                                                    <div class="secondary-btn2-box d-block d-xl-none">
-                                                        <button class="secondary-btn2-set d-flex align-items-center me-4">
-                                                            選擇我
-                                        
-                                                            <span class="material-symbols-outlined sec-btn2-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                        </button>
-                                                    </div>
-
-                                                </div>   
-                                            </div>  
-                                        </div> 
-
-                                    </div>
-                                    <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
-
-                                        <div class="oEstimate-main2-card-content-box mx-auto">
-                                            <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
-                                                <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
-                                                    <picture>
-                                                        <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
-                                                        <img src="https://fakeimg.pl/215x144/" alt="215x144">
-                                                    </picture>  
-                                                </div>
-                                                <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
-                                        
-                                                    <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
-                                                        <div class="oEstimate-main2-card1-text">
-                                                            <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
-                                                            <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="secondary-btn1-box d-none d-xl-block">
-                                                        <button class="secondary-btn1-set d-flex align-items-center me-4">
-                                                            選擇我
-                                                        
-                                                            <span class="material-symbols-outlined sec-btn1-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                            
-                                                        </button>
-                                                    </div>
-                                                    <div class="secondary-btn2-box d-block d-xl-none">
-                                                        <button class="secondary-btn2-set d-flex align-items-center me-4">
-                                                            選擇我
-                                        
-                                                            <span class="material-symbols-outlined sec-btn2-img-set">
-                                                                chevron_right
-                                                            </span>
-                                                        </button>
-                                                    </div>
-
-                                                </div>   
-                                            </div>  
-                                        </div> 
-
-                                    </div>
+                                <div class="upLord-text-sm-box d-flex flex-column row-gap-8 mb-24 mb-xl-0">
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">請上傳檔案或將檔案拖曳至此</p>
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">最多上傳10個檔案</p>
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">格式：.stl | 大小: &lt; 30MB</p> <!--格式：.stl | 大小： < 30MB-->
                                 </div>
                             </div>
-                            <div class="swiper-next-R-btn">
-                                <button class="carousel-btn-R">
-                                    <div class="img-box">
-                                        <img class="img-set" src="data:image/png;base64,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" alt="Vector 14">
+
+                            <div class="upLord-btn-sm-box d-none d-xl-block"> <!--xl用按鈕-->
+                                <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center  py-xl-22 px-xl-22">
+                                    <div class="upLord-btn-img-sm-set">
+                                        <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAYAAAC4e0AJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAWJAAAFiQBmxXGFAAAABt0RVh0U29mdHdhcmUAQ2Vsc3lzIFN0dWRpbyBUb29swafhfAAAAQtJREFUaEPt2kEKgkAUBuCxTbtu0i5oV7foIHWA6AadoC4R3qELSLRzmZt2UkYzOXuV9+B/mvALs9HH/8ZvYAbBxIGvYndZzTbzRVPsdHk6Ju7gwS1xcd77b2i5Xtd8i+tkkMTJG6CKIikvYjIoorwBqiiS8iImgyLKG6CKIikvYjIoorwBqiiS8iImg6Le5cv0vkaNtq+oeP+dPQKsj9tPXAzravivz6pbcebkh1gdyg+hHnuOXz5u9WWa1VslZnStxCd/1lslqI8LCfyY6v2QQr4BJ4/U1GRRXqOFrKU8UlOTRXmNFrKW8khNTRblNVrIWsojNTVZlNdoIWtHLR9/nIj/GDSNAP50+wFO198pTqPEVQAAAABJRU5ErkJggg==" alt="upLord-btn">
                                     </div>
                                 </button>
                             </div>
-                            <div class="swiper-next-L-btn">
-                                <button class="carousel-btn-L">
-                                    <div class="img-box">
-                                        <img class="img-set" src="data:image/png;base64,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" alt="Vector 13">
+
+                            <div class="upLord-fileFormat-sm-box mb-24 mb-xl-0">
+                                <button class="upLord-fileFormat-sm-box-set d-flex align-items-center me-4">
+                                    <span class="material-symbols-outlined">
+                                        error 
+                                    </span>
+                                    檔案格式說明
+                                </button>
+                            </div>
+
+                            <div class="upLord-btn-sm-box d-block d-xl-none">
+                                <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center">
+                                    <div class="upLord-btn-img-sm-set">
+                                        <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAuCAYAAAC4e0AJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAWJAAAFiQBmxXGFAAAABt0RVh0U29mdHdhcmUAQ2Vsc3lzIFN0dWRpbyBUb29swafhfAAAAQtJREFUaEPt2kEKgkAUBuCxTbtu0i5oV7foIHWA6AadoC4R3qELSLRzmZt2UkYzOXuV9+B/mvALs9HH/8ZvYAbBxIGvYndZzTbzRVPsdHk6Ju7gwS1xcd77b2i5Xtd8i+tkkMTJG6CKIikvYjIoorwBqiiS8iImgyLKG6CKIikvYjIoorwBqiiS8iImg6Le5cv0vkaNtq+oeP+dPQKsj9tPXAzravivz6pbcebkh1gdyg+hHnuOXz5u9WWa1VslZnStxCd/1lslqI8LCfyY6v2QQr4BJ4/U1GRRXqOFrKU8UlOTRXmNFrKW8khNTRblNVrIWsojNTVZlNdoIWtHLR9/nIj/GDSNAP50+wFO198pTqPEVQAAAABJRU5ErkJggg==" alt="upLord-btn">
                                     </div>
                                 </button>
                             </div>
+    
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="oEstimate-main1-box2 py-16 py-xl-0 mb-24">
+                        <div class="oEstimate-main1-title2-sm-box mb-16 mb-xl-48">
+                            <h3 class="fs-32 fw-900 text-nautral-white">圖檔上傳預覽</h3>
+                        </div>
+
+                        <div class="oEstimate-main1-upLord-img-sm-box">
+                            <div class="oEstimate-main1-upLord-img-sm-box-set py-16 px-12 py-xl-64 px-xl-auto row-gap-16 row-gap-xl-48 d-flex flex-column justify-content-center align-items-center">
+                                <div class="oEstimate-main1-upLord-btn-img-sm-set">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABCCAYAAAAIY7vrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIJSURBVHgB7ZrhTcMwEIVfEf+BCcgGwARkhDIB3YAyQbtBywQVE8AGLhPQDTpCYYLjnKSoKmntJG7ioPdJJ0vRqWk+nR0nF4AQQgghhDRHRFINo7GRuDEajwiN/uhY+sfU9/oGHgISHdboJw+DweDdlXQGNxP0lyefJJ9K2Ohwif5ypdXwdSzhHG7KBMw1nGXWMncas5LjFxqNJZSxUrsfiAitWGdVH8JnTfj3UAIoIYMSQAkZlABKyKAEUEIGJYASMigBlJBBCaCEDEpApBL0BUmrr/Oik1AI+NRxjJaIsRLse8LEjioiRQtEJaFomIx2Di3amBonlaAXMPQta827xd8eR6Lxhq450OJy9vps50pjXeSnFXLLcIqUvFdaxjWaUkeCLeG9i9oU7bxD+UbcpI5z1pZwqukwRV7KW+y8NlIyvyVfB1K4WUjLt85fpGIlyPEOttnLHUk1zJHzxjEdJJ/bLmY7uWupzhiBJdRtw5UK0MF4pNpK+dbRikxQHbt/sG3AJQIRck3YbnJ8mKCegC0LCbg+BJEg+eI2RHskCLh/aCxBBdiL7+JDjlQCPV+EWBNs73+EjrDTwvURhovGEkIuUF3BlyqghAxKQP01we72UsTFDWrCT/jgNx2W6C8rn9unj4QX9Je5T5JTQrEPeEb/mOp/f0VIikdfI/FjNO5BCCGEEELC8AOaz2sdd1J+FAAAAABJRU5ErkJggg==" alt="upLord-btn">
+                                </div>
+                                <div class="oEstimate-main1-upLord-text-box d-flex flex-column justify-content-center align-items-center row-gap-xl-12">
+                                    <p class="fs-16 fw-500 lh-15 text-nautral-white d-block d-xl-none">目前無檔案，請上傳圖檔進行估價確認</p>
+                                    <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">目前無檔案</p>
+                                    <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">請上傳圖檔進行估價確認</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="oEstimate-main2-footer-btn-box d-flex justify-content-center align-items-center">
-                        <button class="pagination-btn02">
-                            <div class="pagination-img-box02">
-                                <img class="pagination-img02-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAABx0lEQVRYw82X0XWCQBBFLx1QAunAEkwHpoJIBWoFkgqUCkwqiB1EO7CDUAIdbH5mczaEZQdY0P3UVa4z770ZE2PMFjgDFY9xMuA1McZ8AQugBIo7QxXABrhZsKW8UQHPd6jeEjhIgQAuTTB73oAjUE8MlDpVco8XzFavAD4mgloBJ4GjD5g971LBKqK4T4FnqsBiVs+2LQ3cU4P9fgDIB1SvKW5ig7nmKEaIezIw294X4DZA3JOC+cyhEfcsYK45npTiVoFlwB5YP8isvAB5YoyxL6wFMLsTUCUMVwAXzLpoM/Mwr2X8le4IbIK56fzZI3dGta0tF5PAPjZVeytgJ88dvI/FNsdR4qWOtY8tpL3ZiLbtPIG8lOzLQjlmxdgGuO9pjlrul3PsY9r2drVtK98xyT7mM8dNHnz1SOKg2ccyubgKtMNnjlTgtoq22SpFT/4uc2QCVivE7fvxuY2QZsD20U6pWBi1m8Y/LfqSXxMNoXW7S9xu24o2LfrA+kRD0xyaNbpLiyow2w6tOVLFGn2WoO2UgQYs1tz8s9aETh+wMXOzaK41scH6zs2hf/cGg4XMERT31GBt5uiaj7OCueb41oo7dH4AGo4I+kN+acQAAAAASUVORK5CYII=" alt="Vector 16">
+                </div>
+                <div class="col-12 col-xl-8">
+                    <div class="oEstimate-main1-box3 mb-xl-64">
+                        <div class="oEstimate-main1-title3-sm-box d-none d-xl-block mb-xl-48">
+                            <h3 class="fs-32 fw-900 text-nautral-white">圖檔資料</h3>
+                        </div>
+                        <div class="oEstimate-main1-numTable">
+                            <div class="row1 d-flex align-items-center">
+                                <div class="row1-sm-set-1">檔案</div>
+                                <div class="row1-sm-set-1">數量</div>
+                                <div class="row1-sm-set-2">估價</div>
+                                <div class="row1-sm-set-2">材質</div>
+                                <div class="row1-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+                            <div class="row2 d-flex align-items-center">
+                                <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="row2-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row2-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row2-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+                            <div class="row3 d-flex align-items-center">
+                                <div class="row3-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row3-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="row3-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row3-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row3-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+                            <div class="row4 d-flex align-items-center">
+                                <div class="row4-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row4-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="row4-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row4-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row4-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+                            <div class="row5 d-flex align-items-center">
+                                <div class="row5-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row5-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="row5-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row5-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row5-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+                            <div class="row6 d-flex align-items-center">
+                                <div class="row6-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row6-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7dPtDUAwEAbgt2IANjCKTVjBBjZhFJuwARvUS/yQC/oV/+5JLo1onUvvABXCWtsyVhtvZjT3bxqRYOZSIc1mjCnxUsEJkZ7OZ/iZJnDKv17yviouNb4t7JoJPmQXXHPhMrydd1ZAx1yMjj0TfOkcaIIosk03RpHSSbTcH2QFndwQ6PjBHirEDjegsfB4DPZNAAAAAElFTkSuQmCC" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgB7ZRRCoAgDIa38AB1g25WV+gG3dRukDdYKxBkpDGl8sEPhqhz2z+GAA0NRDSz7ZSPZZvCmCgSWF5GKMMh4gARBReQyd37Dl5GlSBHYV0KqkxgUpexfstzHkuMxfhXgazMV56qWNKm6BGjcdb03vO5AsfWl/yozBZupIJFOig5C1yhoeEAvpp3+vgwqAEAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                <div class="row6-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row6-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row6-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7djLDYMwEEXRIUoBKYFS6SjpIC2kk6SDiS3FG1ZDsP343CN5gWTBPLBHwmYAcAjuPnncZFuysPiqIYboxPxE62hIIvMutnMEwNmFu1DRuhtFu0/BJlbbfYCrrbR0zc6t3VMsITUCqBFAjQBqBFAjgBoB1AigRgC1U/4Tf9K4lYvep9Zz/3yBl7XzsNbSCx/TeHt9+Z6j9fALcfc6cuHPbsUDQFVfV58rckACbh0AAAAASUVORK5CYII=" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="oEstimate-main1-footer-btn d-none d-xl-block d-xl-flex justify-content-xl-center align-items-xl-center">
+                        <button class="pagination-btn01">
+                            <div class="pagination-img-box01">
+                                <img class="pagination-img01-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAkCAYAAADl9UilAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAACaElEQVRYw82YTW7aUBSFvytQ1c7cUeMqA9gBS0h3kK6gsAKMKqLMMKOiEhWzAtoVhB2U7oAdlEEl2k7KIAMigW8HQEKsZ/sBNsFDzM/Hu+ece2RRVU7xki6uV0SHnk4npwAUiFtawAfpcvYdtBIi/Sud+s8JdSOuL0hd0fEajIv1vUkR3h379G7EvQDtgVTWL42iYACE0H7BPPD03yzfsb12lrzyFa1HbpnBNqcn4H/U6bc8oD7Lm8sChYGijuF2ItjKHfC1AO2sxrsW9yDpN63Asjy9LXE7KW+1Bnv4QBFqu56eQdxkDfZgDptoSRB3PmCb8SrL9039O95D3LmCGc1hKe78wbbNoVC2FHc62CfOSgVoCVRPZH+PFlCTTbvoiltlBVh6DhqFCVBt6vQHgGzXnkDKTsi8HsIRl7nMQIM75n1/awWKqY91xC0VkVvQyjHGdm3IxcQ+ltd4FSZK2LjSP8O9+1hH3IzNocEd923f0Fz26mNdOa/A8vaA0xsphUZTf43NK4sBj98dl2MaFJG+CfCLuK3dzCEzJfSb+rufex+zH2/S2N56Aq1c+licORQdg3ibTHp6SueVBcteah9bJb/0BL1M+OezOHMEUnYW3LdAvbSxLXjpAa08kj/WHB1xS3Pmsxi3RcVt1GLIsraJkCcBu4t24syxR402atGY/JbRkFi3U8S9FSH4Ji1K0iMCm2iImsOuRsdr0Qrscbx25iggTlqNVmS4RBvXKTIQ24cqh+7NaK1JjeVdnvYcsDf9aK3JFGyPvRlba3IBSzdHurhzBTObI34/HhUsYo6ftuI+GljW139Gwtjm1v/h4QAAAABJRU5ErkJggg==" alt="Vector 15">
                             </div>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div> 
 
-    <div class="oEstimate-main3 w-100 oEstimate-main3-bg-set">
-      <div class="container py-64 py-xxl-144">
-        <div class="row">
-          <div  class="col-12">
+        <div class="oEstimate-main2 w-100 oEstimate-main2-bg-set">
+            <div class="container py-100">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="oEstimate-main2-title-sm-box mb-24 mb-xl-64">
+                            <h3 class="fs-32 fw-900 lh-15 text-center text-nautral-white fs-xl-64 text-xl-start">材料選擇</h3>
+                        </div>
+                        <div class="oEstimate-main2-btn-box d-flex">
+                            <button class="oEstimate-main2-btn oEstimate-main2-btn-on">
+                                3D列印
+                            </button>
+                            <button class="oEstimate-main2-btn">
+                                3D列印
+                            </button>
+                        </div>
+                        <div class="oEstimate-main2-swiper w-100 py-20 d-flex justify-content-center align-items-center mb-32 mb-xl-72">
+                            <div class="oEstimate-main2-swiper-box w-100">                     <!--內層外框-->
 
-                <div class="oEstimate-main3-title-sm-box mb-24 mb-xl-64">
-                    <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">規格設置</h3>
-                </div>
+                                <div class="swiper mySwiper oEstimate-main2-mySwiper-set"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                                    <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
 
-          </div>
-          <div class="col-12 mb-32 mb-xl-72">
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
 
-                <div class="oEstimate-main3-btn01-box w-100">
-                    <div class="oEstimate-main3-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
-                        <span class="material-symbols-outlined sec-btn1-img-set">
-                            error
-                        </span>
-                        <div class="oEstimate-main3-btn01-p-box">
-                            <p class="d-none d-lg-block">若無法確定規格，可點擊預設配置，系統會自動帶出適合的規格設置。</p>
-                            <p class="d-block d-xl-none">若無法確定規格，可點擊預設配置，</p>
-                            <p class="d-block d-xl-none">系統會自動帶出適合的規格設置。</p>
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-next-R-btn">
+                                    <button class="carousel-btn-R">
+                                        <div class="img-box">
+                                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 14">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="swiper-next-L-btn">
+                                    <button class="carousel-btn-L">
+                                        <div class="img-box">
+                                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 13">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oEstimate-main2-footer-btn-box d-flex justify-content-center align-items-center">
+                            <button class="pagination-btn02">
+                                <div class="pagination-img-box02">
+                                    <img class="pagination-img02-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAABx0lEQVRYw82X0XWCQBBFLx1QAunAEkwHpoJIBWoFkgqUCkwqiB1EO7CDUAIdbH5mczaEZQdY0P3UVa4z770ZE2PMFjgDFY9xMuA1McZ8AQugBIo7QxXABrhZsKW8UQHPd6jeEjhIgQAuTTB73oAjUE8MlDpVco8XzFavAD4mgloBJ4GjD5g971LBKqK4T4FnqsBiVs+2LQ3cU4P9fgDIB1SvKW5ig7nmKEaIezIw294X4DZA3JOC+cyhEfcsYK45npTiVoFlwB5YP8isvAB5YoyxL6wFMLsTUCUMVwAXzLpoM/Mwr2X8le4IbIK56fzZI3dGta0tF5PAPjZVeytgJ88dvI/FNsdR4qWOtY8tpL3ZiLbtPIG8lOzLQjlmxdgGuO9pjlrul3PsY9r2drVtK98xyT7mM8dNHnz1SOKg2ccyubgKtMNnjlTgtoq22SpFT/4uc2QCVivE7fvxuY2QZsD20U6pWBi1m8Y/LfqSXxMNoXW7S9xu24o2LfrA+kRD0xyaNbpLiyow2w6tOVLFGn2WoO2UgQYs1tz8s9aETh+wMXOzaK41scH6zs2hf/cGg4XMERT31GBt5uiaj7OCueb41oo7dH4AGo4I+kN+acQAAAAASUVORK5CYII=" alt="Vector 16">
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
-
-          </div>
-          <div class="col-12">
-
-                <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between mb-32 mb-xl-72">
-                    <div class="oEstimate-main3-ousidematerial01-box oEstimate-main3-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center mb-32 w-xl-auto mb-xl-0">
-                        <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">
-                            <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material01">支撐材</label>
-                            <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material01" placeholder="1mm" value="mm">
-                        </form>
-                        <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">   
-                            <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">壁厚</label>
-                            <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material02" placeholder="50%">
-                        </form>
-                        <form class="d-flex flex-column from-set row-gap-12 w-100 mb-32  flex-xl-row row-gap-xl-0 gap-xl-40">
-                            <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">支撐材密度</label>
-                            <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material03" placeholder="1mm">
-                        </form>
-                    </div>
-                    <div class="oEstimate-main3-ousidematerial-btn01-box">
-                        <button class="oEstimate-main3-ousidematerial-btn01 mian-btn1-set-sm" type="submit">預設配置</button>
-                    </div>
-                </div>
-                <button class="oEstimate-main3-ousidematerial-btn02 pagination-btn01 d-block mx-auto">
-                    <div class="pagination-img-box01">
-                        <img class="pagination-img01-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAkCAYAAADl9UilAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAACaElEQVRYw82YTW7aUBSFvytQ1c7cUeMqA9gBS0h3kK6gsAKMKqLMMKOiEhWzAtoVhB2U7oAdlEEl2k7KIAMigW8HQEKsZ/sBNsFDzM/Hu+ece2RRVU7xki6uV0SHnk4npwAUiFtawAfpcvYdtBIi/Sud+s8JdSOuL0hd0fEajIv1vUkR3h379G7EvQDtgVTWL42iYACE0H7BPPD03yzfsb12lrzyFa1HbpnBNqcn4H/U6bc8oD7Lm8sChYGijuF2ItjKHfC1AO2sxrsW9yDpN63Asjy9LXE7KW+1Bnv4QBFqu56eQdxkDfZgDptoSRB3PmCb8SrL9039O95D3LmCGc1hKe78wbbNoVC2FHc62CfOSgVoCVRPZH+PFlCTTbvoiltlBVh6DhqFCVBt6vQHgGzXnkDKTsi8HsIRl7nMQIM75n1/awWKqY91xC0VkVvQyjHGdm3IxcQ+ltd4FSZK2LjSP8O9+1hH3IzNocEd923f0Fz26mNdOa/A8vaA0xsphUZTf43NK4sBj98dl2MaFJG+CfCLuK3dzCEzJfSb+rufex+zH2/S2N56Aq1c+licORQdg3ibTHp6SueVBcteah9bJb/0BL1M+OezOHMEUnYW3LdAvbSxLXjpAa08kj/WHB1xS3Pmsxi3RcVt1GLIsraJkCcBu4t24syxR402atGY/JbRkFi3U8S9FSH4Ji1K0iMCm2iImsOuRsdr0Qrscbx25iggTlqNVmS4RBvXKTIQ24cqh+7NaK1JjeVdnvYcsDf9aK3JFGyPvRlba3IBSzdHurhzBTObI34/HhUsYo6ftuI+GljW139Gwtjm1v/h4QAAAABJRU5ErkJggg==" alt="Vector 15">
-                    </div>
-                </button>
-
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="oEstimate-main4 w-100 oEstimate-main4-bg-set">
-        <div class="container py-64 py-lg-100 "> 
+        <div class="oEstimate-main3 w-100 oEstimate-main3-bg-set">
+        <div class="container py-64 py-xxl-144">
             <div class="row">
-                <div  class="col-12">
+            <div  class="col-12">
 
-                        <div class="oEstimate-main4-title-sm-box mb-24 mb-xl-64">
-                            <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">時程選擇</h3>
-                        </div>
+                    <div class="oEstimate-main3-title-sm-box mb-24 mb-xl-64">
+                        <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">規格設置</h3>
+                    </div>
 
-                </div>
-                <div class="col-12 mb-32 mb-xl-72">
+            </div>
+            <div class="col-12 mb-32 mb-xl-72">
 
-                    <div class="oEstimate-main4-btn01-box w-100">
-                        <div class="oEstimate-main4-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
+                    <div class="oEstimate-main3-btn01-box w-100">
+                        <div class="oEstimate-main3-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
                             <span class="material-symbols-outlined sec-btn1-img-set">
                                 error
                             </span>
@@ -603,74 +546,133 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="col-12">
-
-                        <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center mb-32 mb-xl-72">
-                            <div class="oEstimate-main4-ousidematerial01-box oEstimate-main4-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between">
-                                <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48 mb-xl-0 flex-xl-row row-gap-xl-0 gap-xl-40">
-                                    <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time01">工期選擇</label>
-                                    <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="time01" placeholder="選擇工期">
-                                </form>
-                                <form class="d-flex flex-column from-set row-gap-12 w-100 flex-xl-row justify-content-xl-end row-gap-xl-0 gap-xl-40">   
-                                    <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time02">日期選擇</label>
-                                    <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="date" id="time02">
-                                </form>
-                            </div>
-                        </div>
-                        <button class="oEstimate-main3-ousidematerial-btn03 pagination-btn02 d-block mx-auto">
-                            <div class="pagination-img-box02">
-                                <img class="pagination-img02-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAABx0lEQVRYw82X0XWCQBBFLx1QAunAEkwHpoJIBWoFkgqUCkwqiB1EO7CDUAIdbH5mczaEZQdY0P3UVa4z770ZE2PMFjgDFY9xMuA1McZ8AQugBIo7QxXABrhZsKW8UQHPd6jeEjhIgQAuTTB73oAjUE8MlDpVco8XzFavAD4mgloBJ4GjD5g971LBKqK4T4FnqsBiVs+2LQ3cU4P9fgDIB1SvKW5ig7nmKEaIezIw294X4DZA3JOC+cyhEfcsYK45npTiVoFlwB5YP8isvAB5YoyxL6wFMLsTUCUMVwAXzLpoM/Mwr2X8le4IbIK56fzZI3dGta0tF5PAPjZVeytgJ88dvI/FNsdR4qWOtY8tpL3ZiLbtPIG8lOzLQjlmxdgGuO9pjlrul3PsY9r2drVtK98xyT7mM8dNHnz1SOKg2ccyubgKtMNnjlTgtoq22SpFT/4uc2QCVivE7fvxuY2QZsD20U6pWBi1m8Y/LfqSXxMNoXW7S9xu24o2LfrA+kRD0xyaNbpLiyow2w6tOVLFGn2WoO2UgQYs1tz8s9aETh+wMXOzaK41scH6zs2hf/cGg4XMERT31GBt5uiaj7OCueb41oo7dH4AGo4I+kN+acQAAAAASUVORK5CYII=" alt="Vector 16">
-                            </div>
-                        </button>
-
-                </div>
             </div>
-        </div>
-    </div>
+            <div class="col-12">
 
-    <div class="oEstimate-main5 w-100 oEstimate-main5-bg-set">
-        <div class="container py-64 py-lg-144 "> 
-            <div class="row">
-                <div  class="col-12 mb-48">
-
-                    <div class="oEstimate-main5-content h-100">
-                        <div class="oEstimate-main5-article h-100 d-flex flex-column justify-content-center align-items-center  align-items-xxl-center">
-                          <div class="oEstimate-main5-title-box w-100 mb-32 mb-xxl-72">
-                            <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">注意事項！！！</h3>
-                            <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">產品交期說明</h3>
-                          </div>
-                          <div class="abus-main5-text-box w-100"> 
-                            <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">急單：3個工作天出貨，且有失敗風險，請與業務聯繫。</p>
-                            <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">一般單：3~6個工作天出貨。</p>
-                            <p class="fs-16 fw-500 lh-15 fs-xxl-24 text-nautral-white">不急單：6~10個工作天出貨、依排程而定。</p>
-                          </div>
+                    <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between mb-32 mb-xl-72">
+                        <div class="oEstimate-main3-ousidematerial01-box oEstimate-main3-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center mb-32 w-xl-auto mb-xl-0">
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material01">支撐材</label>
+                                <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material01" placeholder="1mm" value="mm">
+                            </form>
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">   
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">壁厚</label>
+                                <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material02" placeholder="50%">
+                            </form>
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-32  flex-xl-row row-gap-xl-0 gap-xl-40">
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">支撐材密度</label>
+                                <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material03" placeholder="1mm">
+                            </form>
+                        </div>
+                        <div class="oEstimate-main3-ousidematerial-btn01-box">
+                            <button class="oEstimate-main3-ousidematerial-btn01 mian-btn1-set-sm" type="submit">預設配置</button>
                         </div>
                     </div>
+                    <button class="oEstimate-main3-ousidematerial-btn02 pagination-btn01 d-block mx-auto">
+                        <div class="pagination-img-box01">
+                            <img class="pagination-img01-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAkCAYAAADl9UilAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAACaElEQVRYw82YTW7aUBSFvytQ1c7cUeMqA9gBS0h3kK6gsAKMKqLMMKOiEhWzAtoVhB2U7oAdlEEl2k7KIAMigW8HQEKsZ/sBNsFDzM/Hu+ece2RRVU7xki6uV0SHnk4npwAUiFtawAfpcvYdtBIi/Sud+s8JdSOuL0hd0fEajIv1vUkR3h379G7EvQDtgVTWL42iYACE0H7BPPD03yzfsb12lrzyFa1HbpnBNqcn4H/U6bc8oD7Lm8sChYGijuF2ItjKHfC1AO2sxrsW9yDpN63Asjy9LXE7KW+1Bnv4QBFqu56eQdxkDfZgDptoSRB3PmCb8SrL9039O95D3LmCGc1hKe78wbbNoVC2FHc62CfOSgVoCVRPZH+PFlCTTbvoiltlBVh6DhqFCVBt6vQHgGzXnkDKTsi8HsIRl7nMQIM75n1/awWKqY91xC0VkVvQyjHGdm3IxcQ+ltd4FSZK2LjSP8O9+1hH3IzNocEd923f0Fz26mNdOa/A8vaA0xsphUZTf43NK4sBj98dl2MaFJG+CfCLuK3dzCEzJfSb+rufex+zH2/S2N56Aq1c+licORQdg3ibTHp6SueVBcteah9bJb/0BL1M+OezOHMEUnYW3LdAvbSxLXjpAa08kj/WHB1xS3Pmsxi3RcVt1GLIsraJkCcBu4t24syxR402atGY/JbRkFi3U8S9FSH4Ji1K0iMCm2iImsOuRsdr0Qrscbx25iggTlqNVmS4RBvXKTIQ24cqh+7NaK1JjeVdnvYcsDf9aK3JFGyPvRlba3IBSzdHurhzBTObI34/HhUsYo6ftuI+GljW139Gwtjm1v/h4QAAAABJRU5ErkJggg==" alt="Vector 15">
+                        </div>
+                    </button>
 
-                </div>
-                <div class="col-12 mb-48">
+            </div>
+            </div>
+        </div>
+        </div>
 
-                    <div class="oEstimate-main5-btn01-box w-100 mb-32">
-                            <div class="oEstimate-main5-btn01-set d-flex justify-content-center align-items-center gap-16 p-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white">
+        <div class="oEstimate-main4 w-100 oEstimate-main4-bg-set">
+            <div class="container py-64 py-lg-100 "> 
+                <div class="row">
+                    <div  class="col-12">
+
+                            <div class="oEstimate-main4-title-sm-box mb-24 mb-xl-64">
+                                <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">時程選擇</h3>
+                            </div>
+
+                    </div>
+                    <div class="col-12 mb-32 mb-xl-72">
+
+                        <div class="oEstimate-main4-btn01-box w-100">
+                            <div class="oEstimate-main4-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
                                 <span class="material-symbols-outlined sec-btn1-img-set">
                                     error
                                 </span>
-                                <div class="oEstimate-main5-btn01-p-box d-flex flex-column justify-content-center align-items-start row-gap-8">
-                                    <p class="">此時間為出貨時間，非到貨時間</p>
-                                    <p class="">產品實際交期依物件大小及數量而定如有特殊狀況將由客服人員與您聯繫</p>
+                                <div class="oEstimate-main3-btn01-p-box">
+                                    <p class="d-none d-lg-block">若無法確定規格，可點擊預設配置，系統會自動帶出適合的規格設置。</p>
+                                    <p class="d-block d-xl-none">若無法確定規格，可點擊預設配置，</p>
+                                    <p class="d-block d-xl-none">系統會自動帶出適合的規格設置。</p>
                                 </div>
-                            </div> 
-                    </div>    
+                            </div>
+                        </div>
 
-                </div>
-                <div class="col-12">
-
-                    <div class="oEstimate-main5-ousidematerial-btn01-box d-flex justify-content-center align-items-center  justify-content-xl-start">
-                        <button class="oEstimate-main5-ousidematerial-btn01 mian-btn1-set-sm" type="submit">送出估價</button>
                     </div>
-                        
+                    <div class="col-12">
 
+                            <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center mb-32 mb-xl-72">
+                                <div class="oEstimate-main4-ousidematerial01-box oEstimate-main4-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between">
+                                    <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48 mb-xl-0 flex-xl-row row-gap-xl-0 gap-xl-40">
+                                        <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time01">工期選擇</label>
+                                        <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="time01" placeholder="選擇工期">
+                                    </form>
+                                    <form class="d-flex flex-column from-set row-gap-12 w-100 flex-xl-row justify-content-xl-end row-gap-xl-0 gap-xl-40">   
+                                        <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time02">日期選擇</label>
+                                        <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="date" id="time02">
+                                    </form>
+                                </div>
+                            </div>
+                            <button class="oEstimate-main3-ousidematerial-btn03 pagination-btn02 d-block mx-auto">
+                                <div class="pagination-img-box02">
+                                    <img class="pagination-img02-set" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAG3RFWHRTb2Z0d2FyZQBDZWxzeXMgU3R1ZGlvIFRvb2zBp+F8AAABx0lEQVRYw82X0XWCQBBFLx1QAunAEkwHpoJIBWoFkgqUCkwqiB1EO7CDUAIdbH5mczaEZQdY0P3UVa4z770ZE2PMFjgDFY9xMuA1McZ8AQugBIo7QxXABrhZsKW8UQHPd6jeEjhIgQAuTTB73oAjUE8MlDpVco8XzFavAD4mgloBJ4GjD5g971LBKqK4T4FnqsBiVs+2LQ3cU4P9fgDIB1SvKW5ig7nmKEaIezIw294X4DZA3JOC+cyhEfcsYK45npTiVoFlwB5YP8isvAB5YoyxL6wFMLsTUCUMVwAXzLpoM/Mwr2X8le4IbIK56fzZI3dGta0tF5PAPjZVeytgJ88dvI/FNsdR4qWOtY8tpL3ZiLbtPIG8lOzLQjlmxdgGuO9pjlrul3PsY9r2drVtK98xyT7mM8dNHnz1SOKg2ccyubgKtMNnjlTgtoq22SpFT/4uc2QCVivE7fvxuY2QZsD20U6pWBi1m8Y/LfqSXxMNoXW7S9xu24o2LfrA+kRD0xyaNbpLiyow2w6tOVLFGn2WoO2UgQYs1tz8s9aETh+wMXOzaK41scH6zs2hf/cGg4XMERT31GBt5uiaj7OCueb41oo7dH4AGo4I+kN+acQAAAAASUVORK5CYII=" alt="Vector 16">
+                                </div>
+                            </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="oEstimate-main5 w-100 oEstimate-main5-bg-set">
+            <div class="container py-64 py-lg-144 "> 
+                <div class="row">
+                    <div  class="col-12 mb-48">
+
+                        <div class="oEstimate-main5-content h-100">
+                            <div class="oEstimate-main5-article h-100 d-flex flex-column justify-content-center align-items-center  align-items-xxl-center">
+                            <div class="oEstimate-main5-title-box w-100 mb-32 mb-xxl-72">
+                                <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">注意事項！！！</h3>
+                                <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">產品交期說明</h3>
+                            </div>
+                            <div class="abus-main5-text-box w-100"> 
+                                <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">急單：3個工作天出貨，且有失敗風險，請與業務聯繫。</p>
+                                <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">一般單：3~6個工作天出貨。</p>
+                                <p class="fs-16 fw-500 lh-15 fs-xxl-24 text-nautral-white">不急單：6~10個工作天出貨、依排程而定。</p>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 mb-48">
+
+                        <div class="oEstimate-main5-btn01-box w-100 mb-32">
+                                <div class="oEstimate-main5-btn01-set d-flex justify-content-center align-items-center gap-16 p-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white">
+                                    <span class="material-symbols-outlined sec-btn1-img-set">
+                                        error
+                                    </span>
+                                    <div class="oEstimate-main5-btn01-p-box d-flex flex-column justify-content-center align-items-start row-gap-8">
+                                        <p class="">此時間為出貨時間，非到貨時間</p>
+                                        <p class="">產品實際交期依物件大小及數量而定如有特殊狀況將由客服人員與您聯繫</p>
+                                    </div>
+                                </div> 
+                        </div>    
+
+                    </div>
+                    <div class="col-12">
+
+                        <div class="oEstimate-main5-ousidematerial-btn01-box d-flex justify-content-center align-items-center  justify-content-xl-start">
+                            <button class="oEstimate-main5-ousidematerial-btn01 mian-btn1-set-sm" type="submit">送出估價</button>
+                        </div>
+                            
+
+                    </div>
                 </div>
             </div>
         </div>
