@@ -1,19 +1,16 @@
-.qP-main2:target{
-    padding-top: 60px;
-    @include media-breakpoint-up(lg){       
-        padding-top: 108px;
-    }
-    @include media-breakpoint-up(xl){       
-        padding-top: 60px;
-    }
-    @include media-breakpoint-up(xxl){       
-        padding-top: 80px;
-    } 
-}
+// .qP-main2:target{
+//     padding-top: 60px;
+//     @include media-breakpoint-up(lg){       
+//         padding-top: 108px;
+//     }
+//     @include media-breakpoint-up(xl){       
+//         padding-top: 60px;
+//     }
+//     @include media-breakpoint-up(xxl){       
+//         padding-top: 80px;
+//     } 
+// }
 
-.content-set{ //給xl尺寸以上用
-    width: calc(100% - 240px);
-}
 
 
 .qP-main2-sm-item-title-box{

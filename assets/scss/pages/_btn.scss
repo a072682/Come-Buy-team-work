@@ -189,7 +189,7 @@
     border: 2px solid #6e002c;
     border-radius:5px 5px 5px 5px;
     overflow-anchor: none;//當容器有新內容時如果過長且持續有新內容產出，設定auto會讓卷軸保持不動，設定none會讓卷軸持續向上(如果內容產出是往下的話)
-    transition: color .15s ease-in-out 
+    transition: color .15s ease-in-out,
                 background-color .15s ease-in-out, 
                 border-color .15s ease-in-out,
                 border-bottom .15s ease-in-out,
