@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oEstimate</title>
+  </head>
+  <body>
+    <%- include('./layout/nav'); -%>
+
+    <div class="all">
+        <div class="oEstimate-main1 w-100 oEstimate-main1-bg-set">
+        <div class="container py-48"> <!--sm~xl 標籤內容切換用-->
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="oEstimate-main1-title-sm-box mb-24 mb-xl-64">
+                        <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">線上估價</h3>
+                    </div>
+
+                    <div class="oEstimate-main1-upLord-content-sm-box py-16 py-xl-0 mb-24 mb-xl-64">
+
+                        <div class="upLord-sm-body p-16 d-xl-flex justify-content-xl-between align-items-xl-center py-xl-40 px-xl-56">
+
+                            <div class="upLord-title-text-sm-box">
+                                <div class="upLord-title-sm-box mb-24">
+                                    <h5 class="fs-24 fw-700 text-primary1 fs-xl-32 fw-xl-900">圖檔上傳</h5>
+                                </div>
+
+                                <div class="upLord-text-sm-box d-flex flex-column row-gap-8 mb-24 mb-xl-0">
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">請上傳檔案或將檔案拖曳至此</p>
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">最多上傳10個檔案</p>
+                                    <p class="fs-12 fw-500 fs-xl-16 fw-xl-500">格式：.stl | 大小: &lt; 30MB</p> <!--格式：.stl | 大小： < 30MB-->
+                                </div>
+                            </div>
+
+                            <div class="upLord-btn-sm-box d-none d-xl-block"> <!--xl用按鈕-->
+                                <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center  py-xl-22 px-xl-22">
+                                    <div class="upLord-btn-img-sm-set">
+                                        <img class="img-set" src="../assets/images/upLord-btn-sm.png" alt="upLord-btn">
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="upLord-fileFormat-sm-box mb-24 mb-xl-0">
+                                <button class="upLord-fileFormat-sm-box-set d-flex align-items-center me-4">
+                                    <span class="material-symbols-outlined">
+                                        error 
+                                    </span>
+                                    檔案格式說明
+                                </button>
+                            </div>
+
+                            <div class="upLord-btn-sm-box d-block d-xl-none">
+                                <button class="upLord-btn-sm-box-set py-10 px-auto bg-primary2 d-flex justify-content-center align-items-center">
+                                    <div class="upLord-btn-img-sm-set">
+                                        <img class="img-set" src="../assets/images/upLord-btn-sm.png" alt="upLord-btn">
+                                    </div>
+                                </button>
+                            </div>
+    
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="oEstimate-main1-box2 py-16 py-xl-0 mb-24">
+                        <div class="oEstimate-main1-title2-sm-box mb-16 mb-xl-48">
+                            <h3 class="fs-32 fw-900 text-nautral-white">圖檔上傳預覽</h3>
+                        </div>
+
+                        <div class="oEstimate-main1-upLord-img-sm-box">
+                            <div class="oEstimate-main1-upLord-img-sm-box-set py-16 px-12 py-xl-64 px-xl-auto row-gap-16 row-gap-xl-48 d-flex flex-column justify-content-center align-items-center">
+                                <div class="oEstimate-main1-upLord-btn-img-sm-set">
+                                    <img class="img-set" src="../assets/images/Image.png" alt="upLord-btn">
+                                </div>
+                                <div class="oEstimate-main1-upLord-text-box d-flex flex-column justify-content-center align-items-center row-gap-xl-12">
+                                    <p class="fs-16 fw-500 lh-15 text-nautral-white d-block d-xl-none">目前無檔案，請上傳圖檔進行估價確認</p>
+                                    <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">目前無檔案</p>
+                                    <p class="fs-24 fw-500 lh-12 text-nautral-white text-center d-none d-xl-block">請上傳圖檔進行估價確認</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                    <div class="oEstimate-main1-box3 mb-xl-64">
+                        <div class="oEstimate-main1-title3-sm-box d-none d-xl-block mb-xl-48">
+                            <h3 class="fs-32 fw-900 text-nautral-white">圖檔資料</h3>
+                        </div>
+                        <div class="oEstimate-main1-numTable">
+                            <div class="row1 d-flex align-items-center">
+                                <div class="row1-sm-set-1">檔案</div>
+                                <div class="row1-sm-set-1">數量</div>
+                                <div class="row1-sm-set-2">估價</div>
+                                <div class="row1-sm-set-2">材質</div>
+                                <div class="row1-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row2 d-flex align-items-center">
+                                <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="../assets/images/minus-sm.png" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="../assets/images/plus-sm.png" alt="">
+                                </div>
+                                <div class="row2-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row2-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row2-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row3 d-flex align-items-center">
+                                <div class="row3-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row3-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="../assets/images/minus-sm.png" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="../assets/images/plus-sm.png" alt="">
+                                </div>
+                                <div class="row3-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row3-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row3-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row4 d-flex align-items-center">
+                                <div class="row4-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row4-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="../assets/images/minus-sm.png" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="../assets/images/plus-sm.png" alt="">
+                                </div>
+                                <div class="row4-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row4-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row4-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row5 d-flex align-items-center">
+                                <div class="row5-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row5-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="../assets/images/minus-sm.png" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="../assets/images/plus-sm.png" alt="">
+                                </div>
+                                <div class="row5-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row5-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row5-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row6 d-flex align-items-center">
+                                <div class="row6-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                    <p>monstera_ad</p>
+                                    <p>ansonii.stl</p>
+                                </div>
+                                <div class="row6-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                    <img class="img-set" src="../assets/images/minus-sm.png" alt="">
+                                    <p>12</p>
+                                    <img class="img-set" src="../assets/images/plus-sm.png" alt="">
+                                </div>
+                                <div class="row6-sm-set-3">
+                                    $360
+                                </div>
+                                <div class="row6-sm-set-3">
+                                    PLA白
+                                </div>
+                                <div class="row6-sm-img-set d-flex justify-content-center align-items-center">
+                                    <img class="img-set" src="../assets/images/delete.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="oEstimate-main1-footer-btn d-none d-xl-block d-xl-flex justify-content-xl-center align-items-xl-center">
+                        <button class="pagination-btn01">
+                            <div class="pagination-img-box01">
+                                <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+        <div class="oEstimate-main2 w-100 oEstimate-main2-bg-set">
+            <div class="container py-100">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="oEstimate-main2-title-sm-box mb-24 mb-xl-64">
+                            <h3 class="fs-32 fw-900 lh-15 text-center text-nautral-white fs-xl-64 text-xl-start">材料選擇</h3>
+                        </div>
+                        <div class="oEstimate-main2-btn-box d-flex">
+                            <button class="oEstimate-main2-btn oEstimate-main2-btn-on">
+                                3D列印
+                            </button>
+                            <button class="oEstimate-main2-btn">
+                                3D列印
+                            </button>
+                        </div>
+                        <div class="oEstimate-main2-swiper w-100 py-20 d-flex justify-content-center align-items-center mb-32 mb-xl-72">
+                            <div class="oEstimate-main2-swiper-box w-100">                     <!--內層外框-->
+
+                                <div class="swiper mySwiper oEstimate-main2-mySwiper-set"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                                    <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                                            <div class="oEstimate-main2-card-content-box mx-auto">
+                                                <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set">
+                                                    <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
+                                                        <picture>
+                                                            <source srcset="https://fakeimg.pl/320x280/" media="(min-width:1400px)">
+                                                            <img src="https://fakeimg.pl/215x144/" alt="215x144">
+                                                        </picture>  
+                                                    </div>
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xl-flex justify-content-xl-between align-items-xl-center p-xl-32">
+                                            
+                                                        <div class="oEstimate-main2-card1-text-box mb-24 mb-xl-0">
+                                                            <div class="oEstimate-main2-card1-text">
+                                                                <p class="fw-500 fs-24 fw-700 lh-12 text-nautral-white mb-8 mb-xl-0">PLA 黑</p>
+                                                                <p class="fw-500 fs-16 fw-700 lh-12 text-nautral-white">PLA聚乳酸</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="secondary-btn1-box d-none d-xl-block">
+                                                            <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                選擇我
+                                                            
+                                                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                                
+                                                            </button>
+                                                        </div>
+                                                        <div class="secondary-btn2-box d-block d-xl-none">
+                                                            <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                選擇我
+                                            
+                                                                <span class="material-symbols-outlined sec-btn2-img-set">
+                                                                    chevron_right
+                                                                </span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>   
+                                                </div>  
+                                            </div> 
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-next-R-btn">
+                                    <button class="carousel-btn-R">
+                                        <div class="img-box">
+                                            <img class="img-set" src="../assets/images/Vector 14.png" alt="Vector 14">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="swiper-next-L-btn">
+                                    <button class="carousel-btn-L">
+                                        <div class="img-box">
+                                            <img class="img-set" src="../assets/images/Vector 13.png" alt="Vector 13">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oEstimate-main2-footer-btn-box d-flex justify-content-center align-items-center">
+                            <button class="pagination-btn02">
+                                <div class="pagination-img-box02">
+                                    <img class="pagination-img02-set" src="../assets/images/Vector 16.png" alt="Vector 16">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="oEstimate-main3 w-100 oEstimate-main3-bg-set">
+        <div class="container py-64 py-xxl-144">
+            <div class="row">
+            <div  class="col-12">
+
+                    <div class="oEstimate-main3-title-sm-box mb-24 mb-xl-64">
+                        <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">規格設置</h3>
+                    </div>
+
+            </div>
+            <div class="col-12 mb-32 mb-xl-72">
+
+                    <div class="oEstimate-main3-btn01-box w-100">
+                        <div class="oEstimate-main3-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
+                            <span class="material-symbols-outlined sec-btn1-img-set">
+                                error
+                            </span>
+                            <div class="oEstimate-main3-btn01-p-box">
+                                <p class="d-none d-lg-block">若無法確定規格，可點擊預設配置，系統會自動帶出適合的規格設置。</p>
+                                <p class="d-block d-xl-none">若無法確定規格，可點擊預設配置，</p>
+                                <p class="d-block d-xl-none">系統會自動帶出適合的規格設置。</p>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="col-12">
+
+                    <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between mb-32 mb-xl-72">
+                        <div class="oEstimate-main3-ousidematerial01-box oEstimate-main3-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center mb-32 w-xl-auto mb-xl-0">
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material01">支撐材</label>
+                                <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material01" placeholder="1mm" value="mm">
+                            </form>
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48  flex-xl-row row-gap-xl-0 gap-xl-40">   
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">壁厚</label>
+                                <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material02" placeholder="50%">
+                            </form>
+                            <form class="d-flex flex-column from-set row-gap-12 w-100 mb-32  flex-xl-row row-gap-xl-0 gap-xl-40">
+                                <label class="fs-24 fw-700 lh-12 text-nautral-white" for="material03">支撐材密度</label>
+                                <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="material03" placeholder="1mm">
+                            </form>
+                        </div>
+                        <div class="oEstimate-main3-ousidematerial-btn01-box">
+                            <button class="oEstimate-main3-ousidematerial-btn01 mian-btn1-set-sm" type="submit">預設配置</button>
+                        </div>
+                    </div>
+                    <button class="oEstimate-main3-ousidematerial-btn02 pagination-btn01 d-block mx-auto">
+                        <div class="pagination-img-box01">
+                            <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
+                        </div>
+                    </button>
+
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="oEstimate-main4 w-100 oEstimate-main4-bg-set">
+            <div class="container py-64 py-lg-100 "> 
+                <div class="row">
+                    <div  class="col-12">
+
+                            <div class="oEstimate-main4-title-sm-box mb-24 mb-xl-64">
+                                <h3 class="fs-32 fw-900 text-center text-nautral-white fs-xl-64 text-xl-start">時程選擇</h3>
+                            </div>
+
+                    </div>
+                    <div class="col-12 mb-32 mb-xl-72">
+
+                        <div class="oEstimate-main4-btn01-box w-100">
+                            <div class="oEstimate-main4-btn01-set d-flex justify-content-center align-items-center gap-16 py-16 px-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white py-xl-12 px-xl-24">
+                                <span class="material-symbols-outlined sec-btn1-img-set">
+                                    error
+                                </span>
+                                <div class="oEstimate-main3-btn01-p-box">
+                                    <p class="d-none d-lg-block">若無法確定規格，可點擊預設配置，系統會自動帶出適合的規格設置。</p>
+                                    <p class="d-block d-xl-none">若無法確定規格，可點擊預設配置，</p>
+                                    <p class="d-block d-xl-none">系統會自動帶出適合的規格設置。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+
+                            <div class="oEstimate-main3-ousidematerial-box d-flex flex-column justify-content-center align-items-center mb-32 mb-xl-72">
+                                <div class="oEstimate-main4-ousidematerial01-box oEstimate-main4-ousidematerial-box-set w-100 d-flex flex-column justify-content-center align-items-center  flex-xl-row justify-content-xl-between">
+                                    <form class="d-flex flex-column from-set row-gap-12 w-100 mb-48 mb-xl-0 flex-xl-row row-gap-xl-0 gap-xl-40">
+                                        <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time01">工期選擇</label>
+                                        <input class="ousidematerial-item1 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="number" id="time01" placeholder="選擇工期">
+                                    </form>
+                                    <form class="d-flex flex-column from-set row-gap-12 w-100 flex-xl-row justify-content-xl-end row-gap-xl-0 gap-xl-40">   
+                                        <label class="fs-24 fw-700 lh-12 text-nautral-white" for="time02">日期選擇</label>
+                                        <input class="ousidematerial-item2 ousidematerial-item-set py-16 px-24 bg-nautral-black text-nautral-white fs-16 fw-500 lh-15" type="date" id="time02">
+                                    </form>
+                                </div>
+                            </div>
+                            <button class="oEstimate-main3-ousidematerial-btn03 pagination-btn02 d-block mx-auto">
+                                <div class="pagination-img-box02">
+                                    <img class="pagination-img02-set" src="../assets/images/Vector 16.png" alt="Vector 16">
+                                </div>
+                            </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="oEstimate-main5 w-100 oEstimate-main5-bg-set">
+            <div class="container py-64 py-lg-144 "> 
+                <div class="row">
+                    <div  class="col-12 mb-48">
+
+                        <div class="oEstimate-main5-content h-100">
+                            <div class="oEstimate-main5-article h-100 d-flex flex-column justify-content-center align-items-center  align-items-xxl-center">
+                            <div class="oEstimate-main5-title-box w-100 mb-32 mb-xxl-72">
+                                <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">注意事項！！！</h3>
+                                <h3 class="fs-32 fw-900 lh-12 fs-xxl-64 text-primary3">產品交期說明</h3>
+                            </div>
+                            <div class="abus-main5-text-box w-100"> 
+                                <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">急單：3個工作天出貨，且有失敗風險，請與業務聯繫。</p>
+                                <p class="fs-16 fw-500 lh-15 mb-12 fs-xxl-24 text-nautral-white">一般單：3~6個工作天出貨。</p>
+                                <p class="fs-16 fw-500 lh-15 fs-xxl-24 text-nautral-white">不急單：6~10個工作天出貨、依排程而定。</p>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 mb-48">
+
+                        <div class="oEstimate-main5-btn01-box w-100 mb-32">
+                                <div class="oEstimate-main5-btn01-set d-flex justify-content-center align-items-center gap-16 p-16 fs-16 fw-500 lh-15 bg-primary1 outline-0 text-nautral-white">
+                                    <span class="material-symbols-outlined sec-btn1-img-set">
+                                        error
+                                    </span>
+                                    <div class="oEstimate-main5-btn01-p-box d-flex flex-column justify-content-center align-items-start row-gap-8">
+                                        <p class="">此時間為出貨時間，非到貨時間</p>
+                                        <p class="">產品實際交期依物件大小及數量而定如有特殊狀況將由客服人員與您聯繫</p>
+                                    </div>
+                                </div> 
+                        </div>    
+
+                    </div>
+                    <div class="col-12">
+
+                        <div class="oEstimate-main5-ousidematerial-btn01-box d-flex justify-content-center align-items-center  justify-content-xl-start">
+                            <button class="oEstimate-main5-ousidematerial-btn01 mian-btn1-set-sm" type="submit">送出估價</button>
+                        </div>
+                            
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('./layout/footer'); -%>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">/*使用swiper輪播插件需要插入的javascript*/
+    </script>
+    <script>/*swiper輪播插件自定義的參數放置位置*/
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, /*要顯示的輪播片數量*/
+            spaceBetween: 0, /*輪播片與輪播片的間隔設定單位為px*/
+            loop: true, /*循環功能 true為開啟 false為關閉*/
+            navigation: { /*上一張與下一張的按鈕設定*/
+                nextEl: ".swiper-next-R-btn", /*下一張的按鈕設定*/
+                prevEl: ".swiper-button-prev"  /*上一張的按鈕設定*/
+            },
+            pagination: {/*顯示分頁設定*/
+                el: ".swiper-pagination-custom",/*與class:swiper-pagination-custom進行對應*/
+                type: "fraction"/*型態為數字記錄*/
+            },
+            breakpoints: { //RWD斷點設定
+                375: { //如果螢幕大於992px則套用以下程式
+                //slidesPerGroup: 2,/*畫面群組 若是設定2 會將兩個投影片數量當成一個*/
+                slidesPerView: 1,
+                spaceBetween: 0
+                },
+                1200: { //如果螢幕大於1200px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 0
+                },
+                1400: { //如果螢幕大於1400px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 24
+                }
+            }
+        });
+    </script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

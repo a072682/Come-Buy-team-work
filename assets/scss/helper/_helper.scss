@@ -1,5 +1,159 @@
-
-
-.border-bottom-set{
-    border-bottom: 4px solid red;
+body{
+    background-color: $nautral-black;
 }
+.lh-12{
+    line-height: 1.2;
+}
+.lh-15{
+    line-height: 1.5;
+}
+.lh-20{
+    line-height: 2;
+}
+.fw-100{
+    font-weight: 100;
+}
+.fw-200{
+    font-weight: 200;
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+
+.bg-set1{ //原-main1-bg
+    outline: 
+        none;
+    border: 
+        none;
+    background: 
+        linear-gradient(90deg, #000000 5%, #850017 100%);
+    background-repeat:
+        no-repeat;
+    background-position:
+        bottom right;
+    position: 
+        relative;
+    @include media-breakpoint-up(xl){ //背景圖完全貼合標籤，但會失真
+        background-image:
+            url(/assets/images/main1-bg.png);
+        background-position: 
+            center bottom;
+        background-repeat:
+            no-repeat;
+        background-size: 
+            100% 100%;
+    }
+}
+
+.bg-set2{ //背景為上左和下右各一個貼圖加背景漸層 //原 - main2
+    width: 100%;
+    height: auto;
+    outline: 
+        none;
+    border: 
+        none;
+    background-image: 
+        url(/assets/images/main2-bg-sm-top.png), 
+        url(/assets/images/main2-bg-sm-bottom.png),
+        linear-gradient(180deg, #000000, #000000);
+    background-repeat: 
+        no-repeat, 
+        no-repeat,
+        no-repeat;
+    background-position:
+        top left,
+        bottom right,
+        center center;
+    background-size: 
+        auto,
+        100% 190px, //完全貼合標籤容器寬度和限制高為190px 會失真
+        cover;
+    @include media-breakpoint-up(lg){  
+        background-image:
+            url(/assets/images/main2-bg-top.png), 
+            url(/assets/images/main2-bg-sm-bottom.png),
+            linear-gradient(180deg, #000000, #4F000E);
+        background-size: 
+            auto,
+            auto,
+            cover;
+    }
+  }
+
+  .bg-set3{ //背景為上方x軸重複和下方一個貼圖加純色背景 //原 - main3
+    height: 
+        calc(100% - 132px);
+    outline: 
+        none;
+    border: 
+        none;
+    background-color: 
+        #000000;
+    background-image:
+        url(/assets/images/bg-01.png);
+    background-attachment:
+        scroll;
+    background-repeat:
+        repeat-x;
+    background-position:
+        top;
+    @include media-breakpoint-up(lg){  
+      background-image: 
+        url(/assets/images/bg-01.png), 
+        url(/assets/images/main3-bg-bottom.png);
+      background-position:
+        top left,
+        bottom right;
+      background-repeat:
+        repeat-x,
+        no-repeat;
+    }
+}
+
+.bg-set4{ //背景為上左和下右各一個貼圖加純色背景 //原 - main4
+    outline: 
+        none;
+    border: 
+        none;
+    background-color: 
+        #000000;
+    background-image: 
+        url(/assets/images/main4-bg-sm-1.png), 
+        url(/assets/images/main4-bg-sm-2.png);
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+    background-position:
+        bottom right,
+        top left;
+    @include media-breakpoint-up(lg){  
+      background-image: 
+        url(/assets/images/main4-bg-1.png), 
+        url(/assets/images/main4-bg-2.png);
+    }
+}
+
+.img-set{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

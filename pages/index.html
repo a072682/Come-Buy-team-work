@@ -7,45 +7,143 @@
     <title>index</title>
   </head>
   <body>
+    <%- include('./layout/nav'); -%>
+
+    <div class="main1 pb-28 pb-xl-0">
+      <div class="main1-bg d-block d-xl-none">
+          <div class="container"><!--外框 要增加y軸pd在這邊加 sm用-->
+              <div class="row">                         <!--外框 不動--> 
+                  <div class="col-12 main1-bg-color pt-48"> <!--外框 控制欄數-->
+                      <div class="main1-content d-flex flex-column justify-content-center align-items-center row-gap-48 pb-20">           <!--內層外框-->
+                          <div class="main1-title mb-8">
+                              <h1 class="fs-32 fw-900 text-center main1-title-text-set">從想像到實物</h1>
+                              <h1 class="fs-32 fw-900 text-center main1-title-text-set">只需Come & Buy</h1>
+                          </div>
+                          <div class="main1-btn">
+                              <button class="mian-btn1-set-sm">開始製作</button>
+                          </div>
+                          <div class="main1-img-box">
+                              <img class="main1-img" src="../assets/images/main-frame-sm.png" alt="main-frame-sm">
+                              <img class="main-corner-img" src="../assets/images/main-sm-corner.png" alt="main-sm-corner">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="main1-bg d-none d-xl-block">
+          <div class="container">        <!--外框 要增加y軸pd在這邊加 lg用-->
+              <div class="row">                         <!--外框 不動--> 
+                  <div class="col-6 "> <!--外框 控制欄數-->
+                      <div class="main1-content-L h-100 d-xl-flex flex-xl-column justify-content-xl-center align-items-xl-start">           <!--內層外框-->
+                          <div class="main1-title mb-56">
+                              <h1 class="fs-64 fw-900 main1-title-text-set mb-20">從想像到實物</h1>
+                              <h1 class="fs-64 fw-900 main1-title-text-set">只需Come & Buy</h1>
+                          </div>
+                          <div class="main1-btn">
+                              <button class="mian-btn1-set-sm">開始製作</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6"> <!--外框 控制欄數-->
+                      <div class="main1-content-R py-124">           <!--內層外框-->
+                          <div class="main1-img-box ms-auto">
+                              <img class="main1-img" src="../assets/images/main-frame-sm.png" alt="main-frame-sm">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+
+    <div class="main2 container-out py-64 py-lg-160">
+      <div class="container mb-64 mb-lg-96">
+          <div class="row">
+                  <div class="col-12 mb-64 col-lg-4 mb-lg-0">
+                      <div class="main2-card1 main2-card-set">
+                          <div class="main2-card1-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center align-items-center">
+                            <p class="main2-box-text d-flex justify-content-center align-items-center">設計流程標準化</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 mb-64 col-lg-4 mb-lg-0">
+                      <div class="main2-card2 main2-card-set">
+                          <div class="main2-card2-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center">
+                              <p class="main2-box-text d-flex justify-content-center align-items-center">降低前期製造成本</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-lg-4 mb-lg-0">
+                      <div class="main2-card3 main2-card-set">
+                          <div class="main2-card3-img-box main2-card-img-box-set">
+                              <img src="https://fakeimg.pl/200x200/" alt="">
+                          </div>
+                          <div class="main2-box d-flex justify-content-center">
+                              <p class="main2-box-text d-flex justify-content-center align-items-center">細節精準調教</p>
+                          </div>
+                      </div>
+                  </div>
+          
+          </div>
+      </div>
+      <div class="d-flex justify-content-center d-lg-none">
+          <button class="mian-btn1-set-sm text-center">線上估價</button>
+      </div>
+      <div class="d-none d-lg-flex justify-content-lg-center">
+        <button class="mian-btn1-set-sm text-center">開始製作</button>
+      </div>
+    </div>
+
     <div class="main3">
       <div class="container pt-64 pb-100 pt-lg-144 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
         <div class="row">                         <!--外框 不動-->
 
-            <div class="col-12 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-12 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main3-content">           <!--內層外框-->
 
                   <div class="main3-title pb-48">
-                    <h1 class="fs-32 text-center">線上估價</h1>
+                    <h1 class="fs-32 text-center main3-title-text-set">線上估價</h1>
                   </div>
                   <div class="main3-card">
 
                       <div class="main3-card-item1 border-bottom-set mb-64">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main-text-box pb-24">
-                          <p class="fs-24 fw-bold">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
+                          <p class="fs-24 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
                         </div>
                       </div>
 
                       <div class="main3-card-item2 mb-64">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main3-text-box border-bottom-set pb-20 mb-64">
-                          <p class="fs-24 fw-bold">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
+                          <p class="fs-24 fw-bold main3-text-set">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
                         </div>
                         <div class="main3-btn-box">
-                          <button class="fs-24 fw-bolder py-12 px-48 d-block mx-auto">線上估價</button>
+                          <button class="fw-bolder d-block mx-auto mian-btn1-set-sm">線上估價</button>
                         </div>
                       </div>
 
                       <div class="main3-card-item3 border-bottom-set">
                         <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/351x261/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
                         </div>
                         <div class="main-text-box pb-24">
-                          <p class="fs-24 fw-bold">打樣快速交付,讓你的創意即刻成真。</p>
+                          <p class="fs-24 fw-bold main3-text-set">打樣快速交付,讓你的創意即刻成真。</p>
                         </div>
                       </div>
                   
@@ -53,43 +151,43 @@
               </div>
             </div>
 
-            <div class="col-12 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+            <div class="col-12 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
               <div class="main3-content">           <!--內層外框-->
 
                   <div class="main3-title pb-64">
-                    <h1 class="fs-64 text-center">線上估價</h1>
+                    <h1 class="fs-64 text-center main3-title-text-set">線上估價</h1>
                   </div>
                   <div class="main3-card">
 
                       <div class="main3-card-item1 d-flex justify-content-lg-center align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
-                          <p class="fs-24 fw-bold">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
+                          <p class="fs-32 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
                         </div>
                       </div>
 
                       <div class="main3-card-item2 d-flex flex-row-reverse justify-content-lg-between align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="item2-content">
                           <div class="main-text-box border-bottom-set pt-32 pb-28 mb-48">
-                            <p class="fs-24 fw-bold">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
+                            <p class="fs-32 fw-bold main3-text-set">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
                           </div>
                           <div class="main3-btn-box">
-                            <button class="fs-24 fw-bolder py-24 px-88 d-block">線上估價</button>
+                            <button class="fs-24 fw-bolder py-24 px-88 d-block mian-btn1-set-sm">開始製作</button>
                           </div>
                         </div>
                       </div>
 
-                      <div class="main3-card-item3 d-flex justify-content-lg-center align-items-lg-center gap-148">
+                      <div class="main3-card-item3 d-flex justify-content-lg-between align-items-lg-center gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
-                          <p class="fs-24 fw-bold">打樣快速交付，讓你的創意即刻成真。</p>
+                          <p class="fs-32 fw-bold main3-text-set">打樣快速交付，讓你的創意即刻成真。</p>
                         </div>
                       </div>
                 
@@ -103,82 +201,82 @@
 
     <div class="main4">
       <div class="container  pt-64 pb-100 pt-lg-144 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
-        <div class="row">                                            <!--外框 不動-->
+        <div class="row gx-xxl-48">                                            <!--外框 不動-->
             <div class="main4-title mb-48 d-lg-none">
-              <h1 class="fs-32 text-center">服務項目</h1>
+              <h1 class="fs-32 text-center main4-title-text-set">服務項目</h1>
             </div>
-            <div class="col-6 pe-6 ps-12 mb-48 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-6 pe-6 ps-12 mb-48 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main4-content">                     <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item1 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item1 mb-24 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">FDM技術</p>
                     </div>
-                    <div class="card-item2 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">SLM技術</p>
+                    <div class="card-item2 mb-24 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLM技術</p>
                     </div>
-                    <div class="card-item3 w-100 py-24 border border-dark">
-                      <p class="fs-16 fw-bolder text-center">SLS選擇性雷射燒結</p>
+                    <div class="card-item3 d-flex justify-content-end justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLS選擇性雷射燒結</p>
                     </div>               
                   </div>
               </div>
             </div>
-            <div class="col-6 ps-6 pe-12 mb-48 border border-dark d-lg-none"> <!--外框 控制欄數 sm用-->
+            <div class="col-6 ps-6 pe-12 mb-48 d-lg-none"> <!--外框 控制欄數 sm用-->
               <div class="main4-content">                               <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item4 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">連續碳纖維尼龍</p>
+                    <div class="card-item4 mb-24 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">連續碳纖維尼龍</p>
                     </div>
-                    <div class="card-item4 w-100 py-24 border border-dark mb-24">
-                      <p class="fs-16 fw-bolder text-center">SLA雷射光固化</p>
+                    <div class="card-item4 mb-24 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">SLA雷射光固化</p>
                     </div>
-                    <div class="card-item4 w-100 py-24 border border-dark">
-                      <p class="fs-16 fw-bolder text-center">層疊製造成型</p>
+                    <div class="card-item4 d-flex justify-content-start justify-content-md-center">
+                      <p class="fs-16 fw-bolder text-center box-sm">層疊製造成型</p>
                     </div>               
                   </div>
               </div>
             </div>
-            <div class="main3-btn-box d-lg-none">
-              <button class="fs-24 fw-bolder py-12 px-48 d-block mx-auto">了解更多</button>
+            <div class="main4-btn-box d-lg-none">
+              <button class="fw-bolder d-block mx-auto mian-btn1-set-sm">了解更多</button>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
               <div class="main4-content h-100 d-flex flex-column justify-content-lg-center">           <!--內層外框-->
                   <div class="main4-title mb-48">
-                    <h1 class="fs-64">服務項目</h1>
+                    <h1 class="fs-64 main4-title-text-set">服務項目</h1>
                   </div>
                   <div class="main3-btn-box">
-                    <button class="fs-24 fw-bolder py-24 px-88 d-block">了解更多</button>
+                    <button class="fs-24 fw-bolder d-block mian-btn1-set">開始製作</button>
                   </div>
               </div>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
-              <div class="main4-content pe-12">           <!--內層外框-->   
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+              <div class="main4-content">           <!--內層外框-->   
                   <div class="main4-card">
-                    <div class="card-item1 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item1 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">FDM技術</p>
                     </div>
-                    <div class="card-item2 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item2 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">SLM技術</p>
                     </div>
-                    <div class="card-item3 w-100 py-42 border border-dark ">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item3">
+                      <p class="fs-24 fw-bolder text-center box">SLS選擇性雷射燒結</p>
                     </div>
                   </div>
               </div>
             </div>
 
-            <div class="col-4 border border-dark d-none d-lg-block"> <!--外框 控制欄數 lg用-->
-              <div class="main4-content ps-12">           <!--內層外框-->
+            <div class="col-4 d-none d-lg-block"> <!--外框 控制欄數 lg用-->
+              <div class="main4-content">           <!--內層外框-->
                   <div class="main4-card">
-                    <div class="card-item4 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item4 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">連續碳纖維尼龍</p>
                     </div>
-                    <div class="card-item5 w-100 py-42 border border-dark mb-60">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item5 mb-60">
+                      <p class="fs-24 fw-bolder text-center box">SLA雷射光固化</p>
                     </div>
-                    <div class="card-item6 w-100 py-42 border border-dark ">
-                      <p class="fs-24 fw-bolder text-center">FDM技術</p>
+                    <div class="card-item6">
+                      <p class="fs-24 fw-bolder text-center box">層疊製造成型</p>
                     </div>
                   </div>
               </div>
@@ -187,10 +285,271 @@
         </div>
       </div>
     </div>
-    
-    <div class="text-center">
-      <a class="fs-64" href="btn.html">test</a>
+
+    <div class="main5" id="index-main5">
+      <div class="main5-title-box">
+        <h3 class="main5-title-box-set text-nautral-white text-center fs-32 fw-900 fs-xxl-64 pt-64 pb-48 pt-xxl-144 px-xxl-88 ">最新消息</h3>
+      </div>
+      <div class="container pb-64 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
+          <div class="row justify-content-center gx-0">                                            <!--外框 不動-->
+              <div class="col-8 col-lg-10 col-xl-12"> <!--外框 控制欄數 sm用-->
+                  <div class="main5-content">                     <!--內層外框-->
+
+                    <div class="swiper mySwiper mb-50 mb-xxl-96"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                      <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
+                        <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
+
+                            <div class="main5-content">
+                              <div class="main5-card1-box main5-card-box-set mx-auto">
+                                  <div class="main5-card1-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card1-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card1-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card1-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>  
+                            </div> 
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card2-box main5-card-box-set mx-auto">
+                                  <div class="main5-card2-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card2-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card2-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card2-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card3-box main5-card-box-set mx-auto">
+                                  <div class="main5-card3-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card3-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card3-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card3-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card4-box main5-card-box-set mx-auto">
+                                  <div class="main5-card4-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card4-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card4-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card4-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content ">
+                              <div class="main5-card5-box main5-card-box-set mx-auto">
+                                  <div class="main5-card5-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card5-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card5-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card5-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="main5-content">
+                              <div class="main5-card6-box main5-card-box-set mx-auto">
+                                  <div class="main5-card6-img-box main5-card-img-box-set mx-auto">
+                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                  </div>
+                                  <div class="main5-card6-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
+                                      <div class="main5-card6-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
+                                        <h5 class="fw-700">2024材料與應用展即將來臨</h5>
+                                        <time class="fw-500" datetime="2024/04/01">2024/04/01</time>
+                                      </div>
+                                      <div class="main5-card6-text main5-card-con-set d-flex flex-column row-gap-12 mb-24">
+                                        <p class="fw-500">雖然CNC已能製作出0.1MM直徑的孔，但360孔CNC必須所需花費的時間超過8小時，我們善用3D列印的陣列技術在40分鐘可造出360孔精度0.03MM。</p>
+                                        <p class="fw-500">隨著技術的成熟，3D列印應用在電子業的案例越來越多。實際案例提供給需要的人，也歡迎詢問印核相關製程與加工細節。</p>
+                                      </div>
+                                      <button class="secondary-btn1-set d-flex align-items-center mx-auto d-lg-none">
+                                        More
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                      <button class="secondary-btn1-set d-none d-lg-flex align-items-center ms-lg-auto">閱讀更多
+                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                            chevron_right
+                                        </span>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main5-btn-box text-center">
+                        <button class="mian-btn1-set-sm">
+                            更多消息
+                        </button>
+                    </div>
+                    <div class="swiper-next-R-btn">
+                      <button class="carousel-btn-R">
+                        <div class="img-box">
+                            <img class="img-set" src="../assets/images/Vector 14.png" alt="Vector 14">
+                        </div>
+                      </button>
+                    </div>
+                    <div class="swiper-next-L-btn">
+                      <button class="carousel-btn-L">
+                        <div class="img-box">
+                            <img class="img-set" src="../assets/images/Vector 13.png" alt="Vector 13">
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
+
+    <%- include('./layout/footer'); -%>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">/*使用swiper輪播插件需要插入的javascript*/
+    </script>
+    <script>/*swiper輪播插件自定義的參數放置位置*/
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, /*要顯示的輪播片數量*/
+            spaceBetween: 0, /*輪播片與輪播片的間隔設定單位為px*/
+            loop: true, /*循環功能 true為開啟 false為關閉*/
+            navigation: { /*上一張與下一張的按鈕設定*/
+                nextEl: ".swiper-next-R-btn", /*下一張的按鈕設定*/
+                prevEl: ".swiper-button-prev"  /*上一張的按鈕設定*/
+            },
+            pagination: {/*顯示分頁設定*/
+                el: ".swiper-pagination-custom",/*與class:swiper-pagination-custom進行對應*/
+                type: "fraction"/*型態為數字記錄*/
+            },
+            breakpoints: { //RWD斷點設定
+                992: { //如果螢幕大於992px則套用以下程式
+                //slidesPerGroup: 2,/*畫面群組 若是設定2 會將兩個投影片數量當成一個*/
+                slidesPerView: 2,
+                spaceBetween: 0
+                },
+                1200: { //如果螢幕大於1200px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 0
+                },
+                1400: { //如果螢幕大於1400px則套用以下程式
+                slidesPerView: 3,
+                spaceBetween: 0
+                }
+            }
+        });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

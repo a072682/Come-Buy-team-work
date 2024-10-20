@@ -1,0 +1,25 @@
+// .qP-main2:target{
+//     padding-top: 60px;
+//     @include media-breakpoint-up(lg){       
+//         padding-top: 108px;
+//     }
+//     @include media-breakpoint-up(xl){       
+//         padding-top: 60px;
+//     }
+//     @include media-breakpoint-up(xxl){       
+//         padding-top: 80px;
+//     } 
+// }
+
+
+
+.qP-main2-sm-item-title-box{
+    h5{
+        line-height: 1.5;
+    }
+}
+.qP-main2-sm-item-text-box{
+    p{
+        line-height: 2;
+    }
+}

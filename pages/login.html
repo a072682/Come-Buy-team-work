@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <%- include('./layout/nav'); -%>
+
+    <div class="login-main w-100 login-main-bg-set" id="login-main">
+      <div class="container py-64 py-lg-100 "> 
+        <div class="row justify-content-lg-center">
+          <div  class="col-12 col-lg-8 mb-24 mb-lg-0">
+
+              <div class="login-main-content h-100">
+                <div class="login-main-article h-100 d-flex flex-column justify-content-center align-items-center  align-items-lg-center">
+
+                  <div class="login-main-title-box w-100 mb-24 mb-lg-72">
+                    <h3 class="text-center text-lg-start fs-lg-64 text-nautral-white">會員登入 </h3>
+                  </div>
+                  
+                  <form class="d-flex flex-column from-set w-100">
+                    <label class="login-label-set fs-24 fw-900 fw-lg-700 mb-12 text-nautral-white  mb-lg-24" for="email">信箱</label>
+                    <input class="login-input-set mb-24 mb-lg-48 fs-16 fw-500 py-12 px-16 fs-lg-24 py-lg-20 px-lg-36" type="email" id="email" placeholder="請輸入信箱">
+              
+                    <label class="login-label-set fs-24 fw-900 fw-lg-700 mb-12 text-nautral-white  mb-lg-24" for="password">密碼</label>
+                    <input class="login-input-set mb-24 mb-lg-48 fs-16 fw-500 py-12 px-16 fs-lg-24 py-lg-20 px-lg-36" type="text" id="password" placeholder="請輸入密碼">
+
+
+                    <div class="login-main-title-box w-100 mb-16 mb-lg-72">
+                      <h6 class="text-center text-xxl-end fs-xxl-24 text-primary3">忘記密碼 ?</h3>
+                    </div>
+                    <button class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700" type="submit">登入</button>
+                    <br>
+                    <div class="login-main-title-box w-100 mb-24 mb-lg-72">
+                      <h6 class="text-center text-xxl-end fs-xxl-24 text-nautral-white">註冊會員 --> </h3>
+                    </div>
+
+                    <div class="login-main-title-box w-100 mb-24 mb-lg-72">
+                      <h6 class="text-center text-xxl-center fs-xxl-24 text-nautral-white">------ 其他登入方式 ------</h3>
+                    </div>
+                    <button class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700" type="submit"><i class="fa fa-facebook-square" aria-hidden="true"></i><span> </span>Facebook 登入</button>
+                    <br>
+                    <button class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700" type="submit"><i class="fa fa-google" aria-hidden="true"></i><span> </span>Google登入</button>
+
+
+
+
+                  </form>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script>
+      let myText = document.getElementById("message");
+      //宣告myText變數並取得id=my-text的標籤
+      let result = document.getElementById("result");
+      //宣告result變數並取得id=result的標籤
+      let limit = 500;//宣告limit變數並賦予數值60
+      result.textContent = 0 + "/" + limit;
+
+      myText.addEventListener("input",function(){
+          let textLength = myText.value.length;
+          //console.log(textLength);
+          result.textContent = textLength + "/" + limit;
+      });
+
+    </script>
+  </body>
+</html>

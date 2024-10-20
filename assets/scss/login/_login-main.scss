@@ -1,0 +1,88 @@
+.login-main:target{
+    padding-top: 60px;
+    margin-top: -60px;
+    @include media-breakpoint-up(lg){       
+        padding-top: 108px;
+        margin-top: -108px;
+    }
+    @include media-breakpoint-up(xl){       
+        padding-top: 95px;
+        margin-top: -95px;
+    }
+    @include media-breakpoint-up(xxl){       
+        padding-top: 130px;
+        margin-top: -130px;
+    }   
+}  
+
+.login-main-bg-set{ //背景為上左和下右各一個貼圖加背景漸層 //原 - main2
+    width: 100%;
+    height: auto;
+    outline: 
+        none;
+    border: 
+        none;
+    background-image: 
+        linear-gradient(180deg, #000000, #000000);
+    background-repeat: 
+        no-repeat;
+    background-position:
+        center center;
+    background-size: 
+        cover;
+    @include media-breakpoint-up(lg){  
+        background-image:
+            linear-gradient(180deg, #000000, #60003A);
+        background-size: 
+            cover;
+    }
+  }
+
+  .login-label-set{
+    line-height: 1.5;
+    @include media-breakpoint-up(lg){  
+        line-height: 1.2;
+    }
+  }
+
+  .login-input-set{
+    background: 
+        transparent;
+    border:
+        2px solid $nautral-white;
+    outline: 
+        none;
+    color:
+        $nautral-white;
+    border-radius: 
+        5px;
+  }
+
+  .login-textarea-set{
+    resize: 
+        none;
+    background: 
+        transparent;
+    border:
+        2px solid $nautral-white;
+    outline: 
+        none;
+    color:
+        $nautral-white;
+    border-radius: 
+        5px;
+  }
+  .login-textarea-box{
+    position: relative;
+  }
+  .login-textarea-result{
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    color: $nautral-white;
+    opacity: 60%;
+    @include media-breakpoint-up(xxl){  
+        right: 36px;
+        bottom: 20px;
+    }
+  }

@@ -1,0 +1,43 @@
+.abus-main2-bg-set{ //背景為上左和下右各一個貼圖加背景漸層 //原 - main2
+    width: 100%;
+    height: auto;
+    outline: 
+        none;
+    border: 
+        none;
+    background-image: 
+        url(/assets/images/main2-bg-sm-top.png), 
+        url(/assets/images/main2-bg-sm-bottom.png),
+        linear-gradient(180deg, #000000, #000000);
+    background-repeat: 
+        no-repeat, 
+        no-repeat,
+        no-repeat;
+    background-position:
+        top left,
+        bottom right,
+        center center;
+    background-size: 
+        auto,
+        100% 190px, //完全貼合標籤容器寬度和限制高為190px 會失真
+        cover;
+    @include media-breakpoint-up(lg){  
+        background-image:
+            url(/assets/images/main2-bg-top.png), 
+            url(/assets/images/main2-bg-sm-bottom.png),
+            linear-gradient(180deg, #000000, #000000);
+        background-size: 
+            auto,
+            auto,
+            cover;
+    }
+  }
+
+.aboutUs-main2-p-set{
+    padding-top: 104px;
+    padding-bottom: 104px;
+    @include media-breakpoint-up(xxl){  
+        padding-top: 367px;
+        padding-bottom: 367px;
+    }
+}
