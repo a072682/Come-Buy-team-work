@@ -10,24 +10,117 @@
     }
 }
 
-
+.ousidematerial-text-set{
+    max-width:452px;
+    width: 100%;
+    @include media-breakpoint-up(xxl){
+        max-width:120px;  
+    }
+}
 .ousidematerial-item-set{
     border:2px solid $nautral-white;
     border-radius: 5px;
+    height: auto;
+    @include media-breakpoint-up(xl){  
+        min-width:452px;
+        width: 100%;
+    }
 }
 
 .ousidematerial-item-menu-set{
 
 }
 .oEstimate-main3-ousidematerial-box-set{
+    
+}
+.main3-img-box{
+    max-width: 48px;
+    height: auto;
+}
+.img-position1{
+    left: 24px;
+    top: 14px;
     @include media-breakpoint-up(xl){  
-        form{
-            label{
-                width: 120px;
-            }
-            input{
-                width: 644px;
-            }
-        }
+        left: 36px;
+        top: 20px;
+    }  
+}
+.img-position2{
+    right: 24px;
+    top: 12px;
+    @include media-breakpoint-up(xl){  
+        right: 36px;
+        top: 20px;
+    }  
+}
+.calendar-btn {
+    display: block;
+    width: 100%;
+    border:2px solid $nautral-white;
+    margin-left: auto;
+    text-decoration: none;
+    padding: 16px 0;
+    @include media-breakpoint-up(xl){  
+        width:452px;
+        padding: 30px 0;
     }
+    
+}
+.calendar-box {
+    background-color: #6e002c;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.5;
+    width: 100%;
+    @include media-breakpoint-up(xl){  
+        max-width:452px;
+    }
+}
+.cc{
+    max-height: 0px;
+}
+.prevMonth-btn-img-box {
+    max-width: 48px;
+    height: auto;
+}
+.weekbox {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.weekbox div {
+    text-align: center;
+    padding: 4px 10px;
+}
+.daybox {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.selectable-date {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    padding: 4px 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectable-date:hover {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+.selected-date {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+.today {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+/* 顯示當前選擇的日期的樣式 */
+#selectedDateDisplay {
+    width: 100%;
+    font-size: 24px;
+    color: white;
 }
