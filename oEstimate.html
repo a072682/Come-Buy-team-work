@@ -57,7 +57,7 @@
                         <a class="navbar-link select-btn-set text-center" id="select-btn03-active" aria-current="page" href="#">材料選擇</a>
                     </li>
                     <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low navbar-dropdown position-relative"> <!--漢堡內部內容 新手指南QA子項目-->
-                        <a class="select-btn-set text-center" id="select-btn04-active" aria-current="page" href="#"
+                        <a class="select-btn-set text-center" id="select-btn04-active" aria-current="page" href="qaPage.html"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                         新手指南QA
                             <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--新手指南QA子項目右邊icon-->
@@ -65,7 +65,7 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn04-active"><!--新手指南QA子項目下拉選項-->
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">客製化流程</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main0">客製化流程</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="#" id="qaPage-link1">設計需求介紹</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main2">運費說明</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main3">常見問題</a></li>
@@ -799,9 +799,27 @@
                             </div>  
 
                             <div class="oEstimate-main5-btn02-box d-flex justify-content-center align-items-center  justify-content-xl-start">
-                                <button class="oEstimate-main5-btn02 mian-btn1-set-sm" type="submit">送出估價</button>
+                                <button class="oEstimate-main5-btn02 mian-btn1-set-sm" type="submit" id="oEstimate-main5" data-bs-toggle="modal" data-bs-target="#oEstimate-main5-Modal">送出估價</button>
                             </div>
 
+                        </div>
+
+                        <div class="modal fade" id="oEstimate-main5-Modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">登入</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>3333333</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                                        <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
+                                      </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
