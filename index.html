@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-b031ce1d.js"></script>
-    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-9eca79e0.css">
+    <script type="module" crossorigin src="/Come-Buy-team-work/assets/bootstrap.bundle.min-08a85b2a.js"></script>
+    <link rel="stylesheet" href="/Come-Buy-team-work/assets/bootstrap.bundle-3180e025.css">
   </head>
   <body>
+
     <nav class="navbar fixed-top nav-bg-set nav-border-set w-100 pt-24 pb-20 px-16 navbar-expand-xxl py-xxl-16"> <!--最外層 pd放這邊 navbar-expand-lg-->
     <div class="container-fluid px-0 justify-content-xxl-center gap-xxl-32"> <!--中間容器 不動-->
         <a class="navbar-brand py-0 px-0 mx-0" href="index.html"> <!--標格 or Logo標誌-->
@@ -26,37 +27,37 @@
 
         <div class="offcanvas offcanvas-end nav-aside-page-set" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"><!--漢堡內部內容-->
             <div class="offcanvas-header pt-32 px-26 pb-8"><!--漢堡內部內容 標題區 lg不顯示-->
-                <button type="button" class="navbar-close-img-box py-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                <button type="button" class="navbar-close-img-box close-btn py-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
                     <div class="navbar-close-img-box">
                         <img class="navbar-close-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC2SURBVHgB7ZfbCYVADETDreT238SWYilRkSAKBt1NTCJzQPybOSM+kAgAAAAA4D2Y+b8cbT2TER6ZWtHEG5NFoUemVtb4yFDhSV5o5MVFYdcIy6zXi8PkLQTC5UdE0sj3CKWTfyKWVl7QBNPLC4pofnnhYkQNeUEZ4SL/I7BT+hYq/RBz5dcoV/6QPRFLN6JHKM2IEZHwERYCYSMsi0NG8Md+6k2ulkfmncJmWeSRCQAAAABwgxmljWRVfJ4rhgAAAABJRU5ErkJggg==" alt="Close.png">
                     </div>
                 </button>
             </div>
-            <div class="offcanvas-body  py-0  align-items-xxl-center gap-xxl-32 px-xxl-0 py-xxl-0"><!--漢堡內部內容 內容區-->
+            <div class="offcanvas-body py-0  align-items-xxl-center gap-xxl-32 px-xxl-0 py-xxl-0"><!--漢堡內部內容 內容區-->
                 <ul class="navbar-nav justify-content-center align-items-xxl-center gap-xxl-32">
-                    <li class="nav-item mb-12 mb-lg-0 ms-xxl-48 mx-auto dropdown pe-auto border-low"> <!--漢堡內部內容 最新消息子項目-->
+                    <li class="nav-item mb-12 mb-lg-0 ms-xxl-48 mx-auto navbar-dropdown pe-auto border-low position-relative"> <!--漢堡內部內容 最新消息子項目-->
                         <button type="button" class="select-btn-set text-center" id="select-btn01-active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                             最新消息
                             <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--最新消息子項目右邊icon-->
                                 arrow_drop_down
                             </span>
                         </button>
-                          <ul class="dropdown-menu dropdown-menu01-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--最新消息子項目下拉選項mt-lg-24-->
+                          <ul class="dropdown-menu dropdown-menu01-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--最新消息子項目下拉選項-->
                               <li><a class="dropdown-item dropdown-item-set" href="index.html#index-main5">最新消息</a></li>
                               <li><a class="dropdown-item dropdown-item-set" href="#">優惠活動</a></li>
                               <li><a class="dropdown-item dropdown-item-set" href="#">合作廠商</a></li>
                               <li><a class="dropdown-item dropdown-item-set" href="aboutUs.html#abus-main4">聯絡我們</a></li>
                           </ul>
                     </li>
-                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low dropdown"> <!--漢堡內部內容 線上估價子項目-->
-                        <a class="select-btn-set text-center" id="select-btn02-active" aria-current="page" href="oEstimate.html">
+                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 線上估價子項目-->
+                        <a class="navbar-link select-btn-set text-center" id="select-btn02-active" aria-current="page" href="oEstimate.html">
                         線上估價
                         </a>
                     </li>
                     <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 材料選擇子項目-->
-                        <a class="select-btn-set text-center" id="select-btn03-active" aria-current="page" href="#">材料選擇</a>
+                        <a class="navbar-link select-btn-set text-center" id="select-btn03-active" aria-current="page" href="#">材料選擇</a>
                     </li>
-                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low  dropdown"> <!--漢堡內部內容 新手指南QA子項目-->
+                    <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low navbar-dropdown position-relative"> <!--漢堡內部內容 新手指南QA子項目-->
                         <a class="select-btn-set text-center" id="select-btn04-active" aria-current="page" href="#"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                         新手指南QA
@@ -64,21 +65,21 @@
                                 arrow_drop_down
                             </span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--新手指南QA子項目下拉選項-->
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#">客製化流程</a></li>
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main1">設計需求介紹</a></li>
+                        <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn04-active"><!--新手指南QA子項目下拉選項-->
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">客製化流程</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="#" id="qaPage-link1">設計需求介紹</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main2">運費說明</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main3">常見問題</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mb-16 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 聯絡我們子項目-->
-                        <a class="select-btn-set text-center" id="select-btn05-active" aria-current="page" href="aboutUs.html">聯絡我們</a>
+                        <a class="navbar-link select-btn-set text-center" id="select-btn05-active" aria-current="page" href="aboutUs.html">聯絡我們</a>
                     </li>
                 </ul>
                 <div class="navbar-log1 d-block"> <!--log-in 未登錄狀態-->
-                    <button type="button" class="navbar-log1-img-box py-0 d-block mx-auto">
+                    <button type="button" class="navbar-log1-img-box py-0 d-block mx-auto" >
                         <div class="navbar-log1-img-box">
-                            <img class="navbar-log1-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABICAYAAAD1ctupAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZrdUdtAFIWPmPy8+iEJvEVUEKeCmApCB5gKAhWQDiAVYCogqQCngrgDlDcmyQw8J9ibcyOJERqMZeLVrvH5ZjSWZMla36O99+7dBYQQQgghhBBCCCGEEEIIIYQQQjxi1p3be+XcJbfzDedSRATbNODmuJ1ilSmM4GIzxkvn+tW2vXCuh4CsISyjyv52aGOUJMBB9fgayBCQoCJNgP3qcd04IWDP+ciPtDx2wOAqSTKsMnQtZzXXsodAWFysueDzTmSxMgidmmEo2iXPdRAAPv+41pYPEDk0yEHtDW7d7VGQbr0XIRISRID1nGeAGeWmBzFYbl7cEwvMNTGmdXldh5+vGTs6SXE/96+SYuP+d27ZzyQZ3deGQpS0POY9fd5zggiIQiTDYhENflge00hDGmmrPDZReO49tx7ybV6XaKKN7Hf5nK98AYblF5Zy87vjyrMHfPYuIiEakQxLIpJcgH9wfxv5273tKucXRIZcsJNJLlBafvGbvTimjC4qkWycRKOdISB8GY7Yi/YREaEHs7e4zge3GQJCkb4gMqIRiTGnx+ThGypuJwTWk4sBbTRE4e4Yi47YkNjGJBkF27qIIDYFFckytjFwykZ0EScZk4rdX5VMMATBRCrGOZYkpIgcqzFSqCMEIkhMWiaBDBu/hYxTrfekZROoSqgqRKsiFeWf4Bnc/0Ch3s4qMS2aVt3ds7zsk2KJ4Vt92vZUf2sirefzRP2Gl2dWY0N7zPM8y0iP0SKtiFQURw8bXJpZ3exHkmxacdX2cXuKfdFYit2rPs/KQrNusvpim5OTrcQkm0zDjF5k0wt/6O/rhU2fcWxaIbVe6L2Lor12/xU8470n2TQAGrg5GmV4l8HMCDTIZyye0bRKN9vyCTOwuaunLa3J8C5S08Ul7p7C6pqHoqv1BEx/XqPewf+210YS4VWkjXyJVtrw8qmlIeenbNSdtpZiPIdrHbdQc/Qq0mSOP2AxgK5xp37e1h6geVbYmGnuynrGnEvL+r4XznhLHIrKwkMWcwxstnScT3fbzKwJ7dMIN8/j5zv2Wsva0nl+wO5hdjgzjj0UbyLV1w08ZurrMRaNN3fHH97BimCu2qfL8yaSh4UjUfOcrhKe8CLSRiQL79tk4vGl9CISe9EbrB7eZpe9iDRZ8kr3A1kukdbiXbPgDRt3+UoensADHHMMk8Dr54QQQgghhBBCCCGEEEIIIYQQQojm/AX+FpTZtpCUFwAAAABJRU5ErkJggg==" alt="log01.png">
+                            <img class="navbar-log1-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABICAYAAAD1ctupAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZrdUdtAFIWPmPy8+iEJvEVUEKeCmApCB5gKAhWQDiAVYCogqQCngrgDlDcmyQw8J9ibcyOJERqMZeLVrvH5ZjSWZMla36O99+7dBYQQQgghhBBCCCGEEEIIIYQQQjxi1p3be+XcJbfzDedSRATbNODmuJ1ilSmM4GIzxkvn+tW2vXCuh4CsISyjyv52aGOUJMBB9fgayBCQoCJNgP3qcd04IWDP+ciPtDx2wOAqSTKsMnQtZzXXsodAWFysueDzTmSxMgidmmEo2iXPdRAAPv+41pYPEDk0yEHtDW7d7VGQbr0XIRISRID1nGeAGeWmBzFYbl7cEwvMNTGmdXldh5+vGTs6SXE/96+SYuP+d27ZzyQZ3deGQpS0POY9fd5zggiIQiTDYhENflge00hDGmmrPDZReO49tx7ybV6XaKKN7Hf5nK98AYblF5Zy87vjyrMHfPYuIiEakQxLIpJcgH9wfxv5273tKucXRIZcsJNJLlBafvGbvTimjC4qkWycRKOdISB8GY7Yi/YREaEHs7e4zge3GQJCkb4gMqIRiTGnx+ThGypuJwTWk4sBbTRE4e4Yi47YkNjGJBkF27qIIDYFFckytjFwykZ0EScZk4rdX5VMMATBRCrGOZYkpIgcqzFSqCMEIkhMWiaBDBu/hYxTrfekZROoSqgqRKsiFeWf4Bnc/0Ch3s4qMS2aVt3ds7zsk2KJ4Vt92vZUf2sirefzRP2Gl2dWY0N7zPM8y0iP0SKtiFQURw8bXJpZ3exHkmxacdX2cXuKfdFYit2rPs/KQrNusvpim5OTrcQkm0zDjF5k0wt/6O/rhU2fcWxaIbVe6L2Lor12/xU8470n2TQAGrg5GmV4l8HMCDTIZyye0bRKN9vyCTOwuaunLa3J8C5S08Ul7p7C6pqHoqv1BEx/XqPewf+210YS4VWkjXyJVtrw8qmlIeenbNSdtpZiPIdrHbdQc/Qq0mSOP2AxgK5xp37e1h6geVbYmGnuynrGnEvL+r4XznhLHIrKwkMWcwxstnScT3fbzKwJ7dMIN8/j5zv2Wsva0nl+wO5hdjgzjj0UbyLV1w08ZurrMRaNN3fHH97BimCu2qfL8yaSh4UjUfOcrhKe8CLSRiQL79tk4vGl9CISe9EbrB7eZpe9iDRZ8kr3A1kukdbiXbPgDRt3+UoensADHHMMk8Dr54QQQgghhBBCCCGEEEIIIYQQQojm/AX+FpTZtpCUFwAAAABJRU5ErkJggg==" alt="log01.png" id="aa" data-bs-toggle="modal" data-bs-target="#bb">
                         </div>
                     </button>
                 </div>
@@ -91,8 +92,28 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="bb" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">登入</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1333321</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                        <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </nav>
+
     <div class="main1 pb-28 pb-xl-0">
       <div class="main1-bg d-block d-xl-none">
           <div class="container"><!--外框 要增加y軸pd在這邊加 sm用-->
@@ -376,17 +397,20 @@
       </div>
       <div class="container pb-64 pb-lg-144">        <!--外框 要增加y軸pd在這邊加-->
           <div class="row justify-content-center gx-0">                                            <!--外框 不動-->
-              <div class="col-8 col-lg-10 col-xl-12"> <!--外框 控制欄數 sm用-->
+              <div class="col-xl-12"> <!--外框 控制欄數-->
                   <div class="main5-content">                     <!--內層外框-->
 
-                    <div class="swiper mySwiper mb-50 mb-xxl-96"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                    <div class="swiper mySwiper index-main5-mySwiper-set mb-50 mb-xxl-96"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
                       <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
                         <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
 
                             <div class="main5-content">
                               <div class="main5-card1-box main5-card-box-set mx-auto">
                                   <div class="main5-card1-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="https://fakeimg.pl/396x280/" media="(min-width:1400px)">
+                                      <img class="img-set" src="https://fakeimg.pl/343x280/" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card1-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card1-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -706,7 +730,7 @@
             loop: true, /*循環功能 true為開啟 false為關閉*/
             navigation: { /*上一張與下一張的按鈕設定*/
                 nextEl: ".swiper-next-R-btn", /*下一張的按鈕設定*/
-                prevEl: ".swiper-button-prev"  /*上一張的按鈕設定*/
+                prevEl: ".swiper-next-L-btn"  /*上一張的按鈕設定*/
             },
             pagination: {/*顯示分頁設定*/
                 el: ".swiper-pagination-custom",/*與class:swiper-pagination-custom進行對應*/
