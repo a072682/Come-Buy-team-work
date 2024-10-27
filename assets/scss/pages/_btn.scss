@@ -66,11 +66,12 @@
     font-weight: 900;
     color:$nautral-white;
     transition: 0.2s;
-    @include media-breakpoint-up(lg){  
+    @include media-breakpoint-up(lg){
+        width: 272px; 
         padding-top: 24px;
         padding-bottom: 24px;
-        padding-right: 88px;
-        padding-left: 88px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 .mian-btn1-set-sm:hover{

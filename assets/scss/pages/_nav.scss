@@ -86,12 +86,12 @@
     left:-65px;
 }
 
-.dropdown-menu.show{
-    display: none;
-    @include media-breakpoint-up(xxl){  
-        display: block;
-    }
-}
+// .dropdown-menu.show{
+//     display: none;
+//     @include media-breakpoint-up(xxl){  
+//         display: block;
+//     }
+// }
 
 .dropdown-item-set{ /*下拉選單按鈕設定*/
     width: 280px;
@@ -127,4 +127,9 @@
     background-color:transparent;
     border-radius: 50%;
     border:none;
+}
+
+.login-modal-body .login-error-message {
+    color: red;
+    display: none;
 }

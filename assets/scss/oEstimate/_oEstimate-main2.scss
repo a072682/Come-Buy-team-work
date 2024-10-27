@@ -33,12 +33,38 @@
     }
   }
 
+    /* 主要樣式 */
+    .oEstimate-main2-tab {
+    }
+    
+    /* 頁籤內容 */
+    .oEstimate-main2-tab-content{
+        display: none;
+    }
+
+    /* 當前選中的頁籤內容 */
+    .oEstimate-main2-active-tab {
+        display: block;
+    }
+
+    
+
+
   .oEstimate-main2-swiper{/*最外框作為輪播按鈕的定位*/
     border:2px solid $primary2;
     position: relative;
     outline: none;
   }
-
+.swiper02 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block
+}
 .oEstimate-main2-mySwiper-set{
     width: 231px;
     height: auto;
@@ -81,9 +107,9 @@
 }
 
 
-.swiper-next-R-btn{
+.oEstimate-main2-swiper-next-R-btn{
     position: absolute;
-    display: none;
+    display: block;
     top: 40%;
     right: 0px;
     @include media-breakpoint-up(sm){  
@@ -103,9 +129,9 @@
         right: 24px;
     }
 }
-.swiper-next-L-btn{
+.oEstimate-main2-swiper-next-L-btn{
     position: absolute;
-    display: none;
+    display: block;
     top: 40%;
     left: 0px;
     @include media-breakpoint-up(sm){  

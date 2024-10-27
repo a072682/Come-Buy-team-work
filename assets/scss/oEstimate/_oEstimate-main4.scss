@@ -1,3 +1,25 @@
+.oEstimate-main4-bg-set{ //背景為上左和下右各一個貼圖加背景漸層 //原 - main2
+    width: 100%;
+    height: auto;
+    outline: 
+        none;
+    border: 
+        none;
+    background-image: 
+        linear-gradient(180deg, #000000, #000000);
+    background-repeat: 
+        no-repeat;
+    background-position:
+        center center;
+    background-size: 
+        cover;
+    @include media-breakpoint-up(lg){  
+        background-image:
+            linear-gradient(180deg, #000000, #4F000E);
+        background-size: 
+            cover;
+    }
+  }
 .oEstimate-main4-btn01-set{
     border:1px solid $nautral-white;
     border-radius: 5px;
@@ -6,15 +28,151 @@
     }
 }
 
-.oEstimate-main4-ousidematerial-box-set{
-    @include media-breakpoint-up(xl){  
-        form{
-            label{
-                width: 120px;
-            }
-            input{
-                width: 452px;
-            }
-        }
+.oEstimate-main4-text-set{
+    max-width:452px;
+    width: 100%;
+    @include media-breakpoint-up(xxl){
+        max-width:120px;  
     }
+}
+.oEstimate-main4-item-set{
+    border:2px solid $nautral-white;
+    border-radius: 5px;
+    height: auto;
+    @include media-breakpoint-up(xl){  
+        max-width:452px;
+        width: 100%;
+    }
+}
+/*工期選擇*/
+.oEstimate-main4-timework{
+
+}
+.oEstimate-main4-timework-list{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    text-align: center;
+    padding-right:auto ;
+    padding-left:auto;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+}
+.oEstimate-main4-timework-item{
+    cursor: pointer;
+}
+.oEstimate-main4-timework-item:hover{
+    background-color: #E22288;
+}
+.main4-img-box{
+    max-width: 48px;
+    height: auto;
+}
+.main4-img-position1{
+    right: 22px;
+    top: 10px;
+    @include media-breakpoint-up(xl){  
+        right: 34px;
+        top: 24px;
+    }  
+}
+.main4-img-position2{
+    left: 24px;
+    top: 14px;
+    @include media-breakpoint-up(xl){  
+        left: 36px;
+        top: 20px;
+    }  
+}
+.main4-img-position3{
+    right: 24px;
+    top: 12px;
+    @include media-breakpoint-up(xl){  
+        right: 36px;
+        top: 20px;
+    }  
+}
+/*工期選擇*/
+
+
+
+
+
+
+
+
+.selectable-date {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    padding: 4px 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectable-date:hover {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+.selected-date {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+.today {
+    border-radius: 50%;
+    background-color: #E22288;
+}
+/* 顯示當前選擇的日期的樣式 */
+#selectedDateDisplay {
+    width: 100%;
+    font-size: 24px;
+    color: white;
+}
+
+
+.calendar {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    text-decoration: none;
+    padding: 16px 0;
+    @include media-breakpoint-up(xl){  
+        width:452px;
+        padding: 30px 0;
+    }
+    
+}
+.calendar-box {
+    background-color: #6e002c;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.5;
+    width: 100%;
+    @include media-breakpoint-up(xl){  
+        max-width:452px;
+    }
+}
+
+.prevMonth-btn-img-box {
+    max-width: 48px;
+    height: auto;
+}
+.nextMonth-btn-img-box {
+    max-width: 48px;
+    height: auto;
+}
+.weekbox {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.weekbox div {
+    text-align: center;
+    padding: 4px 10px;
+}
+.daybox {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }

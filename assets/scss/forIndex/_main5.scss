@@ -8,16 +8,33 @@
 .main5-title-box-set{
     line-height: 1.2;
 }
+.index-main5-mySwiper-set{
+    width: 352px;
+    height: auto;
+    @include media-breakpoint-up(lg){  
+        width: 736px;
+    }
+    @include media-breakpoint-up(xl){  
+        width: 1120px;
+    }
+    @include media-breakpoint-up(xxl){  
+        width: 1300px;
+    }
+}
 
 .main5-card-box-set{
     border: 4px solid #8B0018;
-    width: 351px;
+    width: 352px;
+    @include media-breakpoint-up(xxl){  
+        width: 412px;
+    }
+
 }
 .main5-card-img-box-set{
     max-width: 343px;
-    img{
-        max-width: 100%;
-        height: auto;
+    height: auto;
+    @include media-breakpoint-up(xxl){  
+        max-width: 396px;
     }
 }
 .main5-card-text-set{
@@ -49,6 +66,7 @@
     display: none;
     top: 40%;
     right: 0px;
+    z-index: 500;
     @include media-breakpoint-up(sm){  
         display: block;
         right: 24px;
@@ -71,6 +89,7 @@
     display: none;
     top: 40%;
     left: 0px;
+    z-index: 500;
     @include media-breakpoint-up(sm){  
         display: block;
         left: 24px;
