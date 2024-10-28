@@ -1000,42 +1000,7 @@
 
 
     <%- include('./layout/footer'); -%>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <script type="module" src="../main.js"></script>
-    <script>
-      // 註冊點擊事件
-      const btn = document.getElementById('qaPage-link1');
-      btn.addEventListener('click', function(event) {
-          event.preventDefault(); // 阻止預設的錨點行為
-  
-          // 先嘗試滾動到 ID 為 'a' 的元素
-          const targetA = document.getElementById('qP-main-sm');
-          const targetB = document.getElementById('qP-main');
-  
-          // 使用 getComputedStyle() 檢查元素是否被 display: none 隱藏
-          const isTargetAVisible = window.getComputedStyle(targetA).display !== 'none';
-          console.log(isTargetAVisible);
-          
-  
-          if (isTargetAVisible) {
-              // 如果目標 A 可見，滾動到目標 A
-              targetA.scrollIntoView({ behavior: 'smooth' });
-          } else if (targetB) {
-              // 如果目標 B 不可見，嘗試滾動到目標 C
-              targetB.scrollIntoView({ behavior: 'smooth' });
-          } 
-      });
-      //點擊日歷區塊外會自動縮回
-      
-  </script>
-  <script>
-    const testa = document.getElementById('offcanvasNavbar');
-    document.addEventListener("click",(event) => {
-            const showBack2 = testa.contains(event.target);
-            if(!showBack2){
-              testa.classList.remove("show");
-            }
-    })
-  </script>
-    </script>
   </body>
 </html>

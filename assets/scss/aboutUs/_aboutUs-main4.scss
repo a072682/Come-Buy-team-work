@@ -91,6 +91,8 @@
     /* 調整視窗大小
     modal-dialog 是控制彈出視窗的整體對話框 控制視窗寬度*/
   max-width: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .modal-content {
