@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/Come-Buy-team-work/assets/bootstrap.bundle.min-08a85b2a.js"></script>
-    <link rel="stylesheet" href="/Come-Buy-team-work/assets/bootstrap.bundle-3180e025.css">
+    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-aac253f0.js"></script>
+    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-1bc64dcf.css">
   </head>
   <body>
 
@@ -66,10 +66,10 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn04-active"><!--新手指南QA子項目下拉選項-->
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main0">客製化流程</a></li>
-                            <li><a class="dropdown-item dropdown-item-set" href="#" id="qaPage-link1">設計需求介紹</a></li>
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main2">運費說明</a></li>
-                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html#qP-main3">常見問題</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">客製化流程</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">設計需求介紹</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">運費說明</a></li>
+                            <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">常見問題</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mb-16 mb-xxl-0 mx-auto border-low"> <!--漢堡內部內容 聯絡我們子項目-->
@@ -103,12 +103,19 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>1333321</p>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">帳號</label>
+                        <input type="text" class="form-control" id="username" placeholder="請輸入帳號">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">密碼</label>
+                        <input type="password" class="form-control" id="password" placeholder="請輸入密碼">
+                    </div>
+                    <div class="error-message" id="errorMessage">帳號或密碼錯誤</div>
+                    <button type="submit" class="btn btn-primary">登入</button>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
-              </div>
         </div>
     </div>
 </div>
@@ -169,7 +176,7 @@
                   <div class="col-12 mb-64 col-lg-4 mb-lg-0">
                       <div class="main2-card1 main2-card-set">
                           <div class="main2-card1-img-box main2-card-img-box-set">
-                              <img src="https://fakeimg.pl/200x200/" alt="">
+                              <img src="/Come-Buy-team-work/assets/index-mian2-img01-1b50e0d0.png" alt="index-mian2-img01">
                           </div>
                           <div class="main2-box d-flex justify-content-center align-items-center">
                             <p class="main2-box-text d-flex justify-content-center align-items-center">設計流程標準化</p>
@@ -180,7 +187,7 @@
                   <div class="col-12 mb-64 col-lg-4 mb-lg-0">
                       <div class="main2-card2 main2-card-set">
                           <div class="main2-card2-img-box main2-card-img-box-set">
-                              <img src="https://fakeimg.pl/200x200/" alt="">
+                              <img src="/Come-Buy-team-work/assets/index-mian2-img02-6e53e677.png" alt="index-mian2-img02">
                           </div>
                           <div class="main2-box d-flex justify-content-center">
                               <p class="main2-box-text d-flex justify-content-center align-items-center">降低前期製造成本</p>
@@ -191,7 +198,7 @@
                   <div class="col-12 col-lg-4 mb-lg-0">
                       <div class="main2-card3 main2-card-set">
                           <div class="main2-card3-img-box main2-card-img-box-set">
-                              <img src="https://fakeimg.pl/200x200/" alt="">
+                              <img src="/Come-Buy-team-work/assets/index-mian2-img03-45329883.png" alt="index-mian2-img03">
                           </div>
                           <div class="main2-box d-flex justify-content-center">
                               <p class="main2-box-text d-flex justify-content-center align-items-center">細節精準調教</p>
@@ -222,8 +229,8 @@
                   <div class="main3-card">
 
                       <div class="main3-card-item1 border-bottom-set mb-64">
-                        <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
+                        <div class="main3-img-box pb-24 mx-auto">
+                          <img class="d-block mx-auto main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-sm-img01-e4a3fc88.png" alt="index-mian3-sm-img01">
                         </div>
                         <div class="main-text-box pb-24">
                           <p class="fs-24 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
@@ -231,11 +238,11 @@
                       </div>
 
                       <div class="main3-card-item2 mb-64">
-                        <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
+                        <div class="main3-img-box pb-24 mx-auto">
+                          <img class="d-block mx-auto main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-sm-img02-2077ac2c.png" alt="index-mian3-sm-img02">
                         </div>
                         <div class="main3-text-box border-bottom-set pb-20 mb-64">
-                          <p class="fs-24 fw-bold main3-text-set">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
+                          <p class="fs-24 fw-bold main3-text-set text-md-center text-lg-start">24小時內快速報價，讓你的3D列印計劃立即起步。</p>
                         </div>
                         <div class="main3-btn-box">
                           <button class="fw-bolder d-block mx-auto mian-btn1-set-sm">線上估價</button>
@@ -243,11 +250,11 @@
                       </div>
 
                       <div class="main3-card-item3 border-bottom-set">
-                        <div class="main3-img-box pb-24">
-                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/351x261/" alt="">
+                        <div class="main3-img-box pb-24 mx-auto">
+                          <img class="d-block mx-auto main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-sm-img03-635d9d43.png" alt="index-mian3-sm-img03">
                         </div>
                         <div class="main-text-box pb-24">
-                          <p class="fs-24 fw-bold main3-text-set">打樣快速交付,讓你的創意即刻成真。</p>
+                          <p class="fs-24 fw-bold main3-text-set text-md-center text-lg-start">打樣快速交付,讓你的創意即刻成真。</p>
                         </div>
                       </div>
                   
@@ -265,7 +272,7 @@
 
                       <div class="main3-card-item1 d-flex justify-content-lg-center align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-img01-0e113ae0.png" alt="index-mian3-img01">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
                           <p class="fs-32 fw-bold main3-text-set">上傳你的創意，我們將它變成現實,體驗定制化3D列印的無限可能。</p>
@@ -274,7 +281,7 @@
 
                       <div class="main3-card-item2 d-flex flex-row-reverse justify-content-lg-between align-items-lg-center mb-112 gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block mx-auto main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block mx-auto main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-img02-7b3d6741.png" alt="index-mian3-img02">
                         </div>
                         <div class="item2-content">
                           <div class="main-text-box border-bottom-set pt-32 pb-28 mb-48">
@@ -288,7 +295,7 @@
 
                       <div class="main3-card-item3 d-flex justify-content-lg-between align-items-lg-center gap-148">
                         <div class="main3-img-box">
-                          <img class="d-block main3-img-set" src="https://fakeimg.pl/512x392/" alt="">
+                          <img class="d-block main3-img-set" src="/Come-Buy-team-work/assets/index-mian3-img03-83699fc9.png" alt="index-mian3-img03">
                         </div>
                         <div class="main-text-box border-bottom-set pt-32 pb-28">
                           <p class="fs-32 fw-bold main3-text-set">打樣快速交付，讓你的創意即刻成真。</p>
@@ -407,8 +414,8 @@
                               <div class="main5-card1-box main5-card-box-set mx-auto">
                                   <div class="main5-card1-img-box main5-card-img-box-set mx-auto">
                                     <picture>
-                                      <source srcset="https://fakeimg.pl/396x280/" media="(min-width:1400px)">
-                                      <img class="img-set" src="https://fakeimg.pl/343x280/" alt="home-section2-1">
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img01-0c06e2f3.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img01-7b9de311.png" alt="index-mian5-sm-img01">
                                     </picture>
                                   </div>
                                   <div class="main5-card1-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
@@ -441,7 +448,10 @@
                             <div class="main5-content">
                               <div class="main5-card2-box main5-card-box-set mx-auto">
                                   <div class="main5-card2-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img02-7b70e274.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img02-324f3c35.png" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card2-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card2-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -473,7 +483,10 @@
                             <div class="main5-content">
                               <div class="main5-card3-box main5-card-box-set mx-auto">
                                   <div class="main5-card3-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img03-52e0f139.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img03-db9956e6.png" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card3-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card3-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -505,7 +518,10 @@
                             <div class="main5-content">
                               <div class="main5-card4-box main5-card-box-set mx-auto">
                                   <div class="main5-card4-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img01-0c06e2f3.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img01-7b9de311.png" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card4-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card4-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -537,7 +553,10 @@
                             <div class="main5-content ">
                               <div class="main5-card5-box main5-card-box-set mx-auto">
                                   <div class="main5-card5-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img02-7b70e274.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img02-324f3c35.png" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card5-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card5-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -569,7 +588,10 @@
                             <div class="main5-content">
                               <div class="main5-card6-box main5-card-box-set mx-auto">
                                   <div class="main5-card6-img-box main5-card-img-box-set mx-auto">
-                                    <img class="mx-auto d-block" src="https://fakeimg.pl/343x280/" alt="343x280">
+                                    <picture>
+                                      <source srcset="/Come-Buy-team-work/assets/index-mian5-img03-52e0f139.png " media="(min-width:1400px)">
+                                      <img class="img-set" src="/Come-Buy-team-work/assets/index-mian5-sm-img03-db9956e6.png" alt="home-section2-1">
+                                    </picture>
                                   </div>
                                   <div class="main5-card6-text main5-card-text-set pt-20 pb-24 px-24 mx-auto">
                                       <div class="main5-card6-title main5-card-title-set d-flex flex-column row-gap-12 mb-24">
@@ -606,14 +628,14 @@
                     <div class="swiper-next-R-btn">
                       <button class="carousel-btn-R">
                         <div class="img-box">
-                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 14">
+                            <img class="img-set" src="data:image/png;base64,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" alt="index-main5-arrowR">
                         </div>
                       </button>
                     </div>
                     <div class="swiper-next-L-btn">
                       <button class="carousel-btn-L">
                         <div class="img-box">
-                            <img class="img-set" src="data:image/png;base64,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" alt="Vector 13">
+                            <img class="img-set" src="data:image/png;base64,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" alt="index-main5-arrowL">
                         </div>
                       </button>
                     </div>
@@ -627,13 +649,14 @@
     <div class="container">
             
         <div class="footer-logo mb-32 mb-xl-48">
-            <div class="img-box">
+            <a href="index.html" class="footer-img-box">
                 <picture>
-                    <source srcset="https://fakeimg.pl/64x64/" media="(max-width:1200px)">
-                    <img src="https://fakeimg.pl/376x104/" alt="home-section2-1">
+                    <source srcset="/Come-Buy-team-work/assets/footer-sm-logo-d45de916.png " media="(max-width:1200px)">
+                    <img class="d-block mx-auto mb-12 mb-xl-0" src="/Come-Buy-team-work/assets/footer-logo-f841118a.png" alt="footer-logo">
                 </picture>
-            </div>
-            <div class="text d-xl-none">Come & Buy</div>
+                <div class="text-nautral-white fs-32 fw-600 lh-12 d-xl-none">Come & Buy</div>
+            </a>
+            <!-- <div class="text-nautral-white fs-32 fw-600 lh-12 d-xl-none">Come & Buy</div> -->
         </div>
         
         <div class="main d-xl-flex justify-content-xl-between mb-xl-48">
@@ -641,7 +664,7 @@
             <div class="card-box mb-32 mx-auto mx-xl-0 mb-xl-0  d-xl-flex flex-xl-column justify-content-xl-between">
                 <div class="card01 card-set mb-16">
                     <div class="card-img-box">
-                        <img src="https://fakeimg.pl/36x36/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJlSURBVHgB7ZdBctNAEEV/K6msWPgCYClwAOcEOCcIvoF9BDYkXtleGdgQnyDkBuEEEifAB6AiJbmAd1Slomm6bVIVgkYzGnmH38JVnulpfXX3zLSAHTvaQQjg7s28zwYnsrjPiGKAO+JqRTAFg5YU8eXLn+MMATQSpELANGFG32UrNoVhPk6KcYEGRL6GN4fzKRtKfcQoRIj3Isp1HRrgFSF1SqAJAmHwrHs9nvrYOgXdHs6HYnaBlpRmnb7MZeeRsvDI/PUgoos8nnScdnWTm+ggtlvQSupqKg8bSkqnMlBYLbWm8OItHOzXTYqTEyniSph5afiXpGG2ehzL4y+LiO5TIu5VO3wYyu831FAbIWbq2eYMY/BUjJIU71eGD441cpWLyO7PSxBs6WJktvNFRZE9dTFaCrLoofriJF4hEJegompQaySP53HVnI7bDk8pgSVaCsqsC4nS56L0v5zOqW2NvIhT0H79NH8XN8Nq57KNifK71/MrcLSU0ziW0Xebi9bizVAGB7UntWzjzl50n9c9xBe9bLv5WeKyq03Znx1zji0gEc187Jy77MEcLKznSgPkLpv52DkFbSNKbPjcty/yOofaRGndqAELX3svQRolRukV8n8V0bRJ19iohb1NPqayot9gyddX12ejBvbNro6SeeSbOk2VbyEHC9LQlwZ+b9wwVUGCsBZ1eiVRqt112rR1i9NLBBD0XabcJJ9+VDVi2rh18/ERAglqPxTDZoBn3cDmWwwDtCA4Qkoef+7tRZw+frmWxhyF1M1TgiOkJMWHpYhYR6Q05aitmK1ha9Z2/Bf8BlYGASXSdcjPAAAAAElFTkSuQmCC" alt="footer-Location">
                     </div>
                     <div class="card-text footer-text-set">
                         地址：台中市大雅區神仙路1號
@@ -649,7 +672,7 @@
                 </div>
                 <div class="card02 card-set mb-16">
                     <div class="card-img-box">
-                        <img src="https://fakeimg.pl/36x36/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHbSURBVHgB7ZdPcoIwFMZfgjPdegEVmV7AG9iT1J5A3VTtRt1UXYkn0J7E9gTeQIO9gLuuzOuLHSTA8EdFpgt+CzGPEL58+aIAUFBQcF9YsOBYkxED3gbAMtwVdkAJq5rodX1V8ImZ2lRoQ44wYKPKtjd22zxw8hlyBkF29DYPnNaWCV/oQ0DWAhAEk7zpVVg5RpBHdTtYHeVDgy6wISsxEm2JP42KeP2K6lOKG6Auugc6dHfmZGFwtqbvJlylBD4Z8lE1RoiLL9R7a4pakxzCcV0MhFtwrPcOA2OYfgeqnYSjmugv3ApNziwZbElL13Rr1W3/rIPHjNYyOGyUCLdQ277ZRykbSiwkQa6ovroYx5p1DM43upjQFPRGwCFvbAqiRHzS3dpbkxZdTm75l1H15chbek6+HydNQDaMEpLWIU81A5MytHPM2XxnDst/g4RDHwyt6qt+21CydZwrvnvpjSiHdJQDNFvKRe/DrZ1yAUYt6AoJWUKKjaA7dLEgjVDoz+ICob1EUKoliyAU+jShTeIWh86cgsxBXCtEd6gEGaBCT2JMyIBbluwuFIKSKAQl8d8FsQPkDvruGXimhsyeDtOi3jzAr8HP3prN6dDK6TXIpj/pMRQUFOTIL4gE2xc+8jiJAAAAAElFTkSuQmCC" alt="footer-Email">
                     </div>
                     <div class="card-text footer-text-set">
                         come_and_buy@comebuy.com
@@ -657,7 +680,7 @@
                 </div>
                 <div class="card03 card-set mb-16">
                     <div class="card-img-box">
-                        <img src="https://fakeimg.pl/36x36/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIhSURBVHgB7ZdLUttAEIb/bnkBlY3XqRDJVA6QnACOwA3QDcIiRUI22CtVViY3UE4QcoLADewL4BFcwBtgAZ5mhodL1ssGeQQL/xuXu2c0n3p6elrASivVE8GhRsFhu8XvdgFpZ31aQ/nq+5+svQWH8ni9L9BhkY8YSIJfyEIxHIoIQZWfOe93CgSh9nOnOAUSVEfIRFBlbc6ARkEUFCVzWjIhhaaAPI8/zxtzi8th1uZuywRblW6B6qjeGE0BCSZJlZ8ggyK7MyD/7OeRaOqW+UX4GE0CWZmi1yuD0tCnaBrIqgQq7qgDhdcAsjLRmLkeSHNcNrYRII/pcPpHcLKh9k/xWkDnm1FofsLpgoK9qvFOgR6qdSo6Jnc+qB/DqjlO2w8m/MXjfWYLoRbpzZvjDCjpRDERTa8PFg59ta/mzVsIyHZ+Hq/tmPBvmYZraIte1VimtSMDs/tks8f+Y0Uip0XFi6/375srkbaAg+ytLZCef3bQzc+NArtN6chYGFuLsKBySf3QAyM0e74tsA/OtxBkEjXZjLpp28WnaNsc7/91YO7Xz5tkoS7vEco267FH3BctOzNP0dgzML/xTNVKagtlovI1/RL2NNkEXjRnslpCHZqJaKzl+svGC2GslnPszXVAwt06IKgPRGOzP4NlgZQCmTqTlH/QGgjIMROd3Eyu/hW1oHVVuLK9EAnsWwAiGesJj1tEg/ejbwlWWumN6w7WOcu1qmO1CgAAAABJRU5ErkJggg==" alt="footer-Phone">
                     </div>
                     <div class="card-text footer-text-set">
                         (04)9408-1688
@@ -665,7 +688,7 @@
                 </div>
                 <div class="card04 card-set ">
                     <div class="card-img-box">
-                        <img src="https://fakeimg.pl/36x36/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ8SURBVHgB7ZjNjdpAFMf/M6AI5UQDAZs0QAehA7aDdSpYOEQb9gKcCMoh3grCdrBbQUgHpICATRrwJVEULfPyZj9tYGBsAxLS/k4e5oOfHjPzngFeODIEUjJzuuVisVQnhSZPbhCkA1D5YblICJoQ0QSCvld+XlwjJdZCWkTKUktAnj0LbIYIAYtdKYWRG3QCmzlWQmFtyCLo2oqsFSPRqwbnV9vGbhUKa598HnSGHUBK+CzVRlah0B2MhBCn2C2jyvTje1OnNHXcRWb3MhovdIZfTJ1rIzSvDTzu+oo9QlDt6vTCxzahmTNwClJ840cHdiuPOZLju0eiBq/YsJoHihbqr+sG/Sj+aXF5mJTwrGUYLfNmet7Xz79qQ/ZjKbuZ5aJ8rQ9LP/H9K8Owl32zFv7ZWvp+g0lo/nZ4ghTRyY9gmVIdJiFWfocDU5BoxtsJIc5DdRwYItmIt2WyUxxcSAjlxNtLmzpbrnqaDRUiNcK8qbNJkPP4XJl2RpyvesjBkpCIkB4vrA16jw1Onv10UhQZhfjaDpABvru6maVITGASImCMjGSW4goTJqGFUjfIQSYpVRzDJMS35iTjPkpKOcPn9COVsebSlWQl+HCTnL8EJ8gun5wecsKR8VjG1YIbxuiyNpFcV7L9rXp1WZD/WnnvJCFptKkg1dFRUCs19so95AbtiLDoY99w0b/uTWTtxXhfyQkf+3JR5JveQI6nyNdUZx1vl5HSkdkks1VIU5nq9yjSiwTIjIj0qasGnfbWkbBEF/8S8pRPjwfrqlKLwFf4c7lczOcWijN3PjchFyecaxwuaOrxPxv0ceYaZyxU4foWv3/YirxwtPwH9+AE3bn+JTUAAAAASUVORK5CYII=" alt="footer-Time">
                     </div>
                     <div class="card-text footer-text-set">
                         9:00am - 18:00pm
@@ -698,16 +721,16 @@
 
                 <div class="footer-icon d-flex justify-content-center gap-32 mb-32  justify-content-xl-start mb-xl-0">
                     <div class="footer-icon-box">
-                        <img src="https://fakeimg.pl/40x40/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHkSURBVHgB7ZjtbcIwEIYviAHYoBkBJoBOUEagE1SdoHSC0gkCI3QC0g3YIN4ANrie6yAh5/wZx/mTRzqBkvP59fk7ABMT41JAJIi4oJ8t2ZpsSVaSLdrXNzJBdiGryX6KorhBDkhYSfZFdsUwKlkWhkJmjOyA/dlDatqsNZiOBlNlcwBx6UQOKM5bZOEQ2ICanSHUrQnt+Y5sw/hLv1XwLCdxewyjIVtb4lWWsh8QAqquTdpVDoFoKj8zxAtrEcCeukhAP968vFCtd6EsPOJWjhhXLs6cibWFMC7cAEe1ID+OyaUjjhT3Qnayenm0VOfMxNhiHJUeixuDJfTH2eUGOlme+ThlpNQfcAJjW58Cd92xY8UjbuUTWC/HZTDPwZKnUzcnUMB4CP0BJ/AC49Gpm1uof0GdPGzI3aZs/9/0hRrVjqAPeJ/JVzs9UG11IfcNbqHeYRylHqvTxW02asjPkTtwmE4z35CfT+4hK5BaUtPPAfJxNB3XZpZCskUChkeQvZteGgW2Y/EZhl24/+uw3UdsGYQ27UOJvIsTNierQAkFkIvnCtJ2twAlzrkpOAVKHjJ5hP7IybfyERcFqhtfFbFQn9FyLTUxD/S/Z/OVKpOzfEP2ZHCVfvfPb6dsn98mJhLzBxlnTwRzn6dFAAAAAElFTkSuQmCC" alt="footer-Facebook">
                     </div>
                     <div class="footer-icon-box">
-                        <img src="https://fakeimg.pl/40x40/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJRSURBVHgB7ViBccIwDBS9DpAR3A3oBKSTlE7QEegGHBNAJwgbJJ0ANkg2gA1UqXEPo9ixlQC93vF3uji2JSuyLMkBuOOOfwBEzIkKohrHY2dlvcJYkJCpFXgt1EQGhoAY50QHvA2C1pwElDP0qD1DFdGe6AjDkBFNiXLRz/JeJpPJPkUIYNfXShy6FX75Bruus0tlng9iTFdsTbQkyuyHu8hThBSCycCFIBRaWIVdFJLn0SPHOO2K/KKB/kVzaH1q5vAyD/vTSvBnbpvHiL+Ck09OIQbxRcueeZnH2j6sf3cBT2GrdPqW7mStgovAHN6aGtNRY8BVsN3qoIIPoIRdqIRzV2BwqNhaasTYDw/xZjAWMQvaLZPWmXnmzbFr5cIzb9FnQZWC2D11NfaccvS7Qq5RULvF7+L9o++U27E30T0DBbQKumGgIQU+Yww0p4Lz1JiDAloFjdNOy5stqoCMKNSn+NbQKtg47RzSceYaoIBWwcppZ5iQ3DncwHDXUCv4Jd7XsTBDDxlLV6CASkF7IrdOl4E2Q3QqYmtdmXE2seIjir5Abccz9Odh7issHQLjxiNv0ReoH0EJssCR5LxA1zoGwiGkgbakb0CJ2BZ7k7tdiJXcQBzsEs89yukKCLF9ZcJ8zrdc05WWt7Zt3rpoWsPzKjt+vcArlvyetaIlv48pF0xRK45QUN7s0v42eBh3ePlrZynW8N3Dgxd3Tk1sOenAFVzn4s54Up1y7N6PrwWOmcN+JKH+cqQFu84UxgJbaxZ4mT9dtZWlqqzvuOOv8A0pL5r5vBW1RQAAAABJRU5ErkJggg==" alt="footer-Instagram">
                     </div>
                     <div class="footer-icon-box">
-                        <img src="https://fakeimg.pl/40x40/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIKSURBVHgB7ZjtccIwDIYVjv/NBvUGZQPCBKUTwAZlg9IJ6AYNE3QE0gmgEyRMABuocm0fvsQkcnCA3uW50zmJHPHGH7IxQE/PbYnqnIiYUDEjk2WsLQRHsoJsR7aOoigDX0jcB16P1T2L8xNJFRO8HUlZz8ChcQa3o/LbQ0elEfhTgBrwR30vQE0o31hJYw2P7tiQvZLFNbEE2ZwsZ8bMQwg8kHkPA65QTqDaLyQT0BJULZp3JTC/RBxXJCfAOZ4hEFiTyjgvu9hAYFBNskaBA2a81Ao8tQXr1sh1uTXDQF+PtM+YPbnWwGAIPH6sa5lWRMlv7mXe+yIhE339oH0LUHlyb72TAQNuCx6Y9WSilh/wVnq+BNULY/CE24JcpMAXsvKYXUK1BVlbN24LJqV7kypk5he2g/Z2Usg7VAWmZHYmYC2DlQ2rayYRGf3wRPsFFY+WT47PJ10KLVDWG1s+w578hfZXPu5PEAF14HkSCASqZS9oHkT8ByvJxSLp3Rg7XIsNbXczUty2KTgnEJcc1X6wcTai6tZGcaEF2shW3aBj84qnpZBFVwINYyuO7FLvf4ccgQdsT6xt0TJOZUl1LXVmPW3DJ5xOIdpQlB+4lroM2jOFy45HduUHLoGsfVpHpKxaNBZWeH28z2euKfKsuKbjN5k25qC2RgLCHr9Jy8hS2sB8Q0/PnfILS3cjndETvUQAAAAASUVORK5CYII=" alt="footer-Line">
                     </div>
                     <div class="footer-icon-box">
-                        <img src="https://fakeimg.pl/40x40/" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH4SURBVHgB7ZjtUcJAEIbfMPwXK+DsACoQOsAKGCtQK0ArUCvADrSD0IFQQY4KSAfnbriMmb2c5guOH3lmdi57cJc3e98H9PSEJZIZxpgJJWxjMmWzZQqP70N7/NQa+ztOoyjaltbAwshiE57EHIOUERWiFpONcBlwVOcczVxggurNdS42JHAe2eh9yx+taevLNIMq2KMC9I5xwb0mu7LP3GLKpqxjIYpOufCD6AOfCIRxx8ByALffbRGOjfAnLFCJTI1wyC4zujSBqfDVAC2hfrImU+gGLfwR7MRYZIwa2DIHsme0hD9UTtqtI2jhgbayH7tEl9ivL1JrNTHlxE2and8t6jk4L0BNzN+s6wp19JjTCmQSssem9Z1DYFHov/1TFupqkFRFoy5niCAPwlXT+k4t8NW0nBVOOc3coibGM80kIrPJSpLDdS3QEFOykgzRDbzIv5G90yY2RYcM4e4geMdbaads+SB7IWEa7VHC1zzNSIG1mpiE3XckrhQWqEVeyJOdEn5pBBXCIVsvE7gTmTOEYyL81Hfs/MLx8MTR3eM3ymnhGVX7nnF3NEqkHLkZ3OBM84N7jLCRK4PvaW7yzcIT3L4YEtZyxw+ZQHujNEfYE13OBvZehh3f9Rv3CU4VjtNOPvUo8XeFamiPX0zZdt7rt56eQPwA+cBvwFXAn40AAAAASUVORK5CYII=" alt="footer-YouTube">
                     </div>
                 </div>
             </div>
@@ -719,7 +742,7 @@
         </div>
 
     </div>
-  </div>
+  </div>    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">/*使用swiper輪播插件需要插入的javascript*/
     </script>
     <script>/*swiper輪播插件自定義的參數放置位置*/
@@ -752,7 +775,6 @@
             }
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
   </body>
 </html>
