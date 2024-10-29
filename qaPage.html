@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>qaPage</title>
-    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-aac253f0.js"></script>
-    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-1bc64dcf.css">
+    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-8fa40e17.js"></script>
+    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-077a4b33.css">
   </head>
   <body>
     <nav class="navbar fixed-top nav-bg-set nav-border-set w-100 pt-24 pb-20 px-16 navbar-expand-xxl py-xxl-16"> <!--最外層 pd放這邊 navbar-expand-lg-->
@@ -34,14 +34,14 @@
             </div>
             <div class="offcanvas-body py-0  align-items-xxl-center gap-xxl-32 px-xxl-0 py-xxl-0"><!--漢堡內部內容 內容區-->
                 <ul class="navbar-nav justify-content-center align-items-xxl-center gap-xxl-32">
-                    <li class="nav-item mb-12 mb-lg-0 ms-xxl-48 mx-auto navbar-dropdown pe-auto border-low position-relative"> <!--漢堡內部內容 最新消息子項目-->
-                        <button type="button" class="select-btn-set text-center" id="select-btn01-active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <li class="nav-item mb-12 mb-lg-0 ms-xxl-20 mx-auto navbar-dropdown pe-auto border-low position-relative"> <!--漢堡內部內容 最新消息子項目-->
+                        <button type="button" class="select-btn-set navbar-btn-bg-set01 text-center ps-xxl-28" id="select-btn01-active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                             最新消息
-                            <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--最新消息子項目右邊icon-->
+                            <span class="material-symbols-outlined ms-xxl-4"><!--最新消息子項目右邊icon-->
                                 arrow_drop_down
                             </span>
                         </button>
-                          <ul class="dropdown-menu dropdown-menu01-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn01-active"><!--最新消息子項目下拉選項-->
+                          <ul class="dropdown-menu dropdown-menu01-set m-0 p-0 mt-xxl-22" aria-labelledby="select-btn01-active"><!--最新消息子項目下拉選項-->
                               <li><a class="dropdown-item dropdown-item-set" href="index.html#index-main5">最新消息</a></li>
                               <li><a class="dropdown-item dropdown-item-set" href="#">優惠活動</a></li>
                               <li><a class="dropdown-item dropdown-item-set" href="#">合作廠商</a></li>
@@ -57,14 +57,14 @@
                         <a class="navbar-link select-btn-set text-center" id="select-btn03-active" aria-current="page" href="#">材料選擇</a>
                     </li>
                     <li class="nav-item mb-12 mb-xxl-0 mx-auto border-low navbar-dropdown position-relative"> <!--漢堡內部內容 新手指南QA子項目-->
-                        <a class="select-btn-set text-center" id="select-btn04-active" aria-current="page" href="qaPage.html"
+                        <button class="select-btn-set text-center navbar-btn-bg-set02" id="select-btn04-active" aria-current="page" href="qaPage.html"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                         新手指南QA
-                            <span class="material-symbols-outlined ms-xxl-4 d-none d-xxl-block"><!--新手指南QA子項目右邊icon-->
+                            <span class="material-symbols-outlined ms-xxl-4"><!--新手指南QA子項目右邊icon-->
                                 arrow_drop_down
                             </span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu02-set py-xxl-0 mt-lg-24" aria-labelledby="select-btn04-active"><!--新手指南QA子項目下拉選項-->
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu02-set m-0 p-0 mt-xxl-22" aria-labelledby="select-btn04-active"><!--新手指南QA子項目下拉選項-->
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">客製化流程</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">設計需求介紹</a></li>
                             <li><a class="dropdown-item dropdown-item-set" href="qaPage.html">運費說明</a></li>
@@ -75,44 +75,84 @@
                         <a class="navbar-link select-btn-set text-center" id="select-btn05-active" aria-current="page" href="aboutUs.html">聯絡我們</a>
                     </li>
                 </ul>
-                <div class="navbar-log1 d-block"> <!--log-in 未登錄狀態-->
+                <div class="navbar-log1" id="navbar-log1"> <!--log-in 未登錄狀態-->
                     <button type="button" class="navbar-log1-img-box py-0 d-block mx-auto" >
                         <div class="navbar-log1-img-box">
-                            <img class="navbar-log1-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABICAYAAAD1ctupAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZrdUdtAFIWPmPy8+iEJvEVUEKeCmApCB5gKAhWQDiAVYCogqQCngrgDlDcmyQw8J9ibcyOJERqMZeLVrvH5ZjSWZMla36O99+7dBYQQQgghhBBCCCGEEEIIIYQQQjxi1p3be+XcJbfzDedSRATbNODmuJ1ilSmM4GIzxkvn+tW2vXCuh4CsISyjyv52aGOUJMBB9fgayBCQoCJNgP3qcd04IWDP+ciPtDx2wOAqSTKsMnQtZzXXsodAWFysueDzTmSxMgidmmEo2iXPdRAAPv+41pYPEDk0yEHtDW7d7VGQbr0XIRISRID1nGeAGeWmBzFYbl7cEwvMNTGmdXldh5+vGTs6SXE/96+SYuP+d27ZzyQZ3deGQpS0POY9fd5zggiIQiTDYhENflge00hDGmmrPDZReO49tx7ybV6XaKKN7Hf5nK98AYblF5Zy87vjyrMHfPYuIiEakQxLIpJcgH9wfxv5273tKucXRIZcsJNJLlBafvGbvTimjC4qkWycRKOdISB8GY7Yi/YREaEHs7e4zge3GQJCkb4gMqIRiTGnx+ThGypuJwTWk4sBbTRE4e4Yi47YkNjGJBkF27qIIDYFFckytjFwykZ0EScZk4rdX5VMMATBRCrGOZYkpIgcqzFSqCMEIkhMWiaBDBu/hYxTrfekZROoSqgqRKsiFeWf4Bnc/0Ch3s4qMS2aVt3ds7zsk2KJ4Vt92vZUf2sirefzRP2Gl2dWY0N7zPM8y0iP0SKtiFQURw8bXJpZ3exHkmxacdX2cXuKfdFYit2rPs/KQrNusvpim5OTrcQkm0zDjF5k0wt/6O/rhU2fcWxaIbVe6L2Lor12/xU8470n2TQAGrg5GmV4l8HMCDTIZyye0bRKN9vyCTOwuaunLa3J8C5S08Ul7p7C6pqHoqv1BEx/XqPewf+210YS4VWkjXyJVtrw8qmlIeenbNSdtpZiPIdrHbdQc/Qq0mSOP2AxgK5xp37e1h6geVbYmGnuynrGnEvL+r4XznhLHIrKwkMWcwxstnScT3fbzKwJ7dMIN8/j5zv2Wsva0nl+wO5hdjgzjj0UbyLV1w08ZurrMRaNN3fHH97BimCu2qfL8yaSh4UjUfOcrhKe8CLSRiQL79tk4vGl9CISe9EbrB7eZpe9iDRZ8kr3A1kukdbiXbPgDRt3+UoensADHHMMk8Dr54QQQgghhBBCCCGEEEIIIYQQQojm/AX+FpTZtpCUFwAAAABJRU5ErkJggg==" alt="log01.png" id="aa" data-bs-toggle="modal" data-bs-target="#bb">
+                            <img class="navbar-log1-img-box" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAABICAYAAAD1ctupAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZrdUdtAFIWPmPy8+iEJvEVUEKeCmApCB5gKAhWQDiAVYCogqQCngrgDlDcmyQw8J9ibcyOJERqMZeLVrvH5ZjSWZMla36O99+7dBYQQQgghhBBCCCGEEEIIIYQQQjxi1p3be+XcJbfzDedSRATbNODmuJ1ilSmM4GIzxkvn+tW2vXCuh4CsISyjyv52aGOUJMBB9fgayBCQoCJNgP3qcd04IWDP+ciPtDx2wOAqSTKsMnQtZzXXsodAWFysueDzTmSxMgidmmEo2iXPdRAAPv+41pYPEDk0yEHtDW7d7VGQbr0XIRISRID1nGeAGeWmBzFYbl7cEwvMNTGmdXldh5+vGTs6SXE/96+SYuP+d27ZzyQZ3deGQpS0POY9fd5zggiIQiTDYhENflge00hDGmmrPDZReO49tx7ybV6XaKKN7Hf5nK98AYblF5Zy87vjyrMHfPYuIiEakQxLIpJcgH9wfxv5273tKucXRIZcsJNJLlBafvGbvTimjC4qkWycRKOdISB8GY7Yi/YREaEHs7e4zge3GQJCkb4gMqIRiTGnx+ThGypuJwTWk4sBbTRE4e4Yi47YkNjGJBkF27qIIDYFFckytjFwykZ0EScZk4rdX5VMMATBRCrGOZYkpIgcqzFSqCMEIkhMWiaBDBu/hYxTrfekZROoSqgqRKsiFeWf4Bnc/0Ch3s4qMS2aVt3ds7zsk2KJ4Vt92vZUf2sirefzRP2Gl2dWY0N7zPM8y0iP0SKtiFQURw8bXJpZ3exHkmxacdX2cXuKfdFYit2rPs/KQrNusvpim5OTrcQkm0zDjF5k0wt/6O/rhU2fcWxaIbVe6L2Lor12/xU8470n2TQAGrg5GmV4l8HMCDTIZyye0bRKN9vyCTOwuaunLa3J8C5S08Ul7p7C6pqHoqv1BEx/XqPewf+210YS4VWkjXyJVtrw8qmlIeenbNSdtpZiPIdrHbdQc/Qq0mSOP2AxgK5xp37e1h6geVbYmGnuynrGnEvL+r4XznhLHIrKwkMWcwxstnScT3fbzKwJ7dMIN8/j5zv2Wsva0nl+wO5hdjgzjj0UbyLV1w08ZurrMRaNN3fHH97BimCu2qfL8yaSh4UjUfOcrhKe8CLSRiQL79tk4vGl9CISe9EbrB7eZpe9iDRZ8kr3A1kukdbiXbPgDRt3+UoensADHHMMk8Dr54QQQgghhBBCCCGEEEIIIYQQQojm/AX+FpTZtpCUFwAAAABJRU5ErkJggg==" alt="log01.png" id="navbar-log1" data-bs-toggle="modal" data-bs-target="#login-modal">
                         </div>
                     </button>
                 </div>
-                <div class="navbar-log2 d-none"> <!--log-in 登錄狀態-->
+                <div class="navbar-log2" id="navbar-log2"> <!--log-in 登錄狀態-->
                     <button type="button" class="navbar-log2-img-box py-0 d-block mx-auto">
-                        <div class="navbar-log2-img-box">
-                            <img class="navbar-log2-img-box" src="/Come-Buy-team-work/assets/log02-74c06870.png" alt="log02.png">
+                        <div class="navbar-log2-img-box mb-8">
+                            <img class="navbar-log2-img-box" src="/Come-Buy-team-work/assets/log02-74c06870.png" alt="log02.png" id="navbar-log2" data-bs-toggle="modal" data-bs-target="#logout-modal">
                         </div>
-                    </button>
+                        <div class="navbar-log2-text fs-16 fw-500 lh-15 text-nautral-white">守倫 歡迎您</div>
+                    </button>    
                 </div>
             </div>
         </div>
     </div>
 </nav>
 
-<div class="modal fade" id="bb" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">登入</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog nav-modal-dialog">
+        <div class="modal-content nav-modal-content bg-nautral-black">
+            <div class="modal-header nav-modal-header border-0">
+                <h3 class="modal-title w-100 text-center text-lg-start fs-lg-64 text-nautral-white" id="loginModalLabel">會員登入</h3>
             </div>
             <div class="modal-body">
                 <form id="loginForm">
                     <div class="mb-3">
-                        <label for="username" class="form-label">帳號</label>
-                        <input type="text" class="form-control" id="username" placeholder="請輸入帳號">
+                        <label for="email" class="form-label login-label-set fs-24 fw-900 fw-lg-700 mb-12 text-nautral-white  mb-lg-24">信箱</label>
+                        <input type="email" class="form-control login-input-set mb-24 mb-lg-48 fs-16 fw-500 py-12 px-16 fs-lg-24 py-lg-20 px-lg-36" id="email" placeholder="請輸入信箱">
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">密碼</label>
-                        <input type="password" class="form-control" id="password" placeholder="請輸入密碼">
+                        <label for="password" class="form-label login-label-set fs-24 fw-900 fw-lg-700 mb-12 text-nautral-white  mb-lg-24">密碼</label>
+                        <input type="password" class="form-control login-input-set mb-24 mb-lg-48 fs-16 fw-500 py-12 px-16 fs-lg-24 py-lg-20 px-lg-36" id="password" placeholder="請輸入密碼">
                     </div>
-                    <div class="error-message" id="errorMessage">帳號或密碼錯誤</div>
-                    <button type="submit" class="btn btn-primary">登入</button>
+
+                    <div class="error-message1 text-nautral-white mb-24 fs-32 text-center" id="errorMessage1">請輸入帳號密碼</div>
+                    <div class="error-message2 text-nautral-white mb-24 fs-32 text-center" id="errorMessage2">帳號或密碼錯誤</div>
+
+                    <div class="login-main-title-box w-100 mb-24 d-flex justify-content-between">
+                        <h6 class="text-center text-xxl-end fs-xxl-24 text-nautral-white">註冊會員</h6>
+                        <h6 class="text-center text-xxl-end fs-xxl-24 text-primary3">忘記密碼 ?</h6>
+                    </div>
+                    <button type="submit" class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700 w-100 mb-24" id="loginbtn">登入</button>
+                    
+                    <div class="text-center text-xxl-center fs-xxl-24 text-nautral-white mb-24">
+                    ------ 其他登入方式 ------
+                    </div>
+                    
+                    <div class="nav-modal-link-btn-box d-flex flex-column justify-content-between align-items-center row-gap-24">
+                        <button class="mian-btn1-set-sm w-100 fs-24 fw-900 fw-lg-700 d-flex justify-content-center align-items-center gap-12" type="button">
+                            <i class="fa fa-facebook-square" aria-hidden="true">
+                            </i>
+                            Facebook 登入
+                        </button>
+                      
+                        <button class="mian-btn1-set-sm w-100 fs-24 fw-900 fw-lg-700 d-flex justify-content-center align-items-center gap-12" type="button">
+                            <i class="fa fa-google" aria-hidden="true">
+                            </i>
+                            Google登入
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="logout-modal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog nav-modal-dialog">
+        <div class="modal-content nav-modal-content bg-nautral-black">
+            <div class="modal-header nav-modal-header border-0">
+                <h3 class="modal-title w-100 text-center text-lg-start fs-lg-64 text-nautral-white" id="logoutModalLabel">會員登出</h3>
+            </div>
+            <div class="modal-body">
+                <form id="logoutForm">
+                    <button type="submit" class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700 w-100 mb-24" id="logoutbtn">登出</button>
                 </form>
             </div>
         </div>
@@ -138,10 +178,10 @@
             <div class="col-12">
 
               <div class="qP-aside-btn-sm-box d-flex">
-                <div><a class="aside-navbar-btn-set-sm" href="#qP-main0-sm">客製化流程</a></div>
-                <div><a class="aside-navbar-btn-set-sm" href="#qP-main1-sm">設計需求介紹</a></div>
-                <div><a class="aside-navbar-btn-set-sm" href="#qP-main2-sm">運費說明</a></div>
-                <div><a class="aside-navbar-btn-set-sm" href="#qP-main3-sm">常見問題</a></div>
+                <div><a class="aside-navbar-btn-set-sm h-100" href="#qP-main0-sm">客製化流程</a></div>
+                <div><a class="aside-navbar-btn-set-sm px-4 h-100" href="#qP-main1-sm">設計需求介紹</a></div>
+                <div><a class="aside-navbar-btn-set-sm h-100" href="#qP-main2-sm">運費說明</a></div>
+                <div><a class="aside-navbar-btn-set-sm h-100" href="#qP-main3-sm">常見問題</a></div>
               </div>
 
               <div class="qP-main0" id="qP-main0-sm">
