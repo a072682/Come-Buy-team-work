@@ -86,36 +86,4 @@
     }
   }
 
-  /* 自訂樣式 */
-  .modal-dialog { 
-    /* 調整視窗大小
-    modal-dialog 是控制彈出視窗的整體對話框 控制視窗寬度*/
-  max-width: 200px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.modal-content {
-/* 彈出視窗內容樣式
-   modal-content 是彈出視窗的主要內容層，可以設定背景色、邊框、陰影等 */
-   background-color: red;
-  border-radius: 10px;
-  border: none;
-}
-.test-aa{
-  background-color: red;
-  border-radius: 10px;
-  border: none;
-}
-
-.modal-header {
-/* 控制標題和按鈕樣式
-modal-header：可以調整標題區域的背景顏色和字體大小。
-modal-footer：可以調整按鈕的間距或樣式。 */
-  background-color: #007bff;
-  color: white;
-}
-
-.modal-footer .btn {
-  margin: 0 5px;
-}
+  

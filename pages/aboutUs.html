@@ -193,25 +193,21 @@
                 <!--class="modal fade"：modal 表示是 Modal 視窗，fade 表示彈出時會有淡入效果。
                     id：exampleModal，這是 Modal 的唯一識別符號，用於在 JavaScript 中或透過觸發按鈕來控制此視窗。
                     aria-hidden="true"：告訴螢幕讀取器此元素預設是隱藏的，當 Modal 開啟時會自動切換成 false。-->
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-dialog-centered abus-main4-Modal-dialog">
                   <!--modal-dialog 是彈出視窗的對話框容器。可使用 modal-dialog-centered 來將 Modal 置中顯示。-->
-                      <div class="modal-content">
+                      <div class="modal-content abus-main4-Modal-content bg-primary1">
                       <!--modal-content 是彈出視窗的內容容器，包含標題、內容和頁腳區域。-->
-                          <div class="modal-header test-aa">
-                            <h5 class="modal-title" id="exampleModalLabel">範例標題</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <!--modal-header：標題部分，包含標題文本和關閉按鈕。
-                              btn-close：Bootstrap 提供的按鈕樣式，設定 data-bs-dismiss="modal" 可點擊關閉彈出視窗。-->
-                          <div class="modal-body">
-                            這是彈出視窗的內容，您可以在這裡顯示重要訊息或提示使用者操作。
+                          <div class="modal-body abus-main4-Modal-body d-flex">
+                            <div class="oEstimate-main3-btn01-box w-100 p-16 fs-16 fw-500 lh-15 text-nautral-white bg-primary1 outline-0">
+                              留言已送出，如有更新消息會再與您聯繫。
+                            </div>
+                            <button type="button" class="oEstimate-main1-btn-close border-0 outline-0 p-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                                <div class="oEstimate-main1-btn-img-box">
+                                    <img class="img-set" src="../assets/images/abus-main4-modal-btn-close.png" alt="abus-main4-modal-btn-close">
+                                </div>
+                            </button>
                           </div>
                           <!--modal-body：彈出視窗的主要內容區域，可以放入自訂的文字、圖片或表單等元素。-->
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                            <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
-                          </div>
-                          <!--modal-footer：Modal 的底部內容，一般包含「取消」或「確認」按鈕。每個按鈕的 data-bs-dismiss 屬性可設定點擊後關閉彈出視窗。-->
                       </div>
                   </div>
               </div>

@@ -375,3 +375,33 @@
         }
     }
 }
+
+/*彈出視窗*/
+.oEstimate-main1-dialog{
+    max-width: calc(100% - 24px);
+    margin-right: auto;
+    margin-left: auto;
+        @include media-breakpoint-up(sm){ 
+            max-width: 526px;
+        }
+    }
+.oEstimate-main1-content{
+    border: none;
+}
+.oEstimate-main1-header{
+    background-color: #6E002C;
+    border: none;
+}
+.oEstimate-main1-btn-close{
+}
+
+.oEstimate-main1-btn-img-box{
+    max-width: 48px;
+    height: auto;
+}
+.oEstimate-main1-body{
+    border:2px solid #E22288;
+    background-image: linear-gradient(90deg, #000000, #60003a);
+}
+/*彈出視窗*/
+

@@ -67,25 +67,132 @@
                         <!--class="modal fade"：modal 表示是 Modal 視窗，fade 表示彈出時會有淡入效果。
                             id：exampleModal，這是 Modal 的唯一識別符號，用於在 JavaScript 中或透過觸發按鈕來控制此視窗。
                             aria-hidden="true"：告訴螢幕讀取器此元素預設是隱藏的，當 Modal 開啟時會自動切換成 false。-->
-                          <div class="modal-dialog">
+                          <div class="modal-dialog oEstimate-main1-dialog">
                           <!--modal-dialog 是彈出視窗的對話框容器。可使用 modal-dialog-centered 來將 Modal 置中顯示。-->
-                              <div class="modal-content">
+                              <div class="modal-content oEstimate-main1-content">
                               <!--modal-content 是彈出視窗的內容容器，包含標題、內容和頁腳區域。-->
-                                  <div class="modal-header test-aa">
-                                    <h5 class="modal-title" id="exampleModalLabel">範例標題</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  <div class="modal-header oEstimate-main1-header text-primary3 d-flex justify-content-between py-16 px-32">
+                                    <h5 class="modal-title" id="exampleModalLabel">檔案格式說明</h5>
+                                    <button type="button" class="oEstimate-main1-btn-close border-0 outline-0 p-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                                        <div class="oEstimate-main1-btn-img-box">
+                                            <img class="img-set" src="../assets/images/oEstimate-main1-modal-btn-close.png" alt="oEstimate-main1-modal-btn-close">
+                                        </div>
+                                    </button>
                                   </div>
                                   <!--modal-header：標題部分，包含標題文本和關閉按鈕。
                                       btn-close：Bootstrap 提供的按鈕樣式，設定 data-bs-dismiss="modal" 可點擊關閉彈出視窗。-->
-                                  <div class="modal-body">
-                                    這是彈出視窗的內容，您可以在這裡顯示重要訊息或提示使用者操作。
+                                  <div class="modal-body oEstimate-main1-body d-flex flex-column row-gap-40">
+                                        <div class="oEstimate-main1-modal-item-box d-flex flex-column row-gap-12">
+                                            <div class="fs-24 fw-700 lh-12 text-primary3 d-flex align-items-center">
+                                                    <span class="material-symbols-outlined text-nautral-white me-12">
+                                                        error 
+                                                    </span>
+                                                    檔案格式
+                                            </div>
+                                            <div class="fs-16 fw-500 lh-15 text-nautral-white">
+                                            </div>
+                                            <div class="secondary-btn1-box">
+                                                <button class="secondary-btn1-set">
+                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                        詳閱常見問題
+                                                    
+                                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                                            chevron_right
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="oEstimate-main1-modal-item-box d-flex flex-column row-gap-12">
+                                            <div class="fs-24 fw-700 lh-12 text-primary3 d-flex align-items-center">
+                                                    <span class="material-symbols-outlined text-nautral-white me-12">
+                                                        error 
+                                                    </span>
+                                                    檔案大小
+                                            </div>
+                                            <div class="fs-16 fw-500 lh-15 text-nautral-white">
+                                                30MB(如檔案過大請去背再上傳)
+                                            </div>
+                                            <div class="secondary-btn1-box">
+                                                <button class="secondary-btn1-set">
+                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                        詳閱常見問題
+                                                    
+                                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                                            chevron_right
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="oEstimate-main1-modal-item-box d-flex flex-column row-gap-12">
+                                            <div class="fs-24 fw-700 lh-12 text-primary3 d-flex align-items-center">
+                                                    <span class="material-symbols-outlined text-nautral-white me-12">
+                                                        error 
+                                                    </span>
+                                                    列印須知
+                                            </div>
+                                            <div class="fs-16 fw-500 lh-15 text-nautral-white">
+                                                列印以材料原色為準,上色另計
+                                            </div>
+                                            <div class="secondary-btn1-box">
+                                                <button class="secondary-btn1-set">
+                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                        詳閱常見問題
+                                                    
+                                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                                            chevron_right
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="oEstimate-main1-modal-item-box d-flex flex-column row-gap-12">
+                                            <div class="fs-24 fw-700 lh-12 text-primary3 d-flex align-items-center">
+                                                    <span class="material-symbols-outlined text-nautral-white me-12">
+                                                        error 
+                                                    </span>
+                                                    複數物件
+                                            </div>
+                                            <div class="fs-16 fw-500 lh-15 text-nautral-white">
+                                                如有多個物件需要列印,請務必分成不同檔案及分別點選數量
+                                            </div>
+                                            <div class="secondary-btn1-box">
+                                                <button class="secondary-btn1-set">
+                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                        詳閱常見問題
+                                                    
+                                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                                            chevron_right
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="oEstimate-main1-modal-item-box d-flex flex-column row-gap-12">
+                                            <div class="fs-24 fw-700 lh-12 text-primary3 d-flex align-items-center">
+                                                    <span class="material-symbols-outlined text-nautral-white me-12">
+                                                        error 
+                                                    </span>
+                                                    檔案破面、無法列印
+                                            </div>
+                                            <div class="fs-16 fw-500 lh-15 text-nautral-white">
+                                                如有檔案破面等無法列印之情形,將由專人與您聯繫
+                                            </div>
+                                            <div class="secondary-btn1-box">
+                                                <button class="secondary-btn1-set">
+                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                        詳閱常見問題
+                                                    
+                                                        <span class="material-symbols-outlined sec-btn1-img-set">
+                                                            chevron_right
+                                                        </span>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
                                   </div>
                                   <!--modal-body：彈出視窗的主要內容區域，可以放入自訂的文字、圖片或表單等元素。-->
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                                    <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
-                                  </div>
-                                  <!--modal-footer：Modal 的底部內容，一般包含「取消」或「確認」按鈕。每個按鈕的 data-bs-dismiss 屬性可設定點擊後關閉彈出視窗。-->
                               </div>
                           </div>
                       </div>
@@ -730,19 +837,19 @@
                         </div>
 
                         <div class="modal fade" id="oEstimate-main5-Modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="loginModalLabel">登入</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-dialog modal-dialog-centered oEstimate-main5-Modal-dialog">
+                                <div class="modal-content oEstimate-main5-Modal-content bg-primary1">
+                                    <div class="modal-body oEstimate-main5-Modal-body d-flex">
+                                        <div class="oEstimate-main3-btn01-box w-100 p-16 fs-16 fw-500 lh-15 text-nautral-white bg-primary1 outline-0">
+                                                訊息已送出，如有更新消息會再與您聯繫。
+                                        </div>
+                                        <button type="button" class="oEstimate-main1-btn-close border-0 outline-0 p-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                                            <div class="oEstimate-main1-btn-img-box">
+                                                <img class="img-set" src="../assets/images/oEstimate-main5-modal-btn-close.png" alt="oEstimate-main5-modal-btn-close">
+                                            </div>
+                                        </button>
                                     </div>
-                                    <div class="modal-body">
-                                        <p>3333333</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                                        <button type="button" class="btn btn-primary" id="saveChanges">儲存變更</button>
-                                      </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -788,7 +895,6 @@
             }
         });
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <script>/*oEstimate-main2-tab*/
         // JavaScript 來控制 class 切換
         const tabButtons = document.querySelectorAll('.oEstimate-main2-btn');

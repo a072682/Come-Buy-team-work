@@ -308,8 +308,9 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 $primary1:#8B0018;
-$primary2: #E22288;
-$primary3: #FFAAD7;
+$primary2:#E22288;
+$primary3:#FFAAD7;
+$primary4:#6E002C;
 $nautral-white: #ffffff;
 $nautral-black: #000000;
 $nautral-60: #909090;
@@ -330,6 +331,7 @@ $theme-colors: (
   "primary1":    $primary1,
   "primary2":    $primary2,
   "primary3":    $primary3,
+  "primary4":    $primary4,
   "nautral-white":    $nautral-white,
   "nautral-black":    $nautral-black,
   "nautral-60":       $nautral-60
