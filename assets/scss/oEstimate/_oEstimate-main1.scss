@@ -80,7 +80,7 @@
 
 .oEstimate-main1-numTable{
     overflow:auto;
-    height: 504px;
+    height: auto;
     background:linear-gradient(90deg, $nautral-black, #60003a);
     .title-row{
         background-color: #6e002c;
@@ -119,9 +119,13 @@
         .row2-sm-set-1{
             min-width: 148px;
             width: 100%;
-            height: 72px;
-            p{  box-sizing: border-box;
-                font-size: 16px;
+            height: auto;
+            p{ 
+                width: 152px;
+                white-space: normal;   /* 允許換行 */
+                overflow-wrap: break-word;  /* 長字自動換行 */
+                word-break: break-all; /* 任意位置斷行 */
+                padding: 5px;          /* 保持內邊距 */
                 font-weight: 500;
                 line-height: 1.5;
                 color:$nautral-white;
@@ -130,17 +134,19 @@
         .row2-sm-set-2{
             min-width: 148px;
             width: 100%;
-            height: 72px;
-            padding: 12px;
+            height: auto;
             img{
                 max-width: 24px;
                 height: auto;
             } 
             p{
-                padding-right: 15px;
-                padding-left: 15px;
-                border: 1px solid $nautral-white;
-                border-radius: 5px;
+                width: 152px;
+                white-space: normal;   /* 允許換行 */
+                overflow-wrap: break-word;  /* 長字自動換行 */
+                word-break: break-all; /* 任意位置斷行 */
+                padding: 5px;          /* 保持內邊距 */
+                font-weight: 500;
+                line-height: 1.5;
                 color:$nautral-white;
             }
         }

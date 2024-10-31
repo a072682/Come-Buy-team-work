@@ -40,18 +40,19 @@
 
 .table-row1-box,.table-row2-box{
     div{
-        width: 100%;
+        width: 165px;
         line-height: 1.2;
         font-size: 24px;
         color:$nautral-white;
-        padding-right: 24px;
-        padding-left: 24px;
+        padding-right: 32px;
+        padding-left: 32px;
         padding-top: 24px;
         padding-bottom: 24px;
         border: none;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 }
 .table-row1-box{
