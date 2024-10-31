@@ -311,6 +311,7 @@ $primary1:#8B0018;
 $primary2:#E22288;
 $primary3:#FFAAD7;
 $primary4:#6E002C;
+$purple:#7F00C3;
 $nautral-white: #ffffff;
 $nautral-black: #000000;
 $nautral-60: #909090;
@@ -334,7 +335,8 @@ $theme-colors: (
   "primary4":    $primary4,
   "nautral-white":    $nautral-white,
   "nautral-black":    $nautral-black,
-  "nautral-60":       $nautral-60
+  "nautral-60":       $nautral-60,
+  "purple":     $purple
   //更改處
 ) !default;
 // scss-docs-end theme-colors-map

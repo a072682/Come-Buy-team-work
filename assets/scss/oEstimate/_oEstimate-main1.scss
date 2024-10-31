@@ -40,6 +40,12 @@
     }
 }
 .oEstimate-main1-upLord-img-sm-box{
+        max-width:100%;
+        height: auto;
+    @include media-breakpoint-up(xl){ 
+        max-width:416px;
+        height: 386px;
+    }
     .oEstimate-main1-upLord-img-sm-box-set{
         background-color: #202020;
         border-radius: 5px;
@@ -50,49 +56,35 @@
                 min-width: 138px;
             }
         }
-        
-
     }
 }
 
-
+.todoList-decrease,.todoList-increase,.todoList-delete{
+    cursor: pointer;
+}
 .oEstimate-main1-numTable{
     overflow:auto;
-    .row1{
+    height: 504px;
+    background:linear-gradient(90deg, $nautral-black, #60003a);
+    .title-row{
         background-color: #6e002c;
         width: 100%;
+        height: 72px;
         min-width: 700px;
-        .row1-sm-set-1{
-            min-width: 148px;
-            width: 100%;
-            height: 48px;
-            padding: 12px; 
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.5;
-            color:$nautral-white;
+        .title-row-set-1,.title-row-set-2{
+            @include media-breakpoint-up(lg){ 
+                min-width: 172px; 
+            }
             @include media-breakpoint-up(xxl){ 
                 min-width: 194px;
-                height: 60px;
-                font-size: 24px;
                 font-weight: 900;
             }
         }
-        .row1-sm-set-2{
+        .title-row-set-1{
+            min-width: 156px;
+        }
+        .title-row-set-2{
             min-width: 170px;
-            width: 100%;
-            height: 48px;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.5;
-            color:$nautral-white;
-            @include media-breakpoint-up(xl){ 
-                min-width: 194px;
-                height: 60px;
-                font-size: 24px;
-                font-weight: 900;
-            }
         }
         .row1-sm-img-set{
             padding: 12px;
@@ -112,8 +104,7 @@
             min-width: 148px;
             width: 100%;
             height: 72px;
-            padding: 12px;
-            p{
+            p{  box-sizing: border-box;
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 1.5;
