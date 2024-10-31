@@ -120,7 +120,7 @@
             min-width: 148px;
             width: 100%;
             height: auto;
-            p{ 
+            .oEstimate-main1-filename{ 
                 width: 152px;
                 white-space: normal;   /* 允許換行 */
                 overflow-wrap: break-word;  /* 長字自動換行 */
@@ -139,15 +139,13 @@
                 max-width: 24px;
                 height: auto;
             } 
+            .oEstimate-main1-num{}
             p{
-                width: 152px;
-                white-space: normal;   /* 允許換行 */
-                overflow-wrap: break-word;  /* 長字自動換行 */
-                word-break: break-all; /* 任意位置斷行 */
-                padding: 5px;          /* 保持內邊距 */
-                font-weight: 500;
-                line-height: 1.5;
                 color:$nautral-white;
+                border: 1px solid $nautral-white;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 5px;
             }
         }
         .row2-sm-set-3{

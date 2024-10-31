@@ -269,7 +269,7 @@
                                         3D列印
                                     </button>
                                     <button class="oEstimate-main2-btn d-block" data-tab="2">
-                                        3D列印
+                                        光固化
                                     </button>
                                 </div>
                             
@@ -1119,6 +1119,7 @@
             const oEstimateSwiper02 = new Swiper(".oEstimate-main2-mySwiper", {
                 slidesPerView: 1,
                 spaceBetween: 0,
+                initialSlide: 1, //預設從第二個滑塊（索引 1）開始顯示。
                 loop: true,
                 centeredSlides: true,
                 breakpoints: {
@@ -1185,12 +1186,12 @@
                         `
                             <div class="row2 d-flex align-items-center">
                                 <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                    <p>${file.name}</p>
+                                    <p class="oEstimate-main1-filename">${file.name}</p>
                                 </div>
                                 <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
                                     <div class="todoList-decrease" alt="todoList-decrease" id="todoList-decrease" data-item="${index}">
                                     </div>
-                                    <p id="count-${index}">12</p>
+                                    <p class="oEstimate-main1-num" id="count-${index}">12</p>
                                     <div class="todoList-increase" alt="todoList-increase" id="todoList-increase" data-item="${index}">
                                     </div>
                                 </div>
