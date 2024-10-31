@@ -1,1 +1,0 @@
-import"./main-a3ed5268.js";const t=document.getElementById("message"),e=document.getElementById("result");document.getElementById("submitBtn");t.addEventListener("input",function(){const n=t.value.length;e.textContent=`${n}/500`});document.getElementById("abus-main4-Modal").addEventListener("click",function(){t.value="",e.textContent="0/500"});
