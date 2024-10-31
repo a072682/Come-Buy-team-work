@@ -62,6 +62,22 @@
 .todoList-decrease,.todoList-increase,.todoList-delete{
     cursor: pointer;
 }
+.todoList-decrease{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/images/oEstimate-main1-input-minus-plus.png);
+}
+.todoList-increase{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/images/oEstimate-main1-input-minus.png);
+}
+.todoList-delete{
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/images/oEstimate-main1-input-delete.png);
+}
+
 .oEstimate-main1-numTable{
     overflow:auto;
     height: 504px;
