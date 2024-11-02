@@ -1293,13 +1293,13 @@
             // 選取所有按鈕與卡片元素
             const buttons = document.querySelectorAll(".oE-main2-bt");
             const cards = document.querySelectorAll(".oEstimate-main2-card-box-set");
-            console.log("我有選到oE-main2-bt按鈕");
+            // console.log("我有選到oE-main2-bt按鈕");
 
             // 遍歷按鈕並綁定點擊事件
             buttons.forEach (button => {
-                console.log("我是按鈕aaaa");
+                // console.log("我是按鈕aaaa");
                 button.addEventListener("click", () => {
-                    console.log("我是按鈕aaaa按下時才會出現");
+                    // console.log("我是按鈕aaaa按下時才會出現");
                     const cardNumber = button.getAttribute("data-card"); // 獲取對應的卡片編號
                     const targetCard = document.querySelector(`.oEstimate-main2-card-box-set[data-card="${cardNumber}"]`);
                 
