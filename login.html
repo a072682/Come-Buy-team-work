@@ -16,8 +16,8 @@
         }
 }
     </style>
-    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-ac732683.js"></script>
-    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-9f9a76fa.css">
+    <script type="module" crossorigin src="/Come-Buy-team-work/assets/main-bc22f18b.js"></script>
+    <link rel="stylesheet" href="/Come-Buy-team-work/assets/main-61a8be1f.css">
   </head>
   <body>
     <nav class="navbar fixed-top nav-bg-set nav-border-set w-100 pt-24 pb-20 px-16 navbar-expand-xxl py-xxl-16"> <!--最外層 pd放這邊 navbar-expand-lg-->
@@ -106,13 +106,13 @@
     </div>
 </nav>
 
-<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true"><!--會員登入彈出頁面-->
     <div class="modal-dialog nav-modal-dialog">
         <div class="modal-content nav-modal-content bg-nautral-black">
-            <div class="modal-header nav-modal-header border-0">
+            <div class="modal-header nav-modal-header border-0 px-48">
                 <h3 class="modal-title w-100 text-center text-lg-start fs-lg-64 text-nautral-white" id="loginModalLabel">會員登入</h3>
             </div>
-            <div class="modal-body">
+            <div class="modal-body px-48">
                 <form id="loginForm">
                     <div class="mb-3">
                         <label for="email" class="form-label login-label-set fs-24 fw-900 fw-lg-700 mb-12 text-nautral-white  mb-lg-24">信箱</label>
@@ -155,13 +155,13 @@
     </div>
 </div>
 
-<div class="modal fade" id="logout-modal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+<div class="modal fade" id="logout-modal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true"><!--會員登出彈出頁面-->
     <div class="modal-dialog nav-modal-dialog">
         <div class="modal-content nav-modal-content bg-nautral-black">
-            <div class="modal-header nav-modal-header border-0">
+            <div class="modal-header nav-modal-header border-0 px-48">
                 <h3 class="modal-title w-100 text-center text-lg-start fs-lg-64 text-nautral-white" id="logoutModalLabel">會員登出</h3>
             </div>
-            <div class="modal-body">
+            <div class="modal-body px-48">
                 <form id="logoutForm">
                     <button type="submit" class="mian-btn1-set-sm fs-24 fw-900 fw-lg-700 w-100 mb-24" id="logoutbtn">登出</button>
                 </form>
@@ -249,7 +249,9 @@
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHbSURBVHgB7ZdPcoIwFMZfgjPdegEVmV7AG9iT1J5A3VTtRt1UXYkn0J7E9gTeQIO9gLuuzOuLHSTA8EdFpgt+CzGPEL58+aIAUFBQcF9YsOBYkxED3gbAMtwVdkAJq5rodX1V8ImZ2lRoQ44wYKPKtjd22zxw8hlyBkF29DYPnNaWCV/oQ0DWAhAEk7zpVVg5RpBHdTtYHeVDgy6wISsxEm2JP42KeP2K6lOKG6Auugc6dHfmZGFwtqbvJlylBD4Z8lE1RoiLL9R7a4pakxzCcV0MhFtwrPcOA2OYfgeqnYSjmugv3ApNziwZbElL13Rr1W3/rIPHjNYyOGyUCLdQ277ZRykbSiwkQa6ovroYx5p1DM43upjQFPRGwCFvbAqiRHzS3dpbkxZdTm75l1H15chbek6+HydNQDaMEpLWIU81A5MytHPM2XxnDst/g4RDHwyt6qt+21CydZwrvnvpjSiHdJQDNFvKRe/DrZ1yAUYt6AoJWUKKjaA7dLEgjVDoz+ICob1EUKoliyAU+jShTeIWh86cgsxBXCtEd6gEGaBCT2JMyIBbluwuFIKSKAQl8d8FsQPkDvruGXimhsyeDtOi3jzAr8HP3prN6dDK6TXIpj/pMRQUFOTIL4gE2xc+8jiJAAAAAElFTkSuQmCC" alt="footer-Email">
                     </div>
                     <div class="card-text footer-text-set">
-                        come_and_buy@comebuy.com
+                        <a class="a-re" href="mailto:m.bluth@example.com">
+                            come_and_buy@comebuy.com
+                        </a>
                     </div>
                 </div>
                 <div class="card03 card-set mb-16">
@@ -257,7 +259,9 @@
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIhSURBVHgB7ZdLUttAEIb/bnkBlY3XqRDJVA6QnACOwA3QDcIiRUI22CtVViY3UE4QcoLADewL4BFcwBtgAZ5mhodL1ssGeQQL/xuXu2c0n3p6elrASivVE8GhRsFhu8XvdgFpZ31aQ/nq+5+svQWH8ni9L9BhkY8YSIJfyEIxHIoIQZWfOe93CgSh9nOnOAUSVEfIRFBlbc6ARkEUFCVzWjIhhaaAPI8/zxtzi8th1uZuywRblW6B6qjeGE0BCSZJlZ8ggyK7MyD/7OeRaOqW+UX4GE0CWZmi1yuD0tCnaBrIqgQq7qgDhdcAsjLRmLkeSHNcNrYRII/pcPpHcLKh9k/xWkDnm1FofsLpgoK9qvFOgR6qdSo6Jnc+qB/DqjlO2w8m/MXjfWYLoRbpzZvjDCjpRDERTa8PFg59ta/mzVsIyHZ+Hq/tmPBvmYZraIte1VimtSMDs/tks8f+Y0Uip0XFi6/375srkbaAg+ytLZCef3bQzc+NArtN6chYGFuLsKBySf3QAyM0e74tsA/OtxBkEjXZjLpp28WnaNsc7/91YO7Xz5tkoS7vEco267FH3BctOzNP0dgzML/xTNVKagtlovI1/RL2NNkEXjRnslpCHZqJaKzl+svGC2GslnPszXVAwt06IKgPRGOzP4NlgZQCmTqTlH/QGgjIMROd3Eyu/hW1oHVVuLK9EAnsWwAiGesJj1tEg/ejbwlWWumN6w7WOcu1qmO1CgAAAABJRU5ErkJggg==" alt="footer-Phone">
                     </div>
                     <div class="card-text footer-text-set">
-                        (04)9408-1688
+                        <a class="a-re" href="+886-4-9408-1688">
+                            (04)9408-1688
+                        </a>
                     </div>
                 </div>
                 <div class="card04 card-set ">
@@ -273,9 +277,21 @@
             <div class="article">
                 <div class="text-content d-flex gap-32 justify-content-center mb-32 gap-xl-48 mb-xl-48">
                     <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">線上估價</span>
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">服務項目</span>
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">最新消息</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="index.html">
+                                線上估價
+                            </a>
+                        </span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="index.html#index-main4">
+                                服務項目
+                            </a>
+                        </span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="index.html#index-main5">
+                                最新消息
+                            </a>
+                        </span>
                     </div>
                     <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
                         <span class="fs-16 fw-medium fs-xl-24 footer-text-set">材料介紹</span>
@@ -283,13 +299,33 @@
                         <span class="fs-16 fw-medium fs-xl-24 footer-text-set">專利介紹</span>
                     </div>
                     <div class="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">公司介紹</span>
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">售後服務</span>
-                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">運費說明</span>
-                        <span class="fs-16 fw-medium d-xl-none footer-text-set">聯絡我們</span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="aboutUs.html#abus-main2">
+                                公司介紹
+                            </a>
+                        </span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="aboutUs.html#abus-main3">
+                                售後服務
+                            </a>
+                        </span>
+                        <span class="fs-16 fw-medium fs-xl-24 footer-text-set">
+                            <a class="a-re" href="qaPage.html">
+                                運費說明
+                            </a>
+                        </span>
+                        <span class="fs-16 fw-medium d-xl-none footer-text-set">
+                            <a class="a-re" href="aboutUs.html#abus-main4">
+                                聯絡我們
+                            </a>
+                        </span>
                     </div>
                     <div class="text-box d-flex flex-column d-none d-xl-block">
-                        <span class="fs-xl-24 fw-medium footer-text-set">聯絡我們</span>
+                        <span class="fs-xl-24 fw-medium footer-text-set">
+                            <a class="a-re" href="aboutUs.html#abus-main4">
+                                聯絡我們
+                            </a>
+                        </span>
                     </div>
                 </div>
 
