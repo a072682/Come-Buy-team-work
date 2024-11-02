@@ -10,7 +10,7 @@
     <%- include('./layout/nav'); -%>
 
     <div class="all">
-        <div class="oEstimate-main1 w-100 oEstimate-main1-bg-set">
+        <div class="oEstimate-main1 w-100 oEstimate-main1-bg-set" id="oEstimate-main1">
         <div class="container py-48"> <!--sm~xl 標籤內容切換用-->
             <div class="row">
                 <div class="col-12">
@@ -64,7 +64,7 @@
                         </div>    
                     </div>
 
-                    <div class="modal fade" id="oEstimate-main1-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="oEstimate-main1-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><!--檔案說明彈出視窗-->
                         <!--class="modal fade"：modal 表示是 Modal 視窗，fade 表示彈出時會有淡入效果。
                             id：exampleModal，這是 Modal 的唯一識別符號，用於在 JavaScript 中或透過觸發按鈕來控制此視窗。
                             aria-hidden="true"：告訴螢幕讀取器此元素預設是隱藏的，當 Modal 開啟時會自動切換成 false。-->
@@ -94,7 +94,7 @@
                                             </div>
                                             <div class="secondary-btn1-box">
                                                 <button class="secondary-btn1-set">
-                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                    <a href="qaPage.html" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
                                                         詳閱常見問題
                                                     
                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -116,7 +116,7 @@
                                             </div>
                                             <div class="secondary-btn1-box">
                                                 <button class="secondary-btn1-set">
-                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                    <a href="qaPage.html" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
                                                         詳閱常見問題
                                                     
                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -138,7 +138,7 @@
                                             </div>
                                             <div class="secondary-btn1-box">
                                                 <button class="secondary-btn1-set">
-                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                    <a href="qaPage.html" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
                                                         詳閱常見問題
                                                     
                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -160,7 +160,7 @@
                                             </div>
                                             <div class="secondary-btn1-box">
                                                 <button class="secondary-btn1-set">
-                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                    <a href="qaPage.html" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
                                                         詳閱常見問題
                                                     
                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -182,7 +182,7 @@
                                             </div>
                                             <div class="secondary-btn1-box">
                                                 <button class="secondary-btn1-set">
-                                                    <a href="" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
+                                                    <a href="qaPage.html" class="fw-500 lh-15 text-primary4 d-flex align-items-center">
                                                         詳閱常見問題
                                                     
                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-8">
+                <div class="col-12 col-xl-8 mb-24"> <!-- 待辦事項生成區塊 -->
                     <div class="oEstimate-main1-box3 mb-xl-64">
                         <div class="oEstimate-main1-title3-sm-box d-none d-xl-block mb-xl-48">
                             <h3 class="fs-32 fw-900 text-nautral-white">圖檔資料</h3>
@@ -243,11 +243,13 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="oEstimate-main1-footer-btn d-none d-xl-block d-xl-flex justify-content-xl-center align-items-xl-center">
+                    <div class="oEstimate-main1-footer-btn d-block d-flex justify-content-center align-items-center">
                         <button class="pagination-btn01">
-                            <div class="pagination-img-box01">
-                                <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
-                            </div>
+                            <a class="a-re" href="oEstimate.html#oEstimate-main2">
+                                <div class="pagination-img-box01">
+                                    <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
+                                </div>
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -255,7 +257,7 @@
         </div>
         </div> 
 
-        <div class="oEstimate-main2 w-100 oEstimate-main2-bg-set">
+        <div class="oEstimate-main2 w-100 oEstimate-main2-bg-set" id="oEstimate-main2">
             <div class="container py-100">
                 <div class="row">
                     <div class="col-12 ">
@@ -285,7 +287,7 @@
                                                 <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
         
                                                     
-                                                        <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set mx-auto p-8 bg-nautral-black">
+                                                        <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set mx-auto p-8 bg-nautral-black" id="main2-tab1-card1-box">
                                                             <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                                     <img class="img-set" src="../assets/images/oEstimate-main2-tab-img1.png" alt="oEstimate-main2-tab-img1">     
                                                             </div>
@@ -298,7 +300,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="secondary-btn1-box d-none d-xl-block mb-16 mb-xl-0">
-                                                                    <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                    <button class="secondary-btn1-set d-flex align-items-center me-4 aaaa">
                                                                         選擇我
                                                                     
                                                                         <span class="material-symbols-outlined sec-btn1-img-set">
@@ -308,7 +310,7 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="secondary-btn2-box d-block d-xl-none mb-16 mb-xl-0">
-                                                                    <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                    <button class="secondary-btn2-set d-flex align-items-center me-4 bbbb">
                                                                         選擇我
                                                     
                                                                         <span class="material-symbols-outlined sec-btn2-img-set">
@@ -325,7 +327,7 @@
                                                 <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
         
                                                     
-                                                    <div class="oEstimate-main2-card2-box oEstimate-main2-card-box-set mx-auto p-8 bg-nautral-black">
+                                                    <div class="oEstimate-main2-card2-box oEstimate-main2-card-box-set mx-auto p-8 bg-nautral-black" id="main2-tab1-card2-box">
                                                         <div class="oEstimate-main2-card2-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-12">
                                                                 <img class="img-set" src="../assets/images/oEstimate-main2-tab-img2.png" alt="oEstimate-main2-tab-img2">     
                                                         </div>
@@ -338,7 +340,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="secondary-btn1-box d-none d-xl-block mb-16 mb-xl-0">
-                                                                <button class="secondary-btn1-set d-flex align-items-center me-4">
+                                                                <button class="secondary-btn1-set d-flex align-items-center me-4 aaaa">
                                                                     選擇我
                                                                 
                                                                     <span class="material-symbols-outlined sec-btn1-img-set">
@@ -348,7 +350,7 @@
                                                                 </button>
                                                             </div>
                                                             <div class="secondary-btn2-box d-block d-xl-none mb-16 mb-xl-0">
-                                                                <button class="secondary-btn2-set d-flex align-items-center me-4">
+                                                                <button class="secondary-btn2-set d-flex align-items-center me-4 bbbb">
                                                                     選擇我
                                                 
                                                                     <span class="material-symbols-outlined sec-btn2-img-set">
@@ -555,17 +557,16 @@
                                 <div class="oEstimate-main2-swiper w-100 py-20 d-flex justify-content-center align-items-center mb-32 mb-xl-72">
                                     <div class="oEstimate-main2-swiper-box w-100"><!--內層外框-->
         
-                                        <div class="swiper mySwiper oEstimate-main2-mySwiper oEstimate-main2-mySwiper-set"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
+                                        <div class="swiper mySwiper oEstimate-main2-mySwiper2 oEstimate-main2-mySwiper-set"> <!--swiper為整個輪播插件的最外層 輪播整體的尺寸由此設定 mySwiper則是細項部份的設定-->
                                             <div class="swiper-wrapper"> <!--swiper-wrapper為包住輪播圖片的容器-->
 
                                                 <div class="swiper-slide"><!--swiper-slide為輪播圖片容器-->
         
-                                                    
                                                         <div class="oEstimate-main2-card1-box oEstimate-main2-card-box-set mx-auto p-8 bg-nautral-black">
                                                             <div class="oEstimate-main2-card1-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                                     <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img1.png" alt="oEstimate-main2-tab2-img1">     
                                                             </div>
-                                                            <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-12 p-xxl-32">
+                                                            <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xxl-32">
                                                     
                                                                 <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                                     <div class="oEstimate-main2-card1-text">
@@ -605,7 +606,7 @@
                                                         <div class="oEstimate-main2-card2-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-12">
                                                                 <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img2.png" alt="oEstimate-main2-tab2-img2">     
                                                         </div>
-                                                        <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-12 p-xl-32">
+                                                        <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xl-32">
                                                 
                                                             <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                                 <div class="oEstimate-main2-card1-text">
@@ -645,7 +646,7 @@
                                                             <div class="oEstimate-main2-card3-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                                     <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img3.png" alt="oEstimate-main2-tab2-img3">     
                                                             </div>
-                                                            <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-12 p-xl-32">
+                                                            <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xl-32">
                                                     
                                                                 <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                                     <div class="oEstimate-main2-card1-text">
@@ -685,7 +686,7 @@
                                                         <div class="oEstimate-main2-card4-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                                 <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img1.png" alt="oEstimate-main2-tab2-img1">     
                                                         </div>
-                                                        <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-12 p-xl-32">
+                                                        <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xl-32">
                                                 
                                                             <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                                 <div class="oEstimate-main2-card1-text">
@@ -725,7 +726,7 @@
                                                     <div class="oEstimate-main2-card5-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                             <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img2.png" alt="oEstimate-main2-tab2-img2">     
                                                     </div>
-                                                    <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-12 p-xl-32">
+                                                    <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xl-32">
                                             
                                                         <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                             <div class="oEstimate-main2-card1-text">
@@ -765,7 +766,7 @@
                                                 <div class="oEstimate-main2-card6-img-box oEstimate-main2-card-img-box-set mb-16 mb-xl-0">
                                                         <img class="img-set" src="../assets/images/oEstimate-main2-tab2-img3.png" alt="oEstimate-main2-tab2-img3">     
                                                 </div>
-                                                <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-32 px-xl-6 p-xl-32">
+                                                <div class="oEstimate-main2-card1-text&btn-box d-xxl-flex justify-content-xxl-between align-items-xxl-center py-xl-12 px-xl-12 p-xl-32">
                                         
                                                     <div class="oEstimate-main2-card1-text-box mb-24 mb-xxl-0">
                                                         <div class="oEstimate-main2-card1-text">
@@ -786,7 +787,6 @@
                                                     <div class="secondary-btn2-box d-block d-xl-none mb-16 mb-xl-0">
                                                         <button class="secondary-btn2-set d-flex align-items-center me-4">
                                                             選擇我
-                                        
                                                             <span class="material-symbols-outlined sec-btn2-img-set">
                                                                 chevron_right
                                                             </span>
@@ -799,11 +799,9 @@
 
                                                 </div>
                                     
-                                                
-                                                
                                             </div>
                                         </div>
-                                        <div class="oEstimate-main2-swiper-next-R-btn">
+                                        <div class="oEstimate-main2-swiper-next-R-btn02">
                                             <button class="caroutsel-btn-R border-0 outline-0 bg-transparent">
                                                 <div class="img-box">
                                                     <picture>
@@ -813,7 +811,7 @@
                                                 </div>
                                             </button>
                                         </div>
-                                        <div class="oEstimate-main2-swiper-next-L-btn">
+                                        <div class="oEstimate-main2-swiper-next-L-btn02">
                                             <button class="caroutsel-btn-L border-0 outline-0 bg-transparent">
                                                 <div class="img-box">
                                                     <picture>
@@ -830,9 +828,11 @@
                         </div>
                         <div class="oEstimate-main2-footer-btn-box d-flex justify-content-center align-items-center">
                             <button class="pagination-btn02">
-                                <div class="pagination-img-box02">
-                                    <img class="pagination-img02-set" src="../assets/images/Vector 16.png" alt="Vector 16">
-                                </div>
+                                <a class="a-re" href="oEstimate.html#oEstimate-main3">
+                                    <div class="pagination-img-box02">
+                                        <img class="pagination-img02-set" src="../assets/images/Vector 16.png" alt="Vector 16">
+                                    </div>
+                                </a>
                             </button>
                         </div>
                     </div>
@@ -840,7 +840,7 @@
             </div>
         </div>
 
-        <div class="oEstimate-main3 w-100 oEstimate-main3-bg-set">
+        <div class="oEstimate-main3 w-100 oEstimate-main3-bg-set" id="oEstimate-main3">
             <div class="container py-64 py-xxl-144">
                 <div class="row">
                     <div  class="col-12">
@@ -935,9 +935,11 @@
                             </div>
 
                             <button class="oEstimate-main3-btn03 pagination-btn01 d-block mx-auto">
-                                <div class="pagination-img01-box">
-                                    <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
-                                </div>
+                                <a class="a-re" href="oEstimate.html#oEstimate-main4">
+                                    <div class="pagination-img01-box">
+                                        <img class="pagination-img01-set" src="../assets/images/Vector 15.png" alt="Vector 15">
+                                    </div>
+                                </a>
                             </button>
 
                     </div>
@@ -945,7 +947,7 @@
             </div>
         </div>
 
-        <div class="oEstimate-main4 w-100 oEstimate-main4-bg-set">
+        <div class="oEstimate-main4 w-100 oEstimate-main4-bg-set" id="oEstimate-main4">
             <div class="container py-64 py-lg-100 "> 
                 <div class="row">
                     <div  class="col-12">
@@ -1039,16 +1041,18 @@
                             </div>
 
                             <button class="oEstimate-main4-btn02 pagination-btn02 d-block mx-auto">
-                                <div class="oEstimate-main4-img-box02">
-                                    <img class="oEstimate-main4-btn02-img-set" src="../assets/images/Vector 16.png" alt="Vector 16">
-                                </div>
+                                <a class="a-re" href="oEstimate.html#oEstimate-main5">
+                                    <div class="oEstimate-main4-img-box02">
+                                        <img class="oEstimate-main4-btn02-img-set" src="../assets/images/Vector 16.png" alt="Vector 16">
+                                    </div>
+                                </a>
                             </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="oEstimate-main5 w-100 oEstimate-main5-bg-set">
+        <div class="oEstimate-main5 w-100 oEstimate-main5-bg-set" id="oEstimate-main5">
             <div class="container py-64 py-lg-144 "> 
                 <div class="row">
                     <div  class="col-12">
@@ -1116,131 +1120,156 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">/*使用swiper輪播插件需要插入的javascript*/
     </script>
     <script>/*swiper輪播插件自定義的參數放置位置*/
-            const oEstimateSwiper02 = new Swiper(".oEstimate-main2-mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                initialSlide: 1, //預設從第二個滑塊（索引 1）開始顯示。
-                loop: true,
-                centeredSlides: true,
-                breakpoints: {
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                    },
-                    1400: {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                    },
+        const oEstimateSwiper1 = new Swiper(".oEstimate-main2-mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup:1,
+            initialSlide: 1,
+            loop: true,
+            centeredSlides: true,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
                 },
-                navigation: {
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+            },
+            navigation: {
                 nextEl: ".oEstimate-main2-swiper-next-R-btn",
                 prevEl: ".oEstimate-main2-swiper-next-L-btn",
+            },
+        });
+        const oEstimateSwiper2 = new Swiper(".oEstimate-main2-mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup:1,
+            initialSlide: 1,
+            loop: true,
+            centeredSlides: true,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
                 },
-                
-            }
-        );
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+            },
+            navigation: {
+                nextEl: ".oEstimate-main2-swiper-next-R-btn02",
+                prevEl: ".oEstimate-main2-swiper-next-L-btn02",
+            },
+        });     
     </script>
     <script>/*oEstimate-main1-input*/
-        const uploadBtn = document.getElementById('oEstimate-main1-uploadBtn');//上傳按鈕
-        const uploadBtn2 = document.getElementById('oEstimate-main1-uploadBtn2');//上傳按鈕
-        const fileInput = document.getElementById('fileInput');//隱藏的文件選擇器，觸發上傳圖片
-        const thumbnailArea = document.getElementById('thumbnailArea');//用於顯示上傳的圖片縮圖
-        const todoList = document.getElementById('oEstimate-main1-todoList');//待辦事 項待辦事項的容器，用於存放每條待辦事項
-        
-        // 顏色陣列
-        const colors = ["PLA白", "PLA黑", "PLA透明色","光固化黑","光固化白","光固化透明"];
-      
-        // 點擊按鈕打開文件選擇器
-        uploadBtn.addEventListener('click', () => {
-          fileInput.click();//fileInput.click()，讓使用者看到文件選擇器並選擇圖片。
-          //fileInput 是一個隱藏的 <input type="file"> 元素，因此透過按鈕來控制選擇檔案。
-        });
-        uploadBtn2.addEventListener('click', () => {
-          fileInput.click();//fileInput.click()，讓使用者看到文件選擇器並選擇圖片。
-          //fileInput 是一個隱藏的 <input type="file"> 元素，因此透過按鈕來控制選擇檔案。
-        });
-      
-        // 當文件選擇後顯示縮圖並生成待辦事項
-        fileInput.addEventListener('change', (event) => {
-          //fileInput 一但狀態有所改變則觸發動作
-          const file = event.target.files[0];
-          //取得使用者選擇的第一個文件（圖片），該圖片被保存在 file 變數中。
-          if (file && file.type.startsWith('image/')) {
-          //檢查 file 是否為圖片類型。如果是圖片檔案，才執行後續處理。
-            const reader = new FileReader();
-            //創建一個 FileReader 對象，將圖片轉換為 URL 格式，以便顯示於頁面上。
-            reader.onload = function(e) {
-              // 文件被成功讀取到時，onload 中的代碼會自動執行
-              thumbnailArea.innerHTML = `<img class="img-set" src="${e.target.result}" alt="縮圖">`;
-              //當文件讀取完成後觸發的事件，並在 thumbnailArea 中顯示圖片縮圖。
-              
-              // 生成待辦事項
-              todoList.innerHTML = ''; // 清空待辦事項區域
-              colors.forEach((color, index) => {
-                    console.log(color);
-                    console.log(index);
-                    //使用迴圈產生待辦事項，每條包含「編號」、「數字」、「加減按鈕」、刪除按鈕。
-                        const todoItem = document.createElement('div');
-                        //創建todoItem對象負責建立div標籤 會創造一個新的div且會把 todoItem.innerHTML = xxx(裡面的內容包入這個div中) 
-                        todoItem.innerHTML = 
-                        `
-                            <div class="row2 d-flex align-items-center">
-                                <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
-                                    <p class="oEstimate-main1-filename">${file.name}</p>
-                                </div>
-                                <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
-                                    <div class="todoList-decrease" alt="todoList-decrease" id="todoList-decrease" data-item="${index}">
-                                    </div>
-                                    <p class="oEstimate-main1-num" id="count-${index}">12</p>
-                                    <div class="todoList-increase" alt="todoList-increase" id="todoList-increase" data-item="${index}">
-                                    </div>
-                                </div>
-                                <div class="row2-sm-set-3" id="total-${index}">
-                                    $360
-                                </div>
-                                <div class="row2-sm-set-3">
-                                    ${color}
-                                </div>
-                                <div class="row2-sm-img-set d-flex justify-content-center align-items-center">
-                                    <div class="img-set todoList-delete" alt="todoList-delete" id="todoList-delete" data-item="${index}">
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        console.log("我應該要出現5次")
-                        // 增加、減少和刪除功能
-                        todoItem.querySelector('.todoList-decrease').addEventListener('click', () => updateCount(index, -1));
-                        console.log("我要增加")
-                        todoItem.querySelector('.todoList-increase').addEventListener('click', () => updateCount(index, 1));
-                        console.log("我要減少")
-                        todoItem.querySelector('.todoList-delete').addEventListener('click', () => deleteTodoItem(todoItem));
+            const uploadBtn = document.getElementById('oEstimate-main1-uploadBtn');//上傳按鈕
+            const uploadBtn2 = document.getElementById('oEstimate-main1-uploadBtn2');//上傳按鈕
+            const fileInput = document.getElementById('fileInput');//隱藏的文件選擇器，觸發上傳圖片
+            const thumbnailArea = document.getElementById('thumbnailArea');//用於顯示上傳的圖片縮圖
+            const todoList = document.getElementById('oEstimate-main1-todoList');//待辦事 項待辦事項的容器，用於存放每條待辦事項
             
-                        todoList.appendChild(todoItem);
+            // 顏色陣列
+            const colors = ["PLA白", "PLA黑", "PLA透明色","光固化黑","光固化白","光固化透明"];
+        
+            // 點擊按鈕打開文件選擇器
+            uploadBtn.addEventListener('click', () => {
+            fileInput.click();//fileInput.click()，讓使用者看到文件選擇器並選擇圖片。
+            //fileInput 是一個隱藏的 <input type="file"> 元素，因此透過按鈕來控制選擇檔案。
+            });
+            uploadBtn2.addEventListener('click', () => {
+            fileInput.click();//fileInput.click()，讓使用者看到文件選擇器並選擇圖片。
+            //fileInput 是一個隱藏的 <input type="file"> 元素，因此透過按鈕來控制選擇檔案。
+            });
+        
+            // 當文件選擇後顯示縮圖並生成待辦事項
+            fileInput.addEventListener('change', (event) => {
+            //fileInput 一但狀態有所改變則觸發動作
+            const file = event.target.files[0];
+            //取得使用者選擇的第一個文件（圖片），該圖片被保存在 file 變數中。
+            if (file && file.type.startsWith('image/')) {
+            //檢查 file 是否為圖片類型。如果是圖片檔案，才執行後續處理。
+                const reader = new FileReader();
+                //創建一個 FileReader 對象，將圖片轉換為 URL 格式，以便顯示於頁面上。
+                reader.onload = function(e) {
+                    // 文件被成功讀取到時，onload 中的代碼會自動執行
+                    thumbnailArea.innerHTML = `<img class="img-set" src="${e.target.result}" alt="縮圖">`;
+                    //當文件讀取完成後觸發的事件，並在 thumbnailArea 中顯示圖片縮圖。
                     
-                });
+                    // 生成待辦事項
+                    todoList.innerHTML = ''; // 清空待辦事項區域
+                    colors.forEach((color, index) => {
+                            console.log(color);
+                            console.log(index);
+                            //使用迴圈產生待辦事項，每條包含「編號」、「數字」、「加減按鈕」、刪除按鈕。
+                                const todoItem = document.createElement('div');
+                                //創建todoItem對象負責建立div標籤 會創造一個新的div且會把 todoItem.innerHTML = xxx(裡面的內容包入這個div中) 
+                                todoItem.innerHTML = 
+                                `
+                                    <div class="row2 d-flex align-items-center">
+                                        <div class="row2-sm-set-1 d-flex flex-column justify-content-center align-items-start">
+                                            <p class="oEstimate-main1-filename">${file.name}</p>
+                                        </div>
+                                        <div class="row2-sm-set-2 d-flex justify-content-start align-items-center gap-12">
+                                            <div class="todoList-increase" alt="todoList-increase" id="todoList-increase" data-item="${index}">
+                                            </div>
+                                            <p class="oEstimate-main1-num" id="count-${index}">12</p>
+                                            <div class="todoList-decrease" alt="todoList-decrease" id="todoList-decrease" data-item="${index}">
+                                            </div>
+                                        </div>
+                                        <div class="row2-sm-set-3" id="total-${index}">
+                                            $360
+                                        </div>
+                                        <div class="row2-sm-set-3">
+                                            ${color}
+                                        </div>
+                                        <div class="row2-sm-img-set d-flex justify-content-center align-items-center">
+                                            <div class="img-set todoList-delete" alt="todoList-delete" id="todoList-delete" data-item="${index}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                                console.log("我應該要出現5次")
+                                // 增加、減少和刪除功能
+                                todoItem.querySelector('.todoList-increase').addEventListener('click', () => updateCount(index, -1));
+                                console.log("我要增加")
+                                todoItem.querySelector('.todoList-decrease').addEventListener('click', () => updateCount(index, 1));
+                                console.log("我要減少")
+                                todoItem.querySelector('.todoList-delete').addEventListener('click', () => deleteTodoItem(todoItem));
+                    
+                                todoList.appendChild(todoItem);
+                            
+                        });
+                };
+                reader.readAsDataURL(file);
+            }
+            fileInput.value = '';
+            });
+        
+            // 更新計數
+            function updateCount(todoItem, amount) {
+            const countElement = document.getElementById(`count-${todoItem}`);
+            const totalElement = document.getElementById(`total-${todoItem}`);
+            let currentCount = parseInt(countElement.textContent);
+            currentCount += amount;
+            currentCount.textContent = currentCount;
+            currentCount = Math.max(currentCount, 0); // 確保不會低於 0
+
+                countElement.textContent = currentCount;
+                totalElement.textContent = "$" + currentCount * 30;
+
+            }
+        
+            // 刪除待辦事項
+            function deleteTodoItem(todoItem) {
+            todoItem.remove();
             };
-            reader.readAsDataURL(file);
-          }
-        });
-      
-        // 更新計數
-        function updateCount(todoItem, amount) {
-          const countElement = document.getElementById(`count-${todoItem}`);
-          const totalElement = document.getElementById(`total-${todoItem}`);
-          let currentCount = parseInt(countElement.textContent);
-          currentCount += amount;
-          currentCount.textContent = currentCount;
-          currentCount = Math.max(currentCount, 0); // 確保不會低於 0
+            
 
-            countElement.textContent = currentCount;
-            totalElement.textContent = "$" + currentCount * 30;
-
-        }
-      
-        // 刪除待辦事項
-        function deleteTodoItem(todoItem) {
-          todoItem.remove();
-        }
+        
     </script>
     <script>/*oEstimate-main2-tab*/
         // JavaScript 來控制 class 切換
@@ -1261,6 +1290,21 @@
             });
         });
     </script>
+    <!-- <script>
+            // 選取按鈕與卡片元素
+            const buttons = [
+                { btn: document.getElementById("aaaa"), card: document.getElementById("main2-tab1-card1-box") },
+                { btn: document.getElementById("bbbb"), card: document.getElementById("main2-tab1-card2-box") },
+                { btn: document.getElementById("btn3"), card: document.getElementById("card3") }
+            ];
+
+            // 遍歷按鈕並綁定點擊事件
+            buttons.forEach(item => {
+                item.btn.addEventListener("click", () => {
+                    item.card.classList.toggle("border-red");
+                });
+            });
+    </script> -->
     <script>/*oEstimate-main3-item1*/
         // 選取元素
         let   inputNumber = document.getElementById('oEstimate-main3-inputNumber01'); // 輸入框

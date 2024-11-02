@@ -67,6 +67,7 @@
 
     }
     .oEstimate-main2-card-box-set{
+        padding: 8px;
         max-width: 231px;
         @include media-breakpoint-up(xl){  
             max-width: 255px;
@@ -99,19 +100,19 @@
     }
 
 
-.oEstimate-main2-swiper-next-R-btn,.oEstimate-main2-swiper-next-L-btn{
+.oEstimate-main2-swiper-next-R-btn,.oEstimate-main2-swiper-next-L-btn,.oEstimate-main2-swiper-next-R-btn02,.oEstimate-main2-swiper-next-L-btn02{
     position: absolute;
     display: block;
     top: 40%;
 }
-.oEstimate-main2-swiper-next-R-btn{
+.oEstimate-main2-swiper-next-R-btn,.oEstimate-main2-swiper-next-R-btn02{
     right: 0px;
     @include media-breakpoint-up(sm){  
         display: block;
         right: 24px;
     }
 }
-.oEstimate-main2-swiper-next-L-btn{
+.oEstimate-main2-swiper-next-L-btn,.oEstimate-main2-swiper-next-L-btn02{
     left: 0px;
     @include media-breakpoint-up(sm){  
         display: block;

@@ -1,7 +1,6 @@
 import './assets/scss/all.scss';
 // import 'bootstrap/dist/js/bootstrap.min.js';
 
-
 import { Modal } from 'bootstrap';
 
 console.log("Hello world!");
@@ -41,7 +40,8 @@ loginForm.addEventListener('submit', function(event) {
         // 顯示錯誤訊息
         errorMessage2.style.display = 'block';
         console.log("我是錯的!!!");
-    }});
+    }
+});
 
 logoutForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -53,4 +53,5 @@ logoutForm.addEventListener('submit', function(event) {
         loginModalInstance.hide();
         
         
-    });
+});
+

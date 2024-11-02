@@ -11,10 +11,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 //font-awesome-icon
 
-//swiper輪播插件
-@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-//swiper輪播插件
-
 //bootstrap5
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
@@ -80,6 +76,10 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 //斷點
 //bootstrap5設定
+
+//swiper輪播插件
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+//swiper輪播插件
 
 @import "./base/base";
 
