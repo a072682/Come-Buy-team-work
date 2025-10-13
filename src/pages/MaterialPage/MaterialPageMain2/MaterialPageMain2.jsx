@@ -100,14 +100,14 @@ function MaterialPageMain2({handleOpenMaterialModal}){
                                     <div className='swiper-box'>
                                         {/* 按鈕區塊 */}
                                         <div className="Main1SwiperBtn-set">
-                                            <button className="Main1BtnL">
+                                            <button className="Main2BtnL">
                                                 <div className="img-box">
                                                     <img className="img-set" 
                                                         src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowL.png`} 
                                                         alt="MateriaPage-main1-arrowL" />
                                                 </div>
                                             </button>
-                                            <button className="Main1BtnR">
+                                            <button className="Main2BtnR">
                                                 <div className="img-box">
                                                     <img className="img-set" 
                                                         src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowR.png`} 
@@ -134,7 +134,7 @@ function MaterialPageMain2({handleOpenMaterialModal}){
                                                     }, 
                                                     // 電腦顯示 3 張
                                                 }}
-                                                navigation={{ prevEl: ".Main1BtnL", nextEl: ".Main1BtnR" }}
+                                                navigation={{ prevEl: ".Main2BtnL", nextEl: ".Main2BtnR" }}
                                                 loop={true}
                                                 className="mySwiper"
                                                 >
