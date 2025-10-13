@@ -111,9 +111,11 @@ function QAPage(){
                                                     
                                                     <SwiperSlide key={item.id}>
                                                         <Nav.Item  className='tab-mb-item'>
-                                                            <Nav.Link className={`tab-mb-link ${item.disabled ? 'is-disabled' : ''}`} 
+                                                            <Nav.Link   className={`tab-mb-link ${item.disabled ? 'is-disabled' : ''}`} 
                                                                         aria-disabled={item.disabled} 
-                                                                        eventKey={item.key}>
+                                                                        eventKey={item.key}
+                                                                        onClick={()=>{window.scrollTo(0, 0);}}
+                                                            >
                                                                 {item.title}
                                                             </Nav.Link>
                                                         </Nav.Item>
@@ -140,7 +142,11 @@ function QAPage(){
                                                             return(
                                                                 
                                                                 <Nav.Item key={item.id} className='tab-item'>
-                                                                    <Nav.Link className={`tab-link ${item.disabled ? 'is-disabled' : ''}`} aria-disabled={item.disabled} eventKey={item.key}>
+                                                                    <Nav.Link   className={`tab-link ${item.disabled ? 'is-disabled' : ''}`} 
+                                                                                aria-disabled={item.disabled} 
+                                                                                eventKey={item.key}
+                                                                                onClick={()=>{window.scrollTo(0, 0);}}
+                                                                    >
                                                                         {item.title}
                                                                     </Nav.Link>
                                                                 </Nav.Item>
