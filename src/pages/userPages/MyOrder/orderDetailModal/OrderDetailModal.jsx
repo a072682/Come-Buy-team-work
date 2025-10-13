@@ -88,12 +88,12 @@ function OrderDetailModal ({onClose}){
                 {
                     id:"orderItemData11",
                     title:"預計訂單製作時間",
-                    content:orderDetailData?.productiontime,
+                    content:orderDetailData?.productiontime.slice(0, 10),
                 },
                 {
                     id:"orderItemData12",
                     title:"預計訂單完成時間",
-                    content:orderDetailData?.productionendtime,
+                    content:orderDetailData?.productionendtime.slice(0, 10),
                 },
             ]
     //#endregion
