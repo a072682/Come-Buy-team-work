@@ -1,9 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loginReducer from "./slice/loginSlice";
+import orderReducer from "./slice/orderSlice";
+import messageReducer from "./slice/messageSlice";
+import modalReducer from "./slice/modalSlice";
+import materialReducer from "./slice/materialSlice";
+
 
 export const store = configureStore({
     reducer: { // 必要加入 reducer
-      login: loginReducer  
+      login: loginReducer,
+      order: orderReducer,
+      message: messageReducer,
+      modal: modalReducer,
+      material:materialReducer,
       //counter為元件的名稱，可更改 
       //counterReducer為引入的元件改名後的名稱不可更改
     }

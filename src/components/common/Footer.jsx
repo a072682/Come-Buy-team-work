@@ -1,14 +1,4 @@
 import { Link } from "react-router-dom";
-import footerLogo from "../../assets/images/Footer/footer-logo.png";
-import footerSmLogo from "../../assets/images/Footer/footer-sm-logo.png";
-import footerLocation from "../../assets/images/Footer/footer-Location.png";
-import footerEmail from "../../assets/images/Footer/footer-Email.png";
-import footerPhone from "../../assets/images/Footer/footer-Phone.png";
-import footerTime from "../../assets/images/Footer/footer-Time.png";
-import footerFacebook from "../../assets/images/Footer/footer-Facebook.png";
-import footerInstagram from "../../assets/images/Footer/footer-Instagram.png";
-import footerLine from "../../assets/images/Footer/footer-Line.png";
-import footerYouTube from "../../assets/images/Footer/footer-YouTube.png";
 
 function Footer() {
   return (
@@ -18,10 +8,10 @@ function Footer() {
         <div className="footer-logo mb-32 mb-xl-48">
           <Link to="/" className="footer-img-box">
             <picture>
-              <source srcSet={footerSmLogo} media="(max-width:1200px)" />
+              <source srcSet={`${import.meta.env.BASE_URL}assets/images/Footer/footer-sm-logo.png`} media="(max-width:1200px)" />
               <img
                 className="d-block mx-auto mb-12 mb-xl-0"
-                src={footerLogo}
+                src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-logo.png`}
                 alt="footer-logo"
               />
             </picture>
@@ -37,7 +27,7 @@ function Footer() {
           <div className="card-box mb-32 mx-auto mx-xl-0 mb-xl-0 d-xl-flex flex-xl-column justify-content-xl-between">
             <div className="card01 card-set mb-16">
               <div className="card-img-box">
-                <img src={footerLocation} alt="地址" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Location.png`} alt="地址" />
               </div>
               <div className="fs-16 fw-medium fs-xl-24 card-text footer-text-set text-white">
                 地址：台中市大雅區神仙路1號
@@ -45,7 +35,7 @@ function Footer() {
             </div>
             <div className="card02 card-set mb-16">
               <div className="card-img-box">
-                <img src={footerEmail} alt="Email" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Email.png`} alt="Email" />
               </div>
               <div className="card-text footer-text-set">
                 <a className="a-re text-white text-decoration-none" href="mailto:come_and_buy@comebuy.com" >
@@ -55,7 +45,7 @@ function Footer() {
             </div>
             <div className="card03 card-set mb-16">
               <div className="card-img-box">
-                <img src={footerPhone} alt="電話" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Phone.png`} alt="電話" />
               </div>
               <div className="card-text footer-text-set">
                 <a className="a-re text-white text-decoration-none" href="tel:+886-4-9408-1688">
@@ -65,7 +55,7 @@ function Footer() {
             </div>
             <div className="card04 card-set">
               <div className="card-img-box">
-                <img src={footerTime} alt="營業時間" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Time.png`} alt="營業時間" />
               </div>
               <div className="card-text footer-text-set text-white text-decoration-none">9:00am - 18:00pm</div>
             </div>
@@ -74,9 +64,10 @@ function Footer() {
           {/* 連結導航 */}
           <div className="article">
             <div className="text-content d-flex gap-32 justify-content-center mb-32 gap-xl-48 mb-xl-48">
+
               <div className="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
                 <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
-                  <Link className="a-re text-white text-decoration-none" to="/OestimatePage">
+                  <Link className="a-re text-white text-decoration-none" to="/EstimatePage">
                     線上估價
                   </Link>
                 </span>
@@ -91,24 +82,13 @@ function Footer() {
                   </Link>
                 </span>
               </div>
+
               <div className="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
                 <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
-                  <Link className="a-re text-white text-decoration-none" to="/IndexPage">
+                  <Link className="a-re text-white text-decoration-none" to="/MateriaPage">
                     材料介紹
                   </Link>
                 </span>
-                <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
-                  <Link className="a-re text-white text-decoration-none" to="/AboutusPage">
-                    設備介紹
-                  </Link>
-                </span>
-                <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
-                  <Link className="a-re text-white text-decoration-none" to="/AboutusPage">
-                    專利介紹
-                  </Link>
-                </span>
-              </div>
-              <div className="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
                 <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
                   <Link className="a-re text-white text-decoration-none" to="/AboutusPage">
                     公司介紹
@@ -119,39 +99,36 @@ function Footer() {
                     售後服務
                   </Link>
                 </span>
+              </div>
+
+              <div className="text-box d-flex flex-column row-gap-16 row-gap-xl-24">
                 <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
                   <Link className="a-re text-white text-decoration-none" to="/QaPage">
                     運費說明
                   </Link>
                 </span>
-                <span className="fs-16 fw-medium d-xl-none footer-text-set">
+                <span className="fs-16 fw-medium fs-xl-24 footer-text-set">
                   <Link className="a-re text-white text-decoration-none" to="/AboutusPage">
                     聯絡我們
                   </Link>
                 </span>
               </div>
-              <div className="text-box d-flex flex-column d-none d-xl-block">
-                <span className="fs-xl-24 fw-medium footer-text-set">
-                  <Link className="a-re text-white text-decoration-none" to="/AboutusPage">
-                    聯絡我們
-                  </Link>
-                </span>
-              </div>
+              
             </div>
 
             {/* 社群媒體 */}
             <div className="footer-icon d-flex justify-content-center gap-32 mb-32 justify-content-xl-start mb-xl-0">
               <div className="footer-icon-box">
-                <img src={footerFacebook} alt="Facebook" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Facebook.png`} alt="Facebook" />
               </div>
               <div className="footer-icon-box">
-                <img src={footerInstagram} alt="Instagram" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Instagram.png`} alt="Instagram" />
               </div>
               <div className="footer-icon-box">
-                <img src={footerLine} alt="Line" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-Line.png`} alt="Line" />
               </div>
               <div className="footer-icon-box">
-                <img src={footerYouTube} alt="YouTube" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/Footer/footer-YouTube.png`} alt="YouTube" />
               </div>
             </div>
           </div>

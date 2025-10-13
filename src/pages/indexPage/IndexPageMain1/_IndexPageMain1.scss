@@ -1,0 +1,139 @@
+//main1
+//最上方留出anvbar位置
+    .main1::before{
+        content:"";
+        display: block;
+        width: 100%;
+        height: 69px;
+    }
+//最上方留出anvbar位置
+
+//背景
+.main1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+
+    .main1-bg{
+        min-height: calc(100vh - 69px);
+        background-image:url("/assets/images/Bg/main1-bg.png");
+        background-repeat:no-repeat;
+        background-position: center bottom;
+        background-size: 100% 100%;
+        position: relative;
+        @media (max-width: 1200px){
+            background: linear-gradient(90deg, #000000 5%, #850017 100%);
+            background-position:bottom right;
+        }
+
+        //角落貼圖
+        .main-corner-img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            display: none;
+            @media (max-width: 1200px){
+                display: block;
+            }
+        }
+        //角落貼圖
+
+        .main1-right-content{
+            width: 100%;
+            height: calc(100vh - 69px);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            row-gap: 48px;
+
+            @media (max-width: 1200px){
+                align-items: center;
+                padding: 48px 0;
+            }
+
+            .main1-title{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+                @media (max-width: 1200px){
+                    align-items: center;
+                    gap: 12px;
+                }
+                .main1-title-text-set{
+                    color: #fff;
+                    line-height: 1.2;
+                    font-weight: 900;
+                    font-size: 64px;
+                    @media (max-width: 1200px){
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .main1-btn1-set{
+                padding: 24px 88px;
+                font-size: 24px;
+                font-weight: 900;
+                @media (max-width: 1200px){
+                    padding: 12px 48px;
+                    font-weight: 700;
+                }
+            }
+
+            .main1-img-box{
+                flex: 1 1 auto; /* 關鍵：吃掉剩餘空間 */
+                min-height: 0; /* 讓它真的能縮 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+                @media (max-width: 1200px){
+                    display: block;
+                }
+                .main1-img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 656 / 696;
+                }
+            }
+        }
+
+        .main1-left-content{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .main1-img-box{
+                flex: 1 1 auto; /* 關鍵：吃掉剩餘空間 */
+                min-height: 0; /* 讓它真的能縮 */
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                @media (max-width: 1200px){
+                    display: none;
+                }
+                .main1-img{
+                    width: 90%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 656 / 696;
+                }
+            }
+        }
+    }
+}
+    
+
+
+
+
+
+//角落貼圖
+

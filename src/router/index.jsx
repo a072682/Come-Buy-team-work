@@ -1,14 +1,12 @@
 import { createHashRouter } from 'react-router-dom';
 import FrontLayout from '../layouts/FrontLayout';
-import IndexPage from '../pages/IndexPage';
-import OestimatePage from '../pages/OestimatePage';
-import QaPage from '../pages/QaPage';
-import AboutusPage from '../pages/AboutusPage';
-import MateriaPage from '../pages/MaterialPage';
-import MemberPage from '../pages/MemberPage';
+import IndexPage from '../pages/indexPage/IndexPage';
 import NotFound from '../pages/NotFound';
-import ManagerPage from '../pages/ManagerPage';
-import ManagerLayout from '../layouts/ManagerLayout';
+import UserPages from '../pages/userPages/UserPages';
+import AboutUsPage from '../pages/AboutusPage/AboutusPage';
+import MateriaPage from '../pages/MaterialPage/MaterialPage';
+import QaPage from '../pages/QAPage/QaPage';
+import EstimatePage from '../pages/EstimatePage/EstimatePage';
 
 
 
@@ -28,8 +26,8 @@ const router = createHashRouter([ //createHashRouter為建立router的方法
                 element: <IndexPage />,
             },
             {
-                path: "OestimatePage",
-                element: <OestimatePage />,
+                path: "EstimatePage",
+                element: <EstimatePage />,
             },
             {
                 path: "MateriaPage",
@@ -40,25 +38,15 @@ const router = createHashRouter([ //createHashRouter為建立router的方法
                 element: <QaPage />,
             },
             {
-                path: "AboutusPage",
-                element: <AboutusPage />,
+                path: "AboutUsPage",
+                element: <AboutUsPage />,
             },
             {
-                path: "/MemberPage",
-                element: <MemberPage />,
+                path: "UserPages",
+                element: <UserPages />,
             },
         ]
 	},
-    {
-        path: "/Manager",
-        element: <ManagerLayout />,
-        children:[
-            {
-                path: "",
-                element: <ManagerPage />,
-            },
-        ]
-    },
     {
         path: "*",
         element: <NotFound />,

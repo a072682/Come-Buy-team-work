@@ -1,0 +1,469 @@
+import { useEffect, useMemo, useState } from 'react';
+import './_BasicInformation.scss';
+import { Dropdown } from 'react-bootstrap';
+import { avatarImgUpLoad, avatarImgUpLoadChange, getUserData, userDataUpChange, userProfileDataUpChange } from '../../../slice/loginSlice';
+import { useDispatch } from 'react-redux';
+
+
+function BasicInformation ({userData,setUserData,userProfileData,setUserProfileData}){
+
+    //#region
+    //#endregion
+
+    //#region 紀錄年欄位狀態宣告
+        const [yearValue, setYearValue] = useState("年");
+        useEffect(()=>{},[yearValue]);
+    //#endregion
+    //#region 控制年欄位下拉選單
+        const [yearShow, setYearShow] = useState(false);
+        useEffect(()=>{},[yearShow]);
+    //#endregion
+
+    //#region 紀錄月欄位狀態宣告
+        const [mouthValue, setMouthValue] = useState("月");
+    //#endregion
+    //#region 控制月欄位下拉選單
+        const [mouthShow, setMouthShow] = useState(false);
+    //#endregion
+
+    //#region 控制日欄位下拉選單
+        const [dayValue, setDayValue] = useState("日");
+    //#endregion
+    //#region 控制日欄位下拉選單
+        const [dayShow, setDayShow] = useState(false);
+    //#endregion
+    
+    //#region 取得"現在"的時間物件
+        const now = new Date();
+    //#endregion
+
+    //#region 取得現在的年份
+        const currentYear = now.getFullYear();
+        //.getFullYear()：從日期物件取出 4 位數的西元年（例如 2025）
+    //#endregion
+
+    //#region 函式功能:近 20 年（例如：2006～2025），依需求你可改成反向排序
+        const years = useMemo(() => Array.from({ length: 100 }, (_, i) => currentYear - 99 + i),[currentYear]);
+        //#region useMemo作用說明
+            //useMemo記憶一段「計算後的值」
+            //語法：useMemo(createFn, [deps]) 
+            //createFn：回傳要被記住的結果
+            //[deps]：相依陣列，只有當裡面的任一值改變時，createFn 才會再被呼叫
+        //#endregion
+        //#region 不用useMemo的函式寫法
+            //const years = Array.from({ length: 20 }, (_, i) => currentYear - 19 + i);
+        //#endregion
+        //#region Array.from作用說明
+            // Array.from({ length: 20 }, mapFn)
+            //建立長度 20 的陣列 → [0, 0, 0...]//長度20，內容為空 → 依序套用 mapFn 放入內容\
+            //(_, i): _ 是「當前值」（這裡沒用到所以用底線），i 是索引（0 到 19）。
+            //currentYear - 19 + i 
+            //當 i = 0 → currentYear(今年) - 19 + 0（最早的年份）
+            //當 i = 19 → currentYear(今年) - 19 + 19（最新的年份）
+            //只有 currentYear 變了，才會重算 years。
+            // 近 20 年（例如：2006～2025），依需求你可改成反向排序 
+            // 如果要反向由新到舊則
+            // (_, i) => currentYear - i)
+        //#endregion
+    //#endregion
+
+    //#region 函式功能:取得1～12月
+        const months = useMemo(() => Array.from({ length: 12 }, (_, i) => i + 1), []);
+    //#endregion
+
+    //#region 函式功能:取得某年某月的天數（month 1-12）
+        const getDaysInMonth = (year, month) => {
+            if (!year || !month) return 31; // 還沒選完就先給 31（或你想先不顯示）
+            return new Date(year, month, 0).getDate(); // month 取「下個月的 0 號」剛好是這個月最後一天
+        };
+        //new Date(2025, 2, 0) // month=2 表示「3 月」的第 0 天 → 2025-02-28
+        //實際範例
+        //getDaysInMonth(2025, 2) // → 28  (2025 年 2 月有 28 天)
+        //getDaysInMonth(2025, 1) // → 31  (2025 年 1 月有 31 天)
+        //語法new Date(年, 月(0~11), 日)
+        //new Date是「建立一個日期物件」，內容是 某一天的完整資訊
+        //.getDate()：只會回傳今天為幾號(純數字)部分。
+    //#endregion
+
+    //#region 套用getDaysInMonth函式取得該月總天數
+        const daysInThisMonth = getDaysInMonth( Number(userData?.birthYear), Number(userData?.birthMonth));
+    //#endregion
+    
+    //#region 套用該月總天數的資料引入至下拉選單
+        const days = useMemo(
+            () => Array.from({ length: daysInThisMonth }, (_, i) => i + 1),
+            [daysInThisMonth]
+        );
+    //#endregion
+    
+    //#region 函式作用:將資料寫入userProfileData
+        const inputUserProfileData = (e) => {
+            const { name, value, type, checked, files } = e.target;
+            setUserProfileData(prev => {
+                if (type === 'checkbox') {
+                    return { ...prev, [name]: checked };
+                } else if (type === 'file') {
+                    return { ...prev, [name]: files?.[0] ?? null };
+                } else {
+                    return { ...prev, [name]: value };
+                }
+            });
+        };
+    //#endregion
+
+    //#region 函式作用:將資料寫入userData
+        const inputUserData = (e) => {
+            const { name, value } = e.target;
+            setUserData(prev => ({
+                ...prev, 
+                [name]: value,
+            }));
+        };
+    //#endregion
+
+    //#region 函式作用:將資料寫入userProfileData(Dropdown專用)
+        const onDropdownSelect = ({ name, value }) => {
+            setUserProfileData(prev => {
+                const next = { ...prev, [name]: value };
+
+                // 只有年/月改變時才檢查日的合法性
+                if (name === 'birth_year' || name === 'birth_month') {
+                    const nextYear  = Number(next.birth_year);   // 用 next 而不是 prev/formData
+                    const nextMonth = Number(next.birth_month);
+                    const nextMax   = getDaysInMonth(nextYear, nextMonth);
+
+                    if (Number(next.birth_day) > nextMax) {      // 比較也用 next
+                        next.birth_day = '';                       // 清空不合法的日
+                    }
+                }
+                return next;
+            });
+        };
+    //#endregion
+
+    //#region 讀取中央函式前置宣告
+        //讀取中央函式前置宣告
+        const dispatch = useDispatch();
+    //#endregion
+
+    //#region 會員頭像圖片上傳函式
+        const avatarImgUpload = async(event)=>{
+            const { files } = event.target;
+            const avatarFile = files?.[0];
+            if (!avatarFile) {                               
+                alert('請先選擇檔案');
+                return;
+            }
+            const avatarImg = new FormData();               
+            avatarImg.append('image', avatarFile);
+            try{
+                const avatarImgUploadRef = await dispatch(avatarImgUpLoad( {avatarImgData:avatarImg})).unwrap();
+                console.log("圖片上傳成功",avatarImgUploadRef);
+                setUserProfileData({
+                    ...userProfileData,
+                    avatar_id: avatarImgUploadRef.filename,             
+                    avatar_url: avatarImgUploadRef.url,        
+                });
+            }catch(error){
+                console.log("圖片上傳失敗",error.response.data.error);
+            }
+        }
+    //#endregion
+
+    //#region 會員頭像圖片覆蓋函式
+        const avatarImgUpChange = async(event)=>{
+            const { files } = event.target;
+            const avatarFile = files?.[0];
+            if (!avatarFile) {                               
+                alert('請先選擇檔案');
+                return;
+            }
+            const avatarImg = new FormData();       
+            avatarImg.append('public_id', userProfileData?.avatar_id);        
+            avatarImg.append('image', avatarFile);
+            try{
+                const avatarImgUpChangeRef = await dispatch(avatarImgUpLoadChange( {avatarImgData:avatarImg})).unwrap();
+                console.log("圖片覆蓋成功",avatarImgUpChangeRef);
+                setUserProfileData({
+                    ...userProfileData,
+                    avatar_id: avatarImgUpChangeRef.filename,             
+                    avatar_url: avatarImgUpChangeRef.url,        
+                });
+            }catch(error){
+                console.log("圖片覆蓋失敗",error.response.data.error);
+            }
+        }
+    //#endregion
+
+    //#region 更新會員資料函式
+        const userDataUpLoadChange = async()=>{
+            try{
+                // console.log("看看資料",userData);
+                const userDataUpLoadChangeRef = await dispatch(userDataUpChange(userData)).unwrap();
+                console.log("會員資料更新成功",userDataUpLoadChangeRef);
+                const user = await dispatch(getUserData()).unwrap();
+                console.log("新會員資料取得成功",user);
+                setUserData(user.UserData);
+            }catch(error){
+                console.log("會員資料更新失敗",error);
+            }
+        }
+    //#endregion
+
+    //#region 更新會員個人資料函式
+        const userProfileDataUpLoadChange = async()=>{
+            try{
+                // console.log("看看資料2",userProfileData);
+                const userProfileDataUpLoadChangeRef = await dispatch(userProfileDataUpChange(userProfileData)).unwrap();
+                console.log("會員個人資料更新成功",userProfileDataUpLoadChangeRef);
+                const user = await dispatch(getUserData()).unwrap();
+                console.log("新會員個人資料取得成功");
+                setUserProfileData(user.UserProfileData);
+            }catch(error){
+                console.log("會員個人資料更新失敗",error);
+            }
+        }
+    //#endregion
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        userDataUpLoadChange();
+        userProfileDataUpLoadChange();
+    };
+
+    return(
+        <form className='form-content' onSubmit={handleSubmit}>
+            <div className='salutation'>
+                {/* 稱謂 */}
+                <h6 className='salutation-title title'>稱謂：</h6>
+                <div className='salutation-item-box mt-24'>
+                    <div className='salutation-item'>
+                        <input  id="salutation01" 
+                                type="radio" 
+                                name="salutation" 
+                                value="先生" 
+                                checked={userProfileData?.salutation === "先生"} 
+                                onChange={inputUserProfileData}/>
+                        <label htmlFor="salutation01" className="mb-0 custom-checkout-label">
+                            先生
+                        </label>
+                    </div>
+                        
+                    <div className='salutation-item'>
+                        <input  id="salutation02" 
+                                type="radio" 
+                                name="salutation" 
+                                value="女士" 
+                                checked={userProfileData?.salutation === "女士"} 
+                                onChange={inputUserProfileData}/>
+                        <label htmlFor="salutation02" className="mb-0 custom-checkout-label">
+                            女士
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div className='name'>
+                <h6 className='name-title title'>姓名：</h6>
+                <div className='name-box mt-24'>
+                    <input
+                        className='name-item form-item'
+                        type="text"
+                        name="last_name"
+                        placeholder="請輸入姓氏"
+                        value={userProfileData?.last_name ?? ""}
+                        onChange={inputUserProfileData}
+                    />
+                    <input
+                        className='name-item form-item'
+                        type="text"
+                        name="first_name"
+                        placeholder="請輸入名字"
+                        value={userProfileData?.first_name ?? ""}
+                        onChange={inputUserProfileData}
+                    />
+                </div>
+            </div>
+            
+            
+
+            <div className='birthday'>
+                <h6 className='title-dropdown title'>生日</h6>
+                <div className='birthday-box mt-24'>
+
+                    <div className='yearData'>
+                        <Dropdown show={yearShow} onToggle={(isOpen) => setYearShow(isOpen)}>
+
+                            <Dropdown.Toggle as="div" onClick={() => {setYearShow(!yearShow);}}> 
+                                <div className='title-dropdown form-item'>{userProfileData?.birth_year ? (userProfileData?.birth_year):(yearValue)}</div>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu  className="triple-dropdown-menu" 
+                                            popperConfig={{
+                                                modifiers: [
+                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                ],
+                                            }}>
+                                <div className="menu-column main-menu">
+                                {
+                                    years.map((main, i) => (
+                                        <span key={i} className='menu-btn' onClick={() => {
+                                            setYearValue(main); onDropdownSelect({ name: 'birth_year', value:Number(main)}); setYearShow(!yearShow)
+                                        }}>
+                                            {main} 
+                                        </span>
+                                    ))
+                                }
+                                </div>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                    
+                    <div className='mouthData'>
+                        <Dropdown show={mouthShow} onToggle={(isOpen) => setMouthShow(isOpen)}>
+
+                            <Dropdown.Toggle as="div" onClick={() => {setMouthShow(!mouthShow);}}> 
+                                <div className='title-dropdown form-item'>{userProfileData?.birth_month ? (userProfileData?.birth_month):(mouthValue)}</div>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu  className="triple-dropdown-menu" 
+                                            popperConfig={{
+                                                modifiers: [
+                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                ],
+                                            }}>
+                                <div className="menu-column main-menu">
+                                {
+                                    months.map((main, i) => (
+                                        <span key={i} className='menu-btn' onClick={() => {
+                                            setMouthValue(main); onDropdownSelect({ name: 'birth_month', value:Number(main) }); setMouthShow(!mouthShow)
+                                        }}>
+                                            {main}
+                                        </span>
+                                    ))
+                                }
+                                </div>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+
+                    <div className='dayData'>
+                        <Dropdown show={dayShow} onToggle={(isOpen) => setDayShow(isOpen)}>
+
+                            <Dropdown.Toggle as="div" onClick={() => {setDayShow(!dayShow);}}> 
+                                <div className='title-dropdown form-item'>{userProfileData?.birth_day ? (userProfileData?.birth_day):(dayValue)}</div>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu  className="triple-dropdown-menu" 
+                                            popperConfig={{
+                                                modifiers: [
+                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                ],
+                                            }}>
+                                <div className="menu-column main-menu">
+                                {
+                                    days.map((main, i) => (
+                                        <span key={i} className='menu-btn' onClick={() => {
+                                            setDayValue(main); onDropdownSelect({ name: 'birth_day', value:Number(main) }); setDayShow(!dayShow)
+                                        }}>
+                                            {main}
+                                        </span>
+                                    ))
+                                }
+                                </div>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                </div>
+            </div>
+            
+            <div className='homePhone'>
+                <h6 className='title'>連絡電話：</h6>
+                <input
+                    className='form-item mt-24 w-100'
+                    type="text"
+                    name="phone"
+                    value={userProfileData?.phone ?? ""}
+                    onChange={inputUserProfileData}
+                    placeholder="請輸入電話號碼"
+                />
+            </div>
+
+            <div className='phone'>
+                <h6 className='title'>手機：</h6>
+                <input
+                    className='form-item mt-24 w-100'
+                    type="text"
+                    name="mobile"
+                    value={userProfileData?.mobile ?? ""}
+                    onChange={inputUserProfileData}
+                    placeholder="請輸入手機號碼"
+                />
+            </div>
+
+            <div className='email'>
+                <h6 className='title'>電子信箱：</h6>
+                <input
+                className='form-item mt-24 w-100'
+                    type="email"
+                    name="email"
+                    value={userData?.email ?? ""}
+                    onChange={inputUserData}
+                    placeholder="請輸入電子信箱"
+                />
+            </div>
+            
+            {/* 訂閱電子報 */}
+            {/* <div className='subscribe'>
+                <div className='subscribe-item'>
+                    <input  id="subscribe"
+                            type="checkbox" 
+                            name="subscribe" 
+                            value="訂閱" 
+                            checked={formData.subscribe} 
+                            onChange={onInputChange}/>
+                    <label htmlFor="subscribe" className="mb-0 custom-checkout-label">
+                        電子報訂閱
+                    </label>
+                </div>
+            </div> */}
+            
+            <div className='img'>
+                <h6 className='title'>照片更改：</h6>
+                {
+                    userProfileData?.avatar_url || userProfileData?.google_avatar_url ?
+                    (
+                        <img    className='imgData' 
+                                src={userProfileData?.avatar_url || userProfileData?.google_avatar_url} 
+                                alt={userData.username} />
+                    )
+                    :
+                    (
+                        <div className="imgData textVer">{(userData?.username.trim()?.charAt(0) || '?').toUpperCase()}</div>
+                    )
+                }
+                
+                <input
+                    className='img-input'
+                    id="avatarFileInput"
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    onChange={userProfileData?.avatar_url || userProfileData?.google_avatar_url?
+                                ((event)=>{avatarImgUpChange(event)}):((event)=>{avatarImgUpload(event)})}
+                />
+                <button className='imgBtn' 
+                        type='button'
+                        onClick={()=>{document.getElementById("avatarFileInput").click()}}
+                        >
+                        上傳照片
+                </button>
+                    
+
+            </div>
+            
+            <button type="submit" className='formBtn submitBtn mian-btn1-set'>儲存</button>
+        </form>
+    )
+}
+export default BasicInformation;
