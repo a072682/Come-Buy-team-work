@@ -63,11 +63,11 @@
                     }
 
                     &:hover{
-                        .Main1BtnL,.Main1BtnR{
+                        .Main2BtnL,.Main2BtnR{
                             animation-play-state: paused;
                         }
                     }
-                    .Main1BtnL,.Main1BtnR{
+                    .Main2BtnL,.Main2BtnR{
                         background-color: transparent;
                         border: none;
                         filter: drop-shadow(0 0 10px #E22288) drop-shadow(0 0 40px #E22288);
