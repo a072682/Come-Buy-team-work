@@ -186,7 +186,8 @@ function UserPages (){
                                                                             if (item.isAction) {
                                                                                 e.preventDefault();
                                                                                 handleLogout();
-                                                                            }
+                                                                            };
+                                                                            window.scrollTo(0, 0);
                                                                         }}
                                                                 >
                                                                     <span className="material-symbols-outlined">
@@ -221,6 +222,7 @@ function UserPages (){
                                                                     if (item.isAction) {
                                                                         e.preventDefault();
                                                                         handleLogout();
+                                                                        window.scrollTo(0, 0);
                                                                     }
                                                                 }}
                                                         >
