@@ -7,7 +7,7 @@ import axios from 'axios';
 export const api = axios.create({
   withCredentials: true, 
 });
-//這個作用是只要使用api就會自動帶入withCredentials: true的設定
+//這個作用是只要使用api就會自動帶入可攜帶cookie(withCredentials: true)的設定
 
 export async function initApi() {
   const url = `${import.meta.env.BASE_URL}config.json?v=${Date.now()}`;
@@ -27,7 +27,7 @@ export async function initApi() {
   // 設定全域存取（可選）
   window.__APP_CONFIG__ = cfg;
 
-  // 設定 axios 實例的 baseURL，之後 api.get('/xxx') 都會走這個 root
+  //設定api的初始路徑，只要是api開頭的都會帶入config.js中的BASE_URL
   api.defaults.baseURL = cfg.BASE_URL || '';
 
   if (!api.defaults.baseURL) {
