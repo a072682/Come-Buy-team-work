@@ -1,9 +1,13 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-axios.defaults.withCredentials = true; 
+import { api } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
+    // import axios from "axios";
+    // axios.defaults.withCredentials = true; 
+
+    // const BASE_URL = import.meta.env.VITE_BASE_URL;
+    // const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
 
 export const messageSlice = createSlice({
     name: "message",
@@ -23,7 +27,7 @@ export const messageSlice = createSlice({
             "order/messageDataUpLoad",
             async ({messageData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const messageDataUpLoadRef = await axios.post(`${BASE_URL}/message/messageUpLoad`,messageData);
+                    const messageDataUpLoadRef = await api.post(`/message/messageUpLoad`,messageData);
                     console.log("會員留言上傳成功:",messageDataUpLoadRef.data);
                     return(messageDataUpLoadRef.data);
                 } catch (error) {

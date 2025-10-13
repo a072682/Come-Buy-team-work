@@ -1,9 +1,13 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-axios.defaults.withCredentials = true; 
+import { api } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
+    // import axios from "axios";
+    // axios.defaults.withCredentials = true; 
+
+    // const BASE_URL = import.meta.env.VITE_BASE_URL;
+    // const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
 
 export const orderSlice = createSlice({
     name: "order",
@@ -127,7 +131,7 @@ export const orderSlice = createSlice({
             "order/orderImgUpLoad",
             async ({orderImgData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderImgUpLoadRef = await axios.post(`${BASE_URL}/orderImg/upload`,orderImgData,
+                    const orderImgUpLoadRef = await api.post(`/orderImg/upload`,orderImgData,
                         { // ✅ 發送 POST 請求到後端圖片上傳 API
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
@@ -147,7 +151,7 @@ export const orderSlice = createSlice({
             "order/orderImgUpLoad",
             async ({orderImgData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderImgUpLoadRef = await axios.post(`${BASE_URL}/orderImg/changeUploadImages`,orderImgData,
+                    const orderImgUpLoadRef = await api.post(`/orderImg/changeUploadImages`,orderImgData,
                         { // ✅ 發送 POST 請求到後端圖片上傳 API
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
@@ -167,7 +171,7 @@ export const orderSlice = createSlice({
             "order/orderDataGet",
             async (_,{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderDataGetRef = await axios.get(`${BASE_URL}/order/getOrderData`);
+                    const orderDataGetRef = await api.get(`/order/getOrderData`);
                     console.log("取得訂單資料成功:",orderDataGetRef.data);
                     return(orderDataGetRef.data);
                 } catch (error) {
@@ -183,7 +187,7 @@ export const orderSlice = createSlice({
             "order/orderDataUpLoad",
             async ({order},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderDataUpLoadRef = await axios.post(`${BASE_URL}/order/registerOrder`,order);
+                    const orderDataUpLoadRef = await api.post(`/order/registerOrder`,order);
                     console.log("訂單上傳成功:",orderDataUpLoadRef.data);
                     return(orderDataUpLoadRef.data);
                 } catch (error) {
