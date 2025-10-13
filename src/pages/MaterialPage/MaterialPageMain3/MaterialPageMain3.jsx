@@ -134,7 +134,7 @@ function MaterialPageMain3({handleOpenMaterialModal}){
                                                     }, 
                                                     // 電腦顯示 3 張
                                                 }}
-                                                navigation={{ prevEl: ".Main1BtnL", nextEl: ".Main1BtnR" }}
+                                                navigation={{ prevEl: ".Main3BtnL", nextEl: ".Main3BtnR" }}
                                                 loop={true}
                                                 className="mySwiper"
                                                 >
