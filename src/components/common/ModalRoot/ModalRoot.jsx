@@ -10,8 +10,7 @@ import OrderModel from "../../../pages/EstimatePage/EstimatePageMain5/orderModel
 import OrderCheckModel from "../../../pages/EstimatePage/EstimatePageMain5/orderCheckModel/OrderCheckModel";
 import OestimateModal from "../../../pages/EstimatePage/EstimatePageMain1/OestimateModal/OestimateModal";
 import MaterialPageModal from "../../../pages/MaterialPage/MaterialPageModal/MaterialPageModal";
-import OrderDetailModal from "../../../pages/userPages/MyOrder/orderDetailModal/OrderDetailModal";
-
+import OrderDetailModal from "../../../pages/userPages/MyOrder/orderDetailModal/orderDetailModal";
 
 
 
