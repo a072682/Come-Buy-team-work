@@ -1,9 +1,13 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-axios.defaults.withCredentials = true; 
+import { api } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
+    // import axios from "axios";
+    // axios.defaults.withCredentials = true; 
+
+    // const BASE_URL = import.meta.env.VITE_BASE_URL;
+    // const API_PATH = import.meta.env.VITE_API_PATH;
+//此區塊為測試開發用內容
 
 export const loginSlice = createSlice({
     name: "login",
@@ -45,7 +49,7 @@ export const loginSlice = createSlice({
             "login/linkTest",
             async (_,{ dispatch }) => {
                 try {
-                    const response = await axios.get(`${BASE_URL}/test-db`);
+                    const response = await api.get(`/test-db`);
                     console.log("連線成功",response.data);
                     return(response.data);
                 } catch (error) {
@@ -63,9 +67,9 @@ export const loginSlice = createSlice({
             "login/createUserData",
             async (newUserDATA,{ dispatch, rejectWithValue }) => {
                 try {
-                    const createUserDataRef = await axios.post(`${BASE_URL}/user/register`,newUserDATA);
+                    const createUserDataRef = await api.post(`/user/register`,newUserDATA);
                     console.log("創建會員成功",createUserDataRef.data);
-                    const createUserProfileRef = await axios.post(`${BASE_URL}/userProfile/createUserProfile`,newUserDATA);
+                    const createUserProfileRef = await api.post(`/userProfile/createUserProfile`,newUserDATA);
                     console.log("創建會員個人資料成功",createUserProfileRef.data);
                     dispatch(logout());
                 } catch (error) {

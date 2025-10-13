@@ -1,0 +1,41 @@
+
+
+
+// src/api.js
+import axios from 'axios';
+
+export const api = axios.create({
+  withCredentials: true, 
+});
+//這個作用是只要使用api就會自動帶入withCredentials: true的設定
+
+export async function initApi() {
+  const url = `${import.meta.env.BASE_URL}config.json?v=${Date.now()}`;
+  //import.meta.env.BASE_URL固定讀取vite.config.js中的base
+  //會得到類似這樣格式的內容 /Come-Buy-team-work/config.json?v=1699999999999
+  //這種路徑會指向「前端自己網站裡的靜態檔案」
+  const res = await axios.get(url, { withCredentials: false });
+  //axios 會向「你目前網站的網址」發出一個 GET 請求
+  //網址類似如下:https://a072682.github.io/Come-Buy-team-work/config.json?v=1699999999999
+  //在https://a072682.github.io/Come-Buy-team-work/之後的內容會尋找在public中尋找同名的檔案也就是config.json檔案
+  //如果是https://a072682.github.io/Come-Buy-team-work/aaa那就會在public中尋找aaa這個檔案
+  //因為是跟自己的內部找資料因此不需要cookie所以才設定withCredentials: false
+  //res會是一個物件
+  //res.data才是裡面真正的內容
+  const cfg = res.data || {};
+
+  // 設定全域存取（可選）
+  window.__APP_CONFIG__ = cfg;
+
+  // 設定 axios 實例的 baseURL，之後 api.get('/xxx') 都會走這個 root
+  api.defaults.baseURL = cfg.BASE_URL || '';
+
+  if (!api.defaults.baseURL) {
+    console.warn('[initApi] BASE_URL is empty. Check public/config.json');
+  }
+}
+
+/** 取用目前的 BASE_URL（可選，用於 debug 或特殊需求） */
+export function getBaseUrl() {
+  return api.defaults.baseURL || '';
+}
