@@ -1,5 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import { api } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
+import { axiosWithCookie, BASE_URL } from "../api";
 
 //此區塊為測試開發用內容
     // import axios from "axios";
@@ -27,7 +27,7 @@ export const messageSlice = createSlice({
             "order/messageDataUpLoad",
             async ({messageData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const messageDataUpLoadRef = await api.post(`/message/messageUpLoad`,messageData);
+                    const messageDataUpLoadRef = await axiosWithCookie.post(`${BASE_URL}/message/messageUpLoad`,messageData);
                     console.log("會員留言上傳成功:",messageDataUpLoadRef.data);
                     return(messageDataUpLoadRef.data);
                 } catch (error) {
