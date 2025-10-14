@@ -1,5 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import { api } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
+import { axiosWithCookie, BASE_URL } from "../api"; // 引入共用 axios 實例（而不是 axios 本體）
+
 
 //此區塊為測試開發用內容
     // import axios from "axios";
@@ -49,7 +50,7 @@ export const loginSlice = createSlice({
             "login/linkTest",
             async (_,{ dispatch }) => {
                 try {
-                    const response = await api.get(`/test-db`);
+                    const response = await axiosWithCookie.get(`${BASE_URL}/test-db`);
                     console.log("連線成功",response.data);
                     return(response.data);
                 } catch (error) {

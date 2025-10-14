@@ -4,7 +4,10 @@
 // src/api.js
 import axios from 'axios';
 
-export const api = axios.create({
+// 只暴露 BASE_URL 給其他模組使用（不改動 axios 的預設行為）
+export let BASE_URL = ''; 
+
+export const axiosWithCookie = axios.create({
   withCredentials: true, 
 });
 //這個作用是只要使用api就會自動帶入可攜帶cookie(withCredentials: true)的設定
@@ -23,14 +26,16 @@ export async function initApi() {
   //res會是一個物件
   //res.data才是裡面真正的內容
   const cfg = res.data || {};
+  //此時的cfg依然是個物件內容為:
+  // {"BASE_URL": "https://come-buy-team-server.onrender.com"}
 
   // 設定全域存取（可選）
-  window.__APP_CONFIG__ = cfg;
+  BASE_URL = cfg.BASE_URL;
 
   //設定api的初始路徑，只要是api開頭的都會帶入config.js中的BASE_URL
-  api.defaults.baseURL = cfg.BASE_URL || '';
+  // api.defaults.baseURL = cfg.BASE_URL || '';
 
-  if (!api.defaults.baseURL) {
+  if (!BASE_URL) {
     console.warn('[initApi] BASE_URL is empty. Check public/config.json');
   }
 }
