@@ -147,6 +147,7 @@ function Header(){
         useEffect(() => {
             const id = setInterval(() => {
                 dispatch(checkLogin()).unwrap?.().catch(err => console.log("登入檢查失敗", err));
+                consolo.log("cookie更新請求已送出");
             }, 4 * 60 * 1000); // 25 分鐘 測試4分鐘
             return () => clearInterval(id);
         }, []);
