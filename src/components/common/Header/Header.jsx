@@ -17,6 +17,17 @@ function Header(){
     //#region
     //#endregion
 
+    //#region 讀取中央登入狀態資料
+        //讀取中央資料
+        const linkState = useSelector((state)=>{
+            return(
+                state.login.linkState
+            )
+        })
+
+        useEffect(()=>{},[linkState])
+    //#endregion
+
     //#region 讀取中央登入資料
         //讀取中央資料
         const loginState = useSelector((state)=>{
@@ -77,7 +88,7 @@ function Header(){
         //連線測試
         useEffect(()=>{
             dispatch(linkTest()); 
-        },[])
+        },[]);
         //連線測試
     //#endregion
 
@@ -117,6 +128,15 @@ function Header(){
         }, [location.pathname]); // 監聽 `pathname`，當變更時執行
         //監控路徑
     //#endregion
+
+    //#region 設定每固定時間觸發函式
+        useEffect(() => {
+            const id = setInterval(() => {
+                dispatch(checkLogin()).unwrap?.().catch(err => console.log("登入檢查失敗", err));
+            }, 25 * 60 * 1000); // 25 分鐘
+            return () => clearInterval(id);
+        }, []);
+    //#endregion
     
     //#region 側邊狀態
         //側邊狀態
@@ -128,10 +148,22 @@ function Header(){
         //側邊狀態
     //#endregion
 
+    
+
     const [expanded, setExpanded] = useState(false);
     
     return(
         <>
+            <div className={linkState ? "d-none" : "mask"}>
+                <div className="loader">
+                    <p className="loader-text" aria-live="polite" aria-busy="true">
+                        網站載入中，請稍後
+                        <span className="dots">
+                            <span>.</span><span>.</span><span>.</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
             <Navbar expand="lg" className="navBg-set" expanded={expanded} id="siteHeader">
                 <Container>
 

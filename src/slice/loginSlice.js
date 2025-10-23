@@ -13,33 +13,40 @@ import { axiosWithCookie, BASE_URL } from "../api"; // 引入共用 axios 實例
 export const loginSlice = createSlice({
     name: "login",
     initialState: {
+        linkState:false,//連線狀態
         isLogin: false,  // 是否登入
-        avatar_url:null,
-        username:null,
-        auth_provider:null,
+        avatar_url:null,//會員頭像內容
+        username:null,//會員名稱
+        auth_provider:null,//登入來源
     },
     reducers: {
-      login: (state, action) => {
-        state.isLogin = true;
-        state.user = action.payload; // 儲存登入的使用者資訊
-      },
-      logout: (state) => {
-        state.isLogin = false;
-        state.user = null;
-      },
-      avatarDataUp:(state,action) => {
-        state.avatar_url = action.payload;
-      },
-      usernameDataUp:(state,action) => {
-        state.username = action.payload;
-      },
-      auth_providerDataUp:(state,action) => {
-        state.auth_provider = action.payload;
-      },
+        linkStateTrue: (state, action) => {
+            state.linkState = true;
+        },
+        linkStateFalse: (state, action) => {
+            state.linkState = false;
+        },
+        login: (state, action) => {
+            state.isLogin = true;
+            state.user = action.payload; // 儲存登入的使用者資訊
+        },
+        logout: (state) => {
+            state.isLogin = false;
+            state.user = null;
+        },
+        avatarDataUp:(state,action) => {
+            state.avatar_url = action.payload;
+        },
+        usernameDataUp:(state,action) => {
+            state.username = action.payload;
+        },
+        auth_providerDataUp:(state,action) => {
+            state.auth_provider = action.payload;
+        },
     },
   });
 
-  export const { login, logout, avatarDataUp, usernameDataUp, auth_providerDataUp } = loginSlice.actions;
+  export const { login, logout, avatarDataUp, usernameDataUp, auth_providerDataUp, linkStateTrue, linkStateFalse, } = loginSlice.actions;
 
     //#region
     //#endregion
@@ -49,12 +56,15 @@ export const loginSlice = createSlice({
         export const linkTest = createAsyncThunk(
             "login/linkTest",
             async (_,{ dispatch }) => {
+                dispatch(linkStateFalse()); 
                 try {
                     const response = await axiosWithCookie.get(`${BASE_URL}/test-db`);
                     console.log("連線成功",response.data);
+                    dispatch(linkStateTrue()); 
                     return(response.data);
                 } catch (error) {
                     console.log("連線失敗",error.response.data);
+                    dispatch(linkStateFalse());
                     return(error.response.data);
                 }
             }
@@ -113,7 +123,9 @@ export const loginSlice = createSlice({
                     try {
                         const checkLoginRef = await axiosWithCookie.post(`${BASE_URL}/user/logInCheck`);
                         console.log("登入確認成功",checkLoginRef.data);
+                        //更新username內容
                         dispatch(usernameDataUp(checkLoginRef?.data.status.username));
+                        //更新登入來源資料
                         dispatch(auth_providerDataUp(checkLoginRef?.data.status.auth_provider));
                         const getUserProfileRef = await axiosWithCookie.get(`${BASE_URL}/userProfile/getUserProfile`);
                         console.log("取得會員個人資料成功",getUserProfileRef.data);
