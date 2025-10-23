@@ -115,6 +115,36 @@ function Header(){
         //登入確認
     //#endregion
 
+    //#region 重複登入確認
+        useEffect(() => {
+            const getUserData = async()=>{
+                try{
+                    await dispatch(checkLogin()).unwrap();
+                    await dispatch(userLoginCounter()).unwrap();
+                }catch(error){
+                    console.log("登入檢查失敗",error);
+                }
+            };
+
+            // 首次掛載先跑一次
+            getUserData();
+
+            // 監聽 pageshow：只要頁面被顯示，就有機會觸發
+            const onPageShow = (event) => {
+                //event.persisted此屬性如果是
+                // false：代表是常規載入（真正從網路）。
+                // true：代表這次顯示是從 BFCache 恢復
+                if (event.persisted) getUserData();   // persisted=true 表示從 BFCache 恢復
+            };
+            //當頁面被顯示 (pageshow) 的時候，請執行指定的函式 onPageShow。
+            //'pageshow' 是一個事件，代表:瀏覽器把頁面「顯示出來」了。
+            //另外像是'click' → 代表使用者按了滑鼠。
+            window.addEventListener('pageshow', onPageShow);
+
+            return () => window.removeEventListener('pageshow', onPageShow);
+        }, []);
+    //#endregion
+
     //#region 抓取網址
     const location = useLocation();
     //#endregion
