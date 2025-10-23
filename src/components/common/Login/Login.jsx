@@ -7,9 +7,6 @@ import './_Login.scss';
 
 
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
-const API_PATH = import.meta.env.VITE_API_PATH;
-
 //setHandleLoginPageModal,loginModalShow,setLoginModalShow 都移除
 
 function Login ({onClose, onSwitch}){
