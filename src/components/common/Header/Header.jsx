@@ -100,22 +100,6 @@ function Header(){
     //#endregion
 
     //#region 登入確認
-        //登入確認
-        useEffect(()=>{
-            const getUserData = async()=>{
-                try{
-                    await dispatch(checkLogin()).unwrap();
-                    await dispatch(userLoginCounter()).unwrap();
-                }catch(error){
-                    console.log("登入檢查失敗",error);
-                }
-            };
-            getUserData();
-        },[]);
-        //登入確認
-    //#endregion
-
-    //#region 重複登入確認
         useEffect(() => {
             const getUserData = async()=>{
                 try{
