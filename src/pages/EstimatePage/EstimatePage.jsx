@@ -29,7 +29,7 @@ function EstimatePage(){
         })
 
         useEffect(()=>{
-            console.log("loginState狀態:",loginState);
+            // console.log("loginState狀態:",loginState);
         },[loginState])
     //#endregion
 
@@ -40,7 +40,7 @@ function EstimatePage(){
                 state.order.orderData
             )
         })
-        useEffect(()=>{console.log("order資料:",order);},[order]);
+        useEffect(()=>{},[order]);
     //#endregion
 
     //#region 讀取中央資料
@@ -58,7 +58,7 @@ function EstimatePage(){
                 resetAll();
                 dispatch(resetTriggerOff());
             }
-            console.log("resetTrigger狀態:",resetTrigger);
+            // console.log("resetTrigger狀態:",resetTrigger);
         },[resetTrigger])
     //#endregion
 
@@ -116,7 +116,7 @@ function EstimatePage(){
             productionEndTime: "", // 預計訂單製作結束時間
         });
 
-        useEffect(()=>{console.log("訂單資料:",orderData)},[orderData]);
+        useEffect(()=>{},[orderData]);
     //#endregion
 
     //#region 重置觸發狀態宣告

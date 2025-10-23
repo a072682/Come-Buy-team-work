@@ -35,7 +35,9 @@ function PassWordChangePage (){
                 newPassWordRepeat:"",
             }
         )
-        useEffect(()=>{console.log("密碼資料:",passWordData)},[passWordData]);
+        useEffect(()=>{
+            // console.log("密碼資料:",passWordData)
+        },[passWordData]);
     //#endregion
 
     //#region 寫入密碼函式
@@ -96,7 +98,7 @@ function PassWordChangePage (){
         const handleUserPasswordChange = async()=>{
             try{
                 await dispatch(userPasswordChange({passWordData:passWordData})).unwrap();
-                console.log("密碼修改成功");
+                // console.log("密碼修改成功");
             }catch(error){
                 console.log(error);
                 throw error;
@@ -161,7 +163,8 @@ function PassWordChangePage (){
                                                 type="password" 
                                                 className="form-item inputItem-set" 
                                                 id="originPassWord" 
-                                                placeholder="請輸入原始密碼" />
+                                                placeholder="請輸入原始密碼" 
+                                                autoComplete="current-password"/>
                                         {originPassWordErrorMsg && <div className="text-danger mt-1">{originPassWordErrorMsg}</div>}
                                     </div>
                                     <div className="newPassWordGroup">
@@ -172,7 +175,8 @@ function PassWordChangePage (){
                                                 type="password" 
                                                 className="form-item inputItem-set" 
                                                 id="newPassWord" 
-                                                placeholder="請輸入新的密碼" />
+                                                placeholder="請輸入新的密碼" 
+                                                autoComplete="current-password"/>
                                         {newPassWordErrorMsg && <div className="text-danger mt-1">{newPassWordErrorMsg}</div>}
                                     </div>
                                     <div className="newPassWordRepeatGroup">
@@ -183,7 +187,8 @@ function PassWordChangePage (){
                                                 type="password" 
                                                 className="form-item inputItem-set" 
                                                 id="newPassWordRepeat" 
-                                                placeholder="請確認輸入新的密碼" />
+                                                placeholder="請確認輸入新的密碼" 
+                                                autoComplete="current-password"/>
                                         {newPassWordRepeatErrorMsg && <div className="text-danger mt-1">{newPassWordRepeatErrorMsg}</div>}
                                     </div>
                                 </div>

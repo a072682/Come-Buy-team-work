@@ -26,14 +26,14 @@ function MyOrder (){
                 state.order.userOrderListData
             )
         })
-        useEffect(()=>{console.log("列表資料",orderListData)},[orderListData])
+        useEffect(()=>{},[orderListData])
     //#endregion
 
     //#region 取得訂單函式
         const handleGetMyOrderData = async()=>{
             try{
                 const orderDataRef = await dispatch(orderDataGet()).unwrap();
-                console.log("確認取得訂單資料",orderDataRef);
+                // console.log("確認取得訂單資料",orderDataRef);
                 dispatch(userOrderListUpLoad(orderDataRef.orderData));
             }catch(error){
                 console.log("取得訂單資料失敗",error);

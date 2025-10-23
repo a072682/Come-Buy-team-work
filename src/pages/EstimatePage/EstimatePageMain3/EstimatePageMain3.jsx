@@ -12,7 +12,7 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
         wallThickness: 50,
         supportDensity: 10,
     });
-    useEffect(()=>{console.log("資料:",main3GroupDataState)},[main3GroupDataState]);
+    useEffect(()=>{},[main3GroupDataState]);
 
     // 點加號的時候
     const handleIncrement = (id) => {

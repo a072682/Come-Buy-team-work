@@ -34,10 +34,10 @@ function IndexPage(){
 
         //取得id為siteHeader的dom
         const headerEl = document.getElementById("siteHeader");
-        console.log("這是headerEl:",headerEl);
+        // console.log("這是headerEl:",headerEl);
         //取出dom的高度
         const headerHeight = headerEl.offsetHeight;
-        console.log("這是高度:",headerHeight);
+        // console.log("這是高度:",headerHeight);
         //.offsetHeight是DOM的實際渲染高度
 
         if(headerHeight){

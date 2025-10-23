@@ -59,7 +59,7 @@ export const loginSlice = createSlice({
                 dispatch(linkStateFalse()); 
                 try {
                     const response = await axiosWithCookie.get(`${BASE_URL}/test-db`);
-                    console.log("連線成功",response.data);
+                    // console.log("連線成功",response.data);
                     dispatch(linkStateTrue()); 
                     return(response.data);
                 } catch (error) {
@@ -79,9 +79,9 @@ export const loginSlice = createSlice({
             async (newUserDATA,{ dispatch, rejectWithValue }) => {
                 try {
                     const createUserDataRef = await axiosWithCookie.post(`${BASE_URL}/user/register`,newUserDATA);
-                    console.log("創建會員成功",createUserDataRef.data);
+                    // console.log("創建會員成功",createUserDataRef.data);
                     const createUserProfileRef = await axiosWithCookie.post(`${BASE_URL}/userProfile/createUserProfile`,newUserDATA);
-                    console.log("創建會員個人資料成功",createUserProfileRef.data);
+                    // console.log("創建會員個人資料成功",createUserProfileRef.data);
                     dispatch(logout());
                 } catch (error) {
                     console.log("創建會員失敗",error.response.data);
@@ -100,7 +100,7 @@ export const loginSlice = createSlice({
             async (account, { dispatch, rejectWithValue }) => {
                 try {
                     const handleLoginRef = await axiosWithCookie.post(`${BASE_URL}/user/login`, account);
-                    console.log("登入成功",handleLoginRef.data);
+                    // console.log("登入成功",handleLoginRef.data);
                     dispatch(login());
                     return({
                         login:handleLoginRef.data,
@@ -122,13 +122,13 @@ export const loginSlice = createSlice({
                 async (_,{ dispatch }) => {
                     try {
                         const checkLoginRef = await axiosWithCookie.post(`${BASE_URL}/user/logInCheck`);
-                        console.log("登入確認成功",checkLoginRef.data);
+                        // console.log("登入確認成功",checkLoginRef.data);
                         //更新username內容
                         dispatch(usernameDataUp(checkLoginRef?.data.status.username));
                         //更新登入來源資料
                         dispatch(auth_providerDataUp(checkLoginRef?.data.status.auth_provider));
                         const getUserProfileRef = await axiosWithCookie.get(`${BASE_URL}/userProfile/getUserProfile`);
-                        console.log("取得會員個人資料成功",getUserProfileRef.data);
+                        // console.log("取得會員個人資料成功",getUserProfileRef.data);
                         if(getUserProfileRef?.data.message !== "管理員帳戶無個人信息"){
                             dispatch(avatarDataUp(getUserProfileRef?.data.userData.avatar_url ?? getUserProfileRef?.data.userData.google_avatar_url));
                         }
@@ -149,9 +149,9 @@ export const loginSlice = createSlice({
                 async (_,{ dispatch, rejectWithValue }) => {
                     try {
                         const userLoginCounterRef = await axiosWithCookie.post(`${BASE_URL}/user/userLoginCounter`);
-                        console.log("登入計數成功",userLoginCounterRef.data.message);
+                        // console.log("登入計數成功",userLoginCounterRef.data.message);
                 } catch (error) {
-                    console.log("登入計數失敗",error.response.data);
+                    // console.log("登入計數失敗",error.response.data);
                     return rejectWithValue(error.response.data);
                 }
             }
@@ -166,7 +166,7 @@ export const loginSlice = createSlice({
             async (_, { dispatch }) => {
                 try {
                     const handleLogoutRef = await axiosWithCookie.post(`${BASE_URL}/user/logout`);
-                    console.log("登出成功(Slice端)");
+                    // console.log("登出成功(Slice端)");
                     dispatch(logout());
                 } catch (error) {
                     console.log("登出失敗(Slice端)");
@@ -184,7 +184,7 @@ export const loginSlice = createSlice({
                     try {
                         const getUserDataRef = await axiosWithCookie.get(`${BASE_URL}/user/getUserData`);
                         const getUserProfileDataRef = await axiosWithCookie.get(`${BASE_URL}/userProfile/getUserProfile`);
-                        console.log("取得使用者資料成功",getUserDataRef.data,getUserProfileDataRef.data.userData,);
+                        // console.log("取得使用者資料成功",getUserDataRef.data,getUserProfileDataRef.data.userData,);
                         dispatch(usernameDataUp(getUserDataRef?.data.username));
                         if(getUserProfileDataRef?.data.message !== "管理員帳戶無個人信息"){
                             dispatch(avatarDataUp(getUserProfileDataRef?.data.userData.avatar_url ?? getUserProfileDataRef?.data.userData.google_avatar_url));
@@ -209,7 +209,7 @@ export const loginSlice = createSlice({
                 async (userData,{ dispatch, rejectWithValue }) => {
                     try {
                         const userDataUpChangeRef = await axiosWithCookie.post(`${BASE_URL}/user/userDataUpChange`,userData);
-                        console.log("更新會員資料成功",userDataUpChangeRef.data);
+                        // console.log("更新會員資料成功",userDataUpChangeRef.data);
                         return(userDataUpChangeRef.data);
                 } catch (error) {
                     console.log("更新會員資料失敗",error.response.data);
@@ -225,7 +225,7 @@ export const loginSlice = createSlice({
                 async (userProfileData,{ dispatch, rejectWithValue }) => {
                     try {
                         const userProfileDataUpChangeRef = await axiosWithCookie.post(`${BASE_URL}/userProfile/upUserProfile`,userProfileData);
-                        console.log("更新會員個人資料成功",userProfileDataUpChangeRef.data);
+                        // console.log("更新會員個人資料成功",userProfileDataUpChangeRef.data);
                         return(userProfileDataUpChangeRef.data);
                 } catch (error) {
                     console.log("更新會員個人資料失敗",error.response.data);
@@ -245,7 +245,7 @@ export const loginSlice = createSlice({
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
-                    console.log("上傳成功:",avatarImgUpLoadRef.data);
+                    // console.log("上傳成功:",avatarImgUpLoadRef.data);
                     return(avatarImgUpLoadRef.data);
                 } catch (error) {
                     console.log("上傳失敗",error.response.data);
@@ -265,7 +265,7 @@ export const loginSlice = createSlice({
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
-                    console.log("上傳覆蓋成功:",avatarImgUpLoadChangeRef.data);
+                    // console.log("上傳覆蓋成功:",avatarImgUpLoadChangeRef.data);
                     return(avatarImgUpLoadChangeRef.data);
                 } catch (error) {
                     console.log("上傳覆蓋失敗",error.response.data);
@@ -281,7 +281,7 @@ export const loginSlice = createSlice({
             async ({passWordData},{ dispatch, rejectWithValue }) => {
                 try {
                     const userPasswordChangeRef = await axiosWithCookie.post(`${BASE_URL}/user/userPasswordUpLoad`,passWordData);
-                    console.log("密碼修改成功:",userPasswordChangeRef.data);
+                    // console.log("密碼修改成功:",userPasswordChangeRef.data);
                     return(userPasswordChangeRef.data);
                 } catch (error) {
                     console.log(error.response.data);

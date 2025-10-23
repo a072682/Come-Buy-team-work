@@ -14,8 +14,8 @@ function OffcanvasUser({handleClose}) {
 
     const handleLogoutUser = async()=>{
         try{
-            await dispatch(logoutUser());
-            console.log("登出成功");
+            await dispatch(logoutUser()).unwrap();
+            // console.log("登出成功");
             handleClose();
         }catch(error){
             console.log("登出失敗:",error);

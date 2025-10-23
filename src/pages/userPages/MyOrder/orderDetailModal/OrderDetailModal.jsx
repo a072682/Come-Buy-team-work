@@ -25,7 +25,9 @@ function OrderDetailModal ({onClose}){
                 state.order.userOrderData
             )
         })
-        useEffect(()=>{console.log("訂單資料",orderDetailData)},[orderDetailData])
+        useEffect(()=>{
+            // console.log("訂單資料",orderDetailData)
+        },[orderDetailData])
     //#endregion
     
     //#region顯示訂單用資料

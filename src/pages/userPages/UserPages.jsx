@@ -36,7 +36,7 @@ function UserPages (){
         })
 
         useEffect(()=>{
-            console.log("loginState狀態:",loginState);
+            // console.log("loginState狀態:",loginState);
         },[loginState])
     //#endregion
 
@@ -49,7 +49,7 @@ function UserPages (){
         })
 
         useEffect(()=>{
-            console.log("會員來源資料:",authProvider);
+            // console.log("會員來源資料:",authProvider);
         },[authProvider])
     //#endregion
 
@@ -63,12 +63,16 @@ function UserPages (){
 
     //#region 會員資料儲存狀態宣告
         const [userData, setUserData] = useState(null);
-        useEffect(()=>{console.log("會員資料:", userData);},[userData]);
+        useEffect(()=>{
+            // console.log("會員資料:", userData);
+        },[userData]);
     //#endregion
 
     //#region 會員資料儲存狀態宣告
         const [userProfileData, setUserProfileData] = useState(null);
-        useEffect(()=>{console.log("會員個人資料:", userProfileData);},[userProfileData]);
+        useEffect(()=>{
+            // console.log("會員個人資料:", userProfileData);
+        },[userProfileData]);
     //#endregion
 
     //#region 取得會員資料

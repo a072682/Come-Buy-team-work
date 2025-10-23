@@ -136,7 +136,7 @@ export const orderSlice = createSlice({
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
-                    console.log("訂單預覽圖片上傳成功:",orderImgUpLoadRef.data);
+                    // console.log("訂單預覽圖片上傳成功:",orderImgUpLoadRef.data);
                     return(orderImgUpLoadRef.data);
                 } catch (error) {
                     console.log("上傳失敗",error.response.data);
@@ -156,7 +156,7 @@ export const orderSlice = createSlice({
                             headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
-                    console.log("訂單預覽圖片上傳覆蓋成功:",orderImgUpLoadRef.data);
+                    // console.log("訂單預覽圖片上傳覆蓋成功:",orderImgUpLoadRef.data);
                     return(orderImgUpLoadRef.data);
                 } catch (error) {
                     console.log("訂單預覽圖片上傳覆蓋失敗",error.response.data);
@@ -172,7 +172,7 @@ export const orderSlice = createSlice({
             async (_,{ dispatch,rejectWithValue }) => {
                 try {
                     const orderDataGetRef = await axiosWithCookie.get(`${BASE_URL}/order/getOrderData`);
-                    console.log("取得訂單資料成功:",orderDataGetRef.data);
+                    // console.log("取得訂單資料成功:",orderDataGetRef.data);
                     return(orderDataGetRef.data);
                 } catch (error) {
                     console.log("取得訂單資料失敗",error.response.data);
@@ -188,7 +188,7 @@ export const orderSlice = createSlice({
             async ({order},{ dispatch,rejectWithValue }) => {
                 try {
                     const orderDataUpLoadRef = await axiosWithCookie.post(`${BASE_URL}/order/registerOrder`,order);
-                    console.log("訂單上傳成功:",orderDataUpLoadRef.data);
+                    // console.log("訂單上傳成功:",orderDataUpLoadRef.data);
                     return(orderDataUpLoadRef.data);
                 } catch (error) {
                     console.log("訂單上傳失敗",error.response.data);

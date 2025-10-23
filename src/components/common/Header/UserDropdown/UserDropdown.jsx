@@ -21,7 +21,7 @@ function UserDropdown() {
       })
 
       useEffect(()=>{
-          console.log("頭像資料:",avatarUrl);
+          // console.log("頭像資料:",avatarUrl);
       },[avatarUrl])
   //#endregion
 
@@ -34,7 +34,7 @@ function UserDropdown() {
       })
 
       useEffect(()=>{
-          console.log("會員名稱資料:",userName);
+          // console.log("會員名稱資料:",userName);
       },[userName])
   //#endregion
   
@@ -43,7 +43,7 @@ function UserDropdown() {
   const handleLogoutUser = async()=>{
     try{
       await dispatch(logoutUser()).unwrap();
-      console.log("登出成功");
+      // console.log("登出成功");
       setShow(false);
     }catch(error){
       console.log("登出失敗:",error);
