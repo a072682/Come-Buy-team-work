@@ -28,7 +28,7 @@ export default function ModalRoot() {
             )
         })
         useEffect(()=>{
-          console.log("modal狀態:",active);
+          // console.log("modal狀態:",active);
         },[active])
     //#endregion
 
@@ -37,10 +37,10 @@ export default function ModalRoot() {
         const prev = document.body.style.overflow;
         if (active) {
             document.body.style.overflow = "hidden";
-            console.log("滾動鎖住");
+            //console.log("滾動鎖住");
         }else{
             document.body.style.overflow = prev || "auto";
-            console.log("滾動解除");
+            //console.log("滾動解除");
         } 
         return () => { 
             document.body.style.overflow = prev || "auto"; 
