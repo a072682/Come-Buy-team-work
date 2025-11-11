@@ -166,7 +166,7 @@ function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4
                             <div className="col-12">
                                 <div className='EstimatePageMain4-content'>
                                     <div className="EstimatePageMain4-title">
-                                        <h3 className="title-set">規格設置</h3>
+                                        <h3 className="title-set">工期設置</h3>
                                     </div>
                                     <div className="EstimatePageMain4-note-box">
                                         <span className="material-symbols-outlined note-icon-set">
