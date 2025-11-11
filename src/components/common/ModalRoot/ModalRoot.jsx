@@ -43,7 +43,7 @@ export default function ModalRoot() {
         return () => { 
             document.body.style.overflow = prev || "auto"; 
         };
-    }, [active]);
+    }, []);
     //#endregion
 
     //#region ⎋ 按 ESC 關閉（可選）

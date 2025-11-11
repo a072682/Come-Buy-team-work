@@ -64,14 +64,14 @@ function UserPages (){
     //#region 會員資料儲存狀態宣告
         const [userData, setUserData] = useState(null);
         useEffect(()=>{
-            // console.log("會員資料:", userData);
+            //console.log("會員資料:", userData);
         },[userData]);
     //#endregion
 
     //#region 會員資料儲存狀態宣告
         const [userProfileData, setUserProfileData] = useState(null);
         useEffect(()=>{
-            // console.log("會員個人資料:", userProfileData);
+            //console.log("會員個人資料:", userProfileData);
         },[userProfileData]);
     //#endregion
 

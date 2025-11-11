@@ -33,7 +33,7 @@ function MyOrder (){
         const handleGetMyOrderData = async()=>{
             try{
                 const orderDataRef = await dispatch(orderDataGet()).unwrap();
-                // console.log("確認取得訂單資料",orderDataRef);
+                //console.log("確認取得訂單資料",orderDataRef);
                 dispatch(userOrderListUpLoad(orderDataRef.orderData));
             }catch(error){
                 console.log("取得訂單資料失敗",error);
@@ -100,13 +100,13 @@ function MyOrder (){
                                                     <div className='text-set-box'>
                                                         <p className='text-set'>
                                                         {
-                                                            item.state?
+                                                            item.state !== "rejected"?
                                                             (
-                                                                "已審核"
+                                                                "審核中"
                                                             )
                                                             :
                                                             (
-                                                                "審核中"
+                                                                "審核駁回"
                                                             )
                                                         }
                                                         </p>
