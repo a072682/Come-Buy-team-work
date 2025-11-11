@@ -164,8 +164,10 @@
             .mian5-checkBtn-Set{
                 font-size: 24px;
                 padding: 24px 88px;
+                font-weight: 900;
                 @media (max-width: 992px){
                     padding: 12px 48px;
+                    font-weight: 700;
                 }
             }
         }

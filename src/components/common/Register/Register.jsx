@@ -160,7 +160,7 @@ function Register ({onClose, onSwitch}){
 
                         {/* model本體背景 */}
                         <div className="RegisterModal-body-set">
-                            <h3 className="title-set">會員登入</h3>
+                            <h3 className="title-set">建立會員</h3>
                             <form onSubmit={handleRegister} className="form-set">
 
                                 <div className="nameGroup">

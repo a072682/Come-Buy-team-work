@@ -27,7 +27,9 @@ export default function ModalRoot() {
                 state.modal.activeModal
             )
         })
-        useEffect(()=>{},[active])
+        useEffect(()=>{
+          console.log("modal狀態:",active);
+        },[active])
     //#endregion
 
     //#region 有開任何一個 modal 時，鎖 body 滾動
@@ -35,15 +37,15 @@ export default function ModalRoot() {
         const prev = document.body.style.overflow;
         if (active) {
             document.body.style.overflow = "hidden";
-            // console.log("滾動鎖住");
+            console.log("滾動鎖住");
         }else{
             document.body.style.overflow = prev || "auto";
-            // console.log("滾動解除");
+            console.log("滾動解除");
         } 
         return () => { 
             document.body.style.overflow = prev || "auto"; 
         };
-    }, []);
+    }, [active]);
     //#endregion
 
     //#region ⎋ 按 ESC 關閉（可選）
