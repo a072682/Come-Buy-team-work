@@ -163,14 +163,18 @@
                             border-image: linear-gradient(90deg, #F1B1FF 0%,#C10877 100%) 1;
                             min-height: 104px;
                             display: flex;
-                            justify-content: end;
+                            justify-content: center;
                             align-items: center;
+                            gap: 12px;
                             padding: 32px;
                             background-color: #202020;
                             border-radius: 0 0 12px 12px;
                             overflow: hidden;
-                            @media (max-width: 992px){
-                                justify-content: center;
+                           
+                            .textSet{
+                                min-width: 70px;
+                                color: #ffffff;
+                                text-align: center;
                             }
                             .main1SwiperBtn-set{
                                 display: flex;

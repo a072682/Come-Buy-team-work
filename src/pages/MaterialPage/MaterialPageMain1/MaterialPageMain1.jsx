@@ -122,8 +122,9 @@ function MaterialPageMain1({ handleOpenMaterialModal }){
                                                 centeredSlides={true}
                                                 breakpoints={{
                                                     768: { 
-                                                        slidesPerView: 3,
+                                                        slidesPerView: 2,
                                                         spaceBetween: 12,
+                                                        centeredSlides: false,
                                                     }, 
                                                     1200: { 
                                                         slidesPerView: 3,
@@ -148,6 +149,7 @@ function MaterialPageMain1({ handleOpenMaterialModal }){
                                                                         </picture>   
                                                                     </div>
                                                                     <div className="cardBtnBox">
+                                                                        <p className='textSet'>{item.title}</p>
                                                                         <button onClick={()=>{handleOpenMaterialModal(item)}} 
                                                                                 className="main1SwiperBtn-set secondary-btn1-set">
                                                                             材料簡介
