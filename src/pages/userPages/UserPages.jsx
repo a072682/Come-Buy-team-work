@@ -86,6 +86,28 @@ function UserPages (){
         },[])
     //#endregion
 
+    //#region 動畫設定
+    const triggerSet = {
+        hidden: { opacity: 0 },                 // 父層只當觸發器，不做淡入
+        show: {
+            opacity: 1,
+            transition: {
+            duration: 0,                        // 0：不要讓父層自己動畫造成等待
+            //觸發動畫到第一個動畫的延遲時間
+            delayChildren: 0.08,
+            //第二個動畫到第三以及後續的延遲時間
+            staggerChildren: 0.1,
+            // 想骨牌再開：delayChildren: 0.08, staggerChildren: 0.06,
+            },
+        },
+    };
+    const fadeUp = { 
+        hidden:{opacity:0,y: 40}, 
+        show:{opacity:1,y:0, 
+        transition:{duration:0.6, ease:"easeOut"}} 
+    };
+    //#endregion
+
     
 
     const [activeTab, setActiveTab] = useState('基本資訊');//tab控制
@@ -98,28 +120,35 @@ function UserPages (){
             pageData: <BasicInformation userData={userData} 
                                         setUserData={setUserData} 
                                         userProfileData={userProfileData} 
-                                        setUserProfileData={setUserProfileData}/>,
+                                        setUserProfileData={setUserProfileData}
+                                        triggerSet={triggerSet}
+                                        fadeUp={fadeUp }/>,
             disabled: false,
         },
         {
             title:"地址資料",
             key:"地址資料",
             icon:"location_on",
-            pageData: <AddressInformation userProfileData={userProfileData} setUserProfileData={setUserProfileData}/>,
+            pageData: <AddressInformation   userProfileData={userProfileData} 
+                                            setUserProfileData={setUserProfileData}
+                                            triggerSet={triggerSet}
+                                            fadeUp={fadeUp }/>,
             disabled: false,
         },
         {
             title:"我的訂單",
             key:"我的訂單",
             icon:"add_shopping_cart",
-            pageData:<MyOrder />,
+            pageData:<MyOrder   triggerSet={triggerSet}
+                                fadeUp={fadeUp }/>,
             disabled: false,
         },
         {
             title:"修改密碼",
             key:"修改密碼",
             icon:"key",
-            pageData:<PassWordChangePage />,
+            pageData:<PassWordChangePage    triggerSet={triggerSet}
+                                            fadeUp={fadeUp }/>,
             disabled: false,
         },
         {
@@ -144,13 +173,15 @@ function UserPages (){
         };
         //處理登出按鈕
     //#endregion
+
+    
     
    
 
     
     return(
         <Tab.Container activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
-            <div className="UserPages">
+            <section className="UserPages">
                 <div className="container">
                     <div className="row">
                         <div className="col">
@@ -254,7 +285,7 @@ function UserPages (){
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
          </Tab.Container>
     )
 }

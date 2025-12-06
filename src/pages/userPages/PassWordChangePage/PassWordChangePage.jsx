@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react';
 import './_PassWordChangePage.scss';
 import { userPasswordChange } from '../../../slice/loginSlice';
 import { useDispatch } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
 
 
-function PassWordChangePage (){
+function PassWordChangePage ({triggerSet,fadeUp}){
 
     //#region
     //#endregion
@@ -133,67 +134,71 @@ function PassWordChangePage (){
         }
     //#endregion
 
-
-    
-
-
-
-    
-
     return(
-        <div className="PassWordChangePage">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <div className="PassWordChangePage-content">
-                            <form className='PassWordChangeForm-set' onSubmit={handleCheckPassWordData}>
-                                <div className="PassWordChangePage-title-box">
-                                    <div className="title-set">
-                                        修改密碼
-                                    </div>
-                                </div>
-                                <div className='PassWordChangePage-Group-box'>
-                                    <div className="originPassWordGroup">
-                                        <label className='label-set' htmlFor="originPassWord">原始密碼</label>
-                                        <input  value={passWordData.originPassWord} 
-                                                onChange={handlePassWordInput} 
-                                                name="originPassWord" 
-                                                type="password" 
-                                                className="form-item inputItem-set" 
-                                                id="originPassWord" 
-                                                placeholder="請輸入原始密碼" />
-                                        {originPassWordErrorMsg && <div className="text-danger mt-1">{originPassWordErrorMsg}</div>}
-                                    </div>
-                                    <div className="newPassWordGroup">
-                                        <label className='label-set' htmlFor="newPassWord">新密碼</label>
-                                        <input  value={passWordData.newPassWord}  
-                                                onChange={handlePassWordInput} 
-                                                name="newPassWord" 
-                                                type="password" 
-                                                className="form-item inputItem-set" 
-                                                id="newPassWord" 
-                                                placeholder="請輸入新的密碼" />
-                                        {newPassWordErrorMsg && <div className="text-danger mt-1">{newPassWordErrorMsg}</div>}
-                                    </div>
-                                    <div className="newPassWordRepeatGroup">
-                                        <label className='label-set' htmlFor="newPassWordRepeat">確認新密碼</label>
-                                        <input  value={passWordData.newPassWordRepeat}  
-                                                onChange={handlePassWordInput} 
-                                                name="newPassWordRepeat" 
-                                                type="password" 
-                                                className="form-item inputItem-set" 
-                                                id="newPassWordRepeat" 
-                                                placeholder="請確認輸入新的密碼" />
-                                        {newPassWordRepeatErrorMsg && <div className="text-danger mt-1">{newPassWordRepeatErrorMsg}</div>}
-                                    </div>
-                                </div>
-                                <button type="submit" className='formBtn submitBtn mian-btn1-set'>儲存</button>
-                            </form>
+        <AnimatePresence>
+            <article className="PassWordChangePage">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <motion.div className="PassWordChangePage-content"
+                                        variants={triggerSet}
+                                        initial="hidden"
+                                        whileInView="show"                      
+                                        viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}>
+                                <form className='PassWordChangeForm-set' onSubmit={handleCheckPassWordData}>
+                                    <motion.div className="PassWordChangePage-title-box"
+                                                variants={fadeUp}>
+                                        <h2 className="title-set">
+                                            修改密碼
+                                        </h2>
+                                    </motion.div>
+                                    <motion.div className='PassWordChangePage-Group-box'
+                                                variants={fadeUp}>
+                                        <div className="originPassWordGroup">
+                                            <label className='label-set' htmlFor="originPassWord">原始密碼</label>
+                                            <input  value={passWordData.originPassWord} 
+                                                    onChange={handlePassWordInput} 
+                                                    name="originPassWord" 
+                                                    type="password" 
+                                                    className="form-item inputItem-set" 
+                                                    id="originPassWord" 
+                                                    placeholder="請輸入原始密碼" />
+                                            {originPassWordErrorMsg && <div className="text-danger mt-1">{originPassWordErrorMsg}</div>}
+                                        </div>
+                                        <div className="newPassWordGroup">
+                                            <label className='label-set' htmlFor="newPassWord">新密碼</label>
+                                            <input  value={passWordData.newPassWord}  
+                                                    onChange={handlePassWordInput} 
+                                                    name="newPassWord" 
+                                                    type="password" 
+                                                    className="form-item inputItem-set" 
+                                                    id="newPassWord" 
+                                                    placeholder="請輸入新的密碼" />
+                                            {newPassWordErrorMsg && <div className="text-danger mt-1">{newPassWordErrorMsg}</div>}
+                                        </div>
+                                        <div className="newPassWordRepeatGroup">
+                                            <label className='label-set' htmlFor="newPassWordRepeat">確認新密碼</label>
+                                            <input  value={passWordData.newPassWordRepeat}  
+                                                    onChange={handlePassWordInput} 
+                                                    name="newPassWordRepeat" 
+                                                    type="password" 
+                                                    className="form-item inputItem-set" 
+                                                    id="newPassWordRepeat" 
+                                                    placeholder="請確認輸入新的密碼" />
+                                            {newPassWordRepeatErrorMsg && <div className="text-danger mt-1">{newPassWordRepeatErrorMsg}</div>}
+                                        </div>
+                                    </motion.div>
+                                    <motion.button  type="submit" 
+                                                    className='formBtn submitBtn mian-btn1-set'
+                                                    variants={fadeUp}
+                                    >儲存</motion.button>
+                                </form>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </AnimatePresence>
     )
 }
 export default PassWordChangePage;

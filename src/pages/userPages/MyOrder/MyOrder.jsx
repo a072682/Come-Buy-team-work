@@ -5,11 +5,11 @@ import './_MyOrder.scss';
 import { orderDataGet, userOrderListUpLoad, userOrderUpLoad } from '../../../slice/orderSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { MODALS, open } from '../../../slice/modalSlice';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
-
-function MyOrder (){
+function MyOrder ({triggerSet,fadeUp}){
     
     //#region
     //#endregion
@@ -58,71 +58,78 @@ function MyOrder (){
 
     return(
         <>
-        <div className="MyOrder">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <div className='MyOrder-content-box'>
-                            <h3 className='title-set'>我的訂單</h3>
-                            <div className='orderList-box'>
-                                <div className='order-title-box'>
-                                    <div className='title-set'>
-                                        <p className='title-text-set'>訂單編號</p>
+        <AnimatePresence>
+            <article className="MyOrder">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <motion.div className='MyOrder-content-box'
+                                        variants={triggerSet}
+                                        initial="hidden"
+                                        whileInView="show"                      
+                                        viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}>
+                                <motion.h2  className='title-set'
+                                            variants={fadeUp}>我的訂單</motion.h2>
+                                <motion.div className='orderList-box'
+                                            variants={fadeUp}>
+                                    <div className='order-title-box'>
+                                        <div className='title-set'>
+                                            <p className='title-text-set'>訂單編號</p>
+                                        </div>
+                                        <div className='title-set'>
+                                            <p className='title-text-set'>檔案縮圖</p>
+                                        </div>
+                                        <div className='title-set'>
+                                            <p className='title-text-set'>訂單詳情</p>
+                                        </div>
+                                        <div className='title-set'>
+                                            <p className='title-text-set'>審核狀態</p>
+                                        </div>
+                                        {/* 樣品材料.樣品規格.製作開始日期.預定完成日期.付款方式 */}
                                     </div>
-                                    <div className='title-set'>
-                                        <p className='title-text-set'>檔案縮圖</p>
+                                    <div className='order-item-box'>
+                                        {
+                                            orderListData?.map((item)=>{
+                                                return(
+                                                    <div key={item.id} className='item-set'>
+                                                        <div className='text-set-box'>
+                                                            <p className='text-set'>{item.id}</p>
+                                                        </div>
+                                                        <div className='img-set-box'>
+                                                            <img className='img-set' src={item.imgfileurl} alt={item.imgfileid} />
+                                                        </div>
+                                                        <div className='btn-set-box'>
+                                                            <button className='btn-set' 
+                                                                    onClick={()=>{handleOpenOrderDetailModal(item)}}>
+                                                                訂單詳情
+                                                            </button>
+                                                        </div>
+                                                        <div className='text-set-box'>
+                                                            <p className='text-set'>
+                                                            {
+                                                                item.state?
+                                                                (
+                                                                    "已審核"
+                                                                )
+                                                                :
+                                                                (
+                                                                    "審核中"
+                                                                )
+                                                            }
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })
+                                        }
                                     </div>
-                                    <div className='title-set'>
-                                        <p className='title-text-set'>訂單詳情</p>
-                                    </div>
-                                    <div className='title-set'>
-                                        <p className='title-text-set'>審核狀態</p>
-                                    </div>
-                                    {/* 樣品材料.樣品規格.製作開始日期.預定完成日期.付款方式 */}
-                                </div>
-                                <div className='order-item-box'>
-                                    {
-                                        orderListData?.map((item)=>{
-                                            return(
-                                                <div key={item.id} className='item-set'>
-                                                    <div className='text-set-box'>
-                                                        <p className='text-set'>{item.id}</p>
-                                                    </div>
-                                                    <div className='img-set-box'>
-                                                        <img className='img-set' src={item.imgfileurl} alt={item.imgfileid} />
-                                                    </div>
-                                                    <div className='btn-set-box'>
-                                                        <button className='btn-set' 
-                                                                onClick={()=>{handleOpenOrderDetailModal(item)}}>
-                                                            訂單詳情
-                                                        </button>
-                                                    </div>
-                                                    <div className='text-set-box'>
-                                                        <p className='text-set'>
-                                                        {
-                                                            item.state?
-                                                            (
-                                                                "已審核"
-                                                            )
-                                                            :
-                                                            (
-                                                                "審核中"
-                                                            )
-                                                        }
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         </div>
-                        
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </AnimatePresence>
         </>
     )
 }

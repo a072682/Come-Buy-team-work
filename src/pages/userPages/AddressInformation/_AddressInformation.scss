@@ -2,30 +2,33 @@
 
 .AddressInformation{
 
-    .address-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        gap: 24px;
+    .formBox{
 
-        .postalCodeGroup{
-            width: 100%;
+        .address-form{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: start;
-            gap: 12px;
-        }
+            gap: 24px;
 
-        .addressGroup{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            gap: 12px;
+            .postalCodeGroup{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 12px;
+            }
+
+            .addressGroup{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 12px;
+            }
+            
         }
-        
-    }
+    } 
 }

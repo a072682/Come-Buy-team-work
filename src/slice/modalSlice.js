@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { orderDataUpLoad } from "./orderSlice";
 // import axios from "axios";
 // axios.defaults.withCredentials = true; 
 

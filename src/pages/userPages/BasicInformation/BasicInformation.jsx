@@ -3,9 +3,10 @@ import './_BasicInformation.scss';
 import { Dropdown } from 'react-bootstrap';
 import { avatarImgUpLoad, avatarImgUpLoadChange, getUserData, userDataUpChange, userProfileDataUpChange } from '../../../slice/loginSlice';
 import { useDispatch } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
-function BasicInformation ({userData,setUserData,userProfileData,setUserProfileData}){
+function BasicInformation ({userData,setUserData,userProfileData,setUserProfileData,triggerSet,fadeUp}){
 
     //#region
     //#endregion
@@ -232,238 +233,257 @@ function BasicInformation ({userData,setUserData,userProfileData,setUserProfileD
     };
 
     return(
-        <form className='form-content' onSubmit={handleSubmit}>
-            <div className='salutation'>
-                {/* 稱謂 */}
-                <h6 className='salutation-title title'>稱謂：</h6>
-                <div className='salutation-item-box mt-24'>
-                    <div className='salutation-item'>
-                        <input  id="salutation01" 
-                                type="radio" 
-                                name="salutation" 
-                                value="先生" 
-                                checked={userProfileData?.salutation === "先生"} 
-                                onChange={inputUserProfileData}/>
-                        <label htmlFor="salutation01" className="mb-0 custom-checkout-label">
-                            先生
-                        </label>
-                    </div>
+        <AnimatePresence>
+            <article className='BasicInformation'>
+                <motion.div className='formBox'
+                            variants={triggerSet}
+                            initial="hidden"
+                            whileInView="show"                      
+                            viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}>
+                    <form className='form-content' onSubmit={handleSubmit}>
+                        <motion.div className='salutation'
+                                    variants={fadeUp}>
+                            {/* 稱謂 */}
+                            <h6 className='salutation-title title'>稱謂：</h6>
+                            <div className='salutation-item-box mt-24'>
+                                <div className='salutation-item'>
+                                    <input  id="salutation01" 
+                                            type="radio" 
+                                            name="salutation" 
+                                            value="先生" 
+                                            checked={userProfileData?.salutation === "先生"} 
+                                            onChange={inputUserProfileData}/>
+                                    <label htmlFor="salutation01" className="mb-0 custom-checkout-label">
+                                        先生
+                                    </label>
+                                </div>
+                                    
+                                <div className='salutation-item'>
+                                    <input  id="salutation02" 
+                                            type="radio" 
+                                            name="salutation" 
+                                            value="女士" 
+                                            checked={userProfileData?.salutation === "女士"} 
+                                            onChange={inputUserProfileData}/>
+                                    <label htmlFor="salutation02" className="mb-0 custom-checkout-label">
+                                        女士
+                                    </label>
+                                </div>
+                            </div>
+                        </motion.div>
                         
-                    <div className='salutation-item'>
-                        <input  id="salutation02" 
-                                type="radio" 
-                                name="salutation" 
-                                value="女士" 
-                                checked={userProfileData?.salutation === "女士"} 
-                                onChange={inputUserProfileData}/>
-                        <label htmlFor="salutation02" className="mb-0 custom-checkout-label">
-                            女士
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div className='name'>
-                <h6 className='name-title title'>姓名：</h6>
-                <div className='name-box mt-24'>
-                    <input
-                        className='name-item form-item'
-                        type="text"
-                        name="last_name"
-                        placeholder="請輸入姓氏"
-                        value={userProfileData?.last_name ?? ""}
-                        onChange={inputUserProfileData}
-                    />
-                    <input
-                        className='name-item form-item'
-                        type="text"
-                        name="first_name"
-                        placeholder="請輸入名字"
-                        value={userProfileData?.first_name ?? ""}
-                        onChange={inputUserProfileData}
-                    />
-                </div>
-            </div>
-            
-            
+                        <motion.div className='name'
+                                    variants={fadeUp}>
+                            <h6 className='name-title title'>姓名：</h6>
+                            <div className='name-box mt-24'>
+                                <input
+                                    className='name-item form-item'
+                                    type="text"
+                                    name="last_name"
+                                    placeholder="請輸入姓氏"
+                                    value={userProfileData?.last_name ?? ""}
+                                    onChange={inputUserProfileData}
+                                />
+                                <input
+                                    className='name-item form-item'
+                                    type="text"
+                                    name="first_name"
+                                    placeholder="請輸入名字"
+                                    value={userProfileData?.first_name ?? ""}
+                                    onChange={inputUserProfileData}
+                                />
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div className='birthday'
+                                    variants={fadeUp}>
+                            <h6 className='title-dropdown title'>生日</h6>
+                            <div className='birthday-box mt-24'>
 
-            <div className='birthday'>
-                <h6 className='title-dropdown title'>生日</h6>
-                <div className='birthday-box mt-24'>
+                                <div className='yearData'>
+                                    <Dropdown show={yearShow} onToggle={(isOpen) => setYearShow(isOpen)}>
 
-                    <div className='yearData'>
-                        <Dropdown show={yearShow} onToggle={(isOpen) => setYearShow(isOpen)}>
+                                        <Dropdown.Toggle as="div" onClick={() => {setYearShow(!yearShow);}}> 
+                                            <div className='title-dropdown form-item'>{userProfileData?.birth_year ? (userProfileData?.birth_year):(yearValue)}</div>
+                                        </Dropdown.Toggle>
 
-                            <Dropdown.Toggle as="div" onClick={() => {setYearShow(!yearShow);}}> 
-                                <div className='title-dropdown form-item'>{userProfileData?.birth_year ? (userProfileData?.birth_year):(yearValue)}</div>
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu  className="triple-dropdown-menu" 
-                                            popperConfig={{
-                                                modifiers: [
-                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
-                                                ],
-                                            }}>
-                                <div className="menu-column main-menu">
-                                {
-                                    years.map((main, i) => (
-                                        <span key={i} className='menu-btn' onClick={() => {
-                                            setYearValue(main); onDropdownSelect({ name: 'birth_year', value:Number(main)}); setYearShow(!yearShow)
-                                        }}>
-                                            {main} 
-                                        </span>
-                                    ))
-                                }
+                                        <Dropdown.Menu  className="triple-dropdown-menu" 
+                                                        popperConfig={{
+                                                            modifiers: [
+                                                                { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                            ],
+                                                        }}>
+                                            <div className="menu-column main-menu">
+                                            {
+                                                years.map((main, i) => (
+                                                    <span key={i} className='menu-btn' onClick={() => {
+                                                        setYearValue(main); onDropdownSelect({ name: 'birth_year', value:Number(main)}); setYearShow(!yearShow)
+                                                    }}>
+                                                        {main} 
+                                                    </span>
+                                                ))
+                                            }
+                                            </div>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </div>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
-                    
-                    <div className='mouthData'>
-                        <Dropdown show={mouthShow} onToggle={(isOpen) => setMouthShow(isOpen)}>
+                                
+                                <div className='mouthData'>
+                                    <Dropdown show={mouthShow} onToggle={(isOpen) => setMouthShow(isOpen)}>
 
-                            <Dropdown.Toggle as="div" onClick={() => {setMouthShow(!mouthShow);}}> 
-                                <div className='title-dropdown form-item'>{userProfileData?.birth_month ? (userProfileData?.birth_month):(mouthValue)}</div>
-                            </Dropdown.Toggle>
+                                        <Dropdown.Toggle as="div" onClick={() => {setMouthShow(!mouthShow);}}> 
+                                            <div className='title-dropdown form-item'>{userProfileData?.birth_month ? (userProfileData?.birth_month):(mouthValue)}</div>
+                                        </Dropdown.Toggle>
 
-                            <Dropdown.Menu  className="triple-dropdown-menu" 
-                                            popperConfig={{
-                                                modifiers: [
-                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
-                                                ],
-                                            }}>
-                                <div className="menu-column main-menu">
-                                {
-                                    months.map((main, i) => (
-                                        <span key={i} className='menu-btn' onClick={() => {
-                                            setMouthValue(main); onDropdownSelect({ name: 'birth_month', value:Number(main) }); setMouthShow(!mouthShow)
-                                        }}>
-                                            {main}
-                                        </span>
-                                    ))
-                                }
+                                        <Dropdown.Menu  className="triple-dropdown-menu" 
+                                                        popperConfig={{
+                                                            modifiers: [
+                                                                { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                            ],
+                                                        }}>
+                                            <div className="menu-column main-menu">
+                                            {
+                                                months.map((main, i) => (
+                                                    <span key={i} className='menu-btn' onClick={() => {
+                                                        setMouthValue(main); onDropdownSelect({ name: 'birth_month', value:Number(main) }); setMouthShow(!mouthShow)
+                                                    }}>
+                                                        {main}
+                                                    </span>
+                                                ))
+                                            }
+                                            </div>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </div>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
 
-                    <div className='dayData'>
-                        <Dropdown show={dayShow} onToggle={(isOpen) => setDayShow(isOpen)}>
+                                <div className='dayData'>
+                                    <Dropdown show={dayShow} onToggle={(isOpen) => setDayShow(isOpen)}>
 
-                            <Dropdown.Toggle as="div" onClick={() => {setDayShow(!dayShow);}}> 
-                                <div className='title-dropdown form-item'>{userProfileData?.birth_day ? (userProfileData?.birth_day):(dayValue)}</div>
-                            </Dropdown.Toggle>
+                                        <Dropdown.Toggle as="div" onClick={() => {setDayShow(!dayShow);}}> 
+                                            <div className='title-dropdown form-item'>{userProfileData?.birth_day ? (userProfileData?.birth_day):(dayValue)}</div>
+                                        </Dropdown.Toggle>
 
-                            <Dropdown.Menu  className="triple-dropdown-menu" 
-                                            popperConfig={{
-                                                modifiers: [
-                                                    { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
-                                                ],
-                                            }}>
-                                <div className="menu-column main-menu">
-                                {
-                                    days.map((main, i) => (
-                                        <span key={i} className='menu-btn' onClick={() => {
-                                            setDayValue(main); onDropdownSelect({ name: 'birth_day', value:Number(main) }); setDayShow(!dayShow)
-                                        }}>
-                                            {main}
-                                        </span>
-                                    ))
-                                }
+                                        <Dropdown.Menu  className="triple-dropdown-menu" 
+                                                        popperConfig={{
+                                                            modifiers: [
+                                                                { name: 'offset', options: { offset: [0, 0] } }, // [skid, distance]
+                                                            ],
+                                                        }}>
+                                            <div className="menu-column main-menu">
+                                            {
+                                                days.map((main, i) => (
+                                                    <span key={i} className='menu-btn' onClick={() => {
+                                                        setDayValue(main); onDropdownSelect({ name: 'birth_day', value:Number(main) }); setDayShow(!dayShow)
+                                                    }}>
+                                                        {main}
+                                                    </span>
+                                                ))
+                                            }
+                                            </div>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </div>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
-                </div>
-            </div>
-            
-            <div className='homePhone'>
-                <h6 className='title'>連絡電話：</h6>
-                <input
-                    className='form-item mt-24 w-100'
-                    type="text"
-                    name="phone"
-                    value={userProfileData?.phone ?? ""}
-                    onChange={inputUserProfileData}
-                    placeholder="請輸入電話號碼"
-                />
-            </div>
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div className='homePhone'
+                                    variants={fadeUp}>
+                            <h6 className='title'>連絡電話：</h6>
+                            <input
+                                className='form-item mt-24 w-100'
+                                type="text"
+                                name="phone"
+                                value={userProfileData?.phone ?? ""}
+                                onChange={inputUserProfileData}
+                                placeholder="請輸入電話號碼"
+                            />
+                        </motion.div>
 
-            <div className='phone'>
-                <h6 className='title'>手機：</h6>
-                <input
-                    className='form-item mt-24 w-100'
-                    type="text"
-                    name="mobile"
-                    value={userProfileData?.mobile ?? ""}
-                    onChange={inputUserProfileData}
-                    placeholder="請輸入手機號碼"
-                />
-            </div>
+                        <motion.div className='phone'
+                                    variants={fadeUp}>
+                            <h6 className='title'>手機：</h6>
+                            <input
+                                className='form-item mt-24 w-100'
+                                type="text"
+                                name="mobile"
+                                value={userProfileData?.mobile ?? ""}
+                                onChange={inputUserProfileData}
+                                placeholder="請輸入手機號碼"
+                            />
+                        </motion.div>
 
-            <div className='email'>
-                <h6 className='title'>電子信箱：</h6>
-                <input
-                className='form-item mt-24 w-100'
-                    type="email"
-                    name="email"
-                    value={userData?.email ?? ""}
-                    onChange={inputUserData}
-                    placeholder="請輸入電子信箱"
-                />
-            </div>
-            
-            {/* 訂閱電子報 */}
-            {/* <div className='subscribe'>
-                <div className='subscribe-item'>
-                    <input  id="subscribe"
-                            type="checkbox" 
-                            name="subscribe" 
-                            value="訂閱" 
-                            checked={formData.subscribe} 
-                            onChange={onInputChange}/>
-                    <label htmlFor="subscribe" className="mb-0 custom-checkout-label">
-                        電子報訂閱
-                    </label>
-                </div>
-            </div> */}
-            
-            <div className='img'>
-                <h6 className='title'>照片更改：</h6>
-                {
-                    userProfileData?.avatar_url || userProfileData?.google_avatar_url ?
-                    (
-                        <img    className='imgData' 
-                                src={userProfileData?.avatar_url || userProfileData?.google_avatar_url} 
-                                alt={userData.username} />
-                    )
-                    :
-                    (
-                        <div className="imgData textVer">{(userData?.username.trim()?.charAt(0) || '?').toUpperCase()}</div>
-                    )
-                }
-                
-                <input
-                    className='img-input'
-                    id="avatarFileInput"
-                    type="file"
-                    name="image"
-                    accept="image/*"
-                    onChange={userProfileData?.avatar_url || userProfileData?.google_avatar_url?
-                                ((event)=>{avatarImgUpChange(event)}):((event)=>{avatarImgUpload(event)})}
-                />
-                <button className='imgBtn' 
-                        type='button'
-                        onClick={()=>{document.getElementById("avatarFileInput").click()}}
-                        >
-                        上傳照片
-                </button>
-                    
+                        <motion.div className='email'
+                                    variants={fadeUp}>
+                            <h6 className='title'>電子信箱：</h6>
+                            <input
+                            className='form-item mt-24 w-100'
+                                type="email"
+                                name="email"
+                                value={userData?.email ?? ""}
+                                onChange={inputUserData}
+                                placeholder="請輸入電子信箱"
+                            />
+                        </motion.div>
+                        
+                        {/* 訂閱電子報 */}
+                        {/* <div className='subscribe'>
+                            <div className='subscribe-item'>
+                                <input  id="subscribe"
+                                        type="checkbox" 
+                                        name="subscribe" 
+                                        value="訂閱" 
+                                        checked={formData.subscribe} 
+                                        onChange={onInputChange}/>
+                                <label htmlFor="subscribe" className="mb-0 custom-checkout-label">
+                                    電子報訂閱
+                                </label>
+                            </div>
+                        </div> */}
+                        
+                        <motion.div className='img'
+                                    variants={fadeUp}>
+                            <h6 className='title'>照片更改：</h6>
+                            {
+                                userProfileData?.avatar_url || userProfileData?.google_avatar_url ?
+                                (
+                                    <img    className='imgData' 
+                                            src={userProfileData?.avatar_url || userProfileData?.google_avatar_url} 
+                                            alt={userData.username} />
+                                )
+                                :
+                                (
+                                    <div className="imgData textVer">{(userData?.username.trim()?.charAt(0) || '?').toUpperCase()}</div>
+                                )
+                            }
+                            
+                            <input
+                                className='img-input'
+                                id="avatarFileInput"
+                                type="file"
+                                name="image"
+                                accept="image/*"
+                                onChange={userProfileData?.avatar_url || userProfileData?.google_avatar_url?
+                                            ((event)=>{avatarImgUpChange(event)}):((event)=>{avatarImgUpload(event)})}
+                            />
+                            <button className='imgBtn' 
+                                    type='button'
+                                    onClick={()=>{document.getElementById("avatarFileInput").click()}}
+                                    >
+                                    上傳照片
+                            </button>
+                                
 
-            </div>
-            
-            <button type="submit" className='formBtn submitBtn mian-btn1-set'>儲存</button>
-        </form>
+                        </motion.div>
+                        
+                        <motion.button  type="submit" 
+                                        className='formBtn submitBtn mian-btn1-set'
+                                        variants={fadeUp}
+                        >儲存</motion.button>
+                    </form>
+                </motion.div>
+            </article>
+        </AnimatePresence>
+        
     )
 }
 export default BasicInformation;

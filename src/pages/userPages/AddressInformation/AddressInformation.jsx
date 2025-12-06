@@ -5,11 +5,12 @@ import './_AddressInformation.scss';
 import CountryDropdown from './countryDropdown/countryDropdown';
 import { useDispatch } from 'react-redux';
 import { getUserData, userProfileDataUpChange } from '../../../slice/loginSlice';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
 
-function AddressInformation ({userProfileData,setUserProfileData}){
+function AddressInformation ({userProfileData,setUserProfileData,triggerSet,fadeUp}){
 
     //#region
     //#endregion
@@ -103,54 +104,64 @@ function AddressInformation ({userProfileData,setUserProfileData}){
 
 
     return(
-        <div className="AddressInformation">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <form onSubmit={onSubmit} className="address-form">
-                            
-                            {/* 國家/地區 */}
-                            <CountryDropdown userProfileData={userProfileData} setUserProfileData={setUserProfileData} countryErrorsMsg={countryErrorsMsg}/>
+        <AnimatePresence>
+            <article className="AddressInformation">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <motion.div className='formBox'
+                                        initial={{ opacity: 0, y: 40 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, ease: "easeOut" }}
+                                        viewport={{ amount: 0, margin: "0% 0px 0% 0px" }}
+                            >
+                                <form onSubmit={onSubmit} className="address-form">
+                                    {/* 國家/地區 */}
+                                    <CountryDropdown    userProfileData={userProfileData} 
+                                                        setUserProfileData={setUserProfileData} 
+                                                        countryErrorsMsg={countryErrorsMsg}
+                                    />
+                                    {/* Postal code */}
+                                    <div className="postalCodeGroup">
+                                        <label htmlFor="postalCode" className="title">郵遞區號</label>
+                                        <input
+                                            id="postalCode"
+                                            name="postal_code"
+                                            className="form-item w-100"
+                                            value={userProfileData?.postal_code ?? ""}
+                                            onChange={onChange}
+                                            inputMode="numeric"
+                                            maxLength={5}                // 台灣最多 5 碼（3+2）
+                                            autoComplete="postal-code"
+                                            placeholder="例如 110 或 11061"
+                                        />
+                                        {postalErrorsMsg && <div className="text-danger mt-1">{postalErrorsMsg}</div>}
+                                    </div>
 
-                            {/* Postal code */}
-                            <div className="postalCodeGroup">
-                                <label htmlFor="postalCode" className="title">郵遞區號</label>
-                                <input
-                                    id="postalCode"
-                                    name="postal_code"
-                                    className="form-item w-100"
-                                    value={userProfileData?.postal_code ?? ""}
-                                    onChange={onChange}
-                                    inputMode="numeric"
-                                    maxLength={5}                // 台灣最多 5 碼（3+2）
-                                    autoComplete="postal-code"
-                                    placeholder="例如 110 或 11061"
-                                />
-                                {postalErrorsMsg && <div className="text-danger mt-1">{postalErrorsMsg}</div>}
-                            </div>
 
+                                    {/* Address */}
+                                    <div className="addressGroup">
+                                        <label htmlFor="address" className="title">聯絡地址</label>
+                                        <input
+                                        id="address"
+                                        name="address_line"
+                                        className="form-item w-100"
+                                        value={userProfileData?.address_line ?? ""}
+                                        onChange={onChange}
+                                        autoComplete="street-address"
+                                        placeholder="路名、段、街、巷、弄、號（必要）"
+                                        />
+                                        {addressErrorsMsg && <div className="text-danger mt-1">{addressErrorsMsg}</div>}
+                                    </div>
 
-                            {/* Address */}
-                            <div className="addressGroup">
-                                <label htmlFor="address" className="title">聯絡地址</label>
-                                <input
-                                id="address"
-                                name="address_line"
-                                className="form-item w-100"
-                                value={userProfileData?.address_line ?? ""}
-                                onChange={onChange}
-                                autoComplete="street-address"
-                                placeholder="路名、段、街、巷、弄、號（必要）"
-                                />
-                                {addressErrorsMsg && <div className="text-danger mt-1">{addressErrorsMsg}</div>}
-                            </div>
-
-                            <button type="submit" className="submitBtn mian-btn1-set d-block">儲存</button>
-                        </form>
+                                    <button type="submit" className="submitBtn mian-btn1-set d-block">儲存</button>
+                                </form>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </AnimatePresence>
     )
 }
 export default AddressInformation;
