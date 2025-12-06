@@ -1,45 +1,68 @@
 
 import { Link } from 'react-router-dom';
 import './_IndexPageMain1.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 
+function IndexPageMain1({triggerSet,fadeLeft,fadeRight,fadeUp}){
 
-function IndexPageMain1(){
     return(
         <>
-            <div className="main1">
-                <div className="main1-bg">
-                <img className="main-corner-img" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main-sm-corner.png`} alt="main-sm-corner" />
-                    <div className="container">{/*外框 要增加y軸pd在這邊加 sm用*/}
-                        <div className="row">{/*外框 不動*/} 
-                            <div className="col-12 col-xl-6"> {/*外框 控制欄數*/}
-                            
-                                <div className='main1-right-content'>
+            <AnimatePresence>
+                <article className="main1">   
+                    {/* 背景貼圖 */}
+                    <div className="main1-bg"></div>
+                    {/* 背景貼圖 */}
+
+                    {/* 角落貼圖 */}
+                    <img className="main-corner-img" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main-sm-corner.png`} alt="main-sm-corner" />
+                    {/* 角落貼圖 */}
+
+                    {/* 主要內容顯示區 */}
+                    <motion.div className='mainBox'
+                                variants={triggerSet}
+                                initial="hidden"
+                                whileInView="show"                      
+                                viewport={{ amount: 0, margin: "0% 0px -40% 0px" }} 
+                    >
+                        <div className="container containerBox">{/*外框 要增加y軸pd在這邊加 sm用*/}
+                            {/* 右方/上方內容 */}
+                            <motion.div className="main1-right-content"
+                                        variants={fadeUp}
+                            >
+                                {/* 標題區塊 */}
+                                <h2 className="main1-titleSet">
+                                    <p className='titleTextSet'>從想像到實物</p>
+                                    <p className='titleTextSet'>只需Come & Buy</p>
+                                </h2>
+                                {/* 標題區塊 */}
+
+                                {/* 按鈕設定 */}
+                                <Link className="main1-btn1-set mian-btn1-set" to="/EstimatePage">
+                                    開始製作
+                                </Link>
+                                {/* 按鈕設定 */}
+
                                 {/*內層外框*/}
-                                    <div className="main1-title">
-                                        <h1 className="main1-title-text-set">從想像到實物</h1>
-                                        <h1 className="main1-title-text-set">只需Come & Buy</h1>
-                                    </div>
-                                    <Link className="main1-btn1-set mian-btn1-set" to="/EstimatePage">
-                                        開始製作
-                                    </Link>
-                                    <div className="main1-img-box">
-                                        <img className="main1-img" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main-frame.png`} alt="main-frame" />
-                                    </div>
+                            </motion.div>
+                            {/* 右邊/上方內容 */}
+
+                            {/* 左方/下方內容 */}
+                            <motion.div className='main1-left-content'
+                                        variants={fadeUp}
+                            >
+                                {/* 圖片區塊 */}
+                                <div className="main1-img-box">
+                                    <img className="main1-img" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main-frame.png`} alt="main-frame" />
                                 </div>
-                            </div>
-                            <div className="col-xl-6 d-none d-xl-block">
-                                <div className='main1-left-content'>
-                                    <div className="main1-img-box">
-                                        <img className="main1-img" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main-frame.png`} alt="main-frame" />
-                                    </div>
-                                </div>
-                            </div>
+                                {/* 圖片區塊 */}
+                            </motion.div>
+                            {/* 左方/下方內容 */}
                         </div>
-                    </div>
-                </div>
-                
-                
-            </div>
+                    </motion.div>
+                    {/* 主要內容顯示區 */}
+                </article>
+            </AnimatePresence>
+            
         </>
     )
 }

@@ -1,7 +1,8 @@
 import './_QAMain2.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Fragment } from "react";
 
-function QAMain2(){
+function QAMain2({triggerSet,fadeUp}){
 
     const QAMain2Data = [
         {
@@ -314,141 +315,151 @@ function QAMain2(){
 
     return(
         <>  
-            <div className="QAMain2">
-                <div className="QAMain2-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-10 mx-auto">
-                                <div className='QAMain2-content'>
-                                    <div className="QAMain2-title">
-                                        <h3 className="title-set">設計需求介紹</h3>
-                                    </div>
-                                    {/* 桌面板 */}
-                                    <div className="QAMain2-table-box">
-                                        <table className="QAMain2-table">
-                                            <thead>
-                                                <tr className="table-row-set">
-                                                    {
-                                                        QAMain2Data?.filter( (item)=> item.key === "DKType")[0].rowTitle.map((item)=>{
-                                                            return(
-                                                                <Fragment key={item.id}>
-                                                                    <th className="text-set">{item.title}</th>
-                                                                </Fragment>
-                                                            )
-                                                        })
-                                                    }
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {
-                                                    QAMain2Data?.filter( (item)=> item.key === "DKType")[0].content.map((item)=>{
-                                                        return(
-                                                            <Fragment key={item.id}>
-                                                                <tr className="table-row-content-set">
-                                                                    {
-                                                                        item.content.map((itemIn)=>{
-                                                                            return(
-                                                                                itemIn.img?
-                                                                                (
-                                                                                    <Fragment key={itemIn.id}>
-                                                                                        <td className="detail-Img-box">
-                                                                                            <img
-                                                                                                className="detail-Img-set border border-primary3"
-                                                                                                src={itemIn.img}
-                                                                                                alt="qP-main1-img1"
-                                                                                            />
-                                                                                        </td>
-                                                                                    </Fragment>
-                                                                                )
-                                                                                :
-                                                                                (
-                                                                                    <Fragment key={itemIn.id}>
-                                                                                        <td className="detail-box" data-label="3D列印設計需求">
-                                                                                            {
-                                                                                                itemIn.item.map((text)=>{
-                                                                                                    return(
-                                                                                                        <Fragment key={text.id}>
-                                                                                                            <p className="text-set">{text.text}</p>
-                                                                                                        </Fragment>
-                                                                                                    )
-                                                                                                })
-                                                                                            }
-                                                                                        </td>
-                                                                                    </Fragment>
-                                                                                )
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </tr>
-                                                            </Fragment>
-                                                        )
-                                                    })
-                                                }
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    {/* 桌面板 */}
-
-
-                                    {/* 手機板 */}
-                                    {
-                                        QAMain2Data?.filter( (item)=> item.key === "mbType").map((item)=>{
-                                            return(
-                                                
-                                                <div key={item.id} className="QAMain2-mb-table-box">
-                                                    <div className="table-mb-set">
+            <AnimatePresence>
+                <article className="QAMain2">
+                    <div className="QAMain2-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-10 mx-auto">
+                                    <motion.div className='QAMain2-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}>
+                                        <motion.div className="QAMain2-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">設計需求介紹</h2>
+                                        </motion.div>
+                                        {/* 桌面板 */}
+                                        <motion.div className="QAMain2-table-box"
+                                                    variants={fadeUp}>
+                                            <table className="QAMain2-table">
+                                                <thead>
+                                                    <tr className="table-row-set">
                                                         {
-                                                            item.rowTitle.map((title)=>{
+                                                            QAMain2Data?.filter( (item)=> item.key === "DKType")[0].rowTitle.map((item)=>{
                                                                 return(
-                                                                    <Fragment key={title.id}>
-                                                                        <p className='text-mb-set'>{title.title}</p>
+                                                                    <Fragment key={item.id}>
+                                                                        <th className="text-set">{item.title}</th>
                                                                     </Fragment>
                                                                 )
                                                             })
                                                         }
-                                                    </div>
-                                                    <div className="table-mb-content-set">
-                                                        {
-                                                            item.content.map((itemIn)=>{
-                                                                return(
-                                                                    itemIn.img?
-                                                                    (
-                                                                        <div key={itemIn.id} className="detail-mb-Img-box">
-                                                                            <img className="detail-mb-Img-set" 
-                                                                                src={itemIn.img} 
-                                                                                alt="qP-main1-img1" />
-                                                                        </div>
-                                                                    )
-                                                                    :
-                                                                    (
-                                                                        <div key={itemIn.id} className='detail-mb-box'>
-                                                                            {
-                                                                                itemIn.item.map((text)=>{
-                                                                                    return(
-                                                                                        <Fragment key={text.id}>
-                                                                                            <p className='text-mb-set'>{text.text}</p>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {
+                                                        QAMain2Data?.filter( (item)=> item.key === "DKType")[0].content.map((item)=>{
+                                                            return(
+                                                                <Fragment key={item.id}>
+                                                                    <tr className="table-row-content-set">
+                                                                        {
+                                                                            item.content.map((itemIn)=>{
+                                                                                return(
+                                                                                    itemIn.img?
+                                                                                    (
+                                                                                        <Fragment key={itemIn.id}>
+                                                                                            <td className="detail-Img-box">
+                                                                                                <img
+                                                                                                    className="detail-Img-set border border-primary3"
+                                                                                                    src={itemIn.img}
+                                                                                                    alt="qP-main1-img1"
+                                                                                                />
+                                                                                            </td>
                                                                                         </Fragment>
                                                                                     )
-                                                                                })
-                                                                            }
-                                                                        </div>
+                                                                                    :
+                                                                                    (
+                                                                                        <Fragment key={itemIn.id}>
+                                                                                            <td className="detail-box" data-label="3D列印設計需求">
+                                                                                                {
+                                                                                                    itemIn.item.map((text)=>{
+                                                                                                        return(
+                                                                                                            <Fragment key={text.id}>
+                                                                                                                <p className="text-set">{text.text}</p>
+                                                                                                            </Fragment>
+                                                                                                        )
+                                                                                                    })
+                                                                                                }
+                                                                                            </td>
+                                                                                        </Fragment>
+                                                                                    )
+                                                                                )
+                                                                            })
+                                                                        }
+                                                                    </tr>
+                                                                </Fragment>
+                                                            )
+                                                        })
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </motion.div>
+                                        {/* 桌面板 */}
+
+                                        {/* 手機板 */}
+                                        {
+                                            QAMain2Data?.filter( (item)=> item.key === "mbType").map((item)=>{
+                                                return(
+                                                    
+                                                    <motion.div key={item.id} 
+                                                                className="QAMain2-mb-table-box"
+                                                                variants={fadeUp}
+                                                    >
+                                                        <div className="table-mb-set">
+                                                            {
+                                                                item.rowTitle.map((title)=>{
+                                                                    return(
+                                                                        <Fragment key={title.id}>
+                                                                            <p className='text-mb-set'>{title.title}</p>
+                                                                        </Fragment>
                                                                     )
-                                                                )
-                                                            })
-                                                        }
-                                                    </div>
-                                                </div>
-                                                
-                                            )
-                                        })
-                                    }
-                                    {/* 手機板 */}
+                                                                })
+                                                            }
+                                                        </div>
+                                                        <div className="table-mb-content-set">
+                                                            {
+                                                                item.content.map((itemIn)=>{
+                                                                    return(
+                                                                        itemIn.img?
+                                                                        (
+                                                                            <div key={itemIn.id} className="detail-mb-Img-box">
+                                                                                <img className="detail-mb-Img-set" 
+                                                                                    src={itemIn.img} 
+                                                                                    alt="qP-main1-img1" />
+                                                                            </div>
+                                                                        )
+                                                                        :
+                                                                        (
+                                                                            <div key={itemIn.id} className='detail-mb-box'>
+                                                                                {
+                                                                                    itemIn.item.map((text)=>{
+                                                                                        return(
+                                                                                            <Fragment key={text.id}>
+                                                                                                <p className='text-mb-set'>{text.text}</p>
+                                                                                            </Fragment>
+                                                                                        )
+                                                                                    })
+                                                                                }
+                                                                            </div>
+                                                                        )
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+                                                    </motion.div>
+                                                    
+                                                )
+                                            })
+                                        }
+                                        {/* 手機板 */}
+                                    </motion.div>
                                 </div>
-                            </div>
-                        </div>    
+                            </div>    
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

@@ -62,6 +62,28 @@ function EstimatePage(){
         },[resetTrigger])
     //#endregion
 
+    //#region 動畫設定
+    const triggerSet = {
+        hidden: { opacity: 0 },                 // 父層只當觸發器，不做淡入
+        show: {
+            opacity: 1,
+            transition: {
+            duration: 0,                        // 0：不要讓父層自己動畫造成等待
+            //觸發動畫到第一個動畫的延遲時間
+            delayChildren: 0.08,
+            //第二個動畫到第三以及後續的延遲時間
+            staggerChildren: 0.1,
+            // 想骨牌再開：delayChildren: 0.08, staggerChildren: 0.06,
+            },
+        },
+    };
+    const fadeUp = { 
+        hidden:{opacity:0,y: 40}, 
+        show:{opacity:1,y:0, 
+        transition:{duration:0.6, ease:"easeOut"}} 
+    };
+    //#endregion
+
     //#region ref宣告
     const EstimatePageMain2Ref = useRef(null);
     const EstimatePageMain3Ref = useRef(null);
@@ -136,51 +158,58 @@ function EstimatePage(){
     }
     //#endregion
 
-    
-
-
 
     return(
         <>
-            <div className="EstimatePageMain1-box">
+            <section className="EstimatePage">
                 <EstimatePageMain1  toEstimatePageMain2={toEstimatePageMain2} 
                                     loginState={loginState} 
                                     orderData={orderData} 
                                     setOrderData={setOrderData} 
                                     main1ResetKey={main1ResetKey}
                                     setMain1ResetKey={setMain1ResetKey}
+                                    triggerSet={triggerSet}
+                                    fadeUp={fadeUp}
                 />
-            </div> 
-            <div ref={EstimatePageMain2Ref} className="EstimatePageMain2-box">
-                <EstimatePageMain2  orderData={orderData} 
-                                    setOrderData={setOrderData} 
-                                    toEstimatePageMain3={toEstimatePageMain3}
-                                    main2ResetKey={main2ResetKey}
-                                    setMain2ResetKey={setMain2ResetKey}
-                />
-            </div> 
-            <div ref={EstimatePageMain3Ref} className="EstimatePageMain3-box">
-                <EstimatePageMain3  orderData={orderData} 
-                                    setOrderData={setOrderData} 
-                                    toEstimatePageMain4={toEstimatePageMain4}
-                                    main3ResetKey={main3ResetKey}
-                                    setMain3ResetKey={setMain3ResetKey}
-                />
-            </div> 
-            <div ref={EstimatePageMain4Ref} className="EstimatePageMain4-box">
-                <EstimatePageMain4  orderData={orderData} 
-                                    setOrderData={setOrderData} 
-                                    toEstimatePageMain5={toEstimatePageMain5}
-                                    main4ResetKey={main4ResetKey}
-                                    setMain4ResetKey={setMain4ResetKey}
-                />
-            </div> 
-            <div ref={EstimatePageMain5Ref} className="EstimatePageMain5-box">
-                <EstimatePageMain5  orderData={orderData} 
-                                    setOrderData={setOrderData}
-                                    resetAll={resetAll}
-                />
-            </div> 
+                <div ref={EstimatePageMain2Ref} className="EstimatePageMain2-box">
+                    <EstimatePageMain2  orderData={orderData} 
+                                        setOrderData={setOrderData} 
+                                        toEstimatePageMain3={toEstimatePageMain3}
+                                        main2ResetKey={main2ResetKey}
+                                        setMain2ResetKey={setMain2ResetKey}
+                                        triggerSet={triggerSet}
+                                        fadeUp={fadeUp}
+                    />
+                </div> 
+                <div ref={EstimatePageMain3Ref} className="EstimatePageMain3-box">
+                    <EstimatePageMain3  orderData={orderData} 
+                                        setOrderData={setOrderData} 
+                                        toEstimatePageMain4={toEstimatePageMain4}
+                                        main3ResetKey={main3ResetKey}
+                                        setMain3ResetKey={setMain3ResetKey}
+                                        triggerSet={triggerSet}
+                                        fadeUp={fadeUp}
+                    />
+                </div> 
+                <div ref={EstimatePageMain4Ref} className="EstimatePageMain4-box">
+                    <EstimatePageMain4  orderData={orderData} 
+                                        setOrderData={setOrderData} 
+                                        toEstimatePageMain5={toEstimatePageMain5}
+                                        main4ResetKey={main4ResetKey}
+                                        setMain4ResetKey={setMain4ResetKey}
+                                        triggerSet={triggerSet}
+                                        fadeUp={fadeUp}
+                    />
+                </div> 
+                <div ref={EstimatePageMain5Ref} className="EstimatePageMain5-box">
+                    <EstimatePageMain5  orderData={orderData} 
+                                        setOrderData={setOrderData}
+                                        resetAll={resetAll}
+                                        triggerSet={triggerSet}
+                                        fadeUp={fadeUp}
+                    />
+                </div> 
+            </section>
         </>
     )
 }

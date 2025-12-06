@@ -1,6 +1,7 @@
 
 
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import './_EstimatePageMain5.scss';
 import { open, MODALS } from "../../../slice/modalSlice";
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,7 +10,7 @@ import { upLoad } from '../../../slice/orderSlice';
 
 
 
-function EstimatePageMain5({ orderData }){
+function EstimatePageMain5({ orderData,setOrderData,resetAll,triggerSet,fadeUp }){
 
     //#region 讀取中央函式前置宣告
         //讀取中央函式前置宣告
@@ -35,23 +36,32 @@ function EstimatePageMain5({ orderData }){
 
     return(
         <>
+        <AnimatePresence>
             <div className="EstimatePageMain5">
                 <div className="EstimatePageMain5-bg">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className='EstimatePageMain5-content'>
-                                    <div className="EstimatePageMain5-title">
+                                <motion.div className='EstimatePageMain5-content'
+                                            variants={triggerSet}
+                                            initial="hidden"
+                                            whileInView="show"                      
+                                            viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                >
+                                    <motion.div className="EstimatePageMain5-title"
+                                                variants={fadeUp}>
                                         <h3 className="title-set">注意事項！！！<span className='d-block d-lg-none'></span>產品交期說明</h3>
-                                    </div>
+                                    </motion.div>
 
-                                    <div className="EstimatePageMain5-text-box"> 
+                                    <motion.div className="EstimatePageMain5-text-box"
+                                                variants={fadeUp}> 
                                         <p className="text-set">急單：3個工作天出貨，且有失敗風險，請與業務聯繫。</p>
                                         <p className="text-set">一般單：3~6個工作天出貨。</p>
                                         <p className="text-set">不急單：6~10個工作天出貨、依排程而定。</p>
-                                    </div>
+                                    </motion.div>
 
-                                    <div className="EstimatePageMain5-note-box">
+                                    <motion.div className="EstimatePageMain5-note-box"
+                                                variants={fadeUp}>
                                         <span className="material-symbols-outlined note-icon-set">
                                             error
                                         </span>
@@ -63,22 +73,24 @@ function EstimatePageMain5({ orderData }){
                                                 產品實際交期及價格依訂單回覆內容而定如有特殊狀況將由客服人員與您聯繫
                                             </p>
                                         </div>
-                                    </div>
+                                    </motion.div>
 
-                                    <div className="EstimatePageMain5-checkBtn-box">
+                                    <motion.div className="EstimatePageMain5-checkBtn-box"
+                                                variants={fadeUp}>
                                         <button className="EstimatePageMain5-checkBtn-set mian-btn1-set" 
                                                 type="button" 
                                                 onClick={()=>{handleOrderModelOpen();}}
                                         >   
                                             送出估價
                                         </button>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </AnimatePresence>
         </>
     )
 }

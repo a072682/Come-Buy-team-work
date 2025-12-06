@@ -1,6 +1,7 @@
 
 
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import './_EstimatePageMain4.scss';
 import { Dropdown } from 'react-bootstrap';
 import Calendar from './Calendar/Calendar';
@@ -8,7 +9,7 @@ import Calendar from './Calendar/Calendar';
 
 
 
-function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4ResetKey, setMain4ResetKey }){
+function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4ResetKey, setMain4ResetKey,triggerSet,fadeUp }){
 
     //#region
     //#endregion 
@@ -159,16 +160,24 @@ function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4
 
     return(
         <>
+        <AnimatePresence>
             <div className="EstimatePageMain4">
                 <div className="EstimatePageMain4-bg">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className='EstimatePageMain4-content'>
-                                    <div className="EstimatePageMain4-title">
-                                        <h3 className="title-set">規格設置</h3>
-                                    </div>
-                                    <div className="EstimatePageMain4-note-box">
+                                <motion.div className='EstimatePageMain4-content'
+                                            variants={triggerSet}
+                                            initial="hidden"
+                                            whileInView="show"                      
+                                            viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                >
+                                    <motion.div className="EstimatePageMain4-title"
+                                                variants={fadeUp}>
+                                        <h2 className="title-set">規格設置</h2>
+                                    </motion.div>
+                                    <motion.div className="EstimatePageMain4-note-box"
+                                                variants={fadeUp}>
                                         <span className="material-symbols-outlined note-icon-set">
                                             error
                                         </span>
@@ -177,9 +186,9 @@ function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4
                                                 選擇工期後<span className='d-none d-lg-inline'>，</span><span className='d-block d-lg-none'></span>工作人員會在確認訂單時間是否可訂做。
                                             </p>
                                         </div>
-                                    </div>
-
-                                    <div className='w-100 d-flex flex-column flex-xl-row justify-content-between align-items-center gap-xl-72 gap-40'>
+                                    </motion.div>
+                                    <motion.div className='w-100 d-flex flex-column flex-xl-row justify-content-between align-items-center gap-xl-72 gap-40'
+                                                variants={fadeUp}>
 
                                         <div className="EstimatePageMain4-group-box">
                                             <label htmlFor="EstimatePageMain4-input" className="label-set">
@@ -281,10 +290,9 @@ function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4
                                             </div>
                                         </div>
 
-                                    </div>
-                                    
-
-                                    <div className="EstimatePageMain4-NextBtn-box">
+                                    </motion.div>
+                                    <motion.div className="EstimatePageMain4-NextBtn-box"
+                                                variants={fadeUp}>
                                         <button className="pagination-btn02" onClick={()=>{toEstimatePageMain5()}}>
                                             <img className="pagination-img02-set" 
                                                 src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-Vector16.png`} 
@@ -294,13 +302,14 @@ function EstimatePageMain4({ orderData, setOrderData, toEstimatePageMain5, main4
                                         <div className='EstimatePageMain4-next-btn-box'>
                                             <p className='nextBtnTipText-set'><span className='d-none d-sm-inline'>前往下一頁</span>送出訂單</p>
                                         </div>
-                                    </div> 
-                                </div>
+                                    </motion.div> 
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </AnimatePresence>
         </>
     )
 }

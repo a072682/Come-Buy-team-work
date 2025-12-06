@@ -1,4 +1,5 @@
 import './_MaterialPageMain3.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Autoplay, Navigation, Pagination, } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css";// 核心 CSS
@@ -8,18 +9,9 @@ import { useState } from 'react';
 
 
 
-function MaterialPageMain3({handleOpenMaterialModal}){
+function MaterialPageMain3({handleOpenMaterialModal,triggerSet,fadeUp}){
 
     const[cardHover,setCardHover]=useState(null);
-
-    //視窗狀態
-    const [handleMaterialPageModal,setHandleMaterialPageModal]=useState(null);
-
-    //單一資料狀態
-    const [singleMaterialPageModal,setSingleMaterialPageModal]=useState({});
-
-    //監控Modal開啟狀態
-    const [materialPageModalShow, setMaterialPageModalShow] = useState(false);
 
     const materiaPageMain3Card = [
     {
@@ -86,93 +78,102 @@ function MaterialPageMain3({handleOpenMaterialModal}){
 
     return(
         <>
-            <div className="MaterialPageMain3">
-                <div className="MaterialPageMain3-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-10 mx-auto">
-                                <div className='MaterialPageMain3-content'>
+            <AnimatePresence>
+                <article className="MaterialPageMain3">
+                    <div className="MaterialPageMain3-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-10 mx-auto">
+                                    <motion.div className='MaterialPageMain3-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        
+                                        <motion.div className="MaterialPageMain3-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">材料類型:SLM(金屬)</h2>
+                                        </motion.div>
                                     
-                                    <div className="MaterialPageMain3-title">
-                                        <h3 className="title-set">SLM(金屬)</h3>
-                                    </div>
-                                
-                                    <div className='swiper-box'>
-                                        {/* 按鈕區塊 */}
-                                        <div className="Main3SwiperBtn-set">
-                                            <button className="Main3BtnL">
-                                                <div className="img-box">
-                                                    <img className="img-set" 
-                                                        src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowL.png`} 
-                                                        alt="MateriaPage-main1-arrowL" />
-                                                </div>
-                                            </button>
-                                            <button className="Main3BtnR">
-                                                <div className="img-box">
-                                                    <img className="img-set" 
-                                                        src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowR.png`} 
-                                                        alt="MateriaPage-main1-arrowR" />
-                                                </div>
-                                            </button>
-                                        </div>
+                                        <motion.div className='swiper-box'
+                                                    variants={fadeUp}>
+                                            {/* 按鈕區塊 */}
+                                            <div className="Main3SwiperBtn-set">
+                                                <button className="Main3BtnL">
+                                                    <div className="img-box">
+                                                        <img className="img-set" 
+                                                            src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowL.png`} 
+                                                            alt="MateriaPage-main1-arrowL" />
+                                                    </div>
+                                                </button>
+                                                <button className="Main3BtnR">
+                                                    <div className="img-box">
+                                                        <img className="img-set" 
+                                                            src={`${import.meta.env.BASE_URL}assets/images/MateriaPage/main1/MateriaPage-main1-arrowR.png`} 
+                                                            alt="MateriaPage-main1-arrowR" />
+                                                    </div>
+                                                </button>
+                                            </div>
 
-                                        {/* 頁籤的內容區塊 */}
-                                        <div className="main3SwiperContent">
-                                            <Swiper
-                                                modules={[Navigation, Pagination, Autoplay]}
-                                                spaceBetween={0}
-                                                slidesPerView={1}
-                                                centeredSlides={true}
-                                                breakpoints={{
-                                                    768: { 
-                                                        slidesPerView: 3,
-                                                        spaceBetween: 12,
-                                                    }, 
-                                                    1200: { 
-                                                        slidesPerView: 3,
-                                                        spaceBetween: 24,
-                                                    }, 
-                                                    // 電腦顯示 3 張
-                                                }}
-                                                navigation={{ prevEl: ".Main1BtnL", nextEl: ".Main1BtnR" }}
-                                                loop={true}
-                                                className="mySwiper"
-                                                >
-                                                {
-                                                    materiaPageMain3Card?.map((item, index) => {
-                                                        return(
-                                                            <SwiperSlide key={index}>
-                                                                <div onClick={()=>{setCardHover(item.title)}} 
-                                                                    className={`main3SwiperCardSet ${item.title === cardHover?("hover"):(null)}`}>                       
-                                                                    <div className="cardImgBox">
-                                                                        <picture>
-                                                                            <source srcSet={item.img} media="(min-width:992px)" />
-                                                                            <img className="cardImg-set" src={item.imgSm} alt="home-section2-1" />
-                                                                        </picture>   
-                                                                    </div>
-                                                                    <div className="cardBtnBox">
-                                                                        <button onClick={()=>{handleOpenMaterialModal(item)}} 
-                                                                                className="main1SwiperBtn-set secondary-btn1-set">
-                                                                            材料簡介
-                                                                            <span className="material-symbols-outlined sec-btn1-img-set">
-                                                                                chevron_right
-                                                                            </span>
-                                                                        </button>
-                                                                    </div>         
-                                                                </div> 
-                                                            </SwiperSlide>
-                                                    )
-                                                })}
-                                            </Swiper>
-                                        </div>
-                                    </div>
-                                            
+                                            {/* 頁籤的內容區塊 */}
+                                            <div className="main3SwiperContent">
+                                                <Swiper
+                                                    modules={[Navigation, Pagination, Autoplay]}
+                                                    spaceBetween={0}
+                                                    slidesPerView={1}
+                                                    centeredSlides={true}
+                                                    breakpoints={{
+                                                        768: { 
+                                                            slidesPerView: 3,
+                                                            spaceBetween: 12,
+                                                        }, 
+                                                        1200: { 
+                                                            slidesPerView: 3,
+                                                            spaceBetween: 24,
+                                                        }, 
+                                                        // 電腦顯示 3 張
+                                                    }}
+                                                    navigation={{ prevEl: ".Main1BtnL", nextEl: ".Main1BtnR" }}
+                                                    loop={true}
+                                                    className="mySwiper"
+                                                    >
+                                                    {
+                                                        materiaPageMain3Card?.map((item, index) => {
+                                                            return(
+                                                                <SwiperSlide key={index}>
+                                                                    <div onClick={()=>{setCardHover(item.title)}} 
+                                                                        className={`main3SwiperCardSet ${item.title === cardHover?("hover"):(null)}`}>                       
+                                                                        <div className="cardImgBox">
+                                                                            <picture>
+                                                                                <source srcSet={item.img} media="(min-width:992px)" />
+                                                                                <img className="cardImg-set" src={item.imgSm} alt="home-section2-1" />
+                                                                            </picture>   
+                                                                        </div>
+                                                                        <div className="cardBtnBox">
+                                                                            <button onClick={()=>{handleOpenMaterialModal(item)}} 
+                                                                                    className="main1SwiperBtn-set secondary-btn1-set">
+                                                                                材料簡介
+                                                                                <span className="material-symbols-outlined sec-btn1-img-set">
+                                                                                    chevron_right
+                                                                                </span>
+                                                                            </button>
+                                                                        </div>         
+                                                                    </div> 
+                                                                </SwiperSlide>
+                                                        )
+                                                    })}
+                                                </Swiper>
+                                            </div>
+                                        </motion.div>
+                                                
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

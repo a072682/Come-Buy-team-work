@@ -1,7 +1,8 @@
 import './_QAMain3.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
-function QAMain3(){
+function QAMain3({triggerSet,fadeUp}){
 
     const QAMain3Data = [
         {
@@ -32,47 +33,56 @@ function QAMain3(){
 
     return(
         <>  
-            <div className="QAMain3">
-                <div className="QAMain3-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-10 mx-auto">
-                                <div className='QAMain3-content'>
-                                    <div className="QAMain3-title">
-                                        <h3 className="title-set">運費說明</h3>
-                                    </div>
-                                    <div className="QAMain3-content-box">
-                                        {
-                                            QAMain3Data?.map((item)=>{
-                                                return(
-                                                    
-                                                    <div key={item.id} className="QAMain3-item-set qP-main2-box">
-                                                        <div className="QAMain3-item-img-box">
-                                                            <img src={item.img} 
-                                                                    alt="qP-main2-img1" 
-                                                                    className='QAMain3-item-img'/>
-                                                        </div>
-                                                        <div className="QAMain3-content-box">
-                                                            <div className="QAMain3-item-title-box">
-                                                                <h5 className="QAMain3-item-title">{item.title} </h5>
+            <AnimatePresence>
+                <article className="QAMain3">
+                    <div className="QAMain3-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-10 mx-auto">
+                                    <motion.div className='QAMain3-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        <motion.div className="QAMain3-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">運費說明</h2>
+                                        </motion.div>
+                                        <motion.div className="QAMain3-content-box"
+                                                    variants={fadeUp}>
+                                            {
+                                                QAMain3Data?.map((item)=>{
+                                                    return(
+                                                        
+                                                        <div key={item.id} className="QAMain3-item-set qP-main2-box">
+                                                            <div className="QAMain3-item-img-box">
+                                                                <img src={item.img} 
+                                                                        alt="qP-main2-img1" 
+                                                                        className='QAMain3-item-img'/>
                                                             </div>
-                                                            <div className="QAMain3-item-text-box">
-                                                                <p className="QAMain3-item-text">{item.text} </p>
+                                                            <div className="QAMain3-content-box">
+                                                                <div className="QAMain3-item-title-box">
+                                                                    <h5 className="QAMain3-item-title">{item.title} </h5>
+                                                                </div>
+                                                                <div className="QAMain3-item-text-box">
+                                                                    <p className="QAMain3-item-text">{item.text} </p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    
-                                                )
-                                            })
-                                        }
-                                        
-                                    </div>
+                                                        
+                                                    )
+                                                })
+                                            }
+                                            
+                                        </motion.div>
+                                    </motion.div>
                                 </div>
-                            </div>
-                        </div>    
+                            </div>    
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

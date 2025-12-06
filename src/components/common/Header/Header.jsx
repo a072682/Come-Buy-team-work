@@ -26,7 +26,7 @@ function Header(){
         })
 
         useEffect(()=>{
-            console.log("loginState狀態:",loginState);
+            //console.log("loginState狀態:",loginState);
         },[loginState])
     //#endregion
 
@@ -39,7 +39,7 @@ function Header(){
         })
 
         useEffect(()=>{
-            console.log("頭像資料:",avatarUrl);
+            //console.log("頭像資料:",avatarUrl);
         },[avatarUrl])
     //#endregion
 
@@ -52,7 +52,7 @@ function Header(){
         })
 
         useEffect(()=>{
-            console.log("會員名稱資料:",userName);
+            //console.log("會員名稱資料:",userName);
         },[userName])
     //#endregion
 
@@ -64,7 +64,7 @@ function Header(){
             )
         })
         useEffect(()=>{
-            console.log("Modal狀態:",active);
+            //console.log("Modal狀態:",active);
         },[active])
     //#endregion
 
@@ -111,9 +111,9 @@ function Header(){
     //#region 監控路徑
         //監控路徑
         useEffect(() => {
-            console.log("🔄 路由變更了！當前路徑：", location.pathname);
+            //console.log("🔄 路由變更了！當前路徑：", location.pathname);
             window.scrollTo(0, 0);
-            console.log("已移動到頁面最上方");
+            //console.log("已移動到頁面最上方");
         }, [location.pathname]); // 監聽 `pathname`，當變更時執行
         //監控路徑
     //#endregion

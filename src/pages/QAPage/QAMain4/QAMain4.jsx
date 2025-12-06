@@ -1,8 +1,9 @@
 import { Accordion } from 'react-bootstrap';
+import { AnimatePresence, motion } from 'framer-motion';
 import './_QAMain4.scss';
 
 
-function QAMain4(){
+function QAMain4({triggerSet,fadeUp}){
 
     const QAMain4Data = [
         {
@@ -57,39 +58,48 @@ function QAMain4(){
 
     return(
         <>  
-            <div className="QAMain4">
-                <div className="QAMain4-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-10 mx-auto">
-                                <div className='QAMain4-content'>
-                                    <div className="QAMain4-title">
-                                        <h3 className="title-set">常見問題</h3>
-                                    </div>
-                                    <div className="QAMain4-content-box">
-                                        <Accordion alwaysOpen defaultActiveKey="1" className="Accordion-set" >
-                                            {
-                                                QAMain4Data?.map((item)=>{
-                                                    return(
-                                                        
-                                                        <Accordion.Item key={item.id} className="accordionItemSet" eventKey={item.key} >
-                                                            <Accordion.Header >{item.header}</Accordion.Header>
-                                                            <Accordion.Body className='accordion-body-set'>
-                                                                {item.content}
-                                                            </Accordion.Body>
-                                                        </Accordion.Item>
-                                                        
-                                                    )
-                                                })
-                                            }
-                                        </Accordion>
-                                    </div>
+            <AnimatePresence>
+                <article className="QAMain4">
+                    <div className="QAMain4-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-10 mx-auto">
+                                    <motion.div className='QAMain4-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        <motion.div className="QAMain4-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">常見問題</h2>
+                                        </motion.div>
+                                        <motion.div className="QAMain4-content-box"
+                                                    variants={fadeUp}>
+                                            <Accordion alwaysOpen defaultActiveKey="1" className="Accordion-set" >
+                                                {
+                                                    QAMain4Data?.map((item)=>{
+                                                        return(
+                                                            
+                                                            <Accordion.Item key={item.id} className="accordionItemSet" eventKey={item.key} >
+                                                                <Accordion.Header >{item.header}</Accordion.Header>
+                                                                <Accordion.Body className='accordion-body-set'>
+                                                                    {item.content}
+                                                                </Accordion.Body>
+                                                            </Accordion.Item>
+                                                            
+                                                        )
+                                                    })
+                                                }
+                                            </Accordion>
+                                        </motion.div>
+                                    </motion.div>
                                 </div>
-                            </div>
-                        </div>    
+                            </div>    
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

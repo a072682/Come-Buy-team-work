@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import './_AboutUsPageMain4.scss';
-import AboutUsModal from "../AboutUsModal/AboutUsModal";
+import { AnimatePresence, motion } from 'framer-motion';
 import { messageDataUpLoad } from "../../../slice/messageSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { open, MODALS } from "../../../slice/modalSlice";
@@ -9,7 +9,7 @@ import { open, MODALS } from "../../../slice/modalSlice";
 
 
 
-function AboutUsPageMain4(){
+function AboutUsPageMain4({triggerSet,fadeUp}){
 
     //#region 讀取中央登入資料
         //讀取中央資料
@@ -93,56 +93,67 @@ function AboutUsPageMain4(){
     // }}></form>
 
     return(
-        <>
-            <div className="AboutUsMain4">
-                <div className="AboutUsMain4-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-8 mx-auto">
-                                <div className='AboutUsMain4-content'>
-                                    <div className="AboutUsMain4-title">
-                                        <h3 className="title-set">聯絡我們</h3>
-                                    </div>
-                                    <form className="from-set" onSubmit={handleSubmit(onSubmit)}>
-
-                                        <div className="message-group ">
-                                            {/* 🔹 留言 */}
-                                            <label className="aboutUs-label-set message-label-set" htmlFor="aboutUs-textarea">
-                                                留言
-                                            </label>
-                                            <div className="aboutUs-textarea-box">
-                                                <textarea
-                                                {...register("message", {
-                                                    required: "請輸入您的留言",
-                                                    maxLength: { value: 500, message: "最多只能輸入 500 個字" }
-                                                })}
-                                                className={`aboutUs-textarea-set aboutUs-input-set message-input-set  ${
-                                                    errors.message ? "is-invalid" : ""
-                                                }`}
-                                                id="aboutUs-textarea"
-                                                rows="4"
-                                                placeholder="請留下您想告知的內容">
-                                                </textarea>
-                                                <p className="aboutUs-textarea-result fs-16 fs-lg-24">{`${messageDataNum}/500`}</p>
-                                            </div>
-                                            {errors.message && <p className="text-danger mb-24">{errors.message.message}</p>}
-                                        </div>
-                                    
-                                        {/* 🔹 送出按鈕 */}
-                                        <button
-                                            className="form-btn-set mian-btn1-set"
-                                            type={loginState ? "submit" : "button"}
-                                            onClick={loginState ? () => null : () => dispatch(open(MODALS.LOGIN))}
+        <>  
+            <AnimatePresence>
+                <article className="AboutUsMain4">
+                    <div className="AboutUsMain4-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-8 mx-auto">
+                                    <motion.div className='AboutUsMain4-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        <motion.div className="AboutUsMain4-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">聯絡我們</h2>
+                                        </motion.div>
+                                        <motion.form    className="from-set" 
+                                                        onSubmit={handleSubmit(onSubmit)}
+                                                        variants={fadeUp}
                                         >
-                                            送出留言
-                                        </button>
-                                    </form>
+
+                                            <div className="message-group ">
+                                                {/* 🔹 留言 */}
+                                                <label className="aboutUs-label-set message-label-set" htmlFor="aboutUs-textarea">
+                                                    留言
+                                                </label>
+                                                <div className="aboutUs-textarea-box">
+                                                    <textarea
+                                                    {...register("message", {
+                                                        required: "請輸入您的留言",
+                                                        maxLength: { value: 500, message: "最多只能輸入 500 個字" }
+                                                    })}
+                                                    className={`aboutUs-textarea-set aboutUs-input-set message-input-set  ${
+                                                        errors.message ? "is-invalid" : ""
+                                                    }`}
+                                                    id="aboutUs-textarea"
+                                                    rows="4"
+                                                    placeholder="請留下您想告知的內容">
+                                                    </textarea>
+                                                    <p className="aboutUs-textarea-result fs-16 fs-lg-24">{`${messageDataNum}/500`}</p>
+                                                </div>
+                                                {errors.message && <p className="text-danger mb-24">{errors.message.message}</p>}
+                                            </div>
+                                        
+                                            {/* 🔹 送出按鈕 */}
+                                            <button
+                                                className="form-btn-set mian-btn1-set"
+                                                type={loginState ? "submit" : "button"}
+                                                onClick={loginState ? () => null : () => dispatch(open(MODALS.LOGIN))}
+                                            >
+                                                送出留言
+                                            </button>
+                                        </motion.form>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

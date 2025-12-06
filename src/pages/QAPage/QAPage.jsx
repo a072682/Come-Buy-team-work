@@ -13,41 +13,77 @@ import { useLocation } from 'react-router-dom';
 
 function QAPage(){
 
+    //#region
+    //#endregion
+
+    //#region 取得網址
     const location = useLocation();
+    //#endregion
 
-    const [activeTab, setActiveTab] = useState('客製化流程');//tab控制
+    //#region 新手指南頁面tab控制
+    const [activeTab, setActiveTab] = useState('客製化流程');
+    //#endregion
 
+    //#region 動畫設定
+    const triggerSet = {
+        hidden: { opacity: 0 },                 // 父層只當觸發器，不做淡入
+        show: {
+            opacity: 1,
+            transition: {
+            duration: 0,                        // 0：不要讓父層自己動畫造成等待
+            //觸發動畫到第一個動畫的延遲時間
+            delayChildren: 0.08,
+            //第二個動畫到第三以及後續的延遲時間
+            staggerChildren: 0.1,
+            // 想骨牌再開：delayChildren: 0.08, staggerChildren: 0.06,
+            },
+        },
+    };
+    const fadeUp = { 
+        hidden:{opacity:0,y: 40}, 
+        show:{opacity:1,y:0, 
+        transition:{duration:0.6, ease:"easeOut"}} 
+    };
+    //#endregion
+
+    //#region 新手指南頁面tab顯示內容
     const tabdata = [
         {
             id:"QaPageTab_01",
             title:"客製化流程",
             key:"客製化流程",
-            pageData: <QAMain1 />,
+            pageData: <QAMain1  triggerSet={triggerSet}
+                                fadeUp={fadeUp}/>,
             disabled: false,
         },
         {
             id:"QaPageTab_02",
             title:"設計需求介紹",
             key:"設計需求介紹",
-            pageData: <QAMain2 />,
+            pageData: <QAMain2  triggerSet={triggerSet}
+                                fadeUp={fadeUp}/>,
             disabled: false,
         },
         {
             id:"QaPageTab_03",
             title:"運費說明",
             key:"運費說明",
-            pageData:<QAMain3 />,
+            pageData:<QAMain3   triggerSet={triggerSet}
+                                fadeUp={fadeUp}/>,
             disabled: false,
         },
         {
             id:"QaPageTab_04",
             title:"常見問題",
             key:"常見問題",
-            pageData:<QAMain4 />,
+            pageData:<QAMain4   triggerSet={triggerSet}
+                                fadeUp={fadeUp}/>,
             disabled: false,
         },
     ]
+    //#endregion
 
+    //#region 網址設定
     useEffect(() => {
         //對中文進行解碼
         const decoded = decodeURIComponent(location.hash);
@@ -69,17 +105,19 @@ function QAPage(){
         }
 
     }, [location]);
+    //#endregion
+
+    
 
     return(
         <>
             <Tab.Container activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
-                <div className="QAPage">
+                <section className="QAPage">
                     <div className="QAPage-bg">
                         <div className="QAPage-title">
-                            <h3 className="title-set">新手指南/QA</h3>
+                            <h1 className="title-set">新手指南/QA</h1>
                         </div>
                         <div className='QAPage-content'>
-                            
                             {/* Tab-手機板 選單區 */}
                             <div className='tab-mb-box'>
                                 <div className='tab-mb-btn-box'>
@@ -171,14 +209,9 @@ function QAPage(){
                                     </div>
                                 </div>
                             </div>
-                            
-                                        
-                                    
-                                
-                            
                         </div>
                     </div>
-                </div>
+                </section>
             </Tab.Container>
         </>
     )

@@ -1,8 +1,9 @@
 
 import './_QAMain1.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Fragment } from "react";
 
-function QAMain1(){
+function QAMain1({triggerSet,fadeUp}){
 
     const QAMain1Data = [
         {
@@ -34,41 +35,51 @@ function QAMain1(){
 
     return(
         <>  
-            <div className="QAMain1">
-                <div className="QAMain1-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-lg-10 mx-auto">
-                                <div className='QAMain1-content'>
-                                    <div className="QAMain1-title">
-                                        <h3 className="title-set">客製化流程</h3>
-                                    </div>
-                                    <div className='QAMain1-contetn-box'>
-                                        <div className="sec-title-box mb-40 ">
-                                            <h3 className="title-set">3D列印步驟</h3>
+            <AnimatePresence>
+                <article className="QAMain1">
+                    <div className="QAMain1-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-10 mx-auto">
+                                    <motion.div className='QAMain1-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        <motion.div className="QAMain1-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">客製化流程</h2>
+                                        </motion.div>
+                                        <div className='QAMain1-contetn-box'>
+                                            <motion.div className="sec-title-box mb-40"
+                                                        variants={fadeUp}>
+                                                <h3 className="title-set">3D列印步驟</h3>
+                                            </motion.div>
+                                            <motion.div className="text-box"
+                                                        variants={fadeUp}>
+                                                <ol>
+                                                    {
+                                                        QAMain1Data?.map((item)=>{
+                                                            return(
+                                                                <Fragment key={item.id}>
+                                                                    <li>{item.title}</li>
+                                                                    <p className="text-set">{item.text}</p>
+                                                                </Fragment>
+                                                            )
+                                                        })
+                                                    }
+                                                </ol>
+                                            </motion.div>  
                                         </div>
-                                        <div className="text-box">
-                                            <ol>
-                                                {
-                                                    QAMain1Data?.map((item)=>{
-                                                        return(
-                                                            <Fragment key={item.id}>
-                                                                <li>{item.title}</li>
-                                                                <p className="text-set">{item.text}</p>
-                                                            </Fragment>
-                                                        )
-                                                    })
-                                                }
-                                            </ol>
-                                        </div>  
-                                    </div>
-                                    
+                                        
+                                    </motion.div>
                                 </div>
-                            </div>
-                        </div>    
+                            </div>    
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }

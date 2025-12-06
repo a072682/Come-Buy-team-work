@@ -1,10 +1,11 @@
 
 
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import './_EstimatePageMain3.scss';
 
 
-function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3ResetKey, setMain3ResetKey}){
+function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3ResetKey, setMain3ResetKey,triggerSet,fadeUp}){
 
     // 初始 state
     const [main3GroupDataState, setMain3GroupDataState] = useState({
@@ -125,17 +126,25 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
 
     return(
         <>
+        <AnimatePresence>
             <div className="EstimatePageMain3">
                 <div className="EstimatePageMain3-bg">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className='EstimatePageMain3-content'>
-                                    <div className="EstimatePageMain3-title">
-                                        <h3 className="title-set">規格設置</h3>
-                                    </div>
+                                <motion.div className='EstimatePageMain3-content'
+                                            variants={triggerSet}
+                                            initial="hidden"
+                                            whileInView="show"                      
+                                            viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                >
+                                    <motion.div className="EstimatePageMain3-title"
+                                                variants={fadeUp}>
+                                        <h2 className="title-set">規格設置</h2>
+                                    </motion.div>
 
-                                    <div className="EstimatePageMain3-note-box">
+                                    <motion.div className="EstimatePageMain3-note-box"
+                                                variants={fadeUp}>
                                         <span className="material-symbols-outlined note-icon-set">
                                             error
                                         </span>
@@ -144,8 +153,9 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
                                                 若無法確定規格，可點擊預設配置<span className='d-none d-lg-inline'>，</span><span className='d-block d-lg-none'></span>系統會自動帶出適合的規格設置。
                                             </p>
                                         </div>
-                                    </div>
-                                    <form className='EstimatePageMain3-form-box'>
+                                    </motion.div>
+                                    <motion.form    className='EstimatePageMain3-form-box'
+                                                    variants={fadeUp}>
                                         <div className='EstimatePageMain3-form-group-box'>
                                         {
                                             main3GroupData?.map((item,index)=>{
@@ -208,8 +218,9 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
                                             </button>
                                         </div>
                                         
-                                    </form>
-                                    <div className="EstimatePageMain3-next-btn">
+                                    </motion.form>
+                                    <motion.div className="EstimatePageMain3-next-btn"
+                                                variants={fadeUp}>
                                         <button type='button' className='pagination-btn01' onClick={()=>{toEstimatePageMain4()}}>
                                             <img className="pagination-img01-set" 
                                                 src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main3/EstimatePage-main3-Vector15.png`} 
@@ -219,13 +230,14 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
                                         <div className='EstimatePageMain3-next-btn-box'>
                                             <p className='nextBtnTipText-set'><span className='d-none d-sm-inline'>前往下一頁</span>選擇日期</p>
                                         </div>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </AnimatePresence>
         </>
     )
 }

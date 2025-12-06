@@ -2,12 +2,13 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css";// 核心 CSS
 import { Nav, Tab } from "react-bootstrap"
+import { AnimatePresence, motion } from 'framer-motion';
 import './_EstimatePageMain2.scss';
 import { useEffect, useState } from 'react';
 
 
 
-function EstimatePageMain2({orderData, setOrderData, toEstimatePageMain3, main2ResetKey, setMain2ResetKey}){
+function EstimatePageMain2({orderData, setOrderData, toEstimatePageMain3, main2ResetKey, setMain2ResetKey,triggerSet,fadeUp}){
 
     //#region
     //#endregion
@@ -163,160 +164,170 @@ function EstimatePageMain2({orderData, setOrderData, toEstimatePageMain3, main2R
 
     return(
         <>
+        <AnimatePresence>
             <Tab.Container className="EstimatePageMain2-tab" activeKey={activeTab} onSelect={(key) => setActiveTab(key)} >
-            <div className="EstimatePageMain2">
-                <div className="EstimatePageMain2-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <div className='EstimatePageMain2-content'>
-                                    <div className="EstimatePageMain2-title">
-                                        <h3 className="title-set">材料選擇</h3>
-                                    </div>
-                                    <div className='EstimatePageMain2-Nav-box'>
-                                        <div className="EstimatePageMain2-NavTabs-box">
-                                            {/* 這是 TABS 的最外層，負責管理不同分頁的內容 */}
-                                            <Nav >
-                                                {
-                                                    swiperData?.map((item)=>{
-                                                        return(
-                                                            
-                                                            <Nav.Item key={item.key}>
-                                                                <Nav.Link className="EstimatePageMain2-tab-btn" eventKey={item.key} 
-                                                                        onClick={()=>{handleMaterialTypeData(item.title, null, null)}}
-                                                                >
-                                                                    {item.title}
-                                                                </Nav.Link>
-                                                            </Nav.Item>
-                                                            
-                                                        )
-                                                    })
-                                                }
-                                            </Nav>
-                                                
-                                            {/* 頁籤的內容區塊 */}
-                                        </div>
-                                        <div className="EstimatePageMain2-NavContent-box">
-                                            {/* 🔹 內容區塊（一次只顯示一個頁面） */}
-                                            <Tab.Content className="">
-                                                {
-                                                    swiperData?.map((item)=>{
-
-                                                        const prevCls = `oEstimate-main2-swiper-prev-${item.key}`;
-                                                        const nextCls = `oEstimate-main2-swiper-next-${item.key}`;
-
-                                                        return(
+                <div className="EstimatePageMain2">
+                    <div className="EstimatePageMain2-bg">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12">
+                                    <motion.div className='EstimatePageMain2-content'
+                                                variants={triggerSet}
+                                                initial="hidden"
+                                                whileInView="show"                      
+                                                viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                    >
+                                        <motion.div className="EstimatePageMain2-title"
+                                                    variants={fadeUp}>
+                                            <h2 className="title-set">材料選擇</h2>
+                                        </motion.div>
+                                        <motion.div className='EstimatePageMain2-Nav-box'
+                                                    variants={fadeUp}>
+                                            <div className="EstimatePageMain2-NavTabs-box">
+                                                {/* 這是 TABS 的最外層，負責管理不同分頁的內容 */}
+                                                <Nav >
+                                                    {
+                                                        swiperData?.map((item)=>{
+                                                            return(
                                                                 
-                                                            <Tab.Pane key={item.key} eventKey={item.key}>
+                                                                <Nav.Item key={item.key}>
+                                                                    <Nav.Link className="EstimatePageMain2-tab-btn" eventKey={item.key} 
+                                                                            onClick={()=>{handleMaterialTypeData(item.title, null, null)}}
+                                                                    >
+                                                                        {item.title}
+                                                                    </Nav.Link>
+                                                                </Nav.Item>
+                                                                
+                                                            )
+                                                        })
+                                                    }
+                                                </Nav>
+                                                    
+                                                {/* 頁籤的內容區塊 */}
+                                            </div>
+                                            <div className="EstimatePageMain2-NavContent-box">
+                                                {/* 🔹 內容區塊（一次只顯示一個頁面） */}
+                                                <Tab.Content className="">
+                                                    {
+                                                        swiperData?.map((item)=>{
 
-                                                                {/* swiper左右按鈕 */}
-                                                                <div className='EstimatePageMain2-Btn-box'>
-                                                                    <button className={nextCls}>
-                                                                        <picture>
-                                                                            <source srcSet={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-arrowR.png`} 
-                                                                                    media="(min-width:992px)" />
-                                                                            <img className="prev-img-set" src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-sm-arrowR.png`} 
-                                                                                    alt="215x144" 
-                                                                            />
-                                                                        </picture>
-                                                                    </button>
-                                                                    <button className={prevCls}>
+                                                            const prevCls = `oEstimate-main2-swiper-prev-${item.key}`;
+                                                            const nextCls = `oEstimate-main2-swiper-next-${item.key}`;
+
+                                                            return(
+                                                                    
+                                                                <Tab.Pane key={item.key} eventKey={item.key}>
+
+                                                                    {/* swiper左右按鈕 */}
+                                                                    <div className='EstimatePageMain2-Btn-box'>
+                                                                        <button className={nextCls}>
                                                                             <picture>
-                                                                                <source srcSet={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-arrowL.png`} 
+                                                                                <source srcSet={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-arrowR.png`} 
                                                                                         media="(min-width:992px)" />
-                                                                                <img className="next-img-set" src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-sm-arrowL.png`} 
-                                                                                        alt="215x144" />
+                                                                                <img className="prev-img-set" src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-sm-arrowR.png`} 
+                                                                                        alt="215x144" 
+                                                                                />
                                                                             </picture>
-                                                                    </button>
-                                                                </div>
-                                                                {/* swiper左右按鈕 */}
+                                                                        </button>
+                                                                        <button className={prevCls}>
+                                                                                <picture>
+                                                                                    <source srcSet={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-arrowL.png`} 
+                                                                                            media="(min-width:992px)" />
+                                                                                    <img className="next-img-set" src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-tab-sm-arrowL.png`} 
+                                                                                            alt="215x144" />
+                                                                                </picture>
+                                                                        </button>
+                                                                    </div>
+                                                                    {/* swiper左右按鈕 */}
 
-                                                                <div className="EstimatePageMain2-swiper-box">
-                                                                    <Swiper
-                                                                        
-                                                                        modules={[Navigation, Pagination, Autoplay]}
-                                                                        spaceBetween={6}
-                                                                        slidesPerView={1}
-                                                                        breakpoints={{
-                                                                            768: { slidesPerView: 2 },
-                                                                            992: { slidesPerView: 3 },
-                                                                            }}
-                                                                        navigation={{   prevEl: `.${prevCls}`, 
-                                                                                        nextEl: `.${nextCls}` }}
-                                                                        loop={true}
-                                                                        centeredSlides={false}
-                                                                        observer={true}          // ← 在隱藏/顯示時重新偵測
-                                                                        observeParents={true}    // ← Pane 切換時更新
-                                                                        className="mySwiper"
-                                                                        >
-                                                                        {
-                                                                            item.swiperData?.map((itemIn)=>{
-                                                                                return(
-                                                                                    
-                                                                                    <SwiperSlide key={itemIn.id}>
-                                                                                        <div className={`EstimatePageMain2-swiperItem-set 
-                                                                                                        ${activeBtn === itemIn.id?("active"):(null)}`}>
+                                                                    <div className="EstimatePageMain2-swiper-box">
+                                                                        <Swiper
+                                                                            
+                                                                            modules={[Navigation, Pagination, Autoplay]}
+                                                                            spaceBetween={6}
+                                                                            slidesPerView={1}
+                                                                            breakpoints={{
+                                                                                768: { slidesPerView: 2 },
+                                                                                992: { slidesPerView: 3 },
+                                                                                }}
+                                                                            navigation={{   prevEl: `.${prevCls}`, 
+                                                                                            nextEl: `.${nextCls}` }}
+                                                                            loop={true}
+                                                                            centeredSlides={false}
+                                                                            observer={true}          // ← 在隱藏/顯示時重新偵測
+                                                                            observeParents={true}    // ← Pane 切換時更新
+                                                                            className="mySwiper"
+                                                                            >
+                                                                            {
+                                                                                item.swiperData?.map((itemIn)=>{
+                                                                                    return(
+                                                                                        
+                                                                                        <SwiperSlide key={itemIn.id}>
+                                                                                            <div className={`EstimatePageMain2-swiperItem-set 
+                                                                                                            ${activeBtn === itemIn.id?("active"):(null)}`}>
 
-                                                                                            <div className="swiperItem-img-box">
-                                                                                                <img className="swiperItem-img-set" src={itemIn.img} alt="oEstimate-main2-tab2-img2" />     
+                                                                                                <div className="swiperItem-img-box">
+                                                                                                    <img className="swiperItem-img-set" src={itemIn.img} alt="oEstimate-main2-tab2-img2" />     
+                                                                                                </div>
+
+                                                                                                <div className="swiperItem-body-box">
+                                                                                        
+                                                                                                    <div className="body-text-box">
+                                                                                                        
+                                                                                                        <p className="text-set">{itemIn.material}</p>
+                                                                                                        <p className="text-set">{itemIn.color}</p>
+                                                                                                        
+                                                                                                    </div>
+
+                                                                                                    <div className="body-btn-box secondary-btn1-box">
+                                                                                                        <button 
+                                                                                                            className="body-btn-set secondary-btn1-set" 
+                                                                                                            onClick={()=>{handleMaterialTypeData(null,itemIn.material,itemIn.color,itemIn.price);setActiveBtn(itemIn.id);}}
+                                                                                                        >
+                                                                                                            選擇我
+                                                                                                            <span className="material-symbols-outlined">
+                                                                                                                chevron_right
+                                                                                                            </span>
+                                                                                                        </button>
+                                                                                                    </div>
+
+                                                                                                </div>   
                                                                                             </div>
-
-                                                                                            <div className="swiperItem-body-box">
-                                                                                    
-                                                                                                <div className="body-text-box">
-                                                                                                    
-                                                                                                    <p className="text-set">{itemIn.material}</p>
-                                                                                                    <p className="text-set">{itemIn.color}</p>
-                                                                                                    
-                                                                                                </div>
-
-                                                                                                <div className="body-btn-box secondary-btn1-box">
-                                                                                                    <button 
-                                                                                                        className="body-btn-set secondary-btn1-set" 
-                                                                                                        onClick={()=>{handleMaterialTypeData(null,itemIn.material,itemIn.color,itemIn.price);setActiveBtn(itemIn.id);}}
-                                                                                                    >
-                                                                                                        選擇我
-                                                                                                        <span className="material-symbols-outlined">
-                                                                                                            chevron_right
-                                                                                                        </span>
-                                                                                                    </button>
-                                                                                                </div>
-
-                                                                                            </div>   
-                                                                                        </div>
-                                                                                    </SwiperSlide>
-                                                                                )
-                                                                            })
-                                                                        }
-                                                                    </Swiper> 
-                                                                </div>
-                                                            </Tab.Pane>
-                                                            
-                                                        )
-                                                    })   
-                                                }
-                                            </Tab.Content>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="EstimatePageMain2-NextBtn-box">
-                                        <button className="pagination-btn02" onClick={()=>{toEstimatePageMain3()}}>
-                                            <img className="pagination-img02-set" 
-                                                src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-Vector16.png`} 
-                                                alt="Vector 16" 
-                                            />
-                                        </button>
-                                        <div className='EstimatePageMain2-next-btn-box'>
-                                            <p className='nextBtnTipText-set'><span className='d-none d-sm-inline'>前往下一頁</span>選擇規格</p>
-                                        </div>
-                                    </div>   
+                                                                                        </SwiperSlide>
+                                                                                    )
+                                                                                })
+                                                                            }
+                                                                        </Swiper> 
+                                                                    </div>
+                                                                </Tab.Pane>
+                                                                
+                                                            )
+                                                        })   
+                                                    }
+                                                </Tab.Content>
+                                            </div>
+                                        </motion.div>
+                                        
+                                        <motion.div className="EstimatePageMain2-NextBtn-box"
+                                                    variants={fadeUp}>
+                                            <button className="pagination-btn02" onClick={()=>{toEstimatePageMain3()}}>
+                                                <img className="pagination-img02-set" 
+                                                    src={`${import.meta.env.BASE_URL}assets/images/EstimatePage/main2/EstimatePage-main2-Vector16.png`} 
+                                                    alt="Vector 16" 
+                                                />
+                                            </button>
+                                            <div className='EstimatePageMain2-next-btn-box'>
+                                                <p className='nextBtnTipText-set'><span className='d-none d-sm-inline'>前往下一頁</span>選擇規格</p>
+                                            </div>
+                                        </motion.div>   
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </Tab.Container>
+        </AnimatePresence>
         </>
     )
 }

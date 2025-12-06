@@ -1,9 +1,10 @@
 
 import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import './_IndexPageMain4.scss';
 
 
-function IndexPageMain4(){
+function IndexPageMain4({triggerSet,fadeLeft,fadeRight,fadeUp}){
 
     const main4Data = [
         {
@@ -38,21 +39,27 @@ function IndexPageMain4(){
 
     return(
         <>
-            <div className="main4">
+        <AnimatePresence>
+            <article className="main4">
                 <div className="container">        {/*外框 要增加y軸pd在這邊加*/}
                     <div className="row">
                         <div className="col-12">
-                            <div className="main4-content">
+                            <motion.div className="main4-content"
+                                        variants={triggerSet}
+                                        initial="hidden"
+                                        whileInView="show"                      
+                                        viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}>
                                 <div className='w-100 row gap-48 gap-lg-0'>
                                     <div className='col-12 col-lg-4'>
-                                        <div className="h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start gap-48">
+                                        <motion.div className="h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start gap-48"
+                                                    variants={fadeUp}>
                                             <div className="main4-title">
                                                 <h2 className="main4-title-set">服務項目</h2>
                                             </div>
                                             <Link className="d-none d-lg-block main4-title-btn-set mian-btn1-set" to="/EstimatePage">
                                                 開始製作
                                             </Link>
-                                        </div>
+                                        </motion.div>
                                     </div>
 
                                     <div className='col-12 col-lg-8'>
@@ -61,7 +68,8 @@ function IndexPageMain4(){
                                                 result.map((group,index)=>{
                                                     return(
                                                         <div key={index} className="col-6">                  
-                                                            <div className="main4-card-box">
+                                                            <motion.div className="main4-card-box"
+                                                                        variants={fadeUp}>
                                                                 {
                                                                     group.map(item => (
                                                                         <div key={item.id} className="card-item">
@@ -73,7 +81,7 @@ function IndexPageMain4(){
                                                                         </div>
                                                                     ))
                                                                 }
-                                                            </div>
+                                                            </motion.div>
                                                         </div>
                                                     )
                                                 })
@@ -91,11 +99,12 @@ function IndexPageMain4(){
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>                                       
                     </div>
                 </div>
-            </div>
+            </article>
+        </AnimatePresence>
         </>
     )
 }

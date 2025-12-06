@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from 'framer-motion';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css";// 核心 CSS
@@ -6,7 +7,7 @@ import "swiper/css/navigation";// 左右箭頭
 import './_IndexPageMain5.scss';
 
 
-function IndexPageMain5(){
+function IndexPageMain5({NewsRef,triggerSet,fadeLeft,fadeRight,fadeUp}){
 
     const main5Data = [
     {
@@ -55,106 +56,117 @@ function IndexPageMain5(){
 
     return(
         <>
-            <div className="main5">
-                <div className="container">        {/*外框 要增加y軸pd在這邊加*/}
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="main5-content">
-                                
+            <AnimatePresence>
+                <article ref={NewsRef} className="main5">
+                    <div className="container">        {/*外框 要增加y軸pd在這邊加*/}
+                        <div className="row">
+                            <div className="col-12">
+                                <motion.div className="main5-content"
+                                            variants={triggerSet}
+                                            initial="hidden"
+                                            whileInView="show"                      
+                                            viewport={{ amount: 0, margin: "0% 0px -20% 0px" }}
+                                >
+                                            
+                                        
+                                            <motion.div className="main5-title"
+                                                        variants={fadeUp}>
+                                                <h2 className="main5-title-set">最新消息</h2>
+                                            </motion.div>
                                     
-                                        <div className="main5-title">
-                                            <h2 className="main5-title-set">最新消息</h2>
-                                        </div>
-                                   
-                                    
-                                        <div className="swiper-box">
-                                            <Swiper
-                                                modules={[Navigation, Pagination, Autoplay]}
-                                                spaceBetween={0}
-                                                slidesPerView={1}
-                                                navigation={{ prevEl: ".swiper-next-L-btn", nextEl: ".swiper-next-R-btn" }}
-                                                loop={true}
-                                                centeredSlides={true}
-                                                className="mySwiper"
-                                                breakpoints={{
-                                                    768: { 
-                                                        slidesPerView: 2,
-                                                        spaceBetween: 32,
-                                                        centeredSlides: false,
-                                                    }, // 電腦顯示 3 張
-                                                    1200: { 
-                                                        slidesPerView: 3,
-                                                        spaceBetween: 32,
-                                                        centeredSlides:true,
-                                                    }, // 電腦顯示 3 張
-                                                }}
-                                            >
-                                                {
-                                                    main5Data?.map((itme,index)=>{
-                                                        return(
-                                                            <SwiperSlide key={index}>
-                                                                <div className="main5-card">
-                                                                    <div className="main5-card-img-box main5-card-img-box-set mx-auto">
-                                                                        <picture>
-                                                                            <source srcSet={itme.img} media="(min-width:1400px)" />
-                                                                            <img className="img-set" src={itme.imgSm} alt={itme.title} />
-                                                                        </picture>
-                                                                    </div>
-                                                                    <div className="main5-card-text-box">
-                                                                        <div className="d-flex flex-column">
-                                                                            <h5 className="fw-700 text-nautral-white">
-                                                                                {itme.title}
-                                                                            </h5>
-                                                                            <time className="fw-500 text-primary3" dateTime="2024/04/01">
-                                                                                2024/04/01
-                                                                            </time>
-                                                                            <p className="fw-500 text-nautral-white">
-                                                                                {itme.content}
-                                                                            </p>
+                                        
+                                            <motion.div className="swiper-box"
+                                                        variants={fadeUp}>
+                                                <Swiper
+                                                    modules={[Navigation, Pagination, Autoplay]}
+                                                    spaceBetween={0}
+                                                    slidesPerView={1}
+                                                    navigation={{ prevEl: ".swiper-next-L-btn", nextEl: ".swiper-next-R-btn" }}
+                                                    loop={true}
+                                                    centeredSlides={true}
+                                                    className="mySwiper"
+                                                    breakpoints={{
+                                                        768: { 
+                                                            slidesPerView: 2,
+                                                            spaceBetween: 32,
+                                                            centeredSlides: false,
+                                                        }, // 電腦顯示 3 張
+                                                        1200: { 
+                                                            slidesPerView: 3,
+                                                            spaceBetween: 32,
+                                                            centeredSlides:true,
+                                                        }, // 電腦顯示 3 張
+                                                    }}
+                                                >
+                                                    {
+                                                        main5Data?.map((itme,index)=>{
+                                                            return(
+                                                                <SwiperSlide key={index}>
+                                                                    <div className="main5-card">
+                                                                        <div className="main5-card-img-box main5-card-img-box-set mx-auto">
+                                                                            <picture>
+                                                                                <source srcSet={itme.img} media="(min-width:1400px)" />
+                                                                                <img className="img-set" src={itme.imgSm} alt={itme.title} />
+                                                                            </picture>
                                                                         </div>
+                                                                        <div className="main5-card-text-box">
+                                                                            <div className="d-flex flex-column">
+                                                                                <h5 className="fw-700 text-nautral-white">
+                                                                                    {itme.title}
+                                                                                </h5>
+                                                                                <time className="fw-500 text-primary3" dateTime="2024/04/01">
+                                                                                    2024/04/01
+                                                                                </time>
+                                                                                <p className="fw-500 text-nautral-white">
+                                                                                    {itme.content}
+                                                                                </p>
+                                                                            </div>
 
-                                                                        <a className="main5CardBtn-set secondary-btn1-set" 
-                                                                            href={itme.html} target="_blank">
-                                                                                閱讀更多
-                                                                            <span className="material-symbols-outlined sec-btn1-img-set">
-                                                                                chevron_right
-                                                                            </span>
-                                                                        </a>
+                                                                            <a className="main5CardBtn-set secondary-btn1-set" 
+                                                                                href={itme.html} 
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer">
+                                                                                    閱讀更多
+                                                                                <span className="material-symbols-outlined sec-btn1-img-set">
+                                                                                    chevron_right
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </SwiperSlide>
-                                                        )
-                                                    })
-                                                }
-                                            </Swiper>
-                                            {/* swiper左右按鈕 */}
-                                            <div className="swiper-btn-box">
-                                                <button className="swiper-next-R-btn carousel-btn-R">
-                                                    <div className="img-box">
-                                                        <img className="img-set" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main5/index-main5-arrowR.png`} alt="index-main5-arrowR" />
-                                                    </div>
-                                                </button>
-                                                <button className="swiper-next-L-btn carousel-btn-L">
-                                                    <div className="img-box">
-                                                        <img className="img-set" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main5/index-main5-arrowL.png`} alt="index-main5-arrowL" />
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    
-                                    
-                                        <div className="main5-checkBtn-box d-flex justify-content-center align-items-center">
-                                            <Link className="mian5-checkBtn-Set mian-btn1-set" to="/EstimatePage">
-                                                開始製作
-                                            </Link>
-                                        </div>
-                                    
-                                
+                                                                </SwiperSlide>
+                                                            )
+                                                        })
+                                                    }
+                                                </Swiper>
+                                                {/* swiper左右按鈕 */}
+                                                <div className="swiper-btn-box">
+                                                    <button className="swiper-next-R-btn carousel-btn-R">
+                                                        <div className="img-box">
+                                                            <img className="img-set" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main5/index-main5-arrowR.png`} alt="index-main5-arrowR" />
+                                                        </div>
+                                                    </button>
+                                                    <button className="swiper-next-L-btn carousel-btn-L">
+                                                        <div className="img-box">
+                                                            <img className="img-set" src={`${import.meta.env.BASE_URL}assets/images/IndexPage/main5/index-main5-arrowL.png`} alt="index-main5-arrowL" />
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </motion.div>
+                                        
+                                        
+                                            <motion.div className="main5-checkBtn-box d-flex justify-content-center align-items-center"
+                                                        variants={fadeUp}>
+                                                <Link className="mian5-checkBtn-Set mian-btn1-set" to="/EstimatePage">
+                                                    開始製作
+                                                </Link>
+                                            </motion.div>
+                                        
+                                </motion.div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </AnimatePresence>
         </>
     )
 }
