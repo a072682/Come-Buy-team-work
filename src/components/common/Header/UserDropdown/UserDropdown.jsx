@@ -21,7 +21,7 @@ function UserDropdown() {
       })
 
       useEffect(()=>{
-          console.log("頭像資料:",avatarUrl);
+          //console.log("頭像資料:",avatarUrl);
       },[avatarUrl])
   //#endregion
 
@@ -34,7 +34,7 @@ function UserDropdown() {
       })
 
       useEffect(()=>{
-          console.log("會員名稱資料:",userName);
+          //console.log("會員名稱資料:",userName);
       },[userName])
   //#endregion
   
@@ -51,9 +51,6 @@ function UserDropdown() {
   }
 
   return (
-
-    
-
     <>
       
       <Dropdown show={show} onToggle={(isOpen) => setShow(isOpen)}>

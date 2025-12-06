@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import './_MyOrder.scss';
-import { orderDataGet, userOrderListUpLoad, userOrderUpLoad } from '../../../slice/orderSlice';
+import { orderDataDelete, orderDataGet, userOrderListUpLoad, userOrderUpLoad } from '../../../slice/orderSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { MODALS, open } from '../../../slice/modalSlice';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -26,7 +26,9 @@ function MyOrder ({triggerSet,fadeUp}){
                 state.order.userOrderListData
             )
         })
-        useEffect(()=>{console.log("列表資料",orderListData)},[orderListData])
+        useEffect(()=>{
+            //console.log("列表資料",orderListData)
+        },[orderListData])
     //#endregion
 
     //#region 取得訂單函式
@@ -51,6 +53,12 @@ function MyOrder ({triggerSet,fadeUp}){
     const handleOpenOrderDetailModal = (data) =>{
         dispatch(userOrderUpLoad(data));
         dispatch(open(MODALS.OrderDetailModal));
+    }
+    //#endregion
+
+    //#region 刪除訂單函式
+    const handleDeleteOrderData = (id) =>{
+        dispatch(orderDataDelete({orderId: id}));
     }
     //#endregion
 
@@ -85,6 +93,9 @@ function MyOrder ({triggerSet,fadeUp}){
                                         <div className='title-set'>
                                             <p className='title-text-set'>審核狀態</p>
                                         </div>
+                                        <div className='title-set'>
+                                            <p className='title-text-set'>移除訂單</p>
+                                        </div>
                                         {/* 樣品材料.樣品規格.製作開始日期.預定完成日期.付款方式 */}
                                     </div>
                                     <div className='order-item-box'>
@@ -117,6 +128,12 @@ function MyOrder ({triggerSet,fadeUp}){
                                                                 )
                                                             }
                                                             </p>
+                                                        </div>
+                                                        <div className='btn-set-box'>
+                                                            <button className='btn-set' 
+                                                                    onClick={()=>{handleDeleteOrderData(item.id)}}>
+                                                                訂單移除
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 )

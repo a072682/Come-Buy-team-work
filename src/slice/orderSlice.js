@@ -198,6 +198,27 @@ export const orderSlice = createSlice({
         );
     //#endregion
 
+    //#region 訂單刪除函式
+        export const orderDataDelete = createAsyncThunk(
+            "order/orderDataDelete",
+            async ({orderId},{ dispatch,rejectWithValue }) => {
+                try {
+                    const orderDataDeleteRef = await axiosWithCookie.delete(`${BASE_URL}/order/deleteOrder/${orderId}`);
+                    //console.log("訂單刪除成功:",orderDataDeleteRef.data);
+                    
+                    //刪除成功後，再次抓取最新訂單列表
+                    const newOrderListRes = await dispatch(orderDataGet()).unwrap();
+                    //更新 Slice 的訂單列表
+                    dispatch(userOrderListUpLoad(newOrderListRes.orderData));
+                    
+                } catch (error) {
+                    console.log("訂單刪除失敗",error);
+                    return rejectWithValue(error.response.data);
+                }
+            }
+        );
+    //#endregion
+
     
         
 export default orderSlice.reducer;

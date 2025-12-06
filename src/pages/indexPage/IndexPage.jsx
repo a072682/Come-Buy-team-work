@@ -18,7 +18,7 @@ function IndexPage(){
     //#region SEO流程宣告
     useEffect(() => {
         //標題
-        document.title = "首頁 | 自我練習的還原自製遊戲網站";
+        document.title = "首頁 | ";
 
         //簡介
         let metaTag = document.querySelector("meta[name='description']");
