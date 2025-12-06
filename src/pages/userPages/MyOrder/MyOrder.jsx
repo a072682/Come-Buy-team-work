@@ -56,6 +56,14 @@ function MyOrder ({triggerSet,fadeUp}){
     }
     //#endregion
 
+    //#region 審核狀態列表
+    const statusLabel = {
+        approved: "已審核",
+        rejected: "已駁回",
+        wait: "審核中",
+    };
+    //#endregion
+
     //#region 刪除訂單函式
     const handleDeleteOrderData = (id) =>{
         dispatch(orderDataDelete({orderId: id}));
@@ -118,14 +126,7 @@ function MyOrder ({triggerSet,fadeUp}){
                                                         <div className='text-set-box'>
                                                             <p className='text-set'>
                                                             {
-                                                                item.state?
-                                                                (
-                                                                    "已審核"
-                                                                )
-                                                                :
-                                                                (
-                                                                    "審核中"
-                                                                )
+                                                                statusLabel[item.state] ?? "未知狀態"
                                                             }
                                                             </p>
                                                         </div>
