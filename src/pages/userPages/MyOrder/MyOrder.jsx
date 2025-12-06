@@ -131,10 +131,14 @@ function MyOrder ({triggerSet,fadeUp}){
                                                             </p>
                                                         </div>
                                                         <div className='btn-set-box'>
-                                                            <button className='btn-set' 
-                                                                    onClick={()=>{handleDeleteOrderData(item.id)}}>
-                                                                訂單移除
-                                                            </button>
+                                                            {
+                                                                item?.state === "rejected" && (
+                                                                    <button className='btn-set' 
+                                                                            onClick={()=>{handleDeleteOrderData(item.id)}}>
+                                                                        訂單移除
+                                                                    </button>
+                                                                )
+                                                            }
                                                         </div>
                                                     </div>
                                                 )
