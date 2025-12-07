@@ -1,5 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import { axiosWithCookie, BASE_URL } from "../api";
+import { BASE_URL } from "../api";
+import axios from "axios";
 
 //此區塊為測試開發用內容
     // import axios from "axios";
@@ -131,9 +132,11 @@ export const orderSlice = createSlice({
             "order/orderImgUpLoad",
             async ({orderImgData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderImgUpLoadRef = await axiosWithCookie.post(`${BASE_URL}/orderImg/upload`,orderImgData,
+                    const orderImgUpLoadRef = await axios.post(`${BASE_URL}/orderImg/upload`,orderImgData,
                         { // ✅ 發送 POST 請求到後端圖片上傳 API
-                            headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
+                            headers: { 
+                                'Content-Type': 'multipart/form-data' 
+                            }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
                     // console.log("訂單預覽圖片上傳成功:",orderImgUpLoadRef.data);
@@ -151,9 +154,11 @@ export const orderSlice = createSlice({
             "order/orderImgUpLoad",
             async ({orderImgData},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderImgUpLoadRef = await axiosWithCookie.post(`${BASE_URL}/orderImg/changeUploadImages`,orderImgData,
+                    const orderImgUpLoadRef = await axios.post(`${BASE_URL}/orderImg/changeUploadImages`,orderImgData,
                         { // ✅ 發送 POST 請求到後端圖片上傳 API
-                            headers: { 'Content-Type': 'multipart/form-data' }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
+                            headers: { 
+                                'Content-Type': 'multipart/form-data' 
+                            }, // ✅ 設定請求頭，讓後端知道是 multipart/form-data 格式
                         }
                     );
                     // console.log("訂單預覽圖片上傳覆蓋成功:",orderImgUpLoadRef.data);
@@ -171,8 +176,8 @@ export const orderSlice = createSlice({
             "order/orderDataGet",
             async (_,{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderDataGetRef = await axiosWithCookie.get(`${BASE_URL}/order/getOrderData`);
-                    // console.log("取得訂單資料成功:",orderDataGetRef.data);
+                    const orderDataGetRef = await axios.get(`${BASE_URL}/order/getOrderData`);
+                    //console.log("取得訂單資料成功:",orderDataGetRef.data);
                     return(orderDataGetRef.data);
                 } catch (error) {
                     console.log("取得訂單資料失敗",error.response.data);
@@ -187,7 +192,7 @@ export const orderSlice = createSlice({
             "order/orderDataUpLoad",
             async ({order},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderDataUpLoadRef = await axiosWithCookie.post(`${BASE_URL}/order/registerOrder`,order);
+                    const orderDataUpLoadRef = await axios.post(`${BASE_URL}/order/registerOrder`,order);
                     // console.log("訂單上傳成功:",orderDataUpLoadRef.data);
                     return(orderDataUpLoadRef.data);
                 } catch (error) {
@@ -203,7 +208,7 @@ export const orderSlice = createSlice({
             "order/orderDataDelete",
             async ({orderId},{ dispatch,rejectWithValue }) => {
                 try {
-                    const orderDataDeleteRef = await axiosWithCookie.delete(`${BASE_URL}/order/deleteOrder/${orderId}`);
+                    const orderDataDeleteRef = await axios.delete(`${BASE_URL}/order/deleteOrder/${orderId}`);
                     //console.log("訂單刪除成功:",orderDataDeleteRef.data);
                     
                     //刪除成功後，再次抓取最新訂單列表
@@ -219,6 +224,4 @@ export const orderSlice = createSlice({
         );
     //#endregion
 
-    
-        
 export default orderSlice.reducer;

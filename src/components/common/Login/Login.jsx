@@ -221,12 +221,6 @@ function Login ({onClose, onSwitch}){
         };
     //#endregion
 
-    
-
-        
-
-    
-
 
     return(
         <>
