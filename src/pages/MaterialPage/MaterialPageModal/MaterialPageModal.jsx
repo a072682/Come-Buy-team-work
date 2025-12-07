@@ -13,7 +13,9 @@ function MaterialPageModal({onClose}){
                 state.material.materialData
             )
         })
-        useEffect(()=>{console.log("materialData資料:",materialData);},[materialData]);
+        useEffect(()=>{
+            //console.log("materialData資料:",materialData);
+        },[materialData]);
     //#endregion
 
     

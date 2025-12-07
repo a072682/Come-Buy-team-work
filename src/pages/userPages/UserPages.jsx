@@ -2,6 +2,7 @@
 import { Tab, Nav } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules'
 import 'swiper/css';
 import { Dropdown } from 'react-bootstrap';
 import './_UserPages.scss';
@@ -200,12 +201,21 @@ function UserPages (){
 
                                 {/* Tab-Mb 選單區 */}
                                 <div className='tab-mb-box'>
+                                    <div className='tab-mb-btn-box'>
+                                        <span className="material-symbols-outlined tab-mb-btnR">
+                                            keyboard_arrow_right
+                                        </span>
+                                        <span className="material-symbols-outlined tab-mb-btnL">
+                                            keyboard_arrow_left
+                                        </span>
+                                    </div>
                                     <Nav className='tab-mb-nav'>
                                         <Swiper
                                             className=''
-                                            modules={[]}
+                                            modules={[Navigation,]}
                                             slidesPerView={2}
                                             loop={true}
+                                            navigation={{ prevEl: ".tab-mb-btnL", nextEl: ".tab-mb-btnR" }}
                                             spaceBetween={0}
                                             >
                                             {

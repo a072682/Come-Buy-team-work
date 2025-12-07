@@ -17,6 +17,19 @@ function Header(){
     //#region
     //#endregion
 
+    //#region 讀取連線狀態
+        //讀取中央資料
+        const linkState = useSelector((state)=>{
+            return(
+                state.login.linkState
+            )
+        })
+
+        useEffect(()=>{
+            //console.log("連線狀態:",linkState);
+        },[linkState])
+    //#endregion
+
     //#region 讀取中央登入資料
         //讀取中央資料
         const loginState = useSelector((state)=>{
@@ -75,9 +88,21 @@ function Header(){
 
     //#region 連線測試
         //連線測試
-        useEffect(()=>{
-            dispatch(linkTest()); 
-        },[])
+        useEffect(() => {
+            if(linkState){
+                console.log("連線成功敲擊結束");
+                return;
+            }else if(!linkState){
+                console.log("執行敲擊");
+                // 每兩秒執行一次
+                const timeId = setInterval(() => {
+                    dispatch(linkTest());
+                }, 2000); 
+
+                // 離開頁面時清除 interval（必要）
+                return () => clearInterval(timeId);
+            }
+        }, [linkState]);
         //連線測試
     //#endregion
 
@@ -99,7 +124,16 @@ function Header(){
                     console.log("登入檢查失敗",error);
                 }
             };
+
             getUserData();
+
+            // 每半小時執行一次
+            const timeId = setInterval(() => {
+                getUserData();
+            }, 30*60*1000); 
+            
+            // 離開頁面時清除 interval（必要）
+            return () => clearInterval(timeId);
         },[]);
         //登入確認
     //#endregion

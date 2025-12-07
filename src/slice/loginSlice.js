@@ -100,14 +100,14 @@ export const loginSlice = createSlice({
 
                 try {
                     const handleLoginRef = await axios.post(`${BASE_URL}/user/login`, account);
-                    console.log("登入成功",handleLoginRef.data);
+                    //console.log("登入成功",handleLoginRef.data);
                     //取出token並取名為tokenData
                     const tokenData = handleLoginRef.data.token;
                     //取出token並取名為tokenData
 
                     //如果tokenData存在則存入 localStorage並取名為token
                     if (tokenData) {
-                        console.log("token存入成功");
+                        //console.log("token存入成功");
                         localStorage.setItem("token", tokenData);
                     }
                     
@@ -134,7 +134,7 @@ export const loginSlice = createSlice({
                     try {
                         //請求格式 網址 附帶檔案 標頭檔
                         const checkLoginRef = await axios.post(`${BASE_URL}/user/logInCheck`);
-                        //console.log("登入確認成功",checkLoginRef.data);
+                        console.log("登入確認成功",checkLoginRef.data);
                         //更新username內容
                         dispatch(usernameDataUp(checkLoginRef?.data.status.username));
                         //更新登入來源資料
@@ -163,7 +163,7 @@ export const loginSlice = createSlice({
                 async (_,{ dispatch, rejectWithValue }) => {
                     try {
                         const userLoginCounterRef = await axios.post(`${BASE_URL}/user/userLoginCounter`);
-                        console.log("登入計數成功",userLoginCounterRef.data.message);
+                        //console.log("登入計數成功",userLoginCounterRef.data.message);
                 } catch (error) {
                     // console.log("登入計數失敗",error.response.data);
                     return rejectWithValue(error.response.data);

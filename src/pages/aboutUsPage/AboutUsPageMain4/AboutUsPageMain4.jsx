@@ -20,7 +20,7 @@ function AboutUsPageMain4({triggerSet,fadeUp}){
         })
 
         useEffect(()=>{
-            console.log("loginState狀態:",loginState);
+            //console.log("loginState狀態:",loginState);
         },[loginState])
     //#endregion
 
@@ -38,7 +38,7 @@ function AboutUsPageMain4({triggerSet,fadeUp}){
 
     //#region 更新表單資料
         useEffect(()=>{
-            console.log("目前聯絡我們的留言資訊:",aboutusPageMessage)
+            //console.log("目前聯絡我們的留言資訊:",aboutusPageMessage)
         },[aboutusPageMessage]);
     //#endregion
 

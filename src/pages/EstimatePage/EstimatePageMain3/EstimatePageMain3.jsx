@@ -13,7 +13,9 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
         wallThickness: 50,
         supportDensity: 10,
     });
-    useEffect(()=>{console.log("資料:",main3GroupDataState)},[main3GroupDataState]);
+    useEffect(()=>{
+        //console.log("資料:",main3GroupDataState)
+    },[main3GroupDataState]);
 
     // 點加號的時候
     const handleIncrement = (id) => {
@@ -30,21 +32,7 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
                 //上限50
             }));
         }
-    };
-    // const handleIncrement = (id) => {
-    //     if(id === "wallThickness"){
-    //         setMain3GroupDataState(prev => ({
-    //             ...prev,
-    //             [id]: Math.min(prev[id] + 10, 50), 
-    //         }));
-    //     }else{
-    //         setMain3GroupDataState(prev => ({
-    //             ...prev,
-    //             [id]: Math.min(prev[id] + 1, 50), 
-    //         }));
-    //     }
-    // };
-    
+    };  
 
     // 點減號的時候
     const handleDecrement = (id) => {
@@ -62,19 +50,6 @@ function EstimatePageMain3({orderData, setOrderData, toEstimatePageMain4, main3R
             }));
         }
     };
-    // const handleDecrement = (id) => {
-    //     if(id === "wallThickness"){
-    //         setMain3GroupDataState(prev => ({
-    //             ...prev,
-    //             [id]: Math.max(prev[id] - 10, 0), 
-    //         }));
-    //     }else{
-    //         setMain3GroupDataState(prev => ({
-    //             ...prev,
-    //             [id]: Math.max(prev[id] - 1, 0), 
-    //         }));
-    //     }
-    // };
 
     //預設配置
     const handleMaterialDefault = ()=>{
