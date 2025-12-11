@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header/Header";
 import ModalRoot from "../components/common/ModalRoot/ModalRoot";
-import './_Header.scss';
+import './_FrontLayout.scss';
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
