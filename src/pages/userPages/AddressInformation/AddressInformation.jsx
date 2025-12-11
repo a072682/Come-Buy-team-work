@@ -41,9 +41,9 @@ function AddressInformation ({userProfileData,setUserProfileData,triggerSet,fade
             try{
                 // console.log("看看資料2",userProfileData);
                 const userProfileDataUpLoadChangeRef = await dispatch(userProfileDataUpChange(userProfileData)).unwrap();
-                console.log("會員個人資料更新成功",userProfileDataUpLoadChangeRef);
+                //console.log("會員個人資料更新成功",userProfileDataUpLoadChangeRef);
                 const user = await dispatch(getUserData()).unwrap();
-                console.log("新會員個人資料取得成功");
+                //console.log("新會員個人資料取得成功");
                 setUserProfileData(user.UserProfileData);
             }catch(error){
                 console.log("會員個人資料更新失敗",error);

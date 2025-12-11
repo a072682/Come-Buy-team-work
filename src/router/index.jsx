@@ -7,6 +7,7 @@ import AboutUsPage from '../pages/AboutusPage/AboutusPage';
 import MateriaPage from '../pages/MaterialPage/MaterialPage';
 import QaPage from '../pages/QAPage/QaPage';
 import EstimatePage from '../pages/EstimatePage/EstimatePage';
+import TokenPage from '../pages/TokenPage/TokenPage';
 
 
 
@@ -44,6 +45,10 @@ const router = createHashRouter([ //createHashRouter為建立router的方法
             {
                 path: "UserPages",
                 element: <UserPages />,
+            },
+            {
+                path: "token",
+                element: <TokenPage />,
             },
         ]
 	},
