@@ -57,7 +57,7 @@ export const loginSlice = createSlice({
                 dispatch(linkStateFalse()); 
                 try {
                     const response = await axios.get(`${BASE_URL}/test-db`);
-                    console.log("連線成功",response.data);
+                    //console.log("連線成功",response.data);
                     dispatch(linkStateTrue()); 
                     return(response.data);
                 } catch (error) {
@@ -134,7 +134,7 @@ export const loginSlice = createSlice({
                     try {
                         //請求格式 網址 附帶檔案 標頭檔
                         const checkLoginRef = await axios.post(`${BASE_URL}/user/logInCheck`);
-                        console.log("登入確認成功",checkLoginRef.data);
+                        //console.log("登入確認成功",checkLoginRef.data);
                         //更新username內容
                         dispatch(usernameDataUp(checkLoginRef?.data.status.username));
                         //更新登入來源資料
