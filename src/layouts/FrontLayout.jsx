@@ -23,7 +23,7 @@ function FrontLayout(){
         })
 
         useEffect(()=>{
-            console.log("連線狀態:",linkState);
+            //console.log("連線狀態:",linkState);
         },[linkState])
     //#endregion
 

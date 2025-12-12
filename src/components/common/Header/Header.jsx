@@ -1,9 +1,8 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Nav, Navbar as Container, Navbar } from "react-bootstrap";
 import { checkLogin, linkTest, logoutUser, userLoginCounter } from "../../../slice/loginSlice";
-import { close, open, MODALS } from "../../../slice/modalSlice";
-import { useNavigate } from "react-router-dom";
+import { open, MODALS } from "../../../slice/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import News from "./News/News";
 import Faq from "./FAQ/FAQ";
@@ -84,7 +83,7 @@ function Header(){
     //#region 確認token
         useEffect(() => {
             const saved = localStorage.getItem("token");
-            console.log("token：", saved);
+            //console.log("token：", saved);
         }, [linkState]);
     //#endregion
 
