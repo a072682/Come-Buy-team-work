@@ -7,12 +7,9 @@ export default function TokenPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("value");
-
-    if (token) {
-      localStorage.setItem("token", token);
-      navigate("/", { replace: true });
-      //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
-    }
+    localStorage.setItem("token", token);
+    navigate("/", { replace: true });
+    //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
   }, []);
 
   return (
