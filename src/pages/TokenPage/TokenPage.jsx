@@ -10,11 +10,9 @@ export default function TokenPage() {
 
     if (token) {
       localStorage.setItem("token", token);
+      navigate("/", { replace: true });
+      //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
     }
-
-    // 1. 存完 token 後馬上跳回首頁
-    navigate("/", { replace: true });
-    //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
   }, []);
 
   return (

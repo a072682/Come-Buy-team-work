@@ -82,15 +82,10 @@ function Header(){
     //#endregion
 
     //#region 確認token
-        const [token, setToken] = useState(null);
         useEffect(() => {
             const saved = localStorage.getItem("token");
-            setToken(saved);
-        }, []);
-
-        useEffect(() => {
-            console.log("token 更新了：", token);
-        }, [token]);
+            console.log("token：", saved);
+        }, [linkState]);
     //#endregion
 
     //#region 讀取中央函式前置宣告
