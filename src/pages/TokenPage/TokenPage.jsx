@@ -5,11 +5,19 @@ export default function TokenPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const hash = window.location.hash; 
+    //類似 "#/token?value=123&role=user"
+    const queryString = hash.split("?")[1];
+    //只要 ? 後面的部分
+    // "value=123&role=user"
+    const params = new URLSearchParams(queryString);
+    //對"value=123&role=user"做解析這樣.get才能取出數值
     const token = params.get("value");
-    localStorage.setItem("token", token);
-    navigate("/", { replace: true });
-    //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
+    if(token){
+        localStorage.setItem("token", token);
+        navigate("/", { replace: true });
+        //replace: true 的效果是 即便按上一頁 也回不到帶有token網址的頁面 會被"/"取代
+    }
   }, []);
 
   return (
