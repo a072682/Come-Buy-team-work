@@ -200,7 +200,7 @@ export const loginSlice = createSlice({
                     try {
                         const getUserDataRef = await axios.get(`${BASE_URL}/user/getUserData`);
                         const getUserProfileDataRef = await axios.get(`${BASE_URL}/userProfile/getUserProfile`);
-                        console.log("取得使用者資料成功",getUserDataRef.data,getUserProfileDataRef.data.userData,);
+                        //console.log("取得使用者資料成功",getUserDataRef.data,getUserProfileDataRef.data.userData,);
                         dispatch(usernameDataUp(getUserDataRef?.data.username));
                         if(getUserProfileDataRef?.data.message !== "管理員帳戶無個人信息"){
                             dispatch(avatarDataUp(getUserProfileDataRef?.data.userData.avatar_url ?? getUserProfileDataRef?.data.userData.google_avatar_url));

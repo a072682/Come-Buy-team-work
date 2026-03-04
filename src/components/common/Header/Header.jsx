@@ -96,10 +96,10 @@ function Header(){
         //連線測試
         useEffect(() => {
             if(linkState){
-                console.log("連線成功敲擊結束");
+                //console.log("連線成功敲擊結束");
                 return;
             }else if(!linkState){
-                console.log("執行敲擊");
+                //console.log("執行敲擊");
                 // 每兩秒執行一次
                 const timeId = setInterval(() => {
                     dispatch(linkTest());
@@ -127,19 +127,19 @@ function Header(){
                     await dispatch(checkLogin()).unwrap();
                     await dispatch(userLoginCounter()).unwrap();
                 }catch(error){
-                    console.log("登入檢查失敗",error);
+                    //console.log("登入檢查失敗",error);
                 }
             };
 
             getUserData();
 
             // 每半小時執行一次
-            const timeId = setInterval(() => {
-                getUserData();
-            }, 30*60*1000); 
+            // const timeId = setInterval(() => {
+            //     getUserData();
+            // }, 30*60*1000); 
             
             // 離開頁面時清除 interval（必要）
-            return () => clearInterval(timeId);
+            //return () => clearInterval(timeId);
         },[]);
         //登入確認
     //#endregion

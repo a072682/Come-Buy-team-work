@@ -36,7 +36,9 @@ function PassWordChangePage ({triggerSet,fadeUp}){
                 newPassWordRepeat:"",
             }
         )
-        useEffect(()=>{console.log("密碼資料:",passWordData)},[passWordData]);
+        useEffect(()=>{
+            //.log("密碼資料:",passWordData)
+        },[passWordData]);
     //#endregion
 
     //#region 寫入密碼函式
