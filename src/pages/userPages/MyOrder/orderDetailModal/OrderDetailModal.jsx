@@ -90,12 +90,12 @@ function OrderDetailModal ({onClose}){
                 {
                     id:"orderItemData11",
                     title:"預計訂單製作時間",
-                    content:new Date(orderDetailData?.productiontime).toLocaleDateString("zh-TW"),
+                    content:new Date(orderDetailData?.productionTime).toLocaleDateString("zh-TW"),
                 },
                 {
                     id:"orderItemData12",
                     title:"預計訂單完成時間",
-                    content:new Date(orderDetailData?.productionendtime).toLocaleDateString("zh-TW"),
+                    content:new Date(orderDetailData?.productionEndTime).toLocaleDateString("zh-TW"),
                 },
             ]
     //#endregion

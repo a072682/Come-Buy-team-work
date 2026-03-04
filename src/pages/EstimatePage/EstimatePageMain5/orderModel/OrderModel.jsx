@@ -95,12 +95,12 @@ function OrderModel ({onClose}){
             {
                 id:"orderItemData11",
                 title:"預計訂單製作時間",
-                content:order.productionTime,
+                content:new Date(order.productionTime).toLocaleDateString("zh-TW"),
             },
             {
                 id:"orderItemData12",
                 title:"預計訂單完成時間",
-                content:order.productionEndTime,
+                content:new Date(order.productionEndTime).toLocaleDateString("zh-TW"),
             },
         ]
     //#endregion
