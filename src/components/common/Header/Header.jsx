@@ -127,19 +127,19 @@ function Header(){
                     await dispatch(checkLogin()).unwrap();
                     await dispatch(userLoginCounter()).unwrap();
                 }catch(error){
-                    //console.log("登入檢查失敗",error);
+                    console.log("登入檢查失敗",error);
                 }
             };
 
             getUserData();
 
             // 每半小時執行一次
-            // const timeId = setInterval(() => {
-            //     getUserData();
-            // }, 30*60*1000); 
+            const timeId = setInterval(() => {
+                getUserData();
+            }, 30*60*1000); 
             
             // 離開頁面時清除 interval（必要）
-            //return () => clearInterval(timeId);
+            return () => clearInterval(timeId);
         },[]);
         //登入確認
     //#endregion
@@ -181,8 +181,6 @@ function Header(){
                             <img className="navbarLogoImg-set" src={`${import.meta.env.BASE_URL}assets/images/Header/logo.png`} alt="home-section2-1" />
                         </Link>
                         {/* 左上角 Logo */}
-                        
-
                         
                         {/* lg 以上選項區塊 */}
                         <div className="navbarItem-box d-none d-lg-flex">

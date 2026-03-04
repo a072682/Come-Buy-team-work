@@ -13,8 +13,6 @@ import MaterialPageModal from "../../../pages/MaterialPage/MaterialPageModal/Mat
 import OrderDetailModal from "../../../pages/userPages/MyOrder/OrderDetailModal/OrderDetailModal";
 
 
-
-
 export default function ModalRoot() {
 
     //#region 讀取中央函式前置宣告
