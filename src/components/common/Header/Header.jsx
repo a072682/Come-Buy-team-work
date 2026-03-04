@@ -94,21 +94,21 @@ function Header(){
 
     //#region 連線測試
         //連線測試
-        // useEffect(() => {
-        //     if(linkState){
-        //         //console.log("連線成功敲擊結束");
-        //         return;
-        //     }else if(!linkState){
-        //         //console.log("執行敲擊");
-        //         // 每兩秒執行一次
-        //         const timeId = setInterval(() => {
-        //             dispatch(linkTest());
-        //         }, 2000); 
+        useEffect(() => {
+            if(linkState){
+                //console.log("連線成功敲擊結束");
+                return;
+            }else if(!linkState){
+                //console.log("執行敲擊");
+                // 每兩秒執行一次
+                const timeId = setInterval(() => {
+                    dispatch(linkTest());
+                }, 2000); 
 
-        //         // 離開頁面時清除 interval（必要）
-        //         return () => clearInterval(timeId);
-        //     }
-        // }, [linkState]);
+                // 離開頁面時清除 interval（必要）
+                return () => clearInterval(timeId);
+            }
+        }, [linkState]);
         //連線測試
     //#endregion
 
