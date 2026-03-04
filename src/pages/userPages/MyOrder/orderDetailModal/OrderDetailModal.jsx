@@ -25,7 +25,9 @@ function OrderDetailModal ({onClose}){
                 state.order.userOrderData
             )
         })
-        useEffect(()=>{console.log("訂單資料",orderDetailData)},[orderDetailData])
+        useEffect(()=>{
+            //console.log("訂單資料",orderDetailData)
+        },[orderDetailData])
     //#endregion
     
     //#region顯示訂單用資料
@@ -88,12 +90,12 @@ function OrderDetailModal ({onClose}){
                 {
                     id:"orderItemData11",
                     title:"預計訂單製作時間",
-                    content:orderDetailData?.productiontime,
+                    content:new Date(orderDetailData?.productiontime).toLocaleDateString("zh-TW"),
                 },
                 {
                     id:"orderItemData12",
                     title:"預計訂單完成時間",
-                    content:orderDetailData?.productionendtime,
+                    content:new Date(orderDetailData?.productionendtime).toLocaleDateString("zh-TW"),
                 },
             ]
     //#endregion
