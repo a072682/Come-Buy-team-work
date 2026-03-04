@@ -6,11 +6,12 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import RegisterSuccessModel from "../Register/RegisterSuccessModel/RegisterSuccessModel";
 import AboutUsModal from "../../../pages/aboutUsPage/AboutUsModal/AboutUsModal";
-import OrderModel from "../../../pages/EstimatePage/EstimatePageMain5/orderModel/OrderModel";
-import OrderCheckModel from "../../../pages/EstimatePage/EstimatePageMain5/orderCheckModel/OrderCheckModel";
+import OrderModel from "../../../pages/EstimatePage/EstimatePageMain5/OrderModel/OrderModel";
+import OrderCheckModel from "../../../pages/EstimatePage/EstimatePageMain5/OrderCheckModel/OrderCheckModel";
 import OestimateModal from "../../../pages/EstimatePage/EstimatePageMain1/OestimateModal/OestimateModal";
 import MaterialPageModal from "../../../pages/MaterialPage/MaterialPageModal/MaterialPageModal";
-import OrderDetailModal from "../../../pages/userPages/MyOrder/orderDetailModal/orderDetailModal";
+import OrderDetailModal from "../../../pages/userPages/MyOrder/OrderDetailModal/OrderDetailModal";
+
 
 
 
